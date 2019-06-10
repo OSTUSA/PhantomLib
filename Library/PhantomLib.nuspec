@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>0.0.3</version>
+    <authors>Mike Rampanelli</authors>
+    <owners>Open Systems Technologies</owners>
+    <!-- <licenseUrl>LICENSE.md</licenseUrl> -->
+    <projectUrl>http://www.ostusa.com</projectUrl>
+    <id>PhantomLib</id>
+    <title>Xamarin.PhantomLib</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This is the awesomeist nuget ever</description>
+    <summary></summary>
+    <copyright>Copyright Open Systems Technologies © 2019</copyright>
+  </metadata>
+
+  <files>
+  	<!-- NETStandard -->
+    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.dll"	target="lib\netstandard2.0\PhantomLib.dll" />
+    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.pdb"	target="lib\netstandard2.0\PhantomLib.pdb" />
+
+    <!-- iOS -->
+    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.dll"	target="lib\Xamarin.iOS10\PhantomLib.dll" />
+    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.pdb"	target="lib\Xamarin.iOS10\PhantomLib.pdb" />
+    <file src="PhantomLib.iOS\bin\Release\PhantomLib.iOS.dll"		    target="lib\Xamarin.iOS10\PhantomLib.iOS.dll" />
+    <file src="PhantomLib.iOS\bin\Release\PhantomLib.iOS.pdb"		    target="lib\Xamarin.iOS10\PhantomLib.iOS.pdb" />
+    <!-- <file src="BluetoothLE.Core/bin/Release/BluetoothLE.Core.xml"		target="lib\Xamarin.iOS10\BluetoothLE.Core.xml" />
+    <file src="BluetoothLE.iOS/bin/Release/BluetoothLE.iOS.dll"			target="lib\Xamarin.iOS10\BluetoothLE.iOS.dll" />
+    <file src="BluetoothLE.iOS/bin/Release/BluetoothLE.iOS.xml"			target="lib\Xamarin.iOS10\BluetoothLE.iOS.xml" /> -->
+
+    <!-- Android -->
+    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.dll"	target="lib\MonoAndroid10\PhantomLib.dll" />
+    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.pdb"	target="lib\MonoAndroid10\PhantomLib.pdb" />
+    <file src="PhantomLib.Android\bin\Release\PhantomLib.Android.dll"	target="lib\MonoAndroid10\PhantomLib.Android.dll" />
+    <file src="PhantomLib.Android\bin\Release\PhantomLib.Android.pdb"	target="lib\MonoAndroid10\PhantomLib.Android.pdb" />
+    <!-- <file src="BluetoothLE.Core/bin/Release/BluetoothLE.Core.dll"		target="lib\MonoAndroid10\BluetoothLE.Core.dll" />
+    <file src="BluetoothLE.Core/bin/Release/BluetoothLE.Core.xml"		target="lib\MonoAndroid10\BluetoothLE.Core.xml" />
+    <file src="BluetoothLE.Droid/bin/Release/BluetoothLE.Droid.dll"			target="lib\MonoAndroid10\BluetoothLE.Droid.dll" />
+    <file src="BluetoothLE.Droid/bin/Release/BluetoothLE.Droid.xml"			target="lib\MonoAndroid10\BluetoothLE.Droid.xml" /> -->
+  </files>
+</package>

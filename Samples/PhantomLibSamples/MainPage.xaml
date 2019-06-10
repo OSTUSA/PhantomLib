@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:PhantomLib" 
+             xmlns:extensions="clr-namespace:PhantomLib.platforms.common.Extensions;assembly=PhantomLib"
+             xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
+             x:Class="PhantomLibSamples.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--<Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="extensions:ViewExtensions.Kerning" Value="10" />
+            </Style>-->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+           
+            <!--Style="{StaticResource LabelStyle}"-->
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >
+                <Label.Effects>
+                    <effects:Kerning LetterSpacing="10" />
+                </Label.Effects>
+            </Label>
+            <!--<Entry Text="Effect attached to an Entry">
+                <Entry.Effects>
+                    <effects:FocusEffect />
+                </Entry.Effects>
+            </Entry>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
