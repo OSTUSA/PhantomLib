@@ -21,3 +21,7 @@ return base.FinishedLaunching(app,  options);
 
 # Effects included in this library
 * Kerning Effect - Allows you to specify the letter spacing of your lables.
+
+# Custom renderers in this library
+* RoundedFrame - Allows you to spcify which corners of a frame are rounded.
+![Sample Image](Images/Sample1.png?raw=true "Sample")
