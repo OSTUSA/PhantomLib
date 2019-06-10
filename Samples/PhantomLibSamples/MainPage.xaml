@@ -2,30 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:PhantomLib" 
-             xmlns:extensions="clr-namespace:PhantomLib.platforms.common.Extensions;assembly=PhantomLib"
+             xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+             xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib"
              xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
              x:Class="PhantomLibSamples.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <!--<Style x:Key="LabelStyle" TargetType="Label">
+            <Style x:Key="LabelStyle" TargetType="Label">
                 <Setter Property="extensions:ViewExtensions.Kerning" Value="10" />
-            </Style>-->
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand">
            
-            <!--Style="{StaticResource LabelStyle}"-->
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >
+            <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}" >
+                <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
                 <Label.Effects>
                     <effects:Kerning LetterSpacing="10" />
-                </Label.Effects>
+                </Label.Effects>-->
             </Label>
-            <!--<Entry Text="Effect attached to an Entry">
-                <Entry.Effects>
-                    <effects:FocusEffect />
-                </Entry.Effects>
-            </Entry>-->
+            
+            <controls:RoundedFrame  x:Name="InsideLayout" CornerRadius="10" BackgroundColor="Blue" RoundTopLeft="true" RoundTopRight="true"> 
+                <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
+            </controls:RoundedFrame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

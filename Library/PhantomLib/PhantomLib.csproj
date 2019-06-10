@@ -16,5 +16,6 @@
   <ItemGroup>
     <Folder Include="Effects\" />
     <Folder Include="CustomControls\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>
