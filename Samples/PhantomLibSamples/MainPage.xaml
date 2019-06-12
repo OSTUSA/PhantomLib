@@ -14,18 +14,25 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
-           
-            <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}" >
-                <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
-                <Label.Effects>
-                    <effects:Kerning LetterSpacing="10" />
-                </Label.Effects>-->
-            </Label>
-            
-            <controls:RoundedFrame  x:Name="InsideLayout" CornerRadius="10" BackgroundColor="Blue" RoundTopLeft="true" RoundTopRight="true"> 
-                <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
-            </controls:RoundedFrame>
-        </StackLayout>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
+                <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}" >
+                    <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
+                    <Label.Effects>
+                        <effects:Kerning LetterSpacing="10" />
+                    </Label.Effects>-->
+                </Label>
+                
+                <controls:RoundedFrame  x:Name="InsideLayout" CornerRadius="10" BackgroundColor="Blue" RoundTopLeft="true" RoundTopRight="true"> 
+                    <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
+                </controls:RoundedFrame>
+                 <Image x:Name="LoadingSpinner" Source="loading_spinner_green" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                        <Image.Effects>
+                            <effects:Spinner Duration="700" />
+                        </Image.Effects>
+                    </Image>
+            </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

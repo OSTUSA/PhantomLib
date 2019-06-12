@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("PhantomLib.Android.Resource", IsApplication=false)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("PhantomLib.Droid.Resource", IsApplication=false)]
 
-namespace PhantomLib.Android
+namespace PhantomLib.Droid
 {
 	
 	
@@ -4055,6 +4055,9 @@ namespace PhantomLib.Android
 			// aapt resource value: 0x7f090025
 			public static int abc_toolbar_collapse_description = 2131296293;
 			
+			// aapt resource value: 0x7f09003d
+			public static int app_name = 2131296317;
+			
 			// aapt resource value: 0x7f090033
 			public static int appbar_scrolling_view_behavior = 2131296307;
 			
@@ -4063,6 +4066,9 @@ namespace PhantomLib.Android
 			
 			// aapt resource value: 0x7f090035
 			public static int character_counter_pattern = 2131296309;
+			
+			// aapt resource value: 0x7f09003c
+			public static int hello = 2131296316;
 			
 			// aapt resource value: 0x7f090000
 			public static int mr_button_content_description = 2131296256;

@@ -117,6 +117,10 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green.png" />
+    <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green-1.png" />
+    <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -132,9 +136,7 @@
       <Version>2.1.72</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Effects\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\Library\PhantomLib\PhantomLib.csproj">
       <Project>{6B048065-BB4E-4DBC-91B4-22F37F7F9E91}</Project>
@@ -143,11 +145,17 @@
     <ProjectReference Include="..\..\Library\PhantomLib.iOS\PhantomLib.iOS.csproj">
       <Project>{7E57AE4D-318F-48FF-B2FE-F13CCBCFDC42}</Project>
       <Name>PhantomLib.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="..\PhantomLibSamples\PhantomLibSamples.csproj">
       <Project>{54D3B27F-A512-49AF-89D8-6B0098048C0C}</Project>
       <Name>PhantomLibSamples</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\loading_spinner_blue.imageset\" />
+    <Folder Include="Assets.xcassets\loading_spinner_green.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

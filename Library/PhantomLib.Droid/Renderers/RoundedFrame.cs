@@ -1,12 +1,12 @@
 ﻿using Android.Content;
 using Android.Graphics.Drawables;
-using PhantomLib.Android.Renderers;
+using PhantomLib.Droid.Renderers;
 using PhantomLib.CustomControls;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(RoundedFrame), typeof(CustomFrameRenderer))]
-namespace PhantomLib.Android.Renderers
+namespace PhantomLib.Droid.Renderers
 {
     public class CustomFrameRenderer : FrameRenderer
     {

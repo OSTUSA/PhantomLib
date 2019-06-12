@@ -5,8 +5,8 @@ using Android.OS;
 using Android.Widget;
 using PhantomLib.Effects;
 
-[assembly: ExportEffect(typeof(PhantomLib.Android.Effects.KerningEffect), nameof(Kerning))]
-namespace PhantomLib.Android.Effects
+[assembly: ExportEffect(typeof(PhantomLib.Droid.Effects.KerningEffect), nameof(Kerning))]
+namespace PhantomLib.Droid.Effects
 {
     public class KerningEffect : PlatformEffect
     {

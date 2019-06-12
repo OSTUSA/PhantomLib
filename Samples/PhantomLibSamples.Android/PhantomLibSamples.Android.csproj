@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -91,13 +91,14 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\loading_spinner_green.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhantomLibSamples\PhantomLibSamples.csproj">
@@ -108,10 +109,10 @@
       <Project>{6B048065-BB4E-4DBC-91B4-22F37F7F9E91}</Project>
       <Name>PhantomLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Library\PhantomLib.Android\PhantomLib.Android.csproj">
-      <Project>{1A3A37FA-FA38-47C8-9E31-D2D71AB5C99A}</Project>
-      <Name>PhantomLib.Android</Name>
+    <ProjectReference Include="..\..\Library\PhantomLib.Droid\PhantomLib.Droid.csproj">
+      <Project>{8EC0AB8C-8925-44CB-A275-F3F758B1EEB0}</Project>
+      <Name>PhantomLib.Droid</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

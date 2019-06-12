@@ -6,7 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using PhantomLib.Android.Effects;
+using PhantomLib.Droid.Effects;
 using Xamarin.Forms;
 
 [assembly: ResolutionGroupName("OST.PhantomLib")]
@@ -24,7 +24,7 @@ namespace PhantomLibSamples.Droid
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            PhantomLib.Android.Effects.Effects.Init();
+            PhantomLib.Droid.Effects.Effects.Init();
 
             LoadApplication(new App());
         }

@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EBECFF9D-24CC-4124-8A9A-1ADC77BC110F}</ProjectGuid>
+    <ProjectGuid>{8EC0AB8C-8925-44CB-A275-F3F758B1EEB0}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{9ef11e43-1701-4396-8835-8392d57abb70}</TemplateGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PhantomLib.Android</RootNamespace>
-    <AssemblyName>PhantomLib.Android</AssemblyName>
+    <RootNamespace>PhantomLib.Droid</RootNamespace>
+    <AssemblyName>PhantomLib.Droid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
@@ -45,19 +46,24 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Effects\Effects.cs" />
     <Compile Include="Effects\KerningEffect.cs" />
+    <Compile Include="Effects\SpinnerEffect.cs" />
+    <Compile Include="Renderers\RoundedFrame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Forms">
-      <Version>4.0.0.482894</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
     <Folder Include="Effects\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhantomLib\PhantomLib.csproj">

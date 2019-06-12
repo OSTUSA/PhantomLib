@@ -4,7 +4,7 @@ using System.Linq;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.Android;
 
-namespace PhantomLib.Android.Effects
+namespace PhantomLib.Droid.Effects
 {
     [Preserve(AllMembers = true)]
     public static class Effects
