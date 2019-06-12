@@ -25,4 +25,8 @@ return base.FinishedLaunching(app,  options);
 
 # Custom controls in this library
 * RoundedFrame - Allows you to spcify which corners of a frame are rounded.
+
+
+# Sample
 ![Sample Image](Images/Sample2.gif)
+
