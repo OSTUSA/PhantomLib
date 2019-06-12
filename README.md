@@ -21,7 +21,8 @@ return base.FinishedLaunching(app,  options);
 
 # Effects included in this library
 * Kerning Effect - Allows you to specify the letter spacing of your lables.
+* Spinner Effect - Allows you to have a custom activity indicator. Just supply an image and duration (how long it takes for one rotation) and the effect will rotate it.
 
 # Custom controls in this library
 * RoundedFrame - Allows you to spcify which corners of a frame are rounded.
-![Sample Image](Images/Sample1.png?raw=true "Sample")
+![Sample Image](Images/Sample2.gif)
