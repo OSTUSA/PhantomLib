@@ -17,5 +17,33 @@ namespace PhantomLibSamples
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            RoundedEntry.TextChanged += RoundedEntry_TextChanged;
+
+            base.OnAppearing();
+        }
+
+        protected override void OnDisappearing()
+        {
+            RoundedEntry.TextChanged -= RoundedEntry_TextChanged;
+
+            base.OnDisappearing();
+        }
+
+        void RoundedEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (e.NewTextValue.Length > 10)
+            {
+                RoundedEntry.ShowError = true;
+            }
+            else
+            {
+                RoundedEntry.ShowError = false;
+
+            }
+        }
+
     }
 }
