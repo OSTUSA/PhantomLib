@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using CoreGraphics;
 using PhantomLib.CustomControls;
 using PhantomLib.iOS.Renderers;
@@ -16,66 +17,48 @@ namespace PhantomLib.iOS.Renderers
         {
             base.OnElementChanged(e);
 
-            if (Control != null && this.Element != null)
+            if (this.Control != null && this.Element != null)
             {
-                RoundedEntry roundedEntry = (RoundedEntry)Element;
+                RoundedEntry roundedEntry = (RoundedEntry)this.Element;
+                UITextField textField = (UITextField)this.Control;
 
-                Control.Layer.CornerRadius = 5;
-                Control.Layer.BorderWidth = 2;
+                textField.Layer.CornerRadius = 5;
+                textField.Layer.BorderWidth = 2;
 
                 UpdateControlUI();
 
                 // Add padding to the entry field
-                Control.LeftView = new UIView(new CGRect(0, 0, 10, 0));
-                ////TODO add clear image
-                //add padding to the entry field
+                textField.LeftView = new UIView(new CGRect(0, 0, 10, 0));
+                textField.LeftViewMode = UITextFieldViewMode.Always;
 
-
-                Control.LeftViewMode = UITextFieldViewMode.Always;
-                Control.RightViewMode = UITextFieldViewMode.Always;
-
+                //add image if RightImageSource is defined else add pading
+                if (string.IsNullOrEmpty(roundedEntry.RightImageSource))
+                {
+                    textField.RightView = new UIView(new CGRect(0, 0, 10, 0));
+                    textField.RightViewMode = UITextFieldViewMode.Always;
+                }
+                else
+                {
+                    textField.RightView = GetImageView(roundedEntry.RightImageSource);
+                    textField.RightViewMode = UITextFieldViewMode.WhileEditing;
+                }
 
                 SetReturnType(roundedEntry);
 
-                Control.ShouldReturn += (textField) => {
+                textField.ShouldReturn += (txtField) => {
                     roundedEntry.OnNext();
                     return false;
                 };
 
-                // Switch the stroke color if the field is in focus and it doesn't have a validation error
-                Control.EditingDidBegin += Control_FocusChanged;
-                Control.EditingDidEnd += Control_FocusChanged;
-
-                // Update the stroke color when the text changes and the user has clicked the submit button once 
-                Control.EditingChanged += (object sender, EventArgs eventArgs) =>
-                {
-                    UpdateControlUI();
-                };
+                textField.EditingDidBegin += TextField_FocusChanged;
+                textField.EditingDidEnd += TextField_FocusChanged;
+                textField.EditingChanged += TextField_FocusChanged;
             }
         }
 
-        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void TextField_FocusChanged(object sender, EventArgs eventArgs)
         {
-            base.OnElementPropertyChanged(sender, e);
-
-            RoundedEntry roundedEntry = (RoundedEntry)Element;
-
-            if (e.PropertyName == RoundedEntry.RightImageSourceProperty.PropertyName)
-            {
-                if (roundedEntry.RightImageSource != null)
-                {
-                    //Control.RightView = new UIView(new UIImage(""));
-                }
-                else
-                {
-                    Control.RightView = new UIView(new CGRect(0, 0, 10, 0));
-                }
-            }
-        }
-
-        private void Control_FocusChanged(object sender, EventArgs eventArgs)
-        {
-            RoundedEntry roundedEntry = (RoundedEntry)Element;
+            RoundedEntry roundedEntry = (RoundedEntry)this.Element;
 
             UpdateControlUI();
 
@@ -87,6 +70,7 @@ namespace PhantomLib.iOS.Renderers
         {
             RoundedEntry roundedEntry = (RoundedEntry)this.Element;
 
+            //set stroke/border
             if (roundedEntry.ShowError)
             {
                 Control.Layer.BorderColor = roundedEntry.ErrorColor.ToCGColor();
@@ -126,6 +110,35 @@ namespace PhantomLib.iOS.Renderers
                     Control.ReturnKeyType = UIReturnKeyType.Default;
                     break;
             }
+        }
+
+        private UIView GetImageView(string imagePath)
+        {
+            var image = UIImage.FromBundle(imagePath).ImageWithRenderingMode(UIKit.UIImageRenderingMode.Automatic);
+            // Make the view 10 wider than the image so that it has some padding.
+
+            var imageButton = UIButton.FromType(UIButtonType.Custom);
+            imageButton.Frame = new RectangleF(0, 0, (int)(image.Size.Width), (int)image.Size.Height);
+            imageButton.SetImage(image, UIControlState.Normal);
+
+
+            //Set up event handler for "Click" event ("TouchUpInside in iOS terminology)
+            imageButton.TouchUpInside += (object sender, EventArgs e) => {
+                RoundedEntry roundedEntry = (RoundedEntry)this.Element;
+
+                if (roundedEntry.ShouldClearTextOnClick)
+                {
+                    roundedEntry.Text = string.Empty;
+                    UpdateControlUI();
+                }
+
+                roundedEntry.RightImageTouchedDelegate(sender, e);
+            };
+
+            UIView view = new UIView(new System.Drawing.Rectangle(0, 0, (int)(image.Size.Width) + 10, (int)image.Size.Height));
+
+            view.Add(imageButton);
+            return view;
         }
 
     }

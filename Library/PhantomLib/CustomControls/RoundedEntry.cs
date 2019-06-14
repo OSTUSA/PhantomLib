@@ -21,12 +21,13 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create("FocusedBackgroundColor", typeof(Color), typeof(RoundedEntry), Color.DimGray);
         public static readonly BindableProperty EntryIsFocusedProperty = BindableProperty.Create("EntryIsFocused", typeof(bool), typeof(RoundedEntry), false);
         public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create("UseKeyboardPlaceholder", typeof(bool), typeof(RoundedEntry), false);
-        public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create("RightImageSource", typeof(ImageSource), typeof(RoundedEntry));
+        public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(RoundedEntry), string.Empty);
+        public static readonly BindableProperty ShouldClearTextOnClickProperty = BindableProperty.Create(nameof(ShouldClearTextOnClick), typeof(bool), typeof(RoundedEntry), false);
 
 
-        public ImageSource RightImageSource
+        public string RightImageSource
         {
-            get => (ImageSource)GetValue(RightImageSourceProperty);
+            get => (string)GetValue(RightImageSourceProperty);
             set => SetValue(RightImageSourceProperty, value);
         }
 
@@ -59,6 +60,12 @@ namespace PhantomLib.CustomControls
         {
             get => (bool)GetValue(EntryIsFocusedProperty);
             set => SetValue(EntryIsFocusedProperty, value);
+        }
+
+        public bool ShouldClearTextOnClick
+        {
+            get => (bool)GetValue(ShouldClearTextOnClickProperty);
+            set => SetValue(ShouldClearTextOnClickProperty, value);
         }
 
         public RoundedEntryReturnType ReturnButton
@@ -94,6 +101,16 @@ namespace PhantomLib.CustomControls
             if (EntryFocusChanged != null)
             {
                 EntryFocusChanged.Invoke(sender, focusEventArgs);
+            }
+        }
+
+        public event EventHandler<EventArgs> RightImageTouched;
+
+        public void RightImageTouchedDelegate(object sender, EventArgs focusEventArgs)
+        {
+            if (RightImageTouched != null)
+            {
+                RightImageTouched.Invoke(sender, focusEventArgs);
             }
         }
     }

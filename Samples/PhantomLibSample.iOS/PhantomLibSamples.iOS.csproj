@@ -121,6 +121,10 @@
     <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green.png" />
     <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green-1.png" />
     <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green-2.png" />
+    <ImageAsset Include="Assets.xcassets\icon_black_close.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_black_close.imageset\icon_black_close.png" />
+    <ImageAsset Include="Assets.xcassets\icon_black_close.imageset\icon_black_close%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icon_black_close.imageset\icon_black_close%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -156,6 +160,7 @@
   <ItemGroup>
     <Folder Include="Assets.xcassets\loading_spinner_blue.imageset\" />
     <Folder Include="Assets.xcassets\loading_spinner_green.imageset\" />
+    <Folder Include="Assets.xcassets\icon_black_close.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -37,11 +37,12 @@ namespace PhantomLibSamples
             if (e.NewTextValue.Length > 10)
             {
                 RoundedEntry.ShowError = true;
+                ErrorLabel.IsVisible = true;
             }
             else
             {
                 RoundedEntry.ShowError = false;
-
+                ErrorLabel.IsVisible = false;
             }
         }
 
