@@ -24,7 +24,6 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(RoundedEntry), string.Empty);
         public static readonly BindableProperty ShouldClearTextOnClickProperty = BindableProperty.Create(nameof(ShouldClearTextOnClick), typeof(bool), typeof(RoundedEntry), false);
 
-
         public string RightImageSource
         {
             get => (string)GetValue(RightImageSourceProperty);
