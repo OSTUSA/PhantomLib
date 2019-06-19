@@ -24,35 +24,44 @@ namespace PhantomLib.iOS.Renderers
 
                 textField.Layer.CornerRadius = 5;
                 textField.Layer.BorderWidth = 2;
-
-                UpdateControlUI();
-
                 // Add padding to the entry field
                 textField.LeftView = new UIView(new CGRect(0, 0, 10, 0));
                 textField.LeftViewMode = UITextFieldViewMode.Always;
 
-                //add image if RightImageSource is defined else add pading
-                if (string.IsNullOrEmpty(roundedEntry.RightImageSource))
-                {
-                    textField.RightView = new UIView(new CGRect(0, 0, 10, 0));
-                    textField.RightViewMode = UITextFieldViewMode.Always;
-                }
-                else
-                {
-                    textField.RightView = GetImageView(roundedEntry.RightImageSource);
-                    textField.RightViewMode = UITextFieldViewMode.WhileEditing;
-                }
+                UpdateControlUI();
 
+                SetImage(roundedEntry.RightImageSource);
                 SetReturnType(roundedEntry);
-
-                textField.ShouldReturn += (txtField) => {
-                    roundedEntry.OnNext();
-                    return false;
-                };
 
                 textField.EditingDidBegin += TextField_FocusChanged;
                 textField.EditingDidEnd += TextField_FocusChanged;
                 textField.EditingChanged += TextField_FocusChanged;
+                textField.ShouldReturn += (txtField) => {
+                    roundedEntry.OnNext();
+                    return false;
+                };
+            }
+        }
+
+
+
+        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged(sender, e);
+
+            var roundedEntry = (RoundedEntry)this.Element;
+
+            switch (e.PropertyName)
+            {
+                case nameof(roundedEntry.RightImageSource):
+                case nameof(roundedEntry.AlwaysShowRightImage):
+                    SetImage(roundedEntry.RightImageSource);
+                    break;
+                case nameof(roundedEntry.ErrorColor):
+                case nameof(roundedEntry.ShowError):
+                case nameof(roundedEntry.FocusedBackgroundColor):
+                    UpdateControlUI();
+                    break;
             }
         }
 
@@ -69,6 +78,7 @@ namespace PhantomLib.iOS.Renderers
         private void UpdateControlUI()
         {
             RoundedEntry roundedEntry = (RoundedEntry)this.Element;
+            UITextField textField = (UITextField)this.Control;
 
             //set stroke/border
             if (roundedEntry.ShowError)
@@ -88,7 +98,6 @@ namespace PhantomLib.iOS.Renderers
             Control.BackgroundColor = roundedEntry.IsFocused
                     ? roundedEntry.FocusedBackgroundColor.ToUIColor()
                     : roundedEntry.BackgroundColor.ToUIColor();
-
         }
 
         private void SetReturnType(RoundedEntry roundedEntry)
@@ -109,6 +118,27 @@ namespace PhantomLib.iOS.Renderers
                 default:
                     Control.ReturnKeyType = UIReturnKeyType.Default;
                     break;
+            }
+        }
+
+        private void SetImage(string rightImageSource)
+        {
+            RoundedEntry roundedEntry = (RoundedEntry)this.Element;
+            UITextField textField = (UITextField)this.Control;
+
+            //add image if RightImageSource is defined else add pading
+            if (string.IsNullOrEmpty(rightImageSource))
+            {
+                textField.RightView = new UIView(new CGRect(0, 0, 10, 0));
+                textField.RightViewMode = UITextFieldViewMode.Always;
+            }
+            else
+            {
+                textField.RightView = GetImageView(rightImageSource);
+                if (roundedEntry.AlwaysShowRightImage)
+                    textField.RightViewMode = UITextFieldViewMode.Always;
+                else
+                    textField.RightViewMode = UITextFieldViewMode.WhileEditing;
             }
         }
 
@@ -140,6 +170,5 @@ namespace PhantomLib.iOS.Renderers
             view.Add(imageButton);
             return view;
         }
-
     }
 }

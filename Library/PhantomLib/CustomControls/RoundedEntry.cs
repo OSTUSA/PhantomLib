@@ -12,7 +12,6 @@ namespace PhantomLib.CustomControls
 
     public class RoundedEntry : Entry
     {
-        public static readonly BindableProperty StrokeColorProperty = BindableProperty.Create("StrokeColor", typeof(Color), typeof(RoundedEntry), Color.Transparent);
         public static readonly BindableProperty ReturnButtonProperty = BindableProperty.Create("ReturnButton", typeof(RoundedEntryReturnType), typeof(RoundedEntry), RoundedEntryReturnType.Done);
         public static readonly BindableProperty NextViewProperty = BindableProperty.Create("NextView", typeof(RoundedEntry), typeof(RoundedEntry));
         public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create("ShowError", typeof(bool), typeof(RoundedEntry), false);
@@ -23,6 +22,7 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create("UseKeyboardPlaceholder", typeof(bool), typeof(RoundedEntry), false);
         public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(RoundedEntry), string.Empty);
         public static readonly BindableProperty ShouldClearTextOnClickProperty = BindableProperty.Create(nameof(ShouldClearTextOnClick), typeof(bool), typeof(RoundedEntry), false);
+        public static readonly BindableProperty AlwaysShowRightImageProperty = BindableProperty.Create(nameof(AlwaysShowRightImage), typeof(bool), typeof(RoundedEntry), false);
 
         public string RightImageSource
         {
@@ -34,6 +34,12 @@ namespace PhantomLib.CustomControls
         {
             get => (bool)GetValue(ShowErrorProperty);
             set => SetValue(ShowErrorProperty, value);
+        }
+
+        public bool AlwaysShowRightImage
+        {
+            get => (bool)GetValue(AlwaysShowRightImageProperty);
+            set => SetValue(AlwaysShowRightImageProperty, value);
         }
 
         public Color ErrorColor
