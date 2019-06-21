@@ -83,18 +83,15 @@ namespace PhantomLib.Utilities
 
             public T Time()
             {
-                if (ENABLED || IgnoreEnabled)
-                {
-                    Stopwatch stopwatch = Stopwatch.StartNew();
-                    T value = Method();
-                    stopwatch.Stop();
+                if (!ENABLED && !IgnoreEnabled) return Method();
 
-                    TimerHandler(stopwatch.ElapsedMilliseconds, MethodName);
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                T value = Method();
+                stopwatch.Stop();
 
-                    return value;
-                }
+                TimerHandler(stopwatch.ElapsedMilliseconds, MethodName);
 
-                return Method.Invoke();
+                return value;
             }
         }
 
@@ -130,15 +127,16 @@ namespace PhantomLib.Utilities
 
             public void Time()
             {
-                if (ENABLED || IgnoreEnabled)
+                if (!ENABLED && !IgnoreEnabled)
                 {
-                    Stopwatch stopwatch = Stopwatch.StartNew();
                     Method();
-                    stopwatch.Stop();
-                    TimerHandler(stopwatch.ElapsedMilliseconds, MethodName);
+                    return;
                 }
 
-                Method.Invoke();
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                Method();
+                stopwatch.Stop();
+                TimerHandler(stopwatch.ElapsedMilliseconds, MethodName);
             }
         }
     }
