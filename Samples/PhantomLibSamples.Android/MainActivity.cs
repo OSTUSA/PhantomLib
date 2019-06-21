@@ -29,32 +29,11 @@ namespace PhantomLibSamples.Droid
             PhantomLib.Droid.Effects.Effects.Init();
 
             LoadApplication(new App());
-
-            AnalyticsTimer.ENABLED = true;
-
-            AnalyticsTimer.WithMethod(AnalyticsTimerExampleVoid).Time();
-            var someBoolean = AnalyticsTimer.WithMethod(AnalyticsTimerExampleWithReturn).Time();
-            AnalyticsTimer.WithMethod(AnalyticsTimerExampleAsync);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-        private void AnalyticsTimerExampleVoid()
-        {
-            //Does nothing
-        }
-
-        private bool AnalyticsTimerExampleWithReturn()
-        {
-            return true;
-        }
-
-        private async Task AnalyticsTimerExampleAsync()
-        {
-            await Task.Delay(1000);
         }
     }
 }

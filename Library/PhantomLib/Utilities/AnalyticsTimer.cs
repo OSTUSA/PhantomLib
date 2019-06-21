@@ -51,37 +51,34 @@ namespace PhantomLib.Utilities
             return new TimerBuilderVoid(method);
         }
 
-        public class TimerBuilder<T>
+        public class TimerBuilderWithReturn<T>
         {
-            protected T Method;
+            protected Func<T> Method;
             protected string MethodName = "";
             protected OnMethodTimedEvent TimerHandler = DEFAULT_TIMER_HANDLER;
             protected bool IgnoreEnabled;
 
-            public TimerBuilder<T> WithMethodName(string name)
+            public TimerBuilderWithReturn(Func<T> method)
+            {
+                Method = method;
+            }
+
+            public TimerBuilderWithReturn<T> WithMethodName(string name)
             {
                 MethodName = name;
                 return this;
             }
 
-            public TimerBuilder<T> WithTimerHandler(OnMethodTimedEvent timedEvent)
+            public TimerBuilderWithReturn<T> WithTimerHandler(OnMethodTimedEvent timedEvent)
             {
                 TimerHandler = timedEvent;
                 return this;
             }
 
-            public TimerBuilder<T> ForceTimer()
+            public TimerBuilderWithReturn<T> ForceTimer()
             {
                 IgnoreEnabled = true;
                 return this;
-            }
-        }
-
-        public class TimerBuilderWithReturn<T> : TimerBuilder<Func<T>>
-        {            
-            public TimerBuilderWithReturn(Func<T> method)
-            {
-                Method = method;
             }
 
             public T Time()
@@ -89,7 +86,7 @@ namespace PhantomLib.Utilities
                 if (ENABLED || IgnoreEnabled)
                 {
                     Stopwatch stopwatch = Stopwatch.StartNew();
-                    T value = Method.Invoke();
+                    T value = Method();
                     stopwatch.Stop();
 
                     TimerHandler(stopwatch.ElapsedMilliseconds, MethodName);
@@ -101,11 +98,34 @@ namespace PhantomLib.Utilities
             }
         }
 
-        public class TimerBuilderVoid : TimerBuilder<Action>
+        public class TimerBuilderVoid
         {
+            protected Action Method;
+            protected string MethodName = "";
+            protected OnMethodTimedEvent TimerHandler = DEFAULT_TIMER_HANDLER;
+            protected bool IgnoreEnabled;
+
             public TimerBuilderVoid(Action method)
             {
                 Method = method;
+            }
+
+            public TimerBuilderVoid WithMethodName(string name)
+            {
+                MethodName = name;
+                return this;
+            }
+
+            public TimerBuilderVoid WithTimerHandler(OnMethodTimedEvent timedEvent)
+            {
+                TimerHandler = timedEvent;
+                return this;
+            }
+
+            public TimerBuilderVoid ForceTimer()
+            {
+                IgnoreEnabled = true;
+                return this;
             }
 
             public void Time()
@@ -113,9 +133,8 @@ namespace PhantomLib.Utilities
                 if (ENABLED || IgnoreEnabled)
                 {
                     Stopwatch stopwatch = Stopwatch.StartNew();
-                    Method.Invoke();
+                    Method();
                     stopwatch.Stop();
-
                     TimerHandler(stopwatch.ElapsedMilliseconds, MethodName);
                 }
 
