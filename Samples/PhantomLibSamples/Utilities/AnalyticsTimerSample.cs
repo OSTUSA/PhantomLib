@@ -21,13 +21,13 @@ namespace PhantomLibSamples.Utilities
                 .WithMethodName("Return Boolean")
                 .Time();
 
-            AnalyticsTimer
-                .WithMethod(AnalyticsTimerExampleAsync)
+            Task<int> someNum = AnalyticsTimer
+                .WithAsyncMethod(AnalyticsTimerExampleAsync)
                 .WithMethodName("Async 1")
                 .Time();
 
-            AnalyticsTimer
-                .WithMethod(async () => Thread.Sleep(2000))
+            _ = AnalyticsTimer
+                .WithAsyncMethod(() => Task.Delay(2000))
                 .WithMethodName("Async 2")
                 .Time();
         }
@@ -43,9 +43,10 @@ namespace PhantomLibSamples.Utilities
             return true;
         }
 
-        private async Task AnalyticsTimerExampleAsync()
+        private async Task<int> AnalyticsTimerExampleAsync()
         {
-            Thread.Sleep(1000);
+            await Task.Delay(1000);
+            return 1;
         }
     }
 }

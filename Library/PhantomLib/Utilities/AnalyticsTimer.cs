@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace PhantomLib.Utilities
 {
@@ -45,40 +46,60 @@ namespace PhantomLib.Utilities
         {
             return new TimerBuilderWithReturn<T>(method);
         }
+        
+        public static TimerBuilderAsyncWithReturn<T> WithAsyncMethod<T>(Func<Task<T>> method)
+        {
+            return new TimerBuilderAsyncWithReturn<T>(method);
+        }
+        
+        public static TimerBuilderAsyncVoid WithAsyncMethod(Func<Task> method)
+        {
+            return new TimerBuilderAsyncVoid(method);
+        }
 
         public static TimerBuilderVoid WithMethod(Action method)
         {
             return new TimerBuilderVoid(method);
         }
 
-        public class TimerBuilderWithReturn<T>
+        public abstract class TimerBuilder<T, IMPL>
         {
-            protected Func<T> Method;
+            protected T Method;
             protected string MethodName = "";
             protected OnMethodTimedEvent TimerHandler = DEFAULT_TIMER_HANDLER;
             protected bool IgnoreEnabled;
 
+            public abstract IMPL This { get; }
+
+            public IMPL WithMethodName(string name)
+            {
+                MethodName = name;
+                return This;
+            }
+
+            public IMPL WithTimerHandler(OnMethodTimedEvent timedEvent)
+            {
+                TimerHandler = timedEvent;
+                return This;
+            }
+
+            public IMPL ForceTimer()
+            {
+                IgnoreEnabled = true;
+                return This;
+            }
+        }
+
+        public class TimerBuilderWithReturn<T> : TimerBuilder<Func<T>, TimerBuilderWithReturn<T>>
+        {
             public TimerBuilderWithReturn(Func<T> method)
             {
                 Method = method;
             }
 
-            public TimerBuilderWithReturn<T> WithMethodName(string name)
+            public override TimerBuilderWithReturn<T> This
             {
-                MethodName = name;
-                return this;
-            }
-
-            public TimerBuilderWithReturn<T> WithTimerHandler(OnMethodTimedEvent timedEvent)
-            {
-                TimerHandler = timedEvent;
-                return this;
-            }
-
-            public TimerBuilderWithReturn<T> ForceTimer()
-            {
-                IgnoreEnabled = true;
-                return this;
+                get { return this; }
             }
 
             public T Time()
@@ -95,34 +116,72 @@ namespace PhantomLib.Utilities
             }
         }
 
-        public class TimerBuilderVoid
+        public class TimerBuilderAsyncVoid : TimerBuilder<Func<Task>, TimerBuilderAsyncVoid>
         {
-            protected Action Method;
-            protected string MethodName = "";
-            protected OnMethodTimedEvent TimerHandler = DEFAULT_TIMER_HANDLER;
-            protected bool IgnoreEnabled;
 
+            public TimerBuilderAsyncVoid(Func<Task> method)
+            {
+                Method = method;
+            }
+
+            public override TimerBuilderAsyncVoid This
+            {
+                get { return this; }
+            }
+
+            public async Task Time()
+            {
+                if (!ENABLED && !IgnoreEnabled)
+                {
+                    await Method();
+                    return;
+                }
+
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                await Method();
+                stopwatch.Stop();
+
+                TimerHandler(stopwatch.ElapsedMilliseconds, MethodName);
+            }
+        }
+
+        public class TimerBuilderAsyncWithReturn<T> : TimerBuilder<Func<Task<T>>, TimerBuilderAsyncWithReturn<T>>
+        {
+
+            public TimerBuilderAsyncWithReturn(Func<Task<T>> method)
+            {
+                Method = method;
+            }
+
+            public override TimerBuilderAsyncWithReturn<T> This
+            {
+                get { return this; }
+            }
+
+            public async Task<T> Time()
+            {
+                if (!ENABLED && !IgnoreEnabled) return await Method();
+
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                T result = await Method();
+                stopwatch.Stop();
+
+                TimerHandler(stopwatch.ElapsedMilliseconds, MethodName);
+
+                return result;
+            }
+        }
+
+        public class TimerBuilderVoid : TimerBuilder<Action, TimerBuilderVoid>
+        {
             public TimerBuilderVoid(Action method)
             {
                 Method = method;
             }
 
-            public TimerBuilderVoid WithMethodName(string name)
+            public override TimerBuilderVoid This
             {
-                MethodName = name;
-                return this;
-            }
-
-            public TimerBuilderVoid WithTimerHandler(OnMethodTimedEvent timedEvent)
-            {
-                TimerHandler = timedEvent;
-                return this;
-            }
-
-            public TimerBuilderVoid ForceTimer()
-            {
-                IgnoreEnabled = true;
-                return this;
+                get { return this; }
             }
 
             public void Time()
