@@ -8,6 +8,8 @@ using Android.Widget;
 using Android.OS;
 using PhantomLib.Droid.Effects;
 using Xamarin.Forms;
+using PhantomLib.Utilities;
+using System.Threading.Tasks;
 
 [assembly: ResolutionGroupName("OST.PhantomLib")]
 namespace PhantomLibSamples.Droid
@@ -28,6 +30,7 @@ namespace PhantomLibSamples.Droid
 
             LoadApplication(new App());
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);

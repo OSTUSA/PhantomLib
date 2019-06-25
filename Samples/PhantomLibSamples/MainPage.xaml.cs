@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PhantomLibSamples.Utilities;
 using Xamarin.Forms;
 
 namespace PhantomLibSamples
@@ -16,6 +17,9 @@ namespace PhantomLibSamples
         public MainPage()
         {
             InitializeComponent();
+
+            //Analytics Timing Sample
+            new AnalyticsTimerSample();
         }
     }
 }

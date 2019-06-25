@@ -17,4 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Library\PhantomLib\PhantomLib.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
 </Project>
