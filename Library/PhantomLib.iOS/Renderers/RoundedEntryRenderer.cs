@@ -24,7 +24,7 @@ namespace PhantomLib.iOS.Renderers
 
                 if(roundedEntry.ImageButtonType == RoundedEntryImageButton.Password)
                 {
-                    textField.SecureTextEntry = true;
+                    roundedEntry.IsPassword = true;
                 }
 
                 textField.Layer.CornerRadius = 5;
@@ -133,7 +133,7 @@ namespace PhantomLib.iOS.Renderers
             else
             {
                 //use hide password image if text is plain text
-                if(roundedEntry.ImageButtonType == RoundedEntryImageButton.Password && !textField.SecureTextEntry)
+                if(roundedEntry.ImageButtonType == RoundedEntryImageButton.Password && !roundedEntry.IsPassword)
                 {
                     textField.RightView = GetImageView(roundedEntry.HidePasswordImageSource);
                 }
@@ -178,8 +178,7 @@ namespace PhantomLib.iOS.Renderers
                     UpdateControlUI();
                     break;
                 case RoundedEntryImageButton.Password:
-                    UITextField textField = (UITextField)this.Control;
-                    textField.SecureTextEntry = !textField.SecureTextEntry;
+                    roundedEntry.IsPassword = !roundedEntry.IsPassword;
                     SetImage();
                     break;
             }

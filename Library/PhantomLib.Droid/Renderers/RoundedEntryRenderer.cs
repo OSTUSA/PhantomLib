@@ -33,7 +33,7 @@ namespace PhantomLib.Droid.Renderers
     
                 if(roundedEntry.ImageButtonType == RoundedEntryImageButton.Password)
                 {
-                    editText.TransformationMethod = PasswordTransformationMethod.Instance;
+                    roundedEntry.IsPassword = true;
                 }
 
                 if (!string.IsNullOrEmpty(roundedEntry.RightImageSource))
@@ -236,17 +236,15 @@ namespace PhantomLib.Droid.Renderers
                                 
                                 //toggle transformation and image on every click
                                 case RoundedEntryImageButton.Password:
-                                    //if plain text
-                                    if(editText.TransformationMethod == null)
-                                    {
-                                        roundedEntryRenderer.SetImage(roundedEntry.RightImageSource);
-                                        editText.TransformationMethod = PasswordTransformationMethod.Instance;
-                                    }
-                                    //else secure bullets
-                                    else
+                                    if(roundedEntry.IsPassword)
                                     {
                                         roundedEntryRenderer.SetImage(roundedEntry.HidePasswordImageSource);
-                                        editText.TransformationMethod = null;
+                                        roundedEntry.IsPassword = false;
+                                    }
+                                    else
+                                    {
+                                        roundedEntryRenderer.SetImage(roundedEntry.RightImageSource);
+                                        roundedEntry.IsPassword = true;
                                     }
                                     break;
                             }
