@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <version>0.0.9</version>
-    <authors>Mike Rampanelli</authors>
+    <authors>Open Systems Technologies</authors>
     <owners>Open Systems Technologies</owners>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/OSTUSA/PhantomLib</projectUrl>
@@ -10,8 +10,10 @@
     <title>PhantomLib</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Additonal Xamarin Forms components that are not included out of the box.</description>
-    <summary></summary>
+    <summary>Additonal Xamarin Forms components that are not included out of the box.</summary>
+    <language>C#</language>
     <copyright>Copyright Open Systems Technologies © 2019</copyright>
+    <releaseNotes>Initial release</releaseNotes>
     <dependencies>
       <dependency id="Xamarin.Forms" version="3.2.0" />
     </dependencies>
@@ -31,8 +33,8 @@
     <!-- Android -->
     <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.dll"	target="lib\MonoAndroid10\PhantomLib.dll" />
     <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.pdb"	target="lib\MonoAndroid10\PhantomLib.pdb" />
-    <file src="PhantomLib.Android\bin\Release\PhantomLib.Android.dll"	target="lib\MonoAndroid10\PhantomLib.Android.dll" />
-    <file src="PhantomLib.Android\bin\Release\PhantomLib.Android.pdb"	target="lib\MonoAndroid10\PhantomLib.Android.pdb" />
+    <file src="PhantomLib.Droid\bin\Release\PhantomLib.Droid.dll"	target="lib\MonoAndroid10\PhantomLib.Android.dll" />
+    <file src="PhantomLib.Droid\bin\Release\PhantomLib.Droid.pdb"	target="lib\MonoAndroid10\PhantomLib.Android.pdb" />
 
     <!-- Readme -->
     <file src="readme.txt" target="" />
