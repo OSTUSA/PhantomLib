@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PhantomLibSamples.Utilities;
 using Xamarin.Forms;
 
 namespace PhantomLibSamples
@@ -18,6 +19,8 @@ namespace PhantomLibSamples
             InitializeComponent();
 
             RoundedEntry.NextView = RoundedEntry1;
+            //Analytics Timing Sample
+            new AnalyticsTimerSample();
         }
 
         protected override void OnAppearing()

@@ -8,6 +8,8 @@ using Android.Widget;
 using Android.OS;
 using PhantomLib.Droid.Effects;
 using Xamarin.Forms;
+using PhantomLib.Utilities;
+using System.Threading.Tasks;
 
 [assembly: ResolutionGroupName("OST.PhantomLib")]
 namespace PhantomLibSamples.Droid
