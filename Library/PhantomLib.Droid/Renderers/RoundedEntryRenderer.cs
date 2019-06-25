@@ -11,13 +11,14 @@ using PhantomLib.Droid.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using System.Linq;
+using Android.Text.Method;
 
 [assembly: ExportRenderer(typeof(RoundedEntry), typeof(RoundedEntryRenderer))]
 namespace PhantomLib.Droid.Renderers
 {
     public class RoundedEntryRenderer : EntryRenderer
     {
-        private int _rightImageResourceId = 0;
+        private int _imageResourceId = 0;
 
         public RoundedEntryRenderer(Context context) : base(context) { }
 
@@ -29,12 +30,20 @@ namespace PhantomLib.Droid.Renderers
             {
                 RoundedEntry roundedEntry = (RoundedEntry)this.Element;
                 EditText editText = (EditText)this.Control;
+    
+                if(roundedEntry.ImageButtonType == RoundedEntryImageButton.Password)
+                {
+                    editText.TransformationMethod = PasswordTransformationMethod.Instance;
+                }
+
+                if (!string.IsNullOrEmpty(roundedEntry.RightImageSource))
+                {
+                    SetImage(roundedEntry.RightImageSource);
+                }
 
                 editText.SetPadding(50, 50, 50, 50);
-                UpdateControlUI();
 
-                SetImage(roundedEntry.RightImageSource);
-                SetReturnType(roundedEntry.ReturnButton);
+                SetReturnType(roundedEntry.ReturnButtonType);
 
                 // Switch the stroke color to blue if the field is in focus and it doesn't have a validation error
                 editText.FocusChange += EditText_FocusChange;
@@ -44,6 +53,8 @@ namespace PhantomLib.Droid.Renderers
                 {
                     UpdateControlUI();
                 };
+
+                UpdateControlUI();
             }
         }
 
@@ -51,17 +62,12 @@ namespace PhantomLib.Droid.Renderers
         {
             base.OnElementPropertyChanged(sender, e);
 
-            var roundedEntry = (RoundedEntry)this.Element;
-
             switch (e.PropertyName)
             {
-                case nameof(roundedEntry.RightImageSource):
-                case nameof(roundedEntry.AlwaysShowRightImage):
-                    SetImage(roundedEntry.RightImageSource);
-                    break;
-                case nameof(roundedEntry.ErrorColor):
-                case nameof(roundedEntry.ShowError):
-                case nameof(roundedEntry.FocusedBackgroundColor):
+                case nameof(RoundedEntry.AlwaysShowRightImage):
+                case nameof(RoundedEntry.ErrorColor):
+                case nameof(RoundedEntry.ShowError):
+                case nameof(RoundedEntry.FocusedBackgroundColor):
                     UpdateControlUI();
                     break;
             }
@@ -101,20 +107,22 @@ namespace PhantomLib.Droid.Renderers
                 gradientDrawable.SetStroke(4, Color.Transparent.ToAndroid());
             }
 
-            //set background color and handle image
+            //set background color
+            var bgColor = editText.IsFocused
+                    ? roundedEntry.FocusedBackgroundColor.ToAndroid()
+                    : roundedEntry.BackgroundColor.ToAndroid();
+            gradientDrawable.SetColor(bgColor);
+
+            //handle toggling visibility to image on focus
             if (editText.IsFocused)
             {
-                gradientDrawable.SetColor(roundedEntry.FocusedBackgroundColor.ToAndroid());
-                //add image
                 if (!roundedEntry.AlwaysShowRightImage)
                 {
-                    editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, _rightImageResourceId, 0);
+                    editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, _imageResourceId, 0);
                 }
             }
             else
             {
-                gradientDrawable.SetColor(roundedEntry.BackgroundColor.ToAndroid());
-                //remove image
                 if (!roundedEntry.AlwaysShowRightImage)
                 {
                     editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
@@ -122,6 +130,51 @@ namespace PhantomLib.Droid.Renderers
             }
 
             Control.Background = gradientDrawable;
+        }
+
+        private void SetReturnType(RoundedEntryReturn type)
+        {
+            var roundedEntry = (RoundedEntry)this.Element;
+            var editText = (EditText)this.Control;
+
+            switch (type)
+            {
+                case RoundedEntryReturn.Next:
+                    editText.ImeOptions = ImeAction.Next;
+                    editText.SetImeActionLabel("Next", ImeAction.Next);
+                    // Editor Action is called when the return button is pressed
+                    Control.EditorAction += (object sender, Android.Widget.TextView.EditorActionEventArgs eventArgs) =>
+                    {
+                        roundedEntry.OnNext();
+                    };
+                    break;
+                case RoundedEntryReturn.Search:
+                    editText.ImeOptions = ImeAction.Search;
+                    editText.SetImeActionLabel("Search", ImeAction.Search);
+                    break;
+                default:
+                    editText.ImeOptions = ImeAction.Done;
+                    editText.SetImeActionLabel("Done", ImeAction.Done);
+                    break;
+            }
+        }
+
+        public void SetImage(string imageSource)
+        {
+
+            EditText editText = (EditText)this.Control;
+            _imageResourceId = Resources.GetIdentifier(imageSource, "drawable", Context.PackageName);
+
+            if (_imageResourceId != 0)
+            {
+                if (!editText.HasOnClickListeners)
+                {
+                    editText.SetOnTouchListener(new OnDrawableTouchListener());
+                }
+                editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, _imageResourceId, 0);
+            }
+
+            UpdateControlUI();
         }
 
         BoxView keyboardPlaceholder;
@@ -152,50 +205,6 @@ namespace PhantomLib.Droid.Renderers
             }
         }
 
-        private void SetReturnType(RoundedEntryReturnType type)
-        {
-            var roundedEntry = (RoundedEntry)this.Element;
-            var editText = (EditText)this.Control;
-
-            switch (type)
-            {
-                case RoundedEntryReturnType.Next:
-                    editText.ImeOptions = ImeAction.Next;
-                    editText.SetImeActionLabel("Next", ImeAction.Next);
-                    // Editor Action is called when the return button is pressed
-                    Control.EditorAction += (object sender, Android.Widget.TextView.EditorActionEventArgs eventArgs) =>
-                    {
-                        roundedEntry.OnNext();
-                    };
-                    break;
-                case RoundedEntryReturnType.Search:
-                    editText.ImeOptions = ImeAction.Search;
-                    editText.SetImeActionLabel("Search", ImeAction.Search);
-                    break;
-                default:
-                    editText.ImeOptions = ImeAction.Done;
-                    editText.SetImeActionLabel("Done", ImeAction.Done);
-                    break;
-            }
-        }
-
-        private void SetImage(string rightImageSource)
-        {
-            RoundedEntry roundedEntry = (RoundedEntry)this.Element;
-            EditText editText = (EditText)this.Control;
-
-            //add image if RightImageSource is defined
-            if (roundedEntry.RightImageSource != null)
-            {
-                var resourceId = Resources.GetIdentifier(roundedEntry.RightImageSource, "drawable", Context.PackageName);
-
-                if (resourceId != 0)
-                {
-                    _rightImageResourceId = resourceId;
-                    editText.SetOnTouchListener(new OnDrawableTouchListener());
-                }
-            }
-        }
     }
 
     public class OnDrawableTouchListener : Java.Lang.Object, Android.Views.View.IOnTouchListener
@@ -214,20 +223,37 @@ namespace PhantomLib.Droid.Renderers
                 if (e.RawX >= (editText.Right - editText.PaddingRight - drawablesArray[2].Bounds.Width()))
                 {
                     var roundedEntryRenderer = (RoundedEntryRenderer)editText.Parent;
-                   
-                   if (roundedEntryRenderer != null)
+                    if (roundedEntryRenderer != null)
                     {
                         var roundedEntry = (RoundedEntry)roundedEntryRenderer.Element;
-
                         if (roundedEntry !=null)
                         {
-                            if(roundedEntry.ShouldClearTextOnClick)
-                                editText.Text = "";
-
-                            roundedEntry.RightImageTouchedDelegate(v, new EventArgs());
+                            switch (roundedEntry.ImageButtonType)
+                            {
+                                case RoundedEntryImageButton.ClearContents:
+                                    roundedEntry.Text = string.Empty;
+                                    break;
+                                
+                                //toggle transformation and image on every click
+                                case RoundedEntryImageButton.Password:
+                                    //if plain text
+                                    if(editText.TransformationMethod == null)
+                                    {
+                                        roundedEntryRenderer.SetImage(roundedEntry.RightImageSource);
+                                        editText.TransformationMethod = PasswordTransformationMethod.Instance;
+                                    }
+                                    //else secure bullets
+                                    else
+                                    {
+                                        roundedEntryRenderer.SetImage(roundedEntry.HidePasswordImageSource);
+                                        editText.TransformationMethod = null;
+                                    }
+                                    break;
+                            }
+                            roundedEntryRenderer.UpdateControlUI();
+                            roundedEntry.RightImageTouchedDelegate(roundedEntry, new EventArgs());
                         }
 
-                        roundedEntryRenderer.UpdateControlUI();
                     }
                     return true;
                 }

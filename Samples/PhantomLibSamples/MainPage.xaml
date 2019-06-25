@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:PhantomLib" 
@@ -38,7 +38,8 @@
                         </Image.Effects>
                     </Image>
                 <Label x:Name="ErrorLabel" Text="There was an error" TextColor="Red" IsVisible="false"/>
-                <controls:RoundedEntry x:Name="RoundedEntry" Placeholder="Placeholder" RightImageSource="icon_black_close" ShouldClearTextOnClick="true" ReturnButton="Done" Style="{StaticResource RoundedEntry}" />
+                <controls:RoundedEntry x:Name="RoundedEntry" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" ImageButtonType="ClearContents" Style="{StaticResource RoundedEntry}" />
+                <controls:RoundedEntry x:Name="RoundedEntry1" AlwaysShowRightImage="false" Placeholder="Placeholder" RightImageSource="icon_lock_open" HidePasswordImageSource="icon_lock_close" ReturnButtonType="Done" ImageButtonType="Password" Style="{StaticResource RoundedEntry}" />
             </StackLayout>
         </AbsoluteLayout>
     </ContentPage.Content>

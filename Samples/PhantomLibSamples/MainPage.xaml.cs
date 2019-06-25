@@ -16,6 +16,8 @@ namespace PhantomLibSamples
         public MainPage()
         {
             InitializeComponent();
+
+            RoundedEntry.NextView = RoundedEntry1;
         }
 
         protected override void OnAppearing()
