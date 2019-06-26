@@ -26,6 +26,11 @@ return base.FinishedLaunching(app,  options);
 # Custom controls in this library
 * RoundedFrame - Allows you to spcify which corners of a frame are rounded.
 
+# Behaviors included in this library
+* Tap Command Behavior - Allows you to bind an `ICommand` to be executed when a control is tapped.
+
+# Other helpers included in this library
+* BaseAttachable - Acts as a base class for view-models, with helpers to easily raise `IPropertyChanged` events for properties.
 
 # Sample
 ![Sample Image](Images/Sample2.gif)
