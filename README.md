@@ -29,6 +29,22 @@ return base.FinishedLaunching(app,  options);
 # Behaviors included in this library
 * Tap Command Behavior - Allows you to bind an `ICommand` to be executed when a control is tapped.
 
+# Converters included in this library
+* CharacterCountConverter - Counts the characters in a string
+* InverseBoolConverter - Inverses Boolean values
+* IsMinimumCharacterCountConverter - Counts the characters in a string and determines if it meets a minimum count
+* IsMinimumValueConverter - Determines if a number meets a minimum count
+* IsNullConverter - Determines if a value is null
+* IsNullOrWhitespace - Determines if a string value is null or whitespace
+* IsNotNullConverter - Determines if a value is not null (inverse of IsNullConverter)
+* IsNotNullOrWhitespace - Determines if a string value is not null or whitespace (inverse of IsNullOrWhitespaceConverter)
+* StringFormatConverter - Safely formats strings (handles case where format string is not a valid .NET format string)
+* ToUpperConverter - Uppercases each character in a string (culture-specific)
+
+# Attached Properties in this library
+* Labels.Kerning - Helper to easily add Kerning Effect
+* Views.TapBackgroundColor - Set the temporary background color of a view when it is tapped
+
 # Other helpers included in this library
 * BaseAttachable - Acts as a base class for view-models, with helpers to easily raise `IPropertyChanged` events for properties.
 
