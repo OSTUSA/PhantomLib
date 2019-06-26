@@ -1,7 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local-extensions="clr-namespace:PhantomLibSamples.Extensions"
+             xmlns:phantom-extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
              x:Class="PhantomLibSamples.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--
+                We can merge several instances of ResourceDictionary to pull in
+                various style. This is a nice way to organize styles & other
+                resources.
+                The PhantomLib resource dictionaries may be pulled into your app
+                directly (by including a reference in the Application's XAML or
+                code-behind), or they may be referenced and extended. For example,
+                see how we are referencing the Converters ResourceDictionary.
+                -->
+                <!--
+                Here we are including a reference to a local resource dictionary,
+                which references the PhantomLib resources. This allows us to
+                reference any resource defined in the PhantomLib resource dictionary
+                or any resource defined in the app's resource dictionary. This
+                is handy for styles that can be extended or here for the set of
+                Converters that can be generic or app-specific.
+                -->
+                <local-extensions:Converters />
+                <!--
+                Here we are including direct references to the PhantomLib
+                resources. This allows us to reference the resources from any
+                of our views in the app.
+                -->
+                <phantom-extensions:Labels />
+                <phantom-extensions:Views />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

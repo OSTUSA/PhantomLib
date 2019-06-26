@@ -20,5 +20,6 @@
     <Folder Include="Utilities\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Models\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>
