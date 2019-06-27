@@ -14,6 +14,7 @@
     <language>C#</language>
     <copyright>Copyright Open Systems Technologies © 2019</copyright>
     <releaseNotes>Initial release</releaseNotes>
+    <iconUrl>https://raw.githubusercontent.com/OSTUSA/PhantomLib/develop/Images/nugetIcon.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.Forms" version="3.2.0" />
     </dependencies>
