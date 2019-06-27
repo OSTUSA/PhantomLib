@@ -50,11 +50,5 @@ namespace PhantomLibSamples
                 ErrorLabel.IsVisible = false;
             }
         }
-
-        async void OnButtonClicked(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new MainPage());
-        }
-
     }
 }

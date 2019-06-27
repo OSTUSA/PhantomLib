@@ -40,8 +40,6 @@
                 <Label x:Name="ErrorLabel" Text="There was an error" TextColor="Red" IsVisible="false"/>
                 <controls:RoundedEntry x:Name="RoundedEntry" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" ImageButtonType="ClearContents" Style="{StaticResource RoundedEntry}" />
                 <controls:RoundedEntry x:Name="RoundedEntry1" AlwaysShowRightImage="false" Placeholder="Placeholder" RightImageSource="icon_lock_open" HidePasswordImageSource="icon_lock_close" ReturnButtonType="Done" ImageButtonType="Password" Style="{StaticResource RoundedEntry}" />
-                
-                <Button Text="Click to Navigate!" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Clicked="OnButtonClicked" />
             </StackLayout>
         </AbsoluteLayout>
     </ContentPage.Content>

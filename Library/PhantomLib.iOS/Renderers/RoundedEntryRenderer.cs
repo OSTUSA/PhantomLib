@@ -7,44 +7,63 @@ using PhantomLib.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using Xamarin.Forms.Internals;
 
 [assembly: ExportRenderer(typeof(RoundedEntry), typeof(RoundedEntryRenderer))]
 namespace PhantomLib.iOS.Renderers
 {
     public class RoundedEntryRenderer : EntryRenderer
     {
+        RoundedEntry _roundedEntry;
+        UITextField _textField;
+        UIButton _imageButton;
+
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
 
-            if (this.Control != null && this.Element != null)
+            if (this.Control != null && this.Element != null && e.NewElement != null)
             {
-                RoundedEntry roundedEntry = (RoundedEntry)this.Element;
-                UITextField textField = (UITextField)this.Control;
+                _roundedEntry = (RoundedEntry)this.Element;
+                _textField = (UITextField)this.Control;
 
-                if(roundedEntry.ImageButtonType == RoundedEntryImageButton.Password)
+                if(_roundedEntry.ImageButtonType == RoundedEntryImageButton.Password)
                 {
-                    roundedEntry.IsPassword = true;
+                    _roundedEntry.IsPassword = true;
                 }
 
-                textField.Layer.CornerRadius = 5;
-                textField.Layer.BorderWidth = 2;
+                _textField.Layer.CornerRadius = 5;
+                _textField.Layer.BorderWidth = 2;
                 // Add padding to the entry field
-                textField.LeftView = new UIView(new CGRect(0, 0, 10, 0));
-                textField.LeftViewMode = UITextFieldViewMode.Always;
+                _textField.LeftView = new UIView(new CGRect(0, 0, 10, 0));
+                _textField.LeftViewMode = UITextFieldViewMode.Always;
 
-                UpdateControlUI();
 
                 SetImage();
-                SetReturnType(roundedEntry);
+                SetReturnType();
 
-                textField.EditingDidBegin += TextField_FocusChanged;
-                textField.EditingDidEnd += TextField_FocusChanged;
-                textField.EditingChanged += TextField_FocusChanged;
-                textField.ShouldReturn += (txtField) => {
-                    roundedEntry.OnNext();
-                    return false;
-                };
+                if(e.NewElement != null)
+                {
+                    //subscribe
+                    _textField.EditingDidBegin += TextField_FocusChanged;
+                    _textField.EditingDidEnd += TextField_FocusChanged;
+                    _textField.EditingChanged += TextField_FocusChanged;
+                    _textField.ShouldReturn += TextField_ShouldReturn;
+                }
+
+
+                UpdateControlUI();
+            }
+
+            if (e.OldElement != null)
+            {
+                // Unsubscribe
+                _textField.EditingDidBegin -= TextField_FocusChanged;
+                _textField.EditingDidEnd -= TextField_FocusChanged;
+                _textField.EditingChanged -= TextField_FocusChanged;
+                _textField.ShouldReturn -= TextField_ShouldReturn;
+                if (_imageButton != null)
+                    _imageButton.TouchUpInside -= ImageButton_TouchUpInside;
             }
         }
 
@@ -65,87 +84,80 @@ namespace PhantomLib.iOS.Renderers
 
         private void TextField_FocusChanged(object sender, EventArgs eventArgs)
         {
-            RoundedEntry roundedEntry = (RoundedEntry)this.Element;
-
             UpdateControlUI();
 
-            roundedEntry.EntryIsFocused = roundedEntry.IsFocused;
-            roundedEntry.EntryFocusChangedDelegate(sender, new FocusEventArgs(roundedEntry, roundedEntry.IsFocused));
+            _roundedEntry.EntryIsFocused = _roundedEntry.IsFocused;
+            _roundedEntry.EntryFocusChangedDelegate(sender, new FocusEventArgs(_roundedEntry, _roundedEntry.IsFocused));
         }
 
         private void UpdateControlUI()
         {
-            RoundedEntry roundedEntry = (RoundedEntry)this.Element;
-            UITextField textField = (UITextField)this.Control;
 
             //set stroke/border
-            if (roundedEntry.ShowError)
+            if (_roundedEntry.ShowError)
             {
-                Control.Layer.BorderColor = roundedEntry.ErrorColor.ToCGColor();
+                _textField.Layer.BorderColor = _roundedEntry.ErrorColor.ToCGColor();
             }
-            else if (!roundedEntry.ShowError && roundedEntry.IsFocused)
+            else if (!_roundedEntry.ShowError && _roundedEntry.IsFocused)
             {
-                Control.Layer.BorderColor = roundedEntry.FocusedBorderColor.ToCGColor();
+                _textField.Layer.BorderColor = _roundedEntry.FocusedBorderColor.ToCGColor();
             }
             else
             {
-                Control.Layer.BorderColor = Color.Transparent.ToCGColor();
+                _textField.Layer.BorderColor = Color.Transparent.ToCGColor();
             }
 
             //set background color
-            Control.BackgroundColor = roundedEntry.IsFocused
-                    ? roundedEntry.FocusedBackgroundColor.ToUIColor()
-                    : roundedEntry.BackgroundColor.ToUIColor();
+            _textField.BackgroundColor = _roundedEntry.IsFocused
+                    ? _roundedEntry.FocusedBackgroundColor.ToUIColor()
+                    : _roundedEntry.BackgroundColor.ToUIColor();
         }
 
-        private void SetReturnType(RoundedEntry roundedEntry)
+        private void SetReturnType()
         {
-            var type = roundedEntry.ReturnButtonType;
 
-            switch (type)
+            switch (_roundedEntry.ReturnButtonType)
             {
                 case RoundedEntryReturn.Next:
-                    Control.ReturnKeyType = UIReturnKeyType.Next;
+                    _textField.ReturnKeyType = UIReturnKeyType.Next;
                     break;
                 case RoundedEntryReturn.Search:
-                    Control.ReturnKeyType = UIReturnKeyType.Search;
+                    _textField.ReturnKeyType = UIReturnKeyType.Search;
                     break;
                 case RoundedEntryReturn.Done:
-                    Control.ReturnKeyType = UIReturnKeyType.Done;
+                    _textField.ReturnKeyType = UIReturnKeyType.Done;
                     break;
                 default:
-                    Control.ReturnKeyType = UIReturnKeyType.Default;
+                    _textField.ReturnKeyType = UIReturnKeyType.Default;
                     break;
             }
         }
 
         private void SetImage()
         {
-            RoundedEntry roundedEntry = (RoundedEntry)this.Element;
-            UITextField textField = (UITextField)this.Control;
 
             //add image if RightImageSource is defined else add pading
-            if (string.IsNullOrEmpty(roundedEntry.RightImageSource))
+            if (string.IsNullOrEmpty(_roundedEntry.RightImageSource))
             {
-                textField.RightView = new UIView(new CGRect(0, 0, 10, 0));
-                textField.RightViewMode = UITextFieldViewMode.Always;
+                _textField.RightView = new UIView(new CGRect(0, 0, 10, 0));
+                _textField.RightViewMode = UITextFieldViewMode.Always;
             }
             else
             {
                 //use hide password image if text is plain text
-                if(roundedEntry.ImageButtonType == RoundedEntryImageButton.Password && !roundedEntry.IsPassword)
+                if(_roundedEntry.ImageButtonType == RoundedEntryImageButton.Password && !_roundedEntry.IsPassword)
                 {
-                    textField.RightView = GetImageView(roundedEntry.HidePasswordImageSource);
+                    _textField.RightView = GetImageView(_roundedEntry.HidePasswordImageSource);
                 }
                 else
                 {
-                    textField.RightView = GetImageView(roundedEntry.RightImageSource);
+                    _textField.RightView = GetImageView(_roundedEntry.RightImageSource);
                 }
 
-                if (roundedEntry.AlwaysShowRightImage)
-                    textField.RightViewMode = UITextFieldViewMode.Always;
+                if (_roundedEntry.AlwaysShowRightImage)
+                    _textField.RightViewMode = UITextFieldViewMode.Always;
                 else
-                    textField.RightViewMode = UITextFieldViewMode.WhileEditing;
+                    _textField.RightViewMode = UITextFieldViewMode.WhileEditing;
             }
         }
 
@@ -154,36 +166,40 @@ namespace PhantomLib.iOS.Renderers
             var image = UIImage.FromBundle(imagePath).ImageWithRenderingMode(UIKit.UIImageRenderingMode.Automatic);
             // Make the view 10 wider than the image so that it has some padding.
 
-            var imageButton = UIButton.FromType(UIButtonType.Custom);
-            imageButton.Frame = new RectangleF(0, 0, (int)(image.Size.Width), (int)image.Size.Height);
-            imageButton.SetImage(image, UIControlState.Normal);
+            _imageButton = UIButton.FromType(UIButtonType.Custom);
+            _imageButton.Frame = new RectangleF(0, 0, (int)(image.Size.Width), (int)image.Size.Height);
+            _imageButton.SetImage(image, UIControlState.Normal);
 
             //Set up event handler for "Click" event ("TouchUpInside in iOS terminology)
-            imageButton.TouchUpInside += ImageButton_TouchUpInside;
+            _imageButton.TouchUpInside += ImageButton_TouchUpInside;
 
             UIView view = new UIView(new System.Drawing.Rectangle(0, 0, (int)(image.Size.Width) + 10, (int)image.Size.Height));
 
-            view.Add(imageButton);
+            view.Add(_imageButton);
             return view;
         }
 
         void ImageButton_TouchUpInside(object sender, EventArgs e)
         {
-            RoundedEntry roundedEntry = (RoundedEntry)this.Element;
-
-            switch (roundedEntry.ImageButtonType)
+            switch (_roundedEntry.ImageButtonType)
             {
                 case RoundedEntryImageButton.ClearContents:
-                    roundedEntry.Text = string.Empty;
+                    _roundedEntry.Text = string.Empty;
                     UpdateControlUI();
                     break;
                 case RoundedEntryImageButton.Password:
-                    roundedEntry.IsPassword = !roundedEntry.IsPassword;
+                    _roundedEntry.IsPassword = !_roundedEntry.IsPassword;
                     SetImage();
                     break;
             }
 
-            roundedEntry.RightImageTouchedDelegate(roundedEntry, e);
+            _roundedEntry.RightImageTouchedDelegate(_roundedEntry, e);
+        }
+
+        bool TextField_ShouldReturn(UITextField textField)
+        {
+            _roundedEntry.OnNext();
+            return false;
         }
 
     }
