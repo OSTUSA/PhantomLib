@@ -51,5 +51,10 @@ namespace PhantomLibSamples
             }
         }
 
+        async void OnButtonClicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
+
     }
 }
