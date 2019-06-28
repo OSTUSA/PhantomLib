@@ -18,5 +18,7 @@
     <Folder Include="CustomControls\" />
     <Folder Include="Extensions\" />
     <Folder Include="Utilities\" />
+    <Folder Include="Behaviors\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>
