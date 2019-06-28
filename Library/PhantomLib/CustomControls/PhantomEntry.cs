@@ -3,34 +3,34 @@ using Xamarin.Forms;
 
 namespace PhantomLib.CustomControls
 {
-    public enum RoundedEntryReturn
+    public enum PhantomEntryReturn
     {
         Next,
         Done,
         Search
     }
 
-    public enum RoundedEntryImageButton
+    public enum PhantomEntryImageButton
     {
         None,
         ClearContents,
         Password,
     }
 
-    public class RoundedEntry : Entry
+    public class PhantomEntry : Entry
     {
-        public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButtonType), typeof(RoundedEntryImageButton), typeof(RoundedEntry), RoundedEntryImageButton.None);
-        public static readonly BindableProperty ReturnButtonProperty = BindableProperty.Create(nameof(ReturnButtonType), typeof(RoundedEntryReturn), typeof(RoundedEntry), RoundedEntryReturn.Done);
-        public static readonly BindableProperty NextViewProperty = BindableProperty.Create(nameof(NextView), typeof(RoundedEntry), typeof(RoundedEntry));
-        public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(RoundedEntry), false);
-        public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(RoundedEntry), Color.Red);
-        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(RoundedEntry), new Color(255, 255, 255, 0.2));
-        public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(RoundedEntry), Color.DimGray);
-        public static readonly BindableProperty EntryIsFocusedProperty = BindableProperty.Create(nameof(EntryIsFocused), typeof(bool), typeof(RoundedEntry), false);
-        public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(RoundedEntry), false);
-        public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(RoundedEntry), string.Empty);
-        public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(RoundedEntry), string.Empty);
-        public static readonly BindableProperty AlwaysShowRightImageProperty = BindableProperty.Create(nameof(AlwaysShowRightImage), typeof(bool), typeof(RoundedEntry), true);
+        public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButtonType), typeof(PhantomEntryImageButton), typeof(PhantomEntry), PhantomEntryImageButton.None);
+        public static readonly BindableProperty ReturnButtonProperty = BindableProperty.Create(nameof(ReturnButtonType), typeof(PhantomEntryReturn), typeof(PhantomEntry), PhantomEntryReturn.Done);
+        public static readonly BindableProperty NextViewProperty = BindableProperty.Create(nameof(NextView), typeof(PhantomEntry), typeof(PhantomEntry));
+        public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(PhantomEntry), false);
+        public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(PhantomEntry), Color.Red);
+        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(PhantomEntry), new Color(255, 255, 255, 0.2));
+        public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(PhantomEntry), Color.DimGray);
+        public static readonly BindableProperty EntryIsFocusedProperty = BindableProperty.Create(nameof(EntryIsFocused), typeof(bool), typeof(PhantomEntry), false);
+        public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(PhantomEntry), false);
+        public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(PhantomEntry), string.Empty);
+        public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(PhantomEntry), string.Empty);
+        public static readonly BindableProperty AlwaysShowRightImageProperty = BindableProperty.Create(nameof(AlwaysShowRightImage), typeof(bool), typeof(PhantomEntry), true);
 
         public string RightImageSource
         {
@@ -81,21 +81,21 @@ namespace PhantomLib.CustomControls
             set => SetValue(EntryIsFocusedProperty, value);
         }
 
-        public RoundedEntryReturn ReturnButtonType
+        public PhantomEntryReturn ReturnButtonType
         {
-            get => (RoundedEntryReturn)GetValue(ReturnButtonProperty);
+            get => (PhantomEntryReturn)GetValue(ReturnButtonProperty);
             set => SetValue(ReturnButtonProperty, value);
         }
 
-        public RoundedEntryImageButton ImageButtonType
+        public PhantomEntryImageButton ImageButtonType
         {
-            get => (RoundedEntryImageButton)GetValue(ImageButtonProperty);
+            get => (PhantomEntryImageButton)GetValue(ImageButtonProperty);
             set => SetValue(ImageButtonProperty, value);
         }
 
-        public RoundedEntry NextView
+        public PhantomEntry NextView
         {
-            get => (RoundedEntry)GetValue(NextViewProperty);
+            get => (PhantomEntry)GetValue(NextViewProperty);
             set => SetValue(NextViewProperty, value);
         }
 
