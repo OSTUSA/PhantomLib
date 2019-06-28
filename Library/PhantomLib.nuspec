@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>0.0.9</version>
+    <version>1.0.0</version>
     <authors>Open Systems Technologies</authors>
     <owners>Open Systems Technologies</owners>
     <license type="expression">MIT</license>
@@ -9,8 +9,8 @@
     <id>PhantomLib</id>
     <title>PhantomLib</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Additonal Xamarin Forms components that are not included out of the box.</description>
-    <summary>Additonal Xamarin Forms components that are not included out of the box.</summary>
+    <description>Additonal Xamarin Forms controls, effects, and converters that are not included out of the box.</description>
+    <summary>Take your Xamarin.Forms app to the next level with this collection of controls, converters, and behaviors.</summary>
     <language>C#</language>
     <copyright>Copyright Open Systems Technologies © 2019</copyright>
     <releaseNotes>Initial release</releaseNotes>
