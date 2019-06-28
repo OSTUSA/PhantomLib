@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="clr-namespace:PhantomLib.Converters" x:Class="PhantomLib.Extensions.Converters">
+    <!-- this ResourceDictionary may have references to Converters so they can be used as StaticResources -->
+    <converters:CharacterCountConverter x:Key="CharacterCountConverter" />
+    <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+    <converters:ValueConverterGroup x:Key="IsMinimumCharacterCountConverter">
+        <!-- first, count the characters -->
+        <converters:CharacterCountConverter />
+        <!-- then, determine if it meets the minimum value criteria -->
+        <converters:IsMinimumValueConverter />
+    </converters:ValueConverterGroup>
+    <converters:IsMinimumValueConverter x:Key="IsMinimumValueConverter" />
+    <converters:IsNullConverter x:Key="IsNullConverter" />
+    <converters:IsNullOrWhitespaceConverter x:Key="IsNullOrWhitespaceConverter" />
+    <converters:ValueConverterGroup x:Key="IsNotNullConverter">
+        <!-- first, determine if the value is null -->
+        <converters:IsNullConverter />
+        <!-- then, invert the value -->
+        <converters:InverseBoolConverter />
+    </converters:ValueConverterGroup>
+    <converters:ValueConverterGroup x:Key="IsNotNullOrWhitespaceConverter">
+        <!-- first, determine if the value is null or whitespace -->
+        <converters:IsNullConverter />
+        <!-- then, invert the value -->
+        <converters:InverseBoolConverter />
+    </converters:ValueConverterGroup>
+    <converters:StringFormatConverter x:Key="StringFormatConverter" />
+    <converters:ToUpperConverter x:Key="ToUpperConverter" />
+</ResourceDictionary>

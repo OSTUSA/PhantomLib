@@ -20,5 +20,6 @@
   <ItemGroup>
     <Folder Include="Utilities\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>
