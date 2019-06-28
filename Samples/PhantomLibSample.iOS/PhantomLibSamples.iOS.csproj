@@ -121,6 +121,15 @@
     <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green.png" />
     <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green-1.png" />
     <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green-2.png" />
+    <ImageAsset Include="Assets.xcassets\icon_close_black.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_close_black.imageset\baseline_close_black_18dp.png" />
+    <ImageAsset Include="Assets.xcassets\icon_close_black.imageset\baseline_close_black_18dp-1.png" />
+    <ImageAsset Include="Assets.xcassets\icon_lock_open.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_lock_open.imageset\baseline_lock_open_black_18dp.png" />
+    <ImageAsset Include="Assets.xcassets\icon_lock_open.imageset\baseline_lock_open_black_18dp-1.png" />
+    <ImageAsset Include="Assets.xcassets\icon_lock_close.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_lock_close.imageset\baseline_lock_black_18dp.png" />
+    <ImageAsset Include="Assets.xcassets\icon_lock_close.imageset\baseline_lock_black_18dp-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -156,6 +165,10 @@
   <ItemGroup>
     <Folder Include="Assets.xcassets\loading_spinner_blue.imageset\" />
     <Folder Include="Assets.xcassets\loading_spinner_green.imageset\" />
+    <Folder Include="Assets.xcassets\icon_black_close.imageset\" />
+    <Folder Include="Assets.xcassets\icon_close_black.imageset\" />
+    <Folder Include="Assets.xcassets\icon_lock_open.imageset\" />
+    <Folder Include="Assets.xcassets\icon_lock_close.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

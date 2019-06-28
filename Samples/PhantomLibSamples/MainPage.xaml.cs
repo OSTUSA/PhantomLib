@@ -18,8 +18,37 @@ namespace PhantomLibSamples
         {
             InitializeComponent();
 
+            RoundedEntry.NextView = RoundedEntry1;
             //Analytics Timing Sample
             new AnalyticsTimerSample();
+        }
+
+        protected override void OnAppearing()
+        {
+            RoundedEntry.TextChanged += RoundedEntry_TextChanged;
+
+            base.OnAppearing();
+        }
+
+        protected override void OnDisappearing()
+        {
+            RoundedEntry.TextChanged -= RoundedEntry_TextChanged;
+
+            base.OnDisappearing();
+        }
+
+        void RoundedEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (e.NewTextValue.Length > 10)
+            {
+                RoundedEntry.ShowError = true;
+                ErrorLabel.IsVisible = true;
+            }
+            else
+            {
+                RoundedEntry.ShowError = false;
+                ErrorLabel.IsVisible = false;
+            }
         }
     }
 }

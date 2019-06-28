@@ -62,6 +62,7 @@
     <Compile Include="Effects\Effects.cs" />
     <Compile Include="Renderers\RoundedFrameRenderer.cs" />
     <Compile Include="Effects\SpinnerEffect.cs" />
+    <Compile Include="Renderers\RoundedEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhantomLib\PhantomLib.csproj">
