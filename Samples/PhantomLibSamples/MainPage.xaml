@@ -15,6 +15,12 @@
             <Style x:Key="LabelStyle" TargetType="Label">
                 <Setter Property="extensions:ViewExtensions.Kerning" Value="10" />
             </Style>
+            <Style x:Key="RoundedEntry" TargetType="controls:RoundedEntry">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="BackgroundColor" Value="White" />
+			</Style>
             <Style x:Key="BoxView_Hr" TargetType="BoxView">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="HeightRequest" Value="1" />
@@ -25,34 +31,37 @@
     <ContentPage.Content>
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <ScrollView>
-                <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
                     <StackLayout>
                         <Label Text="Kerning Effect" FontSize="Large" />
-                        <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}" >
-                            <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
-                            <Label.Effects>
-                                <effects:Kerning LetterSpacing="10" />
-                            </Label.Effects>-->
-                        </Label>
+                <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}" >
+                    <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
+                    <Label.Effects>
+                        <effects:Kerning LetterSpacing="10" />
+                    </Label.Effects>-->
+                </Label>
                     </StackLayout>
                     <BoxView Style="{StaticResource BoxView_Hr}" />
                         
                     <StackLayout>
                         <Label Text="Rounded Frame" FontSize="Large" />
                         <controls:RoundedFrame CornerRadius="10" BackgroundColor="Blue" RoundTopLeft="true" RoundTopRight="true"> 
-                            <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
-                        </controls:RoundedFrame>
+                    <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
+                </controls:RoundedFrame>
                     </StackLayout>
                     <BoxView Style="{StaticResource BoxView_Hr}" />
                     
                     <StackLayout>
                         <Label Text="Spinner Effect" FontSize="Large" />
                         <Image x:Name="LoadingSpinner" Source="loading_spinner_green" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                            <Image.Effects>
-                                <effects:Spinner Duration="700" />
-                            </Image.Effects>
-                        </Image>
-                    </StackLayout>
+                        <Image.Effects>
+                            <effects:Spinner Duration="700" />
+                        </Image.Effects>
+                    </Image>
+                <Label x:Name="ErrorLabel" Text="There was an error" TextColor="Red" IsVisible="false"/>
+                <controls:RoundedEntry x:Name="RoundedEntry" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" ImageButtonType="ClearContents" Style="{StaticResource RoundedEntry}" />
+                <controls:RoundedEntry x:Name="RoundedEntry1" AlwaysShowRightImage="false" Placeholder="Placeholder" RightImageSource="icon_lock_open" HidePasswordImageSource="icon_lock_close" ReturnButtonType="Done" ImageButtonType="Password" Style="{StaticResource RoundedEntry}" />
+            </StackLayout>
                     <BoxView Style="{StaticResource BoxView_Hr}" />
                     
                     <StackLayout BackgroundColor="Aqua" Padding="10">
