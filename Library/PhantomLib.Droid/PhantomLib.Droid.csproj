@@ -51,7 +51,7 @@
     <Compile Include="Effects\KerningEffect.cs" />
     <Compile Include="Effects\SpinnerEffect.cs" />
     <Compile Include="Renderers\RoundedFrame.cs" />
-    <Compile Include="Renderers\PhantomEntryRenderer.cs" />
+    <Compile Include="Renderers\UltimateEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

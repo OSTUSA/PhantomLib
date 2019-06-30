@@ -18,35 +18,35 @@ namespace PhantomLibSamples
         {
             InitializeComponent();
 
-            PhantomEntry.NextView = PhantomEntry1;
+            UltimateEntry.NextView = UltimateEntry1;
             //Analytics Timing Sample
             new AnalyticsTimerSample();
         }
 
         protected override void OnAppearing()
         {
-            PhantomEntry.TextChanged += PhantomEntry_TextChanged;
+            UltimateEntry.TextChanged += UltimateEntry_TextChanged;
 
             base.OnAppearing();
         }
 
         protected override void OnDisappearing()
         {
-            PhantomEntry.TextChanged -= PhantomEntry_TextChanged;
+            UltimateEntry.TextChanged -= UltimateEntry_TextChanged;
 
             base.OnDisappearing();
         }
 
-        void PhantomEntry_TextChanged(object sender, TextChangedEventArgs e)
+        void UltimateEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (e.NewTextValue.Length > 10)
             {
-                PhantomEntry.ShowError = true;
+                UltimateEntry.ShowError = true;
                 ErrorLabel.IsVisible = true;
             }
             else
             {
-                PhantomEntry.ShowError = false;
+                UltimateEntry.ShowError = false;
                 ErrorLabel.IsVisible = false;
             }
         }

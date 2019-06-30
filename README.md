@@ -7,7 +7,7 @@ Collection of Xamarin additions that are ready to consume.
 
 # Custom controls in this library
 * RoundedFrame - Allows you to spcify which corners of a frame are rounded.
-* PhantomEntry - Entry control jam packed with functionality. You can set an icon on the right that will clear the contents when tapped. You can use it as a password entry and set an icon to show and hide the password by tapping it. You can have it validate input and show an error when validation fails. And you can even round the corners!
+* UltimateEntry - Entry control jam packed with functionality. You can set an icon on the right that will clear the contents when tapped. You can use it as a password entry and set an icon to show and hide the password by tapping it. You can have it validate input and show an error when validation fails. And you can even round the corners!
 
 # Behaviors included in this library
 * Tap Command Behavior - Allows you to bind an `ICommand` to be executed when a control is tapped.
@@ -48,5 +48,5 @@ return base.FinishedLaunching(app,  options);
 ```
 
 # Sample
-![Sample Image](Images/sample3.gif)
+![Sample Image](Images/sample4.gif)
 
