@@ -2,11 +2,11 @@
 Collection of Xamarin additions that are ready to consume.
 
 # Effects included in this library
-* Kerning Effect - Allows you to specify the letter spacing of your lables.
+* Kerning Effect - Allows you to specify the letter spacing of your labels.
 * Spinner Effect - Allows you to have a custom activity indicator. Just supply an image and duration (how long it takes for one rotation) and the effect will rotate it.
 
 # Custom controls in this library
-* RoundedFrame - Allows you to spcify which corners of a frame are rounded.
+* RoundedFrame - Allows you to specify which corners of a frame are rounded.
 * UltimateEntry - Entry control jam packed with functionality. You can set an icon on the right that will clear the contents when tapped. You can use it as a password entry and set an icon to show and hide the password by tapping it. You can have it validate input and show an error when validation fails. And you can even round the corners!
 
 # Behaviors included in this library
