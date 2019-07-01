@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:phantom-converters="clr-namespace:PhantomLib.Converters;assembly=PhantomLib" xmlns:phantom-extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib" x:Class="PhantomLibSamples.Extensions.Converters">
+    <ResourceDictionary.MergedDictionaries>
+        <phantom-extensions:Converters />
+    </ResourceDictionary.MergedDictionaries>
+    <!--
+    This is a useless converter, but it demonstrates how we can extend the ResourceDictionary
+    instances included in PhantomLib.
+    -->
+    <phantom-converters:ValueConverterGroup x:Key="IsNotNotNullConverter">
+        <phantom-converters:IsNullConverter />
+        <phantom-converters:InverseBoolConverter />
+        <phantom-converters:InverseBoolConverter />
+    </phantom-converters:ValueConverterGroup>
+</ResourceDictionary>

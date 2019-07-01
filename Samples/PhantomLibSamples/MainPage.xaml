@@ -1,38 +1,178 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              xmlns:local="clr-namespace:PhantomLib" 
              xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
              xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib"
              xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
-             x:Class="PhantomLibSamples.MainPage">
+             xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
+             xmlns:local-vms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
+             x:Class="PhantomLibSamples.MainPage"
+             ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="LabelStyle" TargetType="Label">
-                <Setter Property="extensions:ViewExtensions.Kerning" Value="10" />
+                <Setter Property="extensions:Labels.Kerning" Value="10" />
+            </Style>
+            <Style x:Key="UltimateEntry" TargetType="controls:UltimateEntry">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+            <Style x:Key="BoxView_Hr" TargetType="BoxView">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="HeightRequest" Value="1" />
+                <Setter Property="BackgroundColor" Value="Gray" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ScrollView>
             <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
-                <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}" >
-                    <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
-                    <Label.Effects>
-                        <effects:Kerning LetterSpacing="10" />
-                    </Label.Effects>-->
-                </Label>
-                
-                <controls:RoundedFrame  x:Name="InsideLayout" CornerRadius="10" BackgroundColor="Blue" RoundTopLeft="true" RoundTopRight="true"> 
-                    <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
-                </controls:RoundedFrame>
-                 <Image x:Name="LoadingSpinner" Source="loading_spinner_green" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                        AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout>
+                    <Label Text="Kerning Effect" FontSize="Large" />
+                    <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}">
+                        <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
+                            <Label.Effects>
+                                <effects:Kerning LetterSpacing="10" />
+                            </Label.Effects>-->
+                    </Label>
+                </StackLayout>
+                <BoxView Style="{StaticResource BoxView_Hr}" />
+                <StackLayout>
+                    <Label Text="Rounded Frame" FontSize="Large" />
+                    <controls:RoundedFrame CornerRadius="10" BackgroundColor="Blue" RoundTopLeft="true" RoundTopRight="true">
+                        <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
+                    </controls:RoundedFrame>
+                </StackLayout>
+                <BoxView Style="{StaticResource BoxView_Hr}" />
+                <StackLayout>
+                    <Label Text="Spinner Effect" FontSize="Large" />
+                    <Image x:Name="LoadingSpinner" Source="loading_spinner_green" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                         <Image.Effects>
                             <effects:Spinner Duration="700" />
                         </Image.Effects>
                     </Image>
+                    <BoxView Style="{StaticResource BoxView_Hr}" />
+                    <Label Text="Ultimate Entry" FontSize="Large" />
+                    <Label Text="Enter more than 10 characters to see an error" FontSize="Small" />
+                    <Label x:Name="ErrorLabel" Text="There was an error" TextColor="Red" IsVisible="false" />
+                    <controls:UltimateEntry x:Name="UltimateEntry" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" 
+                                           ImageButtonType="ClearContents" Style="{StaticResource UltimateEntry}" />
+                    <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
+                    <controls:UltimateEntry x:Name="UltimateEntry1" AlwaysShowRightImage="false" Placeholder="Enter your password" RightImageSource="icon_lock_open"
+                                           HidePasswordImageSource="icon_lock_close" ReturnButtonType="Done" ImageButtonType="Password" Style="{StaticResource UltimateEntry}" />
+                </StackLayout>
+                <BoxView Style="{StaticResource BoxView_Hr}" />
+                <StackLayout BackgroundColor="Aqua" Padding="10">
+                    <StackLayout.BindingContext>
+                        <local-vms:TapCommandBehaviorViewModel />
+                    </StackLayout.BindingContext>
+                    <StackLayout.Behaviors>
+                        <!--
+                            The TapCommandBehavior has bindable properties for Command and Command Parameter.
+                            This instance has a binding to ShowAlert for its command (from the binding context)
+                            and a binding to the Entry's text value for its command parameter.
+                            Tapping anywhere in the StackLayout will trigger an alert with the body that you write in the Entry.
+                            -->
+                        <behaviors:TapCommandBehavior Command="{Binding DisplayAlert}" CommandParameter="{Binding Text, Source={x:Reference _entryTapCommandValue}}" />
+                    </StackLayout.Behaviors>
+                    <Label Text="Tap Command Behavior" FontSize="Large" />
+                    <Entry x:Name="_entryTapCommandValue" Text="Hello, world!" />
+                    <Label Text="Tap anywhere in the Aqua StackLayout to show an alert with the body you enter above." FontSize="Small" />
+                </StackLayout>
+                <BoxView Style="{StaticResource BoxView_Hr}" />
+                <StackLayout Padding="10" BackgroundColor="White" extensions:Views.TapBackgroundColor="#CCCCCC">
+                    <!--
+                    The Views.TapBackgroundColor property will update the background color of the view when it is tapped.
+                    This will last for 
+                    Note: the view must have a default value for BackgroundColor. With a BackgroundColor of Transparent,
+                    the transition from TapBackgroundColor to BackgroundColor will blink.
+                    -->
+                    <Label Text="Tap Background Color" FontSize="Large" />
+                    <Label Text="Tap anywhere in this StackLayout to temporarily its background color to #CCCCCC." FontSize="Small" />
+                </StackLayout>
+                <BoxView Style="{StaticResource BoxView_Hr}" />
+                <StackLayout Padding="10">
+                    <Label Text="Converters" FontSize="Large" />
+                    <Entry x:Name="_entryConverters" Placeholder="Enter text to see converter values" />
+                    <Label FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>IsNullConverter: </Span>
+                                <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNullConverter}}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>IsNotNullConverter: </Span>
+                                <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNotNullConverter}}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>IsNotNotNullConverter: </Span>
+                                <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNotNotNullConverter}}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>IsNullOrWhitespaceConverter: </Span>
+                                <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNullOrWhitespaceConverter}}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>IsNotNullOrWhitespaceConverter: </Span>
+                                <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNotNullOrWhitespaceConverter}}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>CharacterCountConverter: </Span>
+                                <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource CharacterCountConverter}}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>IsMinimumCharacterCountConverter (10): </Span>
+                                <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsMinimumCharacterCountConverter}, ConverterParameter=10}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>ToUpperConverter: </Span>
+                                <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource ToUpperConverter}}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Small">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span>StringFormatConverter (Test {0}): </Span>
+                                <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource StringFormatConverter}, ConverterParameter='Test {0}'}}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+                <BoxView Style="{StaticResource BoxView_Hr}" />
             </StackLayout>
-        </AbsoluteLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

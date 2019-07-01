@@ -27,6 +27,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -50,6 +51,7 @@
     <Compile Include="Effects\KerningEffect.cs" />
     <Compile Include="Effects\SpinnerEffect.cs" />
     <Compile Include="Renderers\RoundedFrame.cs" />
+    <Compile Include="Renderers\UltimateEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

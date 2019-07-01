@@ -91,7 +91,13 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\icon_close_black.xml" />
+    <AndroidResource Include="Resources\drawable\icon_lock_open.xml" />
+    <AndroidResource Include="Resources\drawable\icon_lock_close.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\loading_spinner_green.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\loading_spinner_green.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\loading_spinner_green.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\loading_spinner_green.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

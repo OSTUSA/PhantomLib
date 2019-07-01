@@ -1,17 +1,20 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>0.0.9</version>
-    <authors>Mike Rampanelli</authors>
+    <version>1.0.1</version>
+    <authors>Open Systems Technologies</authors>
     <owners>Open Systems Technologies</owners>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/OSTUSA/PhantomLib</projectUrl>
     <id>PhantomLib</id>
     <title>PhantomLib</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Additonal Xamarin Forms components that are not included out of the box.</description>
-    <summary></summary>
+    <description>Additonal Xamarin Forms controls, effects, and converters that are not included out of the box.</description>
+    <summary>Take your Xamarin.Forms app to the next level with this collection of controls, converters, and behaviors.</summary>
+    <language>C#</language>
     <copyright>Copyright Open Systems Technologies © 2019</copyright>
+    <releaseNotes>Initial release</releaseNotes>
+    <iconUrl>https://raw.githubusercontent.com/OSTUSA/PhantomLib/develop/Images/nugetIcon.png</iconUrl>
     <dependencies>
       <dependency id="Xamarin.Forms" version="3.2.0" />
     </dependencies>
@@ -23,16 +26,13 @@
     <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.pdb"	target="lib\netstandard2.0\PhantomLib.pdb" />
 
     <!-- iOS -->
-    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.dll"	target="lib\Xamarin.iOS10\PhantomLib.dll" />
-    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.pdb"	target="lib\Xamarin.iOS10\PhantomLib.pdb" />
-    <file src="PhantomLib.iOS\bin\Release\PhantomLib.iOS.dll"		    target="lib\Xamarin.iOS10\PhantomLib.iOS.dll" />
-    <file src="PhantomLib.iOS\bin\Release\PhantomLib.iOS.pdb"		    target="lib\Xamarin.iOS10\PhantomLib.iOS.pdb" />
+    <file src="PhantomLib.iOS\bin\Release\*.dll"		    target="lib\Xamarin.iOS10" />
+    <file src="PhantomLib.iOS\bin\Release\*.pdb"		    target="lib\Xamarin.iOS10" />
     
     <!-- Android -->
-    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.dll"	target="lib\MonoAndroid10\PhantomLib.dll" />
-    <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.pdb"	target="lib\MonoAndroid10\PhantomLib.pdb" />
-    <file src="PhantomLib.Android\bin\Release\PhantomLib.Android.dll"	target="lib\MonoAndroid10\PhantomLib.Android.dll" />
-    <file src="PhantomLib.Android\bin\Release\PhantomLib.Android.pdb"	target="lib\MonoAndroid10\PhantomLib.Android.pdb" />
+    <file src="PhantomLib.Droid\bin\Release\*.dll"	target="lib\MonoAndroid10" />
+    <file src="PhantomLib.Droid\bin\Release\*.pdb"	target="lib\MonoAndroid10" />
+    
 
     <!-- Readme -->
     <file src="readme.txt" target="" />
