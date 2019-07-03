@@ -25,6 +25,7 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="HeightRequest" Value="1" />
                 <Setter Property="BackgroundColor" Value="Gray" />
+                <Setter Property="Margin" Value="0,20" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -55,15 +56,26 @@
                             <effects:Spinner Duration="700" />
                         </Image.Effects>
                     </Image>
-                    <BoxView Style="{StaticResource BoxView_Hr}" />
+                </StackLayout>
+                <BoxView Style="{StaticResource BoxView_Hr}" />
+                <StackLayout>
                     <Label Text="Ultimate Entry" FontSize="Large" />
                     <Label Text="Enter more than 10 characters to see an error" FontSize="Small" />
-                    <Label x:Name="ErrorLabel" Text="There was an error" TextColor="Red" IsVisible="false" />
-                    <controls:UltimateEntry x:Name="UltimateEntry" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" 
-                                           ImageButtonType="ClearContents" Style="{StaticResource UltimateEntry}" />
+                    <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateEntry1}" IsVisible="{Binding ShowError}"/>
+                    <controls:UltimateEntry x:Name="UltimateEntry1" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" 
+                                           ImageButtonType="ClearContents" Style="{StaticResource UltimateEntry}"/>
                     <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
-                    <controls:UltimateEntry x:Name="UltimateEntry1" AlwaysShowRightImage="false" Placeholder="Enter your password" RightImageSource="icon_lock_open"
+                    <controls:UltimateEntry x:Name="UltimateEntry2" AlwaysShowRightImage="false" Placeholder="Enter your password" RightImageSource="icon_lock_open"
                                            HidePasswordImageSource="icon_lock_close" ReturnButtonType="Done" ImageButtonType="Password" Style="{StaticResource UltimateEntry}" />
+                    <StackLayout x:Name="StackLayoutAndroidEntries" Spacing="0" IsVisible="false">
+                        <Label Text="Same Entrys but... underlined on ANDROID" FontSize="Small" />
+                        <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateEntry3}" IsVisible="{Binding ShowError}" />
+                        <controls:UltimateEntry x:Name="UltimateEntry3" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" 
+                                               ImageButtonType="ClearContents" Style="{StaticResource UltimateEntry}" IsAndroidUnderlined="true"/>
+                        <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
+                        <controls:UltimateEntry x:Name="UltimateEntry4" AlwaysShowRightImage="false" Placeholder="Enter your password" RightImageSource="icon_lock_open"
+                                               HidePasswordImageSource="icon_lock_close" ReturnButtonType="Done" ImageButtonType="Password" Style="{StaticResource UltimateEntry}" IsAndroidUnderlined="true"/>
+                    </StackLayout>
                 </StackLayout>
                 <BoxView Style="{StaticResource BoxView_Hr}" />
                 <StackLayout BackgroundColor="Aqua" Padding="10">

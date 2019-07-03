@@ -25,12 +25,13 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(UltimateEntry), false);
         public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(UltimateEntry), Color.Red);
         public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(UltimateEntry), new Color(255, 255, 255, 0.2));
-        public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(UltimateEntry), Color.DimGray);
+        public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create(nameof(FocusedBorderColor), typeof(Color), typeof(UltimateEntry), Color.DimGray);
         public static readonly BindableProperty EntryIsFocusedProperty = BindableProperty.Create(nameof(EntryIsFocused), typeof(bool), typeof(UltimateEntry), false);
         public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(UltimateEntry), false);
         public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
         public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
         public static readonly BindableProperty AlwaysShowRightImageProperty = BindableProperty.Create(nameof(AlwaysShowRightImage), typeof(bool), typeof(UltimateEntry), true);
+        public static readonly BindableProperty IsAndroidUnderlinedProperty = BindableProperty.Create(nameof(IsAndroidUnderlined), typeof(bool), typeof(UltimateEntry), false);
 
         public string RightImageSource
         {
@@ -48,6 +49,12 @@ namespace PhantomLib.CustomControls
         {
             get => (bool)GetValue(ShowErrorProperty);
             set => SetValue(ShowErrorProperty, value);
+        }
+
+        public bool IsAndroidUnderlined
+        {
+            get => (bool)GetValue(IsAndroidUnderlinedProperty);
+            set => SetValue(IsAndroidUnderlinedProperty, value);
         }
 
         public bool AlwaysShowRightImage

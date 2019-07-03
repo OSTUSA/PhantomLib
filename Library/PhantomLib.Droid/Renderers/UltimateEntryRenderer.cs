@@ -12,6 +12,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using System.Linq;
 using Android.Text.Method;
+using Android.Graphics;
+using Color = Xamarin.Forms.Color;
 
 [assembly: ExportRenderer(typeof(UltimateEntry), typeof(UltimateEntryRenderer))]
 namespace PhantomLib.Droid.Renderers
@@ -20,6 +22,7 @@ namespace PhantomLib.Droid.Renderers
     {
         UltimateEntry _ultimateEntry;
         EditText _editText;
+        Color _entryBackgroundColor;
         private int _imageResourceId = 0;
 
         public UltimateEntryRenderer(Context context) : base(context) { }
@@ -32,6 +35,7 @@ namespace PhantomLib.Droid.Renderers
             {
                 _ultimateEntry = (UltimateEntry)this.Element;
                 _editText = (EditText)this.Control;
+                _entryBackgroundColor = _ultimateEntry.BackgroundColor;
 
                 if(_ultimateEntry.ImageButtonType == UltimateEntryImageButton.Password)
                 {
@@ -43,7 +47,10 @@ namespace PhantomLib.Droid.Renderers
                     SetImage(_ultimateEntry.RightImageSource);
                 }
 
-                _editText.SetPadding(50, 50, 50, 50);
+                if (!_ultimateEntry.IsAndroidUnderlined)
+                {
+                    _editText.SetPadding(50, 50, 50, 50);
+                }
 
                 SetReturnType(_ultimateEntry.ReturnButtonType);
 
@@ -95,7 +102,10 @@ namespace PhantomLib.Droid.Renderers
 
         public void UpdateControlUI()
         {
-            // Remove the underline in the android entry field
+            //use this if IsUnderlined == true
+            Drawable drawable = _editText.Background;
+
+            // else remove the underline in the android entry field
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.SetCornerRadius(5);
 
@@ -103,21 +113,35 @@ namespace PhantomLib.Droid.Renderers
             if (_ultimateEntry.ShowError)
             {
                 gradientDrawable.SetStroke(4, _ultimateEntry.ErrorColor.ToAndroid());
+                drawable.SetColorFilter(_ultimateEntry.ErrorColor.ToAndroid(), PorterDuff.Mode.SrcIn);
             }
             else if (!_ultimateEntry.ShowError && _editText.IsFocused)
             {
                 gradientDrawable.SetStroke(4, _ultimateEntry.FocusedBorderColor.ToAndroid());
+                drawable.SetColorFilter(_ultimateEntry.FocusedBorderColor.ToAndroid(), PorterDuff.Mode.SrcIn);
             }
             else
             {
                 gradientDrawable.SetStroke(4, Color.Transparent.ToAndroid());
+                drawable.ClearColorFilter();
             }
 
-            //set background color
+            //get background color
             var bgColor = _editText.IsFocused
-                    ? _ultimateEntry.FocusedBackgroundColor.ToAndroid()
-                    : _ultimateEntry.BackgroundColor.ToAndroid();
-            gradientDrawable.SetColor(bgColor);
+                    ? _ultimateEntry.FocusedBackgroundColor
+                    : _entryBackgroundColor;
+
+            //set background
+            if (_ultimateEntry.IsAndroidUnderlined)
+            {
+                _ultimateEntry.BackgroundColor = bgColor;
+            }
+            else
+            {
+                _editText.Background = gradientDrawable;
+                gradientDrawable.SetColor(bgColor.ToAndroid());
+            }
+
 
             //handle toggling visibility to image on focus
             if (_editText.IsFocused)
@@ -134,8 +158,6 @@ namespace PhantomLib.Droid.Renderers
                     _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
                 }
             }
-
-            Control.Background = gradientDrawable;
         }
 
         private void SetReturnType(UltimateEntryReturn type)
@@ -146,7 +168,7 @@ namespace PhantomLib.Droid.Renderers
                     _editText.ImeOptions = ImeAction.Next;
                     _editText.SetImeActionLabel("Next", ImeAction.Next);
                     // Editor Action is called when the return button is pressed
-                    Control.EditorAction += (object sender, Android.Widget.TextView.EditorActionEventArgs eventArgs) =>
+                    _editText.EditorAction += (object sender, Android.Widget.TextView.EditorActionEventArgs eventArgs) =>
                     {
                         _ultimateEntry.OnNext();
                     };
