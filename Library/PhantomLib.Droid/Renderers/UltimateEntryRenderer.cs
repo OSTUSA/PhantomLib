@@ -47,10 +47,7 @@ namespace PhantomLib.Droid.Renderers
                     SetImage(_ultimateEntry.RightImageSource);
                 }
 
-                if (!_ultimateEntry.IsAndroidUnderlined)
-                {
-                    _editText.SetPadding(50, 50, 50, 50);
-                }
+                _editText.SetPadding(50, 50, 50, 50);
 
                 SetReturnType(_ultimateEntry.ReturnButtonType);
 
@@ -132,14 +129,14 @@ namespace PhantomLib.Droid.Renderers
                     : _entryBackgroundColor;
 
             //set background
-            if (_ultimateEntry.IsAndroidUnderlined)
+            if (_ultimateEntry.IsRoundedEntry)
             {
-                _ultimateEntry.BackgroundColor = bgColor;
+                gradientDrawable.SetColor(bgColor.ToAndroid());
+                _editText.Background = gradientDrawable;
             }
             else
             {
-                _editText.Background = gradientDrawable;
-                gradientDrawable.SetColor(bgColor.ToAndroid());
+                _editText.SetBackgroundResource(Resource.Drawable.ExtEntryShape);
             }
 
 

@@ -31,7 +31,7 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
         public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
         public static readonly BindableProperty AlwaysShowRightImageProperty = BindableProperty.Create(nameof(AlwaysShowRightImage), typeof(bool), typeof(UltimateEntry), true);
-        public static readonly BindableProperty IsAndroidUnderlinedProperty = BindableProperty.Create(nameof(IsAndroidUnderlined), typeof(bool), typeof(UltimateEntry), false);
+        public static readonly BindableProperty IsRoundedEntryProperty = BindableProperty.Create(nameof(IsRoundedEntry), typeof(bool), typeof(UltimateEntry), false);
 
         public string RightImageSource
         {
@@ -51,10 +51,10 @@ namespace PhantomLib.CustomControls
             set => SetValue(ShowErrorProperty, value);
         }
 
-        public bool IsAndroidUnderlined
+        public bool IsRoundedEntry
         {
-            get => (bool)GetValue(IsAndroidUnderlinedProperty);
-            set => SetValue(IsAndroidUnderlinedProperty, value);
+            get => (bool)GetValue(IsRoundedEntryProperty);
+            set => SetValue(IsRoundedEntryProperty, value);
         }
 
         public bool AlwaysShowRightImage
