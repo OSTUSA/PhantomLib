@@ -137,6 +137,7 @@ namespace PhantomLib.Droid.Renderers
             else
             {
                 _editText.SetBackgroundResource(Resource.Drawable.ExtEntryShape);
+                _ultimateEntry.BackgroundColor = bgColor;
             }
 
 
