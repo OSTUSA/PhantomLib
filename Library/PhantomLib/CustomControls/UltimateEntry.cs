@@ -32,6 +32,7 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
         public static readonly BindableProperty AlwaysShowRightImageProperty = BindableProperty.Create(nameof(AlwaysShowRightImage), typeof(bool), typeof(UltimateEntry), true);
         public static readonly BindableProperty IsRoundedEntryProperty = BindableProperty.Create(nameof(IsRoundedEntry), typeof(bool), typeof(UltimateEntry), false);
+        public static readonly BindableProperty ThicknessPaddingProperty = BindableProperty.Create(nameof(ThicknessPadding), typeof(Thickness), typeof(UltimateEntry), new Thickness(0));
 
         public string RightImageSource
         {
@@ -43,6 +44,12 @@ namespace PhantomLib.CustomControls
         {
             get => (string)GetValue(HidePasswordImageSourceProperty);
             set => SetValue(HidePasswordImageSourceProperty, value);
+        }
+
+        public Thickness ThicknessPadding
+        {
+            get => (Thickness)GetValue(ThicknessPaddingProperty);
+            set => SetValue(ThicknessPaddingProperty, value);
         }
 
         public bool ShowError
