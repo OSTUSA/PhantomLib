@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PhantomLib.CustomControls;
 using PhantomLibSamples.Utilities;
 using Xamarin.Forms;
 
@@ -18,36 +19,43 @@ namespace PhantomLibSamples
         {
             InitializeComponent();
 
-            UltimateEntry.NextView = UltimateEntry1;
+            StackLayoutAndroidEntries.IsVisible = Device.RuntimePlatform == Device.Android;
+
+            UltimateEntry1.NextView = UltimateEntry2;
+            UltimateEntry2.NextView = UltimateEntry3;
+            UltimateEntry3.NextView = UltimateEntry4;
             //Analytics Timing Sample
             new AnalyticsTimerSample();
         }
 
         protected override void OnAppearing()
         {
-            UltimateEntry.TextChanged += UltimateEntry_TextChanged;
+            UltimateEntry1.TextChanged += UltimateEntry_TextChanged;
+            UltimateEntry3.TextChanged += UltimateEntry_TextChanged;
 
             base.OnAppearing();
         }
 
         protected override void OnDisappearing()
         {
-            UltimateEntry.TextChanged -= UltimateEntry_TextChanged;
+            UltimateEntry1.TextChanged -= UltimateEntry_TextChanged;
+            UltimateEntry3.TextChanged -= UltimateEntry_TextChanged;
 
             base.OnDisappearing();
         }
 
         void UltimateEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (e.NewTextValue.Length > 10)
+            if(sender is UltimateEntry entry)
             {
-                UltimateEntry.ShowError = true;
-                ErrorLabel.IsVisible = true;
-            }
-            else
-            {
-                UltimateEntry.ShowError = false;
-                ErrorLabel.IsVisible = false;
+                if (e.NewTextValue.Length > 10)
+                {
+                    entry.ShowError = true;
+                }
+                else
+                {
+                    entry.ShowError = false;
+                }
             }
         }
     }
