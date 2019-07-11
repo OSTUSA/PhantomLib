@@ -11,19 +11,22 @@ namespace PhantomLib.CustomControls
         public event EventHandler Completed;
 
         private Label FloatingLabel;
+        private BoxView LabelBuffer;
+        private int _floatingTransitionLength;
+        private bool _floatingTextIsPlaceholder = true;
 
         public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(string), string.Empty, BindingMode.TwoWay, null, HandleBindingPropertyChangedDelegate);
 
-        public static readonly BindableProperty FloatingTranslationLengthProperty = BindableProperty.Create(nameof(FloatingTranslationLength), typeof(int), typeof(FloatingUltimateEntry), 32);
+        public static readonly BindableProperty FloatingSpaceProperty = BindableProperty.Create(nameof(FloatingSpace), typeof(int), typeof(FloatingUltimateEntry), 10);
         public static readonly BindableProperty FloatingTextProperty = BindableProperty.Create(nameof(FloatingText), typeof(string), typeof(string), string.Empty, BindingMode.TwoWay, null);
-        public static readonly BindableProperty FloatingTextColorProperty = BindableProperty.Create(nameof(FloatingTextColor), typeof(Color), typeof(FloatingUltimateEntry), Color.Black);
+        public static readonly BindableProperty FloatingTextColorProperty = BindableProperty.Create(nameof(FloatingTextColor), typeof(Color), typeof(FloatingUltimateEntry), Color.DarkGray);
         public static readonly BindableProperty FloatingTextEaseProperty = BindableProperty.Create(nameof(FloatingTextColor), typeof(Easing), typeof(FloatingUltimateEntry), Easing.Linear);
 
         public static readonly BindableProperty PlaceholderFontSizeProperty = BindableProperty.Create(nameof(PlaceholderFontSize), typeof(int), typeof(FloatingUltimateEntry), 18);
-        public static readonly BindableProperty PlaceholderLeftMarginProperty = BindableProperty.Create(nameof(PlaceholderLeftMargin), typeof(int), typeof(FloatingUltimateEntry), 10);
+        public static readonly BindableProperty PlaceholderLeftMarginProperty = BindableProperty.Create(nameof(PlaceholderLeftMargin), typeof(int), typeof(FloatingUltimateEntry), 15);
 
         public static readonly BindableProperty TitleFontSizeProperty = BindableProperty.Create(nameof(PlaceholderFontSize), typeof(int), typeof(FloatingUltimateEntry), 14);
-        public static readonly BindableProperty TitleLeftMarginProperty = BindableProperty.Create(nameof(TitleLeftMargin), typeof(int), typeof(FloatingUltimateEntry), 10);
+        public static readonly BindableProperty TitleLeftMarginProperty = BindableProperty.Create(nameof(TitleLeftMargin), typeof(int), typeof(FloatingUltimateEntry), 15);
 
         
         static async void HandleBindingPropertyChangedDelegate(BindableObject bindable, object oldValue, object newValue)
@@ -49,16 +52,16 @@ namespace PhantomLib.CustomControls
             set => SetValue(TextProperty, value);
         }
 
-        public int FloatingTranslationLength
+        public int FloatingSpace
         {
-            get => (int)GetValue(PlaceholderLeftMarginProperty);
-            set => SetValue(PlaceholderLeftMarginProperty, value);
+            get => (int)GetValue(FloatingSpaceProperty);
+            set => SetValue(FloatingSpaceProperty, value);
         }
 
         public int PlaceholderLeftMargin
         {
-            get => (int)GetValue(FloatingTranslationLengthProperty);
-            set => SetValue(FloatingTranslationLengthProperty, value);
+            get => (int)GetValue(PlaceholderLeftMarginProperty);
+            set => SetValue(PlaceholderLeftMarginProperty, value);
         }
 
         public int TitleLeftMargin
@@ -112,6 +115,12 @@ namespace PhantomLib.CustomControls
                 else if ((int)_ultimateEntry.HeightRequest > 0)
                     HeightRequest = _ultimateEntry.HeightRequest;
 
+                UltimateEntry.EntryFocusChanged -= Handle_Focus_Delegate;
+                UltimateEntry.TextChanged -= UltimateEntry_TextChanged;
+
+                UltimateEntry.EntryFocusChanged += Handle_Focus_Delegate;
+                UltimateEntry.TextChanged += UltimateEntry_TextChanged;
+
                 Render();
             }
         }
@@ -123,17 +132,29 @@ namespace PhantomLib.CustomControls
                 TextColor = FloatingTextColor,
                 VerticalOptions = LayoutOptions.Center,
             };
-            FloatingLabel.GestureRecognizers.Add(new TapGestureRecognizer
+            
+            LabelBuffer = new BoxView
+            {
+                BackgroundColor = UltimateEntry.BackgroundColor,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand
+            };
+
+            var gesture = new TapGestureRecognizer
             {
                 NumberOfTapsRequired = 1,
-                Command = new Command((obj) => Handle_Tapped())
-            });
+                Command = new Command((obj) => Handle_Buffer_Tapped())
+            };
 
+            LabelBuffer.GestureRecognizers.Add(gesture);
+            FloatingLabel.GestureRecognizers.Add(gesture);
             FloatingLabel.TranslationX = PlaceholderLeftMargin;
             FloatingLabel.FontSize = PlaceholderFontSize;
             FloatingLabel.BackgroundColor = Color.Transparent;
 
             FloatingLabel.Text = FloatingText;
+
+            _floatingTransitionLength = PlaceholderFontSize + FloatingSpace;
 
             Render();
         }
@@ -141,15 +162,22 @@ namespace PhantomLib.CustomControls
         private void Render()
         {
             Content = null;
-            var grid = new Grid();
+
+            var grid = new Grid { RowSpacing = 0 };
+
+            LabelBuffer.BackgroundColor = UltimateEntry.BackgroundColor;
+
             UltimateEntry.IsEnabled = IsEnabled;
             FloatingLabel.IsEnabled = IsEnabled;
-            grid.Children.Add(UltimateEntry);
-            grid.Children.Add(FloatingLabel);
-            Content = grid;
 
-            UltimateEntry.EntryFocusChanged += Handle_Focus;
-            UltimateEntry.TextChanged += UltimateEntry_TextChanged;
+            grid.RowDefinitions.Add(new RowDefinition { Height = TitleFontSize+FloatingSpace});
+            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
+
+            grid.Children.Add(LabelBuffer, 0, 0);
+            grid.Children.Add(UltimateEntry, 0, 1);
+            grid.Children.Add(FloatingLabel, 0 ,1);
+
+            Content = grid;
         }
 
         private void UltimateEntry_TextChanged(object sender, TextChangedEventArgs e)
@@ -157,11 +185,12 @@ namespace PhantomLib.CustomControls
             Text = e.NewTextValue;
         }
 
-        async void Handle_Focus(object sender, FocusEventArgs e)
+        async void Handle_Focus_Delegate(object sender, FocusEventArgs e)
         {
+            LabelBuffer.BackgroundColor = UltimateEntry.BackgroundColor;
             if (string.IsNullOrEmpty(Text))
             {
-                if (e.IsFocused)
+                if (_ultimateEntry.EntryIsFocused)
                 {
                     await TransitionToTitle(true);
                 }
@@ -176,16 +205,18 @@ namespace PhantomLib.CustomControls
         {
             if (animated)
             {
-                var t1 = FloatingLabel.TranslateTo(TitleLeftMargin, 0-FloatingTranslationLength, 100);
+                var t1 = FloatingLabel.TranslateTo(TitleLeftMargin, 0- _floatingTransitionLength, 100);
                 var t2 = SizeTo(TitleFontSize);
                 await Task.WhenAll(t1, t2);
             }
             else
             {
                 FloatingLabel.TranslationX = TitleLeftMargin;
-                FloatingLabel.TranslationY = 0 - FloatingTranslationLength;
+                FloatingLabel.TranslationY = 0 - _floatingTransitionLength;
                 FloatingLabel.FontSize = TitleFontSize;
             }
+
+            _floatingTextIsPlaceholder = false;
         }
 
         async Task TransitionToPlaceholder(bool animated)
@@ -202,14 +233,16 @@ namespace PhantomLib.CustomControls
                 FloatingLabel.TranslationY = 0;
                 FloatingLabel.FontSize = PlaceholderFontSize;
             }
+
+            _floatingTextIsPlaceholder = true;
         }
 
-        void Handle_Tapped()
+        private void Handle_Buffer_Tapped()
         {
-            if (IsEnabled)
-            {
+            if (_ultimateEntry.EntryIsFocused)
+                UltimateEntry.Unfocus();
+            else
                 UltimateEntry.Focus();
-            }
         }
 
         Task SizeTo(int fontSize)
@@ -246,6 +279,7 @@ namespace PhantomLib.CustomControls
             {
                 FloatingLabel.TextColor = FloatingTextColor;
             }
+           
         }
     }
 }

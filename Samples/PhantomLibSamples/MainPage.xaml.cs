@@ -25,12 +25,8 @@ namespace PhantomLibSamples
             {
                 RightImageSource = "icon_close_black",
                 ImageButtonType = UltimateEntryImageButton.ClearContents,
-                AlwaysShowRightImage = true,
-                IsRoundedEntry = false,
-                BackgroundColor = Color.Beige,
-                FocusedBackgroundColor = Color.Aquamarine,
-                HeightRequest = 60,
-                ThicknessPadding = new Thickness(20,30,20,10),
+                BackgroundColor = Color.White,
+                FocusedBackgroundColor = Color.Wheat
             };
 
             UltimateEntry1.NextView = UltimateEntry2;

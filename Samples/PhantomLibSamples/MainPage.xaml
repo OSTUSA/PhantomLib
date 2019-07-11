@@ -76,12 +76,12 @@
                                                ImageButtonType="ClearContents" Style="{StaticResource UltimateEntry}" />
                         <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
                         <controls:UltimateEntry x:Name="UltimateEntry4" AlwaysShowRightImage="false" Placeholder="Enter your password" RightImageSource="icon_lock_open"
-                                               HidePasswordImageSource="icon_lock_close" ReturnButtonType="Done" ImageButtonType="Password" Style="{StaticResource UltimateEntry}" />
+                                               HidePasswordImageSource="icon_lock_close" ReturnButtonType="Next" ImageButtonType="Password" Style="{StaticResource UltimateEntry}" />
                     </StackLayout>
                 </StackLayout>
                 <BoxView Style="{StaticResource BoxView_Hr}" />
                 <StackLayout>
-                    <controls:FloatingUltimateEntry x:Name="FloatingUltimateEntry1" FloatingText="enter some stuffs" FloatingTranslationLength="20"/>
+                    <controls:FloatingUltimateEntry x:Name="FloatingUltimateEntry1" FloatingText="Enter some stuffs to watch me float"/>
                 </StackLayout>
                 <BoxView Style="{StaticResource BoxView_Hr}" />
                 <StackLayout BackgroundColor="Aqua" Padding="10">
