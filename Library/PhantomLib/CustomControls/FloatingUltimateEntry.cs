@@ -13,7 +13,6 @@ namespace PhantomLib.CustomControls
         private Label FloatingLabel;
         private BoxView LabelBuffer;
         private int _floatingTransitionLength;
-        private bool _floatingTextIsPlaceholder = true;
 
         public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(string), string.Empty, BindingMode.TwoWay, null, HandleBindingPropertyChangedDelegate);
 
