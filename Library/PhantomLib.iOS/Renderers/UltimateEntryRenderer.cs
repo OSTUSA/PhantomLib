@@ -37,8 +37,6 @@ namespace PhantomLib.iOS.Renderers
                 _textField.LeftView = new UIView(new CGRect(0, 0, 10, 0));
                 _textField.LeftViewMode = UITextFieldViewMode.Always;
 
-
-                SetImage();
                 SetReturnType();
 
                 if(e.NewElement != null)
@@ -75,6 +73,9 @@ namespace PhantomLib.iOS.Renderers
                 case nameof(UltimateEntry.ErrorColor):
                 case nameof(UltimateEntry.ShowError):
                 case nameof(UltimateEntry.FocusedBackgroundColor):
+                case nameof(UltimateEntry.RightImageSource):
+                case nameof(UltimateEntry.HidePasswordImageSource):
+                case nameof(UltimateEntry.ErrorImageSource):
                     UpdateControlUI();
                     break;
             }
@@ -108,6 +109,8 @@ namespace PhantomLib.iOS.Renderers
             _textField.BackgroundColor = _ultimateEntry.IsFocused
                     ? _ultimateEntry.FocusedBackgroundColor.ToUIColor()
                     : _ultimateEntry.BackgroundColor.ToUIColor();
+
+            SetImage();
         }
 
         private void SetReturnType()
@@ -131,34 +134,44 @@ namespace PhantomLib.iOS.Renderers
 
         private void SetImage()
         {
-            //add image if RightImageSource is defined else add pading
-            if (string.IsNullOrEmpty(_ultimateEntry.RightImageSource))
+            string imageSource = "";
+
+            //if error and error image is provided
+            if (_ultimateEntry.ShowError && !string.IsNullOrEmpty(_ultimateEntry.ErrorImageSource))
+            {
+                imageSource = _ultimateEntry.ErrorImageSource;
+            }
+            //handle Password image if its a password
+            else if (_ultimateEntry.ImageButtonType == UltimateEntryImageButton.Password)
+            {
+                imageSource = _ultimateEntry.IsPassword
+                    ? _ultimateEntry.HidePasswordImageSource
+                    : _ultimateEntry.RightImageSource;
+            }
+            //lastly use RightImageSource if it exists
+            else if (!string.IsNullOrEmpty(_ultimateEntry.RightImageSource))
+            {
+                imageSource = _ultimateEntry.RightImageSource;
+            }
+
+            //set padding in place of image if developer didnt set imageSource
+            if (string.IsNullOrEmpty(imageSource))
             {
                 _textField.RightView = new UIView(new CGRect(0, 0, 10, 0));
                 _textField.RightViewMode = UITextFieldViewMode.Always;
             }
             else
             {
-                //use hide password image if text is plain text
-                if(_ultimateEntry.ImageButtonType == UltimateEntryImageButton.Password && !_ultimateEntry.IsPassword)
-                {
-                    _textField.RightView = GetImageView(_ultimateEntry.HidePasswordImageSource);
-                }
-                else
-                {
-                    _textField.RightView = GetImageView(_ultimateEntry.RightImageSource);
-                }
-
-                if (_ultimateEntry.AlwaysShowRightImage)
-                    _textField.RightViewMode = UITextFieldViewMode.Always;
-                else
-                    _textField.RightViewMode = UITextFieldViewMode.WhileEditing;
+                _textField.RightView = GetImageView(imageSource);
+                _textField.RightViewMode = _ultimateEntry.AlwaysShowRightImage
+                        ? UITextFieldViewMode.Always
+                        : UITextFieldViewMode.WhileEditing;
             }
         }
 
-        private UIView GetImageView(string imagePath)
+        private UIView GetImageView(string imageSource)
         {
-            var image = UIImage.FromBundle(imagePath).ImageWithRenderingMode(UIKit.UIImageRenderingMode.Automatic);
+            var image = UIImage.FromBundle(imageSource).ImageWithRenderingMode(UIKit.UIImageRenderingMode.Automatic);
             // Make the view 10 wider than the image so that it has some padding.
 
             _imageButton = UIButton.FromType(UIButtonType.Custom);
@@ -180,14 +193,13 @@ namespace PhantomLib.iOS.Renderers
             {
                 case UltimateEntryImageButton.ClearContents:
                     _ultimateEntry.Text = string.Empty;
-                    UpdateControlUI();
                     break;
                 case UltimateEntryImageButton.Password:
                     _ultimateEntry.IsPassword = !_ultimateEntry.IsPassword;
-                    SetImage();
                     break;
             }
 
+            UpdateControlUI();
             _ultimateEntry.RightImageTouchedDelegate(_ultimateEntry, e);
         }
 

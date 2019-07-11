@@ -29,6 +29,7 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty EntryIsFocusedProperty = BindableProperty.Create(nameof(EntryIsFocused), typeof(bool), typeof(UltimateEntry), false);
         public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(UltimateEntry), false);
         public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
+        public static readonly BindableProperty ErrorImageSourceProperty = BindableProperty.Create(nameof(ErrorImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
         public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
         public static readonly BindableProperty AlwaysShowRightImageProperty = BindableProperty.Create(nameof(AlwaysShowRightImage), typeof(bool), typeof(UltimateEntry), true);
         public static readonly BindableProperty IsRoundedEntryProperty = BindableProperty.Create(nameof(IsRoundedEntry), typeof(bool), typeof(UltimateEntry), false);
@@ -38,6 +39,11 @@ namespace PhantomLib.CustomControls
         {
             get => (string)GetValue(RightImageSourceProperty);
             set => SetValue(RightImageSourceProperty, value);
+        }
+        public string ErrorImageSource
+        {
+            get => (string)GetValue(ErrorImageSourceProperty);
+            set => SetValue(ErrorImageSourceProperty, value);
         }
 
         public string HidePasswordImageSource
