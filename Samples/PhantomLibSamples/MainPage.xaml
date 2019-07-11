@@ -80,6 +80,10 @@
                     </StackLayout>
                 </StackLayout>
                 <BoxView Style="{StaticResource BoxView_Hr}" />
+                <StackLayout>
+                    <controls:FloatingUltimateEntry x:Name="FloatingUltimateEntry1" FloatingText="enter some stuffs" FloatingTranslationLength="20"/>
+                </StackLayout>
+                <BoxView Style="{StaticResource BoxView_Hr}" />
                 <StackLayout BackgroundColor="Aqua" Padding="10">
                     <StackLayout.BindingContext>
                         <local-vms:TapCommandBehaviorViewModel />
