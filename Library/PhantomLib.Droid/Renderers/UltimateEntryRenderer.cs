@@ -47,7 +47,7 @@ namespace PhantomLib.Droid.Renderers
                     SetImage(_ultimateEntry.RightImageSource);
                 }
 
-                _editText.SetPadding(50, 50, 50, 50);
+                SetPadding();
 
                 SetReturnType(_ultimateEntry.ReturnButtonType);
 
@@ -70,6 +70,23 @@ namespace PhantomLib.Droid.Renderers
                     _editText.SetOnTouchListener(null);
                 }
             }
+        }
+
+        private int ConvertToDip(int size)
+        {
+            var a = (int)TypedValue.ApplyDimension(ComplexUnitType.Dip, size, Context.Resources.DisplayMetrics);
+            return a;
+        }
+
+        private void SetPadding()
+        {
+            _editText.SetPadding
+                (
+                    ConvertToDip((int)_ultimateEntry.ThicknessPadding.Left),
+                    ConvertToDip((int)_ultimateEntry.ThicknessPadding.Top),
+                    ConvertToDip((int)_ultimateEntry.ThicknessPadding.Right),
+                    ConvertToDip((int)_ultimateEntry.ThicknessPadding.Bottom)
+                );
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
