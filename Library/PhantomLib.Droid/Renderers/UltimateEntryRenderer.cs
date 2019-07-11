@@ -23,7 +23,6 @@ namespace PhantomLib.Droid.Renderers
         UltimateEntry _ultimateEntry;
         EditText _editText;
         Color _entryBackgroundColor;
-        private int _imageResourceId = 0;
 
         public UltimateEntryRenderer(Context context) : base(context) { }
 
@@ -40,11 +39,6 @@ namespace PhantomLib.Droid.Renderers
                 if(_ultimateEntry.ImageButtonType == UltimateEntryImageButton.Password)
                 {
                     _ultimateEntry.IsPassword = true;
-                }
-
-                if (!string.IsNullOrEmpty(_ultimateEntry.RightImageSource))
-                {
-                    SetImage(_ultimateEntry.RightImageSource);
                 }
 
                 SetPadding();
@@ -99,6 +93,9 @@ namespace PhantomLib.Droid.Renderers
                 case nameof(UltimateEntry.ErrorColor):
                 case nameof(UltimateEntry.ShowError):
                 case nameof(UltimateEntry.FocusedBackgroundColor):
+                case nameof(UltimateEntry.RightImageSource):
+                case nameof(UltimateEntry.HidePasswordImageSource):
+                case nameof(UltimateEntry.ErrorImageSource):
                     UpdateControlUI();
                     break;
             }
@@ -157,22 +154,8 @@ namespace PhantomLib.Droid.Renderers
                 _ultimateEntry.BackgroundColor = bgColor;
             }
 
-
-            //handle toggling visibility to image on focus
-            if (_editText.IsFocused)
-            {
-                if (!_ultimateEntry.AlwaysShowRightImage)
-                {
-                    _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, _imageResourceId, 0);
-                }
-            }
-            else
-            {
-                if (!_ultimateEntry.AlwaysShowRightImage)
-                {
-                    _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
-                }
-            }
+            //update image
+            SetImage();
         }
 
         private void SetReturnType(UltimateEntryReturn type)
@@ -199,20 +182,48 @@ namespace PhantomLib.Droid.Renderers
             }
         }
 
-        public void SetImage(string imageSource)
+        public void SetImage()
         {
-            _imageResourceId = Resources.GetIdentifier(imageSource, "drawable", Context.PackageName);
+            string imageSource = "";
 
-            if (_imageResourceId != 0)
+            //if error and error image is provided
+            if (_ultimateEntry.ShowError && !string.IsNullOrEmpty(_ultimateEntry.ErrorImageSource))
+            {
+                imageSource = _ultimateEntry.ErrorImageSource;
+            }
+            //handle Password image if its a password
+            else if (_ultimateEntry.ImageButtonType == UltimateEntryImageButton.Password)
+            {
+                imageSource = _ultimateEntry.IsPassword
+                    ? _ultimateEntry.HidePasswordImageSource
+                    : _ultimateEntry.RightImageSource;
+            }
+            //lastly use RightImageSource if it exists
+            else if(!string.IsNullOrEmpty(_ultimateEntry.RightImageSource))
+            {
+                imageSource = _ultimateEntry.RightImageSource;
+            }
+
+            //clear image and return if developer didnt set imageSource  OR the entry is not focused and developer wants to hide image
+            if (string.IsNullOrEmpty(imageSource) || !_ultimateEntry.AlwaysShowRightImage && !_editText.IsFocused)
+            {
+                _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
+                return;
+            }
+
+            var imageResourceId = Resources.GetIdentifier(imageSource, "drawable", Context.PackageName);
+            if (imageResourceId != 0)
             {
                 if (!_editText.HasOnClickListeners)
                 {
                     _editText.SetOnTouchListener(new OnDrawableTouchListener());
                 }
-                _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, _imageResourceId, 0);
+                _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, imageResourceId, 0);
             }
-
-            UpdateControlUI();
+            else
+            {
+                throw new Exception($"Drawable {imageSource} was not found in package {Context.PackageName}");
+            }
         }
 
         BoxView keyboardPlaceholder;
@@ -276,25 +287,14 @@ namespace PhantomLib.Droid.Renderers
                                 case UltimateEntryImageButton.ClearContents:
                                     ultimateEntry.Text = string.Empty;
                                     break;
-                                
-                                //toggle transformation and image on every click
+                                //toggle transformation
                                 case UltimateEntryImageButton.Password:
-                                    if(ultimateEntry.IsPassword)
-                                    {
-                                        ultimateEntryRenderer.SetImage(ultimateEntry.HidePasswordImageSource);
-                                        ultimateEntry.IsPassword = false;
-                                    }
-                                    else
-                                    {
-                                        ultimateEntryRenderer.SetImage(ultimateEntry.RightImageSource);
-                                        ultimateEntry.IsPassword = true;
-                                    }
+                                    ultimateEntry.IsPassword = !ultimateEntry.IsPassword;
                                     break;
                             }
                             ultimateEntryRenderer.UpdateControlUI();
                             ultimateEntry.RightImageTouchedDelegate(ultimateEntry, new EventArgs());
                         }
-
                     }
                     return true;
                 }
@@ -302,5 +302,4 @@ namespace PhantomLib.Droid.Renderers
             return false;
         }
     }
-
 }
