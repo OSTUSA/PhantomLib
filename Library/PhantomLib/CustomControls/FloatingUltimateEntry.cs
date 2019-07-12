@@ -215,7 +215,6 @@ namespace PhantomLib.CustomControls
                 FloatingLabel.FontSize = TitleFontSize;
             }
 
-            _floatingTextIsPlaceholder = false;
         }
 
         async Task TransitionToPlaceholder(bool animated)
@@ -233,7 +232,6 @@ namespace PhantomLib.CustomControls
                 FloatingLabel.FontSize = PlaceholderFontSize;
             }
 
-            _floatingTextIsPlaceholder = true;
         }
 
         private void Handle_Buffer_Tapped()
