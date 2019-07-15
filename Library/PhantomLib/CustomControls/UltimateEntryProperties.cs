@@ -71,7 +71,7 @@ namespace PhantomLib.CustomControls
         public static bool GetAlwaysShowRightImage(Element element) => (bool)element.GetValue(AlwaysShowRightImageProperty);
         public static void SetAlwaysShowRightImage(Element element, bool value) => element.SetValue(AlwaysShowRightImageProperty, value);
 
-        public static readonly BindableProperty IsRoundedEntryProperty = CreateAttached(nameof(UltimateEntry.IsRoundedEntry), typeof(string), typeof(UltimateEntry), false);
+        public static readonly BindableProperty IsRoundedEntryProperty = CreateAttached(nameof(UltimateEntry.IsRoundedEntry), typeof(bool), typeof(UltimateEntry), false);
         public static bool GetIsRoundedEntry(Element element) => (bool)element.GetValue(IsRoundedEntryProperty);
         public static void SetIsRoundedEntry(Element element, bool value) => element.SetValue(IsRoundedEntryProperty, value);
 
