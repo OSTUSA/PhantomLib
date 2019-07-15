@@ -130,6 +130,9 @@
     <ImageAsset Include="Assets.xcassets\icon_lock_close.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\icon_lock_close.imageset\baseline_lock_black_18dp.png" />
     <ImageAsset Include="Assets.xcassets\icon_lock_close.imageset\baseline_lock_black_18dp-1.png" />
+    <ImageAsset Include="Assets.xcassets\icon_error.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_error.imageset\baseline_error_black_18dp.png" />
+    <ImageAsset Include="Assets.xcassets\icon_error.imageset\baseline_error_black_18dp-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -169,6 +172,7 @@
     <Folder Include="Assets.xcassets\icon_close_black.imageset\" />
     <Folder Include="Assets.xcassets\icon_lock_open.imageset\" />
     <Folder Include="Assets.xcassets\icon_lock_close.imageset\" />
+    <Folder Include="Assets.xcassets\icon_error.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
