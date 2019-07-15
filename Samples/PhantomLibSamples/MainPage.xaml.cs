@@ -21,14 +21,6 @@ namespace PhantomLibSamples
 
             StackLayoutAndroidEntries.IsVisible = Device.RuntimePlatform == Device.Android;
 
-            FloatingUltimateEntry1.UltimateEntry = new UltimateEntry
-            {
-                RightImageSource = "icon_close_black",
-                ImageButtonType = UltimateEntryImageButton.ClearContents,
-                BackgroundColor = Color.White,
-                FocusedBackgroundColor = Color.Wheat
-            };
-
             UltimateEntry1.NextView = UltimateEntry2;
             UltimateEntry2.NextView = UltimateEntry3;
             UltimateEntry3.NextView = UltimateEntry4;
@@ -61,7 +53,6 @@ namespace PhantomLibSamples
                 if (e.NewTextValue.Length > 10)
                 {
                     entry.ShowError = true;
-                    entry.RightImageSource = "icon_error";
                 }
                 else
                 {

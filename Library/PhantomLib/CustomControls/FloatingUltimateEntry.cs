@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -103,25 +102,7 @@ namespace PhantomLib.CustomControls
         public UltimateEntry UltimateEntry
         {
             get => _ultimateEntry;
-            set
-            {
-                _ultimateEntry = value;
-
-                //get whatever height was defined and use that.
-                //Use FloatingUltimateEntry first if it was defined
-                if (HeightRequest > 0)
-                    _ultimateEntry.HeightRequest = this.HeightRequest;
-                else if ((int)_ultimateEntry.HeightRequest > 0)
-                    HeightRequest = _ultimateEntry.HeightRequest;
-
-                UltimateEntry.EntryFocusChanged -= Handle_Focus_Delegate;
-                UltimateEntry.TextChanged -= UltimateEntry_TextChanged;
-
-                UltimateEntry.EntryFocusChanged += Handle_Focus_Delegate;
-                UltimateEntry.TextChanged += UltimateEntry_TextChanged;
-
-                Render();
-            }
+            set => _ultimateEntry = value;
         }
 
         public FloatingUltimateEntry()
@@ -154,6 +135,16 @@ namespace PhantomLib.CustomControls
             FloatingLabel.Text = FloatingText;
 
             _floatingTransitionLength = PlaceholderFontSize + FloatingSpace;
+
+            //get whatever height was defined and use that.
+            //Use FloatingUltimateEntry first if it was defined
+            if (HeightRequest > 0)
+                UltimateEntry.HeightRequest = this.HeightRequest;
+            else if ((int)_ultimateEntry.HeightRequest > 0)
+                HeightRequest = UltimateEntry.HeightRequest;
+
+            UltimateEntry.EntryFocusChanged += Handle_Focus_Delegate;
+            UltimateEntry.TextChanged += UltimateEntry_TextChanged;
 
             Render();
         }
@@ -189,7 +180,7 @@ namespace PhantomLib.CustomControls
             LabelBuffer.BackgroundColor = UltimateEntry.BackgroundColor;
             if (string.IsNullOrEmpty(Text))
             {
-                if (_ultimateEntry.EntryIsFocused)
+                if (UltimateEntry.EntryIsFocused)
                 {
                     await TransitionToTitle(true);
                 }
@@ -265,18 +256,23 @@ namespace PhantomLib.CustomControls
             Completed?.Invoke(this, e);
         }
 
+
+
         protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             base.OnPropertyChanged(propertyName);
-            if (propertyName == nameof(FloatingText))
+
+            switch (propertyName)
             {
-                FloatingLabel.Text = FloatingText;
+                case nameof(FloatingText):
+                    FloatingLabel.Text = FloatingText;
+                    break;
+                case nameof(FloatingTextColor):
+                    FloatingLabel.TextColor = FloatingTextColor;
+                    break;
             }
-            else if (propertyName == nameof(FloatingTextColor))
-            {
-                FloatingLabel.TextColor = FloatingTextColor;
-            }
-           
+
+            UltimateEntryProperties.OnPropertyChanged(propertyName, UltimateEntry, this);
         }
     }
 }
