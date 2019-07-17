@@ -24,6 +24,8 @@ namespace PhantomLibSamples
             UltimateEntry1.NextView = UltimateEntry2;
             UltimateEntry2.NextView = UltimateEntry3;
             UltimateEntry3.NextView = UltimateEntry4;
+            UltimateEntry4.NextView = FloatingUltimateEntry1.UltimateEntry;
+
             //Analytics Timing Sample
             new AnalyticsTimerSample();
         }

@@ -1,128 +1,109 @@
 ﻿using System;
 using Xamarin.Forms;
+using static PhantomLib.CustomControls.UltimateEntryProperties;
 
 namespace PhantomLib.CustomControls
 {
-    public enum UltimateEntryReturn
-    {
-        Next,
-        Done,
-        Search
-    }
-
-    public enum UltimateEntryImageButton
-    {
-        None,
-        ClearContents,
-        Password,
-    }
-
     public class UltimateEntry : Entry
     {
-        public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButtonType), typeof(UltimateEntryImageButton), typeof(UltimateEntry), UltimateEntryImageButton.None);
-        public static readonly BindableProperty ReturnButtonProperty = BindableProperty.Create(nameof(ReturnButtonType), typeof(UltimateEntryReturn), typeof(UltimateEntry), UltimateEntryReturn.Done);
-        public static readonly BindableProperty NextViewProperty = BindableProperty.Create(nameof(NextView), typeof(UltimateEntry), typeof(UltimateEntry));
-        public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(UltimateEntry), false);
-        public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(UltimateEntry), Color.Red);
-        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(UltimateEntry), new Color(255, 255, 255, 0.2));
-        public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create(nameof(FocusedBorderColor), typeof(Color), typeof(UltimateEntry), Color.DimGray);
-        public static readonly BindableProperty EntryIsFocusedProperty = BindableProperty.Create(nameof(EntryIsFocused), typeof(bool), typeof(UltimateEntry), false);
-        public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(UltimateEntry), false);
-        public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
-        public static readonly BindableProperty ErrorImageSourceProperty = BindableProperty.Create(nameof(ErrorImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
-        public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(UltimateEntry), string.Empty);
-        public static readonly BindableProperty AlwaysShowRightImageProperty = BindableProperty.Create(nameof(AlwaysShowRightImage), typeof(bool), typeof(UltimateEntry), true);
-        public static readonly BindableProperty IsRoundedEntryProperty = BindableProperty.Create(nameof(IsRoundedEntry), typeof(bool), typeof(UltimateEntry), false);
-        public static readonly BindableProperty ThicknessPaddingProperty = BindableProperty.Create(nameof(ThicknessPadding), typeof(Thickness), typeof(UltimateEntry), new Thickness(20,10));
-
         public string RightImageSource
         {
-            get => (string)GetValue(RightImageSourceProperty);
-            set => SetValue(RightImageSourceProperty, value);
+            get => UltimateEntryProperties.GetRightImageSource(this);
+            set => UltimateEntryProperties.SetRightImageSource(this, value);
         }
         public string ErrorImageSource
         {
-            get => (string)GetValue(ErrorImageSourceProperty);
-            set => SetValue(ErrorImageSourceProperty, value);
+            get => UltimateEntryProperties.GetErrorImageSource(this);
+            set => UltimateEntryProperties.SetErrorImageSource(this, value);
         }
 
         public string HidePasswordImageSource
         {
-            get => (string)GetValue(HidePasswordImageSourceProperty);
-            set => SetValue(HidePasswordImageSourceProperty, value);
+            get => UltimateEntryProperties.GetHidePasswordImageSource(this);
+            set => UltimateEntryProperties.SetHidePasswordImageSource(this, value);
         }
 
         public Thickness ThicknessPadding
         {
-            get => (Thickness)GetValue(ThicknessPaddingProperty);
-            set => SetValue(ThicknessPaddingProperty, value);
+            get => UltimateEntryProperties.GetThicknessPadding(this);
+            set => UltimateEntryProperties.SetThicknessPadding(this, value);
         }
 
         public bool ShowError
         {
-            get => (bool)GetValue(ShowErrorProperty);
-            set => SetValue(ShowErrorProperty, value);
+            get => UltimateEntryProperties.GetShowError(this);
+            set => UltimateEntryProperties.SetShowError(this, value);
         }
 
         public bool IsRoundedEntry
         {
-            get => (bool)GetValue(IsRoundedEntryProperty);
-            set => SetValue(IsRoundedEntryProperty, value);
+            get => UltimateEntryProperties.GetIsRoundedEntry(this);
+            set => UltimateEntryProperties.SetIsRoundedEntry(this, value);
         }
 
         public bool AlwaysShowRightImage
         {
-            get => (bool)GetValue(AlwaysShowRightImageProperty);
-            set => SetValue(AlwaysShowRightImageProperty, value);
+            get => UltimateEntryProperties.GetAlwaysShowRightImage(this);
+            set => UltimateEntryProperties.SetAlwaysShowRightImage(this, value);
         }
 
         public Color ErrorColor
         {
-            get => (Color)GetValue(ErrorColorProperty);
-            set => SetValue(ErrorColorProperty, value);
+            get => UltimateEntryProperties.GetErrorColor(this);
+            set => UltimateEntryProperties.SetErrorColor(this, value);
         }
 
         public Color FocusedBorderColor
         {
-            get => (Color)GetValue(FocusedBorderColorProperty);
-            set => SetValue(FocusedBorderColorProperty, value);
+            get => UltimateEntryProperties.GetFocusedBorderColor(this);
+            set => UltimateEntryProperties.SetFocusedBorderColor(this, value);
         }
 
         public Color FocusedBackgroundColor
         {
-            get => (Color)GetValue(FocusedBackgroundColorProperty);
-            set => SetValue(FocusedBackgroundColorProperty, value);
-
+            get => UltimateEntryProperties.GetFocusedBackgroundColor(this);
+            set => UltimateEntryProperties.SetFocusedBackgroundColor(this, value);
         }
 
         public bool EntryIsFocused
         {
-            get => (bool)GetValue(EntryIsFocusedProperty);
-            set => SetValue(EntryIsFocusedProperty, value);
+            get => UltimateEntryProperties.GetEntryIsFocused(this);
+            set => UltimateEntryProperties.SetEntryIsFocused(this, value);
         }
 
         public UltimateEntryReturn ReturnButtonType
         {
-            get => (UltimateEntryReturn)GetValue(ReturnButtonProperty);
-            set => SetValue(ReturnButtonProperty, value);
+            get
+            {
+                var enumString = UltimateEntryProperties.GetReturnButton(this);
+                Enum.TryParse(enumString, out UltimateEntryReturn returnButton);
+                return returnButton;
+            }
+            set => UltimateEntryProperties.SetImageButtonType(this, value.ToString());
         }
 
         public UltimateEntryImageButton ImageButtonType
         {
-            get => (UltimateEntryImageButton)GetValue(ImageButtonProperty);
-            set => SetValue(ImageButtonProperty, value);
+
+            get
+            {    
+                var enumString = UltimateEntryProperties.GetImageButtonType(this);
+                Enum.TryParse(enumString, out UltimateEntryImageButton imageButton);
+                return imageButton;
+            }
+            set => UltimateEntryProperties.SetImageButtonType(this, value.ToString());
         }
 
         public UltimateEntry NextView
         {
-            get => (UltimateEntry)GetValue(NextViewProperty);
-            set => SetValue(NextViewProperty, value);
+            get => UltimateEntryProperties.GetNextView(this);
+            set => UltimateEntryProperties.SetNextView(this, value);
         }
 
         public bool UseKeyboardPlaceholder
         {
-            get => (bool)GetValue(UseKeyboardPlaceholderProperty);
-            set => SetValue(UseKeyboardPlaceholderProperty, value);
+            get => UltimateEntryProperties.GetUseKeyboardPlaceholder(this);
+            set => UltimateEntryProperties.SetUseKeyboardPlaceholder(this, value);
         }
 
         public void OnNext()

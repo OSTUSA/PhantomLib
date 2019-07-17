@@ -10,10 +10,9 @@ using PhantomLib.CustomControls;
 using PhantomLib.Droid.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using System.Linq;
-using Android.Text.Method;
 using Android.Graphics;
 using Color = Xamarin.Forms.Color;
+using static PhantomLib.CustomControls.UltimateEntryProperties;
 
 [assembly: ExportRenderer(typeof(UltimateEntry), typeof(UltimateEntryRenderer))]
 namespace PhantomLib.Droid.Renderers
