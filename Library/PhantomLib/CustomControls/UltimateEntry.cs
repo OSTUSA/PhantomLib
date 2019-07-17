@@ -73,14 +73,25 @@ namespace PhantomLib.CustomControls
 
         public UltimateEntryReturn ReturnButtonType
         {
-            get => UltimateEntryProperties.GetReturnButton(this);
-            set => UltimateEntryProperties.SetReturnButton(this, value);
+            get
+            {
+                var enumString = UltimateEntryProperties.GetReturnButton(this);
+                Enum.TryParse(enumString, out UltimateEntryReturn returnButton);
+                return returnButton;
+            }
+            set => UltimateEntryProperties.SetImageButtonType(this, value.ToString());
         }
 
         public UltimateEntryImageButton ImageButtonType
         {
-            get => UltimateEntryProperties.GetImageButtonType(this);
-            set => UltimateEntryProperties.SetImageButtonType(this, value);
+
+            get
+            {    
+                var enumString = UltimateEntryProperties.GetImageButtonType(this);
+                Enum.TryParse(enumString, out UltimateEntryImageButton imageButton);
+                return imageButton;
+            }
+            set => UltimateEntryProperties.SetImageButtonType(this, value.ToString());
         }
 
         public UltimateEntry NextView

@@ -7,6 +7,7 @@ using PhantomLib.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using static PhantomLib.CustomControls.UltimateEntryProperties;
 
 [assembly: ExportRenderer(typeof(UltimateEntry), typeof(UltimateEntryRenderer))]
 namespace PhantomLib.iOS.Renderers

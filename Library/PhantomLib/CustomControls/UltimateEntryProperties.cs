@@ -1,6 +1,6 @@
 ﻿using System;
-using System.ComponentModel;
 using Xamarin.Forms;
+using static PhantomLib.CustomControls.UltimateEntry;
 using static Xamarin.Forms.BindableProperty;
 
 namespace PhantomLib.CustomControls
@@ -9,13 +9,13 @@ namespace PhantomLib.CustomControls
     {
         //Abstract the properties so that the FloatingUltimateEntry and UltimateEntry reflect same BindableProperties and
         //so FloatingUltimateEntry can accept UltimateEntry in xaml
+        //USE STRINGS FOR CUSTOM ENUMS (see property ImageButtonType to see an example of enum)
         public enum UltimateEntryReturn
         {
             Next,
             Done,
             Search
         }
-
         public enum UltimateEntryImageButton
         {
             None,
@@ -27,13 +27,13 @@ namespace PhantomLib.CustomControls
         public static string GetRightImageSource(Element element) => (string)element.GetValue(RightImageSourceProperty);
         public static void SetRightImageSource(Element element, string value) => element.SetValue(RightImageSourceProperty, value);
 
-        public static readonly BindableProperty ImageButtonProperty = CreateAttached(nameof(UltimateEntry.ImageButtonType), typeof(UltimateEntryImageButton), typeof(UltimateEntry), UltimateEntryImageButton.None);
-        public static UltimateEntryImageButton GetImageButtonType(Element element) => (UltimateEntryImageButton)element.GetValue(ImageButtonProperty);
-        public static void SetImageButtonType(Element element, UltimateEntryImageButton value) => element.SetValue(ImageButtonProperty, value);
+        public static readonly BindableProperty ImageButtonTypeProperty = CreateAttached(nameof(UltimateEntry.ImageButtonType), typeof(string), typeof(UltimateEntry), UltimateEntryImageButton.None.ToString());
+        public static string GetImageButtonType(Element element) => (string)element.GetValue(ImageButtonTypeProperty);
+        public static void SetImageButtonType(Element element, string value) => element.SetValue(ImageButtonTypeProperty, value.ToString());
 
-        public static readonly BindableProperty ReturnButtonProperty = CreateAttached(nameof(UltimateEntry.ReturnButtonType), typeof(UltimateEntryReturn), typeof(UltimateEntry), UltimateEntryReturn.Done);
-        public static UltimateEntryReturn GetReturnButton(Element element) => (UltimateEntryReturn)element.GetValue(ReturnButtonProperty);
-        public static void SetReturnButton(Element element, UltimateEntryReturn value) => element.SetValue(ReturnButtonProperty, value);
+        public static readonly BindableProperty ReturnButtonProperty = CreateAttached(nameof(UltimateEntry.ReturnButtonType), typeof(string), typeof(UltimateEntry), UltimateEntryReturn.Done.ToString());
+        public static string GetReturnButton(Element element) => (string)element.GetValue(ReturnButtonProperty);
+        public static void SetReturnButton(Element element, string value) => element.SetValue(ReturnButtonProperty, value);
 
         public static readonly BindableProperty NextViewProperty = CreateAttached(nameof(UltimateEntry.NextView), typeof(UltimateEntry), typeof(UltimateEntry), null);
         public static UltimateEntry GetNextView(Element element) => (UltimateEntry)element.GetValue(NextViewProperty);

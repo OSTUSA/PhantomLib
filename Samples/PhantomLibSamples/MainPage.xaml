@@ -26,6 +26,8 @@
             <Style x:Key="FloatingUltimateEntry" TargetType="controls:FloatingUltimateEntry">
                 <Setter Property="controls:UltimateEntryProperties.FocusedBackgroundColor" Value="Gray" />
                 <Setter Property="controls:UltimateEntryProperties.ThicknessPadding" Value="20, 10" />
+                <Setter Property="controls:UltimateEntryProperties.RightImageSource" Value="icon_close_black" />
+                <Setter Property="controls:UltimateEntryProperties.ImageButtonType" Value="ClearContents" />
             </Style>
             <Style x:Key="BoxView_Hr" TargetType="BoxView">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
