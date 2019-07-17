@@ -22,9 +22,9 @@ namespace PhantomLib.iOS.Renderers
             if (roundedFrame.RoundTopRight)
                 corners = corners | CACornerMask.MaxXMinYCorner;
             if (roundedFrame.RoundBottomLeft)
-                corners = corners | CACornerMask.MaxXMaxYCorner;
-            if (roundedFrame.RoundBottomRight)
                 corners = corners | CACornerMask.MinXMaxYCorner;
+            if (roundedFrame.RoundBottomRight)
+                corners = corners | CACornerMask.MaxXMaxYCorner;
 
             this.ClipsToBounds = true;
             this.Layer.MaskedCorners = corners;
