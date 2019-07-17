@@ -18,47 +18,18 @@ namespace PhantomLibSamples
         public MainPage()
         {
             InitializeComponent();
-
-            StackLayoutAndroidEntries.IsVisible = Device.RuntimePlatform == Device.Android;
-
-            UltimateEntry1.NextView = UltimateEntry2;
-            UltimateEntry2.NextView = UltimateEntry3;
-            UltimateEntry3.NextView = UltimateEntry4;
-            UltimateEntry4.NextView = FloatingUltimateEntry1.UltimateEntry;
-
             //Analytics Timing Sample
             new AnalyticsTimerSample();
         }
 
-        protected override void OnAppearing()
+        void Handle_Clicked(object sender, System.EventArgs e)
         {
-            UltimateEntry1.TextChanged += UltimateEntry_TextChanged;
-            UltimateEntry3.TextChanged += UltimateEntry_TextChanged;
-
-            base.OnAppearing();
+            Navigation.PushAsync(new UltimateControlsPage());
         }
 
-        protected override void OnDisappearing()
+        void Handle_Clicked_1(object sender, System.EventArgs e)
         {
-            UltimateEntry1.TextChanged -= UltimateEntry_TextChanged;
-            UltimateEntry3.TextChanged -= UltimateEntry_TextChanged;
-
-            base.OnDisappearing();
-        }
-
-        void UltimateEntry_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if(sender is UltimateEntry entry)
-            {
-                if (e.NewTextValue.Length > 10)
-                {
-                    entry.ShowError = true;
-                }
-                else
-                {
-                    entry.ShowError = false;
-                }
-            }
+            Navigation.PushAsync(new ConvertersPage());
         }
     }
 }
