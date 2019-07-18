@@ -8,7 +8,8 @@
              xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
              xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
              xmlns:local-vms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
-             x:Class="PhantomLibSamples.CovertersPage"
+             x:Class="PhantomLibSamples.ConvertersPage"
+             Title="Converters"
              ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -22,10 +23,8 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
-                <BoxView Style="{StaticResource BoxView_Hr}" />
+            <StackLayout VerticalOptions="StartAndExpand" Margin="10,0">
                 <StackLayout Padding="10">
-                    <Label Text="Converters" FontSize="Large" />
                     <Entry x:Name="_entryConverters" Placeholder="Enter text to see converter values" />
                     <Label FontSize="Small">
                         <Label.FormattedText>
@@ -100,7 +99,6 @@
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
-                <BoxView Style="{StaticResource BoxView_Hr}" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

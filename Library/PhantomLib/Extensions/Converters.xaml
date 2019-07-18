@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converters="clr-namespace:PhantomLib.Converters" x:Class="PhantomLib.Extensions.Converters">
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:converters="clr-namespace:PhantomLib.Converters"
+                    x:Class="PhantomLib.Extensions.Converters">
+    
     <!-- this ResourceDictionary may have references to Converters so they can be used as StaticResources -->
     <converters:CharacterCountConverter x:Key="CharacterCountConverter" />
     <converters:InverseBoolConverter x:Key="InverseBoolConverter" />

@@ -9,9 +9,10 @@
              xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
              xmlns:local-vms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
              x:Class="PhantomLibSamples.UltimateControlsPage"
+             Title="Ultimate Entry"
              ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
-        <ResourceDictionary>
+        <ResourceDictionary> 
             <Style x:Key="UltimateEntry" TargetType="controls:UltimateEntry">
                 <Setter Property="FontSize" Value="15" />
                 <Setter Property="TextColor" Value="Black" />
@@ -38,7 +39,6 @@
         <ScrollView>
             <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
                 <StackLayout>
-                    <Label Text="Ultimate Entry" FontSize="Large" />
                     <Label Text="Enter more than 10 characters to see an error" FontSize="Small" />
                     <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateEntry1}" IsVisible="{Binding ShowError}"/>
                     <controls:UltimateEntry x:Name="UltimateEntry1" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" 

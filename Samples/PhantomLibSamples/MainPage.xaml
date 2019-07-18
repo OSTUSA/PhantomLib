@@ -9,89 +9,23 @@
              xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
              xmlns:local-vms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
              x:Class="PhantomLibSamples.MainPage"
+             NavigationPage.HasNavigationBar="false"
              ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="LabelStyle" TargetType="Label">
-                <Setter Property="extensions:Labels.Kerning" Value="10" />
-            </Style>
-            <Style x:Key="BoxView_Hr" TargetType="BoxView">
-                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="HeightRequest" Value="1" />
-                <Setter Property="BackgroundColor" Value="Gray" />
-                <Setter Property="Margin" Value="0,20" />
-            </Style>
             <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="Cornsilk" />
                 <Setter Property="BackgroundColor" Value="CornflowerBlue" />
+                <Setter Property="TextColor" Value="White" />
                 <Setter Property="Margin" Value="20" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
-                <BoxView Style="{StaticResource BoxView_Hr}" />
-                <Button Clicked="Handle_Clicked" Style="{StaticResource ButtonStyle}" Text="See Ultimate Controls" />
-                <Button Clicked="Handle_Clicked_1" Style="{StaticResource ButtonStyle}" Text="See Converters"/>
-                <BoxView Style="{StaticResource BoxView_Hr}" />
-                <StackLayout>
-                    
-                    <Label Text="Kerning Effect" FontSize="Large" />
-                    <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}">
-                        <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
-                            <Label.Effects>
-                                <effects:Kerning LetterSpacing="10" />
-                            </Label.Effects>-->
-                    </Label>
-                </StackLayout>
-                <BoxView Style="{StaticResource BoxView_Hr}" />
-                <StackLayout>
-                    <Label Text="Rounded Frame" FontSize="Large" />
-                    <controls:RoundedFrame CornerRadius="10" BackgroundColor="Blue" RoundTopLeft="true" RoundTopRight="true">
-                        <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
-                    </controls:RoundedFrame>
-                </StackLayout>
-                <BoxView Style="{StaticResource BoxView_Hr}" />
-                <StackLayout>
-                    <Label Text="Spinner Effect" FontSize="Large" />
-                    <Image x:Name="LoadingSpinner" Source="loading_spinner_green" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Image.Effects>
-                            <effects:Spinner Duration="700" />
-                        </Image.Effects>
-                    </Image>
-                </StackLayout>
-                <BoxView Style="{StaticResource BoxView_Hr}" />
-                <StackLayout BackgroundColor="Aqua" Padding="10">
-                    <StackLayout.BindingContext>
-                        <local-vms:TapCommandBehaviorViewModel />
-                    </StackLayout.BindingContext>
-                    <StackLayout.Behaviors>
-                        <!--
-                            The TapCommandBehavior has bindable properties for Command and Command Parameter.
-                            This instance has a binding to ShowAlert for its command (from the binding context)
-                            and a binding to the Entry's text value for its command parameter.
-                            Tapping anywhere in the StackLayout will trigger an alert with the body that you write in the Entry.
-                            -->
-                        <behaviors:TapCommandBehavior Command="{Binding DisplayAlert}" CommandParameter="{Binding Text, Source={x:Reference _entryTapCommandValue}}" />
-                    </StackLayout.Behaviors>
-                    <Label Text="Tap Command Behavior" FontSize="Large" />
-                    <Entry x:Name="_entryTapCommandValue" Text="Hello, world!" />
-                    <Label Text="Tap anywhere in the Aqua StackLayout to show an alert with the body you enter above." FontSize="Small" />
-                </StackLayout>
-                <BoxView Style="{StaticResource BoxView_Hr}" />
-                <StackLayout Padding="10" BackgroundColor="White" extensions:Views.TapBackgroundColor="#CCCCCC">
-                    <!--
-                    The Views.TapBackgroundColor property will update the background color of the view when it is tapped.
-                    This will last for 
-                    Note: the view must have a default value for BackgroundColor. With a BackgroundColor of Transparent,
-                    the transition from TapBackgroundColor to BackgroundColor will blink.
-                    -->
-                    <Label Text="Tap Background Color" FontSize="Large" />
-                    <Label Text="Tap anywhere in this StackLayout to temporarily its background color to #CCCCCC." FontSize="Small" />
-                </StackLayout>
-                <BoxView Style="{StaticResource BoxView_Hr}" />
-            </StackLayout>
-        </ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
+            <Button Clicked="Handle_UltimateControlButtonClick" Style="{StaticResource ButtonStyle}" Text="Ultimate Controls Examples" />
+            <Button Clicked="Handle_ConvertersButtonClick" Style="{StaticResource ButtonStyle}" Text="Converter Examples"/>
+            <Button Clicked="Handle_EffectsButtonClick" Style="{StaticResource ButtonStyle}" Text="Misc Examples"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

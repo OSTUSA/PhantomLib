@@ -22,14 +22,19 @@ namespace PhantomLibSamples
             new AnalyticsTimerSample();
         }
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+        void Handle_UltimateControlButtonClick(object sender, EventArgs e)
         {
             Navigation.PushAsync(new UltimateControlsPage());
         }
 
-        void Handle_Clicked_1(object sender, System.EventArgs e)
+        void Handle_ConvertersButtonClick(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ConvertersPage());
+        }
+
+        void Handle_EffectsButtonClick(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EffectsAndMisc());
         }
     }
 }
