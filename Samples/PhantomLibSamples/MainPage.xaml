@@ -1,33 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              xmlns:local="clr-namespace:PhantomLib" 
              xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
-             xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib"
-             xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
-             xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
-             xmlns:local-vms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
-             x:Class="PhantomLibSamples.MainPage"
+             xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib" 
+             xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib" 
+             xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib" 
+             xmlns:local-vms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples" 
+             x:Class="PhantomLibSamples.MainPage" 
              ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="LabelStyle" TargetType="Label">
                 <Setter Property="extensions:Labels.Kerning" Value="10" />
             </Style>
-            <Style x:Key="UltimateEntry" TargetType="controls:UltimateEntry">
-                <Setter Property="FontSize" Value="15" />
-                <Setter Property="TextColor" Value="Black" />
+            <Style x:Key="UltimateControl" TargetType="controls:UltimateControl">
                 <Setter Property="HeightRequest" Value="45" />
-                <Setter Property="BackgroundColor" Value="White" />
-                <Setter Property="controls:UltimateEntryProperties.FocusedBackgroundColor" Value="Gray" />
-                <Setter Property="controls:UltimateEntryProperties.ThicknessPadding" Value="20, 10" />
+                <Setter Property="FocusedBackgroundColor" Value="LightGray" />
+                <Setter Property="BackgroundColor" Value="WhiteSmoke" />
+                <Setter Property="Placeholder" Value="Placeholder" />
+                <Setter Property="IsFloating" Value="false" />
+                <Setter Property="IsRoundedEntry" Value="true" />
             </Style>
-            <Style x:Key="FloatingUltimateEntry" TargetType="controls:FloatingUltimateEntry">
-                <Setter Property="controls:UltimateEntryProperties.FocusedBackgroundColor" Value="Gray" />
-                <Setter Property="controls:UltimateEntryProperties.ThicknessPadding" Value="20, 10" />
-                <Setter Property="controls:UltimateEntryProperties.RightImageSource" Value="icon_close_black" />
-                <Setter Property="controls:UltimateEntryProperties.ImageButtonType" Value="ClearContents" />
+            <Style x:Key="UltimatePassword" TargetType="controls:UltimateControl" BasedOn="{StaticResource UltimateControl}">
+                <Setter Property="RightImageSource" Value="icon_lock_open" />
+                <Setter Property="HidePasswordImageSource" Value="icon_lock_close" />
+                <Setter Property="ReturnButtonType" Value="Done" />
+                <Setter Property="ImageButtonType" Value="Password" />
+            </Style>
+            <Style x:Key="UltimateClearContents" TargetType="controls:UltimateControl" BasedOn="{StaticResource UltimateControl}">
+                <Setter Property="RightImageSource" Value="icon_close_black" />
+                <Setter Property="ReturnButtonType" Value="Next" />
+                <Setter Property="ImageButtonType" Value="ClearContents" />
             </Style>
             <Style x:Key="BoxView_Hr" TargetType="BoxView">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
@@ -69,25 +74,26 @@
                 <StackLayout>
                     <Label Text="Ultimate Entry" FontSize="Large" />
                     <Label Text="Enter more than 10 characters to see an error" FontSize="Small" />
-                    <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateEntry1}" IsVisible="{Binding ShowError}"/>
-                    <controls:UltimateEntry x:Name="UltimateEntry1" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" 
-                                           ImageButtonType="ClearContents" Style="{StaticResource UltimateEntry}" IsRoundedEntry="true"/>
+                    <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateControl1}" IsVisible="{Binding ShowError}" />
+                    <controls:UltimateControl x:Name="UltimateControl1" Style="{StaticResource UltimateClearContents}" Placeholder="Placeholder" />
                     <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
-                    <controls:UltimateEntry x:Name="UltimateEntry2" AlwaysShowRightImage="false" Placeholder="Enter your password" RightImageSource="icon_lock_open"
-                                           HidePasswordImageSource="icon_lock_close" ReturnButtonType="Done" ImageButtonType="Password" Style="{StaticResource UltimateEntry}" IsRoundedEntry="true"/>
+                    <controls:UltimateControl x:Name="UltimateControl2" Placeholder="Enter your password" Style="{StaticResource UltimatePassword}" />
                     <StackLayout x:Name="StackLayoutAndroidEntries" Spacing="0" IsVisible="false">
                         <Label Text="Same Entrys but... underlined on ANDROID" FontSize="Small" />
-                        <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateEntry3}" IsVisible="{Binding ShowError}" />
-                        <controls:UltimateEntry x:Name="UltimateEntry3" Placeholder="Placeholder" RightImageSource="icon_close_black" ReturnButtonType="Next" 
-                                               ImageButtonType="ClearContents" Style="{StaticResource UltimateEntry}" />
+                        <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateControl3}" IsVisible="{Binding ShowError}" />
+                        <controls:UltimateControl x:Name="UltimateControl3" Placeholder="Enter Stuff" Style="{StaticResource UltimateClearContents}" IsRoundedEntry="false" />
                         <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
-                        <controls:UltimateEntry x:Name="UltimateEntry4" AlwaysShowRightImage="false" Placeholder="Enter your password" RightImageSource="icon_lock_open"
-                                               HidePasswordImageSource="icon_lock_close" ReturnButtonType="Next" ImageButtonType="Password" Style="{StaticResource UltimateEntry}" />
+                        <controls:UltimateControl x:Name="UltimateControl4" Placeholder="Enter your password" Style="{StaticResource UltimatePassword}" IsRoundedEntry="false" />
                     </StackLayout>
                 </StackLayout>
                 <BoxView Style="{StaticResource BoxView_Hr}" />
                 <StackLayout>
-                    <controls:FloatingUltimateEntry x:Name="FloatingUltimateEntry1" FloatingText="Enter some stuffs to watch me float" Style="{StaticResource FloatingUltimateEntry}" /> 
+                    <Label Margin="0,10,0,0" Text="Same ultimate control but they float" FontSize="Small" />
+                    <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=FloatingUltimateControl1}" IsVisible="{Binding ShowError}" />
+                    <controls:UltimateControl x:Name="FloatingUltimateControl1" Placeholder="Clear Me" Style="{StaticResource UltimateClearContents}" HeightRequest="65" IsRoundedEntry="false" IsFloating="true" />
+                    <controls:UltimateControl x:Name="FloatingUltimateControl2" Placeholder="Enter Password" Style="{StaticResource UltimatePassword}" HeightRequest="65" IsRoundedEntry="false" IsFloating="true" />
+                    <Label Margin="0,10,0,0" Text="Floating animation disabled when text is set programatically" FontSize="Small" />
+                    <controls:UltimateControl x:Name="FloatingUltimateControl3" Text="set programatically" Placeholder="Enter Password" Style="{StaticResource UltimateControl}" HeightRequest="65" IsRoundedEntry="false" IsFloating="true"/>
                 </StackLayout>
                 <BoxView Style="{StaticResource BoxView_Hr}" />
                 <StackLayout BackgroundColor="Aqua" Padding="10">
