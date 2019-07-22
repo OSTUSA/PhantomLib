@@ -24,15 +24,17 @@
                 <Setter Property="IsRoundedEntry" Value="true" />
             </Style>
             <Style x:Key="UltimatePassword" TargetType="controls:UltimateControl" BasedOn="{StaticResource UltimateControl}">
-                <Setter Property="RightImageSource" Value="icon_lock_open" />
+                <Setter Property="ImageSource" Value="icon_lock_open" />
                 <Setter Property="HidePasswordImageSource" Value="icon_lock_close" />
-                <Setter Property="ReturnButtonType" Value="Done" />
-                <Setter Property="ImageButtonType" Value="Password" />
+                <Setter Property="ReturnButton" Value="Done" />
+                <Setter Property="ImageButton" Value="Password" />
             </Style>
             <Style x:Key="UltimateClearContents" TargetType="controls:UltimateControl" BasedOn="{StaticResource UltimateControl}">
-                <Setter Property="RightImageSource" Value="icon_close_black" />
-                <Setter Property="ReturnButtonType" Value="Next" />
-                <Setter Property="ImageButtonType" Value="ClearContents" />
+                <Setter Property="ImageSource" Value="icon_close_black" />
+                <Setter Property="ReturnButton" Value="Next" />
+                <Setter Property="ImageButton" Value="ClearContents" />
+                <Setter Property="PlaceholderColor" Value="Blue" />
+                <Setter Property="TextColor" Value="Blue" />
             </Style>
             <Style x:Key="BoxView_Hr" TargetType="BoxView">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
@@ -75,7 +77,7 @@
                     <Label Text="Ultimate Entry" FontSize="Large" />
                     <Label Text="Enter more than 10 characters to see an error" FontSize="Small" />
                     <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateControl1}" IsVisible="{Binding ShowError}" />
-                    <controls:UltimateControl x:Name="UltimateControl1" Style="{StaticResource UltimateClearContents}" Placeholder="Placeholder" />
+                    <controls:UltimateControl x:Name="UltimateControl1" Style="{StaticResource UltimateClearContents}" />
                     <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
                     <controls:UltimateControl x:Name="UltimateControl2" Placeholder="Enter your password" Style="{StaticResource UltimatePassword}" />
                     <StackLayout x:Name="StackLayoutAndroidEntries" Spacing="0" IsVisible="false">

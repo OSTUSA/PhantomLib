@@ -15,21 +15,23 @@ namespace PhantomLib.CustomControls
 
         public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(UltimateControl), string.Empty, BindingMode.TwoWay, null, HandleBindingPropertyChangedDelegate);
         
-        public static readonly BindableProperty FloatingSpaceProperty = BindableProperty.Create(nameof(FloatingSpace), typeof(int), typeof(UltimateControl), 10);
         public static readonly BindableProperty PlaceholderProperty = BindableProperty.Create(nameof(Placeholder), typeof(string), typeof(string), string.Empty, BindingMode.TwoWay, null);
-        public static readonly BindableProperty FloatingTextColorProperty = BindableProperty.Create(nameof(FloatingTextColor), typeof(Color), typeof(UltimateControl), Color.DarkGray);
-        public static readonly BindableProperty FloatingTextEaseProperty = BindableProperty.Create(nameof(FloatingTextColor), typeof(Easing), typeof(UltimateControl), Easing.Linear);
+        public static readonly BindableProperty PlaceholderColorProperty = BindableProperty.Create(nameof(PlaceholderColor), typeof(Color), typeof(UltimateControl), Color.DarkGray);
+        public static readonly BindableProperty TextColorProperty = BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(UltimateControl), Color.Black);
+        //floating properties
         public static readonly BindableProperty IsFloatingProperty = BindableProperty.Create(nameof(IsFloating), typeof(bool), typeof(UltimateControl), true);
+        public static readonly BindableProperty FloatingSpaceProperty = BindableProperty.Create(nameof(FloatingSpace), typeof(int), typeof(UltimateControl), 10);
+        public static readonly BindableProperty FloatingTextEaseProperty = BindableProperty.Create(nameof(FloatingTextEase), typeof(Easing), typeof(UltimateControl), Easing.Linear);
 
-        public static readonly BindableProperty PlaceholderFontSizeProperty = BindableProperty.Create(nameof(PlaceholderFontSize), typeof(int), typeof(UltimateControl), 18);
-        public static readonly BindableProperty PlaceholderLeftMarginProperty = BindableProperty.Create(nameof(PlaceholderLeftMargin), typeof(int), typeof(UltimateControl), 15);
 
-        public static readonly BindableProperty TitleFontSizeProperty = BindableProperty.Create(nameof(PlaceholderFontSize), typeof(int), typeof(UltimateControl), 14);
+        public static readonly BindableProperty FloatingPlaceholderFontSizeProperty = BindableProperty.Create(nameof(FloatingPlaceholderFontSize), typeof(int), typeof(UltimateControl), 18);
+        public static readonly BindableProperty FloatingPlaceholderLeftMarginProperty = BindableProperty.Create(nameof(FloatingPlaceholderLeftMargin), typeof(int), typeof(UltimateControl), 15);
+        public static readonly BindableProperty TitleFontSizeProperty = BindableProperty.Create(nameof(TitleFontSize), typeof(int), typeof(UltimateControl), 14);
         public static readonly BindableProperty TitleLeftMarginProperty = BindableProperty.Create(nameof(TitleLeftMargin), typeof(int), typeof(UltimateControl), 15);
 
         static async void HandleBindingPropertyChangedDelegate(BindableObject bindable, object oldValue, object newValue)
         {
-            //handle text if its changed
+            //handle text if its changed programatically. Dont show transition animation in this case
             if(bindable is UltimateControl ultimateControl)
             {
                 if (!ultimateControl.EntryIsFocused)
@@ -64,10 +66,10 @@ namespace PhantomLib.CustomControls
             set => SetValue(FloatingSpaceProperty, value);
         }
 
-        public int PlaceholderLeftMargin
+        public int FloatingPlaceholderLeftMargin
         {
-            get => (int)GetValue(PlaceholderLeftMarginProperty);
-            set => SetValue(PlaceholderLeftMarginProperty, value);
+            get => (int)GetValue(FloatingPlaceholderLeftMarginProperty);
+            set => SetValue(FloatingPlaceholderLeftMarginProperty, value);
         }
 
         public int TitleLeftMargin
@@ -76,10 +78,10 @@ namespace PhantomLib.CustomControls
             set => SetValue(TitleLeftMarginProperty, value);
         }
 
-        public int PlaceholderFontSize
+        public int FloatingPlaceholderFontSize
         {
-            get => (int)GetValue(PlaceholderFontSizeProperty);
-            set => SetValue(PlaceholderFontSizeProperty, value);
+            get => (int)GetValue(FloatingPlaceholderFontSizeProperty);
+            set => SetValue(FloatingPlaceholderFontSizeProperty, value);
         }
 
         public int TitleFontSize
@@ -88,10 +90,16 @@ namespace PhantomLib.CustomControls
             set => SetValue(TitleFontSizeProperty, value);
         }
 
-        public Color FloatingTextColor
+        public Color PlaceholderColor
         {
-            get => (Color)GetValue(FloatingTextColorProperty);
-            set => SetValue(FloatingTextColorProperty, value);
+            get => (Color)GetValue(PlaceholderColorProperty);
+            set => SetValue(PlaceholderColorProperty, value);
+        }
+
+        public Color TextColor
+        {
+            get => (Color)GetValue(TextColorProperty);
+            set => SetValue(TextColorProperty, value);
         }
 
         public Easing FloatingTextEase
@@ -116,10 +124,11 @@ namespace PhantomLib.CustomControls
         public UltimateControl()
         {
             UltimateEntryInstance = new UltimateEntry(this);
+            UltimateEntryInstance.TextColor = TextColor;
 
             FloatingLabel = new Label
             {
-                TextColor = FloatingTextColor,
+                TextColor = PlaceholderColor,
                 VerticalOptions = LayoutOptions.Center,
             };
 
@@ -138,11 +147,11 @@ namespace PhantomLib.CustomControls
 
             LabelBuffer.GestureRecognizers.Add(gesture);
             FloatingLabel.GestureRecognizers.Add(gesture);
-            FloatingLabel.TranslationX = PlaceholderLeftMargin;
-            FloatingLabel.FontSize = PlaceholderFontSize;
+            FloatingLabel.TranslationX = FloatingPlaceholderLeftMargin;
+            FloatingLabel.FontSize = FloatingPlaceholderFontSize;
             FloatingLabel.BackgroundColor = Color.Transparent;
 
-            _floatingTransitionLength = PlaceholderFontSize + FloatingSpace;
+            _floatingTransitionLength = FloatingPlaceholderFontSize + FloatingSpace;
 
             UltimateEntryInstance.TextChanged += UltimateEntry_TextChanged;
 
@@ -232,15 +241,15 @@ namespace PhantomLib.CustomControls
         {
             if (animated)
             {
-                var t1 = FloatingLabel.TranslateTo(PlaceholderLeftMargin, 0, 100);
-                var t2 = SizeTo(PlaceholderFontSize);
+                var t1 = FloatingLabel.TranslateTo(FloatingPlaceholderLeftMargin, 0, 100);
+                var t2 = SizeTo(FloatingPlaceholderFontSize);
                 await Task.WhenAll(t1, t2);
             }
             else
             {
-                FloatingLabel.TranslationX = PlaceholderLeftMargin;
+                FloatingLabel.TranslationX = FloatingPlaceholderLeftMargin;
                 FloatingLabel.TranslationY = 0;
-                FloatingLabel.FontSize = PlaceholderFontSize;
+                FloatingLabel.FontSize = FloatingPlaceholderFontSize;
             }
 
         }
@@ -282,11 +291,15 @@ namespace PhantomLib.CustomControls
 
             switch (propertyName)
             {
-                case nameof(FloatingTextColor):
-                    FloatingLabel.TextColor = FloatingTextColor;
-                    break;
                 case nameof(Text):
                     UltimateEntryInstance.Text = Text;
+                    break;
+                case nameof(PlaceholderColor):
+                    FloatingLabel.TextColor = PlaceholderColor;
+                    UltimateEntryInstance.PlaceholderColor = PlaceholderColor;
+                    break;
+                case nameof(TextColor):
+                    UltimateEntryInstance.TextColor = TextColor;
                     break;
                 case nameof(IsFloating):
                 case nameof(Placeholder):
@@ -310,29 +323,33 @@ namespace PhantomLib.CustomControls
             ClearContents,
             Password,
         }
-        public static readonly BindableProperty ImageButtonTypeProperty = BindableProperty.Create(nameof(ImageButtonType), typeof(UltimateEntryImageButton), typeof(UltimateControl), UltimateEntryImageButton.None);
-        public static readonly BindableProperty ReturnButtonTypeProperty = BindableProperty.Create(nameof(ReturnButtonType), typeof(UltimateEntryReturn), typeof(UltimateControl), UltimateEntryReturn.Done);
-        public static readonly BindableProperty NextViewProperty = BindableProperty.Create(nameof(NextView), typeof(UltimateControl), typeof(UltimateEntry));
+
+        public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButton), typeof(UltimateEntryImageButton), typeof(UltimateControl), UltimateEntryImageButton.None);
         public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(UltimateControl), false);
-        public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(UltimateControl), Color.Red);
-        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(UltimateControl), new Color(255, 255, 255, 0.2));
-        public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create(nameof(FocusedBorderColor), typeof(Color), typeof(UltimateControl), Color.DimGray);
-        public static readonly BindableProperty EntryIsFocusedProperty = BindableProperty.Create(nameof(EntryIsFocused), typeof(bool), typeof(UltimateControl), false);
-        public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(UltimateControl), false);
-        public static readonly BindableProperty RightImageSourceProperty = BindableProperty.Create(nameof(RightImageSource), typeof(string), typeof(UltimateControl), string.Empty);
-        public static readonly BindableProperty ErrorImageSourceProperty = BindableProperty.Create(nameof(ErrorImageSource), typeof(string), typeof(UltimateControl), string.Empty);
-        public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(UltimateControl), string.Empty);
-        public static readonly BindableProperty AlwaysShowRightImageProperty = BindableProperty.Create(nameof(AlwaysShowRightImage), typeof(bool), typeof(UltimateControl), true);
         public static readonly BindableProperty IsRoundedEntryProperty = BindableProperty.Create(nameof(IsRoundedEntry), typeof(bool), typeof(UltimateControl), false);
         public static readonly BindableProperty ThicknessPaddingProperty = BindableProperty.Create(nameof(ThicknessPadding), typeof(Thickness), typeof(UltimateControl), new Thickness(20, 10));
+        public static readonly BindableProperty ReturnButtonProperty = BindableProperty.Create(nameof(ReturnButton), typeof(UltimateEntryReturn), typeof(UltimateControl), UltimateEntryReturn.Done);
+        public static readonly BindableProperty NextViewProperty = BindableProperty.Create(nameof(NextView), typeof(UltimateControl), typeof(UltimateEntry));
+
+        public static readonly BindableProperty EntryIsFocusedProperty = BindableProperty.Create(nameof(EntryIsFocused), typeof(bool), typeof(UltimateControl), false);
+        public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(UltimateControl), false);
+        //colors
+        public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(UltimateControl), Color.Red);
+        public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create(nameof(FocusedBorderColor), typeof(Color), typeof(UltimateControl), Color.DimGray);
+        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(UltimateControl), new Color(255, 255, 255, 0.2));
+        //image
+        public static readonly BindableProperty ImageSourceProperty = BindableProperty.Create(nameof(ImageSource), typeof(string), typeof(UltimateControl), string.Empty);
+        public static readonly BindableProperty ErrorImageSourceProperty = BindableProperty.Create(nameof(ErrorImageSource), typeof(string), typeof(UltimateControl), string.Empty);
+        public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(UltimateControl), string.Empty);
+        public static readonly BindableProperty AlwaysShowImageProperty = BindableProperty.Create(nameof(AlwaysShowImage), typeof(bool), typeof(UltimateControl), true);
 
         public event EventHandler<FocusEventArgs> EntryFocusChanged;
         public event EventHandler<EventArgs> RightImageTouched;
 
-        public string RightImageSource
+        public string ImageSource
         {
-            get => (string)GetValue(RightImageSourceProperty);
-            set => SetValue(RightImageSourceProperty, value);
+            get => (string)GetValue(ImageSourceProperty);
+            set => SetValue(ImageSourceProperty, value);
         }
         public string ErrorImageSource
         {
@@ -364,10 +381,10 @@ namespace PhantomLib.CustomControls
             set => SetValue(IsRoundedEntryProperty, value);
         }
 
-        public bool AlwaysShowRightImage
+        public bool AlwaysShowImage
         {
-            get => (bool)GetValue(AlwaysShowRightImageProperty);
-            set => SetValue(AlwaysShowRightImageProperty, value);
+            get => (bool)GetValue(AlwaysShowImageProperty);
+            set => SetValue(AlwaysShowImageProperty, value);
         }
 
         public Color ErrorColor
@@ -394,16 +411,16 @@ namespace PhantomLib.CustomControls
             set => SetValue(EntryIsFocusedProperty, value);
         }
 
-        public UltimateEntryReturn ReturnButtonType
+        public UltimateEntryReturn ReturnButton
         {
-            get => (UltimateEntryReturn)GetValue(ReturnButtonTypeProperty);
-            set => SetValue(ReturnButtonTypeProperty, value);
+            get => (UltimateEntryReturn)GetValue(ReturnButtonProperty);
+            set => SetValue(ReturnButtonProperty, value);
         }
 
-        public UltimateEntryImageButton ImageButtonType
+        public UltimateEntryImageButton ImageButton
         {
-            get => (UltimateEntryImageButton)GetValue(ImageButtonTypeProperty);
-            set => SetValue(ImageButtonTypeProperty, value);
+            get => (UltimateEntryImageButton)GetValue(ImageButtonProperty);
+            set => SetValue(ImageButtonProperty, value);
         }
 
         public UltimateControl NextView

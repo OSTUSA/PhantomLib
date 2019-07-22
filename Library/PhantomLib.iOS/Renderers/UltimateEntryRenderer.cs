@@ -29,7 +29,7 @@ namespace PhantomLib.iOS.Renderers
                 _textField = (UITextField)this.Control;
                 _ultimateControl = _ultimateEntry.ParentUltimateControl;
 
-                if(_ultimateControl.ImageButtonType == UltimateEntryImageButton.Password)
+                if(_ultimateControl.ImageButton == UltimateEntryImageButton.Password)
                 {
                     _ultimateEntry.IsPassword = true;
                 }
@@ -72,11 +72,11 @@ namespace PhantomLib.iOS.Renderers
 
             switch (e.PropertyName)
             {
-                case nameof(UltimateControl.AlwaysShowRightImage):
+                case nameof(UltimateControl.AlwaysShowImage):
                 case nameof(UltimateControl.ErrorColor):
                 case nameof(UltimateControl.ShowError):
                 case nameof(UltimateControl.FocusedBackgroundColor):
-                case nameof(UltimateControl.RightImageSource):
+                case nameof(UltimateControl.ImageSource):
                 case nameof(UltimateControl.HidePasswordImageSource):
                 case nameof(UltimateControl.ErrorImageSource):
                     UpdateControlUI();
@@ -118,7 +118,7 @@ namespace PhantomLib.iOS.Renderers
 
         private void SetReturnType()
         {
-            switch (_ultimateControl.ReturnButtonType)
+            switch (_ultimateControl.ReturnButton)
             {
                 case UltimateEntryReturn.Next:
                     _textField.ReturnKeyType = UIReturnKeyType.Next;
@@ -145,16 +145,16 @@ namespace PhantomLib.iOS.Renderers
                 imageSource = _ultimateControl.ErrorImageSource;
             }
             //handle Password image if its a password
-            else if (_ultimateControl.ImageButtonType == UltimateEntryImageButton.Password)
+            else if (_ultimateControl.ImageButton == UltimateEntryImageButton.Password)
             {
                 imageSource = _ultimateEntry.IsPassword
                     ? _ultimateControl.HidePasswordImageSource
-                    : _ultimateControl.RightImageSource;
+                    : _ultimateControl.ImageSource;
             }
             //lastly use RightImageSource if it exists
-            else if (!string.IsNullOrEmpty(_ultimateControl.RightImageSource))
+            else if (!string.IsNullOrEmpty(_ultimateControl.ImageSource))
             {
-                imageSource = _ultimateControl.RightImageSource;
+                imageSource = _ultimateControl.ImageSource;
             }
 
             //set padding in place of image if developer didnt set imageSource
@@ -166,7 +166,7 @@ namespace PhantomLib.iOS.Renderers
             else
             {
                 _textField.RightView = GetImageView(imageSource);
-                _textField.RightViewMode = _ultimateControl.AlwaysShowRightImage
+                _textField.RightViewMode = _ultimateControl.AlwaysShowImage
                         ? UITextFieldViewMode.Always
                         : UITextFieldViewMode.WhileEditing;
             }
@@ -192,7 +192,7 @@ namespace PhantomLib.iOS.Renderers
 
         void ImageButton_TouchUpInside(object sender, EventArgs e)
         {
-            switch (_ultimateControl.ImageButtonType)
+            switch (_ultimateControl.ImageButton)
             {
                 case UltimateEntryImageButton.ClearContents:
                     _ultimateEntry.Text = string.Empty;

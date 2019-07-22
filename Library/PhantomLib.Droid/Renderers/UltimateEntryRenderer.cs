@@ -38,14 +38,14 @@ namespace PhantomLib.Droid.Renderers
                 _editText = (EditText)this.Control;
                 _entryBackgroundColor = _ultimateEntry.BackgroundColor;
 
-                if(_ultimateControl.ImageButtonType == UltimateEntryImageButton.Password)
+                if(_ultimateControl.ImageButton == UltimateEntryImageButton.Password)
                 {
                     _ultimateEntry.IsPassword = true;
                 }
 
                 SetPadding();
 
-                SetReturnType(_ultimateControl.ReturnButtonType);
+                SetReturnType(_ultimateControl.ReturnButton);
 
                 // Switch the stroke color to blue if the field is in focus and it doesn't have a validation error
                 _editText.FocusChange += EditText_FocusChange;
@@ -91,11 +91,11 @@ namespace PhantomLib.Droid.Renderers
 
             switch (e.PropertyName)
             {
-                case nameof(UltimateControl.AlwaysShowRightImage):
+                case nameof(UltimateControl.AlwaysShowImage):
                 case nameof(UltimateControl.ErrorColor):
                 case nameof(UltimateControl.ShowError):
                 case nameof(UltimateControl.FocusedBackgroundColor):
-                case nameof(UltimateControl.RightImageSource):
+                case nameof(UltimateControl.ImageSource):
                 case nameof(UltimateControl.HidePasswordImageSource):
                 case nameof(UltimateControl.ErrorImageSource):
                     UpdateControlUI();
@@ -194,20 +194,20 @@ namespace PhantomLib.Droid.Renderers
                 imageSource = _ultimateControl.ErrorImageSource;
             }
             //handle Password image if its a password
-            else if (_ultimateControl.ImageButtonType == UltimateEntryImageButton.Password)
+            else if (_ultimateControl.ImageButton == UltimateEntryImageButton.Password)
             {
                 imageSource = _ultimateEntry.IsPassword
                     ? _ultimateControl.HidePasswordImageSource
-                    : _ultimateControl.RightImageSource;
+                    : _ultimateControl.ImageSource;
             }
             //lastly use RightImageSource if it exists
-            else if(!string.IsNullOrEmpty(_ultimateControl.RightImageSource))
+            else if(!string.IsNullOrEmpty(_ultimateControl.ImageSource))
             {
-                imageSource = _ultimateControl.RightImageSource;
+                imageSource = _ultimateControl.ImageSource;
             }
 
             //clear image and return if developer didnt set imageSource  OR the entry is not focused and developer wants to hide image
-            if (string.IsNullOrEmpty(imageSource) || !_ultimateControl.AlwaysShowRightImage && !_editText.IsFocused)
+            if (string.IsNullOrEmpty(imageSource) || !_ultimateControl.AlwaysShowImage && !_editText.IsFocused)
             {
                 _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
                 return;
@@ -284,7 +284,7 @@ namespace PhantomLib.Droid.Renderers
                         var ultimateEntry = (UltimateEntry)ultimateEntryRenderer.Element;
                         if (ultimateEntry !=null)
                         {
-                            switch (ultimateEntry.ParentUltimateControl.ImageButtonType)
+                            switch (ultimateEntry.ParentUltimateControl.ImageButton)
                             {
                                 case UltimateEntryImageButton.ClearContents:
                                     ultimateEntry.Text = string.Empty;
