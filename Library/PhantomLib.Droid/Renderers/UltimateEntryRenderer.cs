@@ -52,6 +52,7 @@ namespace PhantomLib.Droid.Renderers
 
                 // Update UI when text is changed
                 _editText.TextChanged += EditText_TextChanged;
+                _ultimateControl.PropertyChanged += OnElementPropertyChanged;
 
                 UpdateControlUI();
             }
@@ -61,6 +62,7 @@ namespace PhantomLib.Droid.Renderers
                 // Unsubscribe
                 _editText.FocusChange -= EditText_FocusChange;
                 _editText.TextChanged -= EditText_TextChanged;
+                _ultimateControl.PropertyChanged -= OnElementPropertyChanged;
                 if (_editText.HasOnClickListeners)
                 {
                     _editText.SetOnTouchListener(null);

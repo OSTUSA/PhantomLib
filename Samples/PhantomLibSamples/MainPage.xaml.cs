@@ -19,8 +19,6 @@ namespace PhantomLibSamples
         {
             InitializeComponent();
 
-            StackLayoutAndroidEntries.IsVisible = Device.RuntimePlatform == Device.Android;
-
             UltimateControl1.NextView = UltimateControl2;
             UltimateControl2.NextView = UltimateControl3;
             UltimateControl3.NextView = UltimateControl4;

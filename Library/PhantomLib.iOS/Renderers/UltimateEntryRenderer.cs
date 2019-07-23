@@ -42,14 +42,12 @@ namespace PhantomLib.iOS.Renderers
 
                 SetReturnType();
 
-                if(e.NewElement != null)
-                {
-                    //subscribe
-                    _textField.EditingDidBegin += TextField_FocusChanged;
-                    _textField.EditingDidEnd += TextField_FocusChanged;
-                    _textField.EditingChanged += TextField_FocusChanged;
-                    _textField.ShouldReturn += TextField_ShouldReturn;
-                }
+                //subscribe
+                _textField.EditingDidBegin += TextField_FocusChanged;
+                _textField.EditingDidEnd += TextField_FocusChanged;
+                _textField.EditingChanged += TextField_FocusChanged;
+                _textField.ShouldReturn += TextField_ShouldReturn;
+                _ultimateControl.PropertyChanged += OnElementPropertyChanged;
 
                 UpdateControlUI();
             }
@@ -61,6 +59,8 @@ namespace PhantomLib.iOS.Renderers
                 _textField.EditingDidEnd -= TextField_FocusChanged;
                 _textField.EditingChanged -= TextField_FocusChanged;
                 _textField.ShouldReturn -= TextField_ShouldReturn;
+                _ultimateControl.PropertyChanged -= OnElementPropertyChanged;
+
                 if (_imageButton != null)
                     _imageButton.TouchUpInside -= ImageButton_TouchUpInside;
             }
