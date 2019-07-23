@@ -19,12 +19,9 @@ namespace PhantomLibSamples
         {
             InitializeComponent();
 
-            StackLayoutAndroidEntries.IsVisible = Device.RuntimePlatform == Device.Android;
-
-            UltimateEntry1.NextView = UltimateEntry2;
-            UltimateEntry2.NextView = UltimateEntry3;
-            UltimateEntry3.NextView = UltimateEntry4;
-            UltimateEntry4.NextView = FloatingUltimateEntry1.UltimateEntry;
+            UltimateControl1.NextView = UltimateControl2;
+            UltimateControl2.NextView = UltimateControl3;
+            UltimateControl3.NextView = UltimateControl4;
 
             //Analytics Timing Sample
             new AnalyticsTimerSample();
@@ -32,32 +29,27 @@ namespace PhantomLibSamples
 
         protected override void OnAppearing()
         {
-            UltimateEntry1.TextChanged += UltimateEntry_TextChanged;
-            UltimateEntry3.TextChanged += UltimateEntry_TextChanged;
+            UltimateControl1.UltimateEntryInstance.TextChanged += UltimateEntry_TextChanged;
+            UltimateControl3.UltimateEntryInstance.TextChanged += UltimateEntry_TextChanged;
+            FloatingUltimateControl1.UltimateEntryInstance.TextChanged += UltimateEntry_TextChanged;
 
             base.OnAppearing();
         }
 
         protected override void OnDisappearing()
         {
-            UltimateEntry1.TextChanged -= UltimateEntry_TextChanged;
-            UltimateEntry3.TextChanged -= UltimateEntry_TextChanged;
+            UltimateControl1.UltimateEntryInstance.TextChanged -= UltimateEntry_TextChanged;
+            UltimateControl3.UltimateEntryInstance.TextChanged -= UltimateEntry_TextChanged;
+            FloatingUltimateControl1.UltimateEntryInstance.TextChanged -= UltimateEntry_TextChanged;
 
             base.OnDisappearing();
         }
 
         void UltimateEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if(sender is UltimateEntry entry)
+            if(sender is UltimateControl.UltimateEntry entry)
             {
-                if (e.NewTextValue.Length > 10)
-                {
-                    entry.ShowError = true;
-                }
-                else
-                {
-                    entry.ShowError = false;
-                }
+                entry.ParentUltimateControl.ShowError = e.NewTextValue.Length > 10;
             }
         }
     }
