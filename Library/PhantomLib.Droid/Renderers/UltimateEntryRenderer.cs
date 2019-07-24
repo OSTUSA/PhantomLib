@@ -63,6 +63,7 @@ namespace PhantomLib.Droid.Renderers
                 _editText.FocusChange -= EditText_FocusChange;
                 _editText.TextChanged -= EditText_TextChanged;
                 _ultimateControl.PropertyChanged -= OnElementPropertyChanged;
+                _editText.EditorAction -= _editText_OnNext;
                 if (_editText.HasOnClickListeners)
                 {
                     _editText.SetOnTouchListener(null);
@@ -170,10 +171,7 @@ namespace PhantomLib.Droid.Renderers
                     _editText.ImeOptions = ImeAction.Next;
                     _editText.SetImeActionLabel("Next", ImeAction.Next);
                     // Editor Action is called when the return button is pressed
-                    _editText.EditorAction += (object sender, Android.Widget.TextView.EditorActionEventArgs eventArgs) =>
-                    {
-                        _ultimateEntry.OnNextDelegate();
-                    };
+                    _editText.EditorAction += _editText_OnNext;
                     break;
                 case UltimateEntryReturn.Search:
                     _editText.ImeOptions = ImeAction.Search;
@@ -184,6 +182,11 @@ namespace PhantomLib.Droid.Renderers
                     _editText.SetImeActionLabel("Done", ImeAction.Done);
                     break;
             }
+        }
+
+        private void _editText_OnNext(object sender, TextView.EditorActionEventArgs e)
+        {
+            _ultimateEntry.OnNextDelegate();
         }
 
         public void SetImage()
