@@ -80,12 +80,12 @@
                     <Label Text="Ultimate Entry" FontSize="Large" />
                     <Label Text="Enter more than 10 characters to see an error" FontSize="Small" />
                     <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateControl1}" IsVisible="{Binding ShowError}" />
-                    <controls:UltimateControl x:Name="UltimateControl1" Style="{StaticResource UltimateClearContents}" />
+                    <controls:UltimateControl x:Name="UltimateControl1" Style="{StaticResource UltimateClearContents}" NextView="{x:Reference UltimateControl2}" />
                     <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
                     <controls:UltimateControl x:Name="UltimateControl2" Placeholder="Enter your password" Style="{StaticResource UltimatePassword}" />
                     <Label Text="Same Entrys but... underlined" FontSize="Small" />
-                    <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateControl3}" IsVisible="{Binding ShowError}" />
-                    <controls:UltimateControl x:Name="UltimateControl3" Placeholder="Enter Stuff" Style="{StaticResource UltimateClearContents}" IsRoundedEntry="false" />
+                    <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateControl3}" IsVisible="{Binding ShowError}"  />
+                    <controls:UltimateControl x:Name="UltimateControl3" Placeholder="Enter Stuff" Style="{StaticResource UltimateClearContents}" IsRoundedEntry="false" NextView="{x:Reference UltimateControl4}" />
                     <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
                     <controls:UltimateControl x:Name="UltimateControl4" Placeholder="Enter your password" Style="{StaticResource UltimatePassword}" IsRoundedEntry="false" Text="{Binding PasswordText}" ShowError="{Binding ShowErrorPassword}"/>
                     <Button Command="{Binding LoginCommand}" Text="Login" />
@@ -94,8 +94,8 @@
                 <StackLayout>
                     <Label Margin="0,10,0,0" Text="Same ultimate control but they float" FontSize="Small" />
                     <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=FloatingUltimateControl1}" IsVisible="{Binding ShowError}" />
-                    <controls:UltimateControl x:Name="FloatingUltimateControl1" Placeholder="Clear Me" Style="{StaticResource UltimateClearContents}" HeightRequest="65" IsRoundedEntry="false" IsFloating="true" />
-                    <controls:UltimateControl x:Name="FloatingUltimateControl2" Placeholder="Enter Password" Style="{StaticResource UltimatePassword}" HeightRequest="65" IsRoundedEntry="false" IsFloating="true" />
+                    <controls:UltimateControl x:Name="FloatingUltimateControl1" Placeholder="Clear Me" Style="{StaticResource UltimateClearContents}" NextView="{x:Reference FloatingUltimateControl2}" HeightRequest="65" IsRoundedEntry="false" IsFloating="true" />
+                    <controls:UltimateControl x:Name="FloatingUltimateControl2" Placeholder="Enter Password" Style="{StaticResource UltimatePassword}" NextView="{x:Reference FloatingUltimateControl3}" HeightRequest="65" IsRoundedEntry="false" IsFloating="true" />
                     <Label Margin="0,10,0,0" Text="Floating animation disabled when text is set programatically" FontSize="Small" />
                     <controls:UltimateControl x:Name="FloatingUltimateControl3" Text="set programatically" Placeholder="Enter Password" Style="{StaticResource UltimateControl}" HeightRequest="65" IsRoundedEntry="false" IsFloating="true"/>
                 </StackLayout>

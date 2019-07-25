@@ -15,7 +15,7 @@ namespace PhantomLib.CustomControls
 
         public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(UltimateControl), string.Empty, BindingMode.TwoWay, null, HandleBindingPropertyChangedDelegate);
         
-        public static readonly BindableProperty PlaceholderProperty = BindableProperty.Create(nameof(Placeholder), typeof(string), typeof(string), string.Empty, BindingMode.TwoWay, null);
+        public static readonly BindableProperty PlaceholderProperty = BindableProperty.Create(nameof(Placeholder), typeof(string), typeof(string), string.Empty);
         public static readonly BindableProperty PlaceholderColorProperty = BindableProperty.Create(nameof(PlaceholderColor), typeof(Color), typeof(UltimateControl), Color.DarkGray);
         public static readonly BindableProperty TextColorProperty = BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(UltimateControl), Color.Black);
         //floating properties
@@ -426,7 +426,11 @@ namespace PhantomLib.CustomControls
         public UltimateControl NextView
         {
             get => (UltimateControl)GetValue(NextViewProperty);
-            set => SetValue(NextViewProperty, value);
+            set
+            {
+                ReturnButton = UltimateEntryReturn.Next;
+                SetValue(NextViewProperty, value);
+            }
         }
 
         public bool UseKeyboardPlaceholder

@@ -19,10 +19,6 @@ namespace PhantomLibSamples
         {
             InitializeComponent();
 
-            UltimateControl1.NextView = UltimateControl2;
-            UltimateControl2.NextView = UltimateControl3;
-            UltimateControl3.NextView = UltimateControl4;
-
             //Analytics Timing Sample
             new AnalyticsTimerSample();
         }
