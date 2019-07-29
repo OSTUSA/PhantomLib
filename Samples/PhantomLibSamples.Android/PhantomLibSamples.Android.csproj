@@ -99,6 +99,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\loading_spinner_green.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\loading_spinner_green.png" />
     <AndroidResource Include="Resources\drawable\icon_error.xml" />
+    <AndroidResource Include="Resources\drawable\ic_collapse_arrow.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

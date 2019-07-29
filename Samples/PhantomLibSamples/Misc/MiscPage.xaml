@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local-vms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
+             xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+             xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib" 
+             xmlns:vm="clr-namespace:PhantomLibSamples.Misc"
+             xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib" 
+             x:Class="PhantomLibSamples.Misc.MiscPage">
+    <ContentPage.BindingContext>
+        <vm:MiscViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Aqua" Padding="10">
+            <StackLayout.BindingContext>
+                <local-vms:TapCommandBehaviorViewModel />
+            </StackLayout.BindingContext>
+            <StackLayout.Behaviors>
+                <!--
+                    The TapCommandBehavior has bindable properties for Command and Command Parameter.
+                    This instance has a binding to ShowAlert for its command (from the binding context)
+                    and a binding to the Entry's text value for its command parameter.
+                    Tapping anywhere in the StackLayout will trigger an alert with the body that you write in the Entry.
+                    -->
+                <behaviors:TapCommandBehavior Command="{Binding DisplayAlert}" CommandParameter="{Binding Text, Source={x:Reference _entryTapCommandValue}}" />
+            </StackLayout.Behaviors>
+            <Label Text="Tap Command Behavior" FontSize="Large" />
+            <Entry x:Name="_entryTapCommandValue" Text="Hello, world!" />
+            <Label Text="Tap anywhere in the Aqua StackLayout to show an alert with the body you enter above." FontSize="Small" />
+            
+            <StackLayout Padding="10" BackgroundColor="White" extensions:Views.TapBackgroundColor="#CCCCCC">
+                <!--
+                The Views.TapBackgroundColor property will update the background color of the view when it is tapped.
+                This will last for 
+                Note: the view must have a default value for BackgroundColor. With a BackgroundColor of Transparent,
+                the transition from TapBackgroundColor to BackgroundColor will blink.
+                -->
+                <Label Text="Tap Background Color" FontSize="Large" />
+                <Label Text="Tap anywhere in this StackLayout to temporarily its background color to #CCCCCC." FontSize="Small" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Rounded Frame" FontSize="Large" />
+                <controls:RoundedFrame CornerRadius="10" BackgroundColor="Blue" RoundTopLeft="true" RoundTopRight="true">
+                    <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
+                </controls:RoundedFrame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

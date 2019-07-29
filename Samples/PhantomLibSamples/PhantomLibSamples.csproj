@@ -21,5 +21,20 @@
     <Folder Include="Utilities\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Extensions\" />
+    <Folder Include="UltimateControl\" />
+    <Folder Include="Effects\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Misc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Effects\EffectsPage.xaml.cs">
+      <DependentUpon>EffectsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Converters\ConvertersPage.xaml.cs">
+      <DependentUpon>ConvertersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Misc\MiscPage.xaml.cs">
+      <DependentUpon>MiscPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

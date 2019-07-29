@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PhantomLib.CustomControls;
+using PhantomLibSamples.Converters;
+using PhantomLibSamples.Effects;
+using PhantomLibSamples.Misc;
+using PhantomLibSamples.UltimateControl;
 using PhantomLibSamples.Utilities;
 using Xamarin.Forms;
 
@@ -23,30 +27,36 @@ namespace PhantomLibSamples
             new AnalyticsTimerSample();
         }
 
-        protected override void OnAppearing()
+        async void Handle_Clicked(object sender, System.EventArgs e)
         {
-            UltimateControl1.UltimateEntryInstance.TextChanged += UltimateEntry_TextChanged;
-            UltimateControl3.UltimateEntryInstance.TextChanged += UltimateEntry_TextChanged;
-            FloatingUltimateControl1.UltimateEntryInstance.TextChanged += UltimateEntry_TextChanged;
-
-            base.OnAppearing();
+            var page = new UltimateControlPage();
+            page.BindingContext = new UltimateControlViewModel();
+            
+            await Navigation.PushAsync(page);
         }
 
-        protected override void OnDisappearing()
+        async void Handle_Clicked_1(object sender, System.EventArgs e)
         {
-            UltimateControl1.UltimateEntryInstance.TextChanged -= UltimateEntry_TextChanged;
-            UltimateControl3.UltimateEntryInstance.TextChanged -= UltimateEntry_TextChanged;
-            FloatingUltimateControl1.UltimateEntryInstance.TextChanged -= UltimateEntry_TextChanged;
+            var page = new EffectsPage();
+            page.BindingContext = new EffectsViewModel();
 
-            base.OnDisappearing();
+            await Navigation.PushAsync(page);
         }
 
-        void UltimateEntry_TextChanged(object sender, TextChangedEventArgs e)
+        async void Handle_Clicked_2(object sender, System.EventArgs e)
         {
-            if(sender is UltimateControl.UltimateEntry entry)
-            {
-                entry.ParentUltimateControl.ShowError = e.NewTextValue.Length > 10;
-            }
+            var page = new ConvertersPage();
+            page.BindingContext = new ConvertersViewModel();
+
+            await Navigation.PushAsync(page);
+        }
+
+        async void Handle_Clicked_3(object sender, System.EventArgs e)
+        {
+            var page = new MiscPage();
+            page.BindingContext = new MiscViewModel();
+
+            await Navigation.PushAsync(page);
         }
     }
 }

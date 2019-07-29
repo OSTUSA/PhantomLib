@@ -49,9 +49,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Effects\Effects.cs" />
     <Compile Include="Effects\KerningEffect.cs" />
-    <Compile Include="Effects\SpinnerEffect.cs" />
     <Compile Include="Renderers\RoundedFrame.cs" />
     <Compile Include="Renderers\UltimateEntryRenderer.cs" />
+    <Compile Include="Effects\TintImageEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

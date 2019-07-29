@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib" 
+             xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+             x:Class="PhantomLibSamples.Effects.EffectsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="extensions:Labels.Kerning" Value="10" />
+            </Style>
+            <Style x:Key="TintLableStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="Margin" Value="10,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Kerning Effect" FontSize="Large" />
+             <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}">
+                <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
+                    <Label.Effects>
+                        <effects:Kerning LetterSpacing="10" />
+                    </Label.Effects>-->
+            </Label>
+            
+            <Label Text="TintImage Effect" Margin="0,20,0,0" FontSize="Large" />
+            <StackLayout BackgroundColor="LightGray">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Original image" Style="{StaticResource TintLableStyle}" />
+                    <Image Source="ic_collapse_arrow" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Same Image Tinted Red" Style="{StaticResource TintLableStyle}" />
+                    <Image Source="ic_collapse_arrow" HorizontalOptions="EndAndExpand">
+                        <Image.Effects>
+                            <effects:TintImageEffect TintColor="Red" />
+                        </Image.Effects>
+                    </Image>
+                </StackLayout>
+                 <StackLayout Orientation="Horizontal">
+                    <Label Text="Same Image Tinted Blue" Style="{StaticResource TintLableStyle}" />
+                    <Image Source="ic_collapse_arrow" HorizontalOptions="EndAndExpand">
+                        <Image.Effects>
+                            <effects:TintImageEffect TintColor="Blue" />
+                        </Image.Effects>
+                    </Image>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
