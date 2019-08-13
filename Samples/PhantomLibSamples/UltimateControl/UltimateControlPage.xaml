@@ -54,7 +54,7 @@
                     <controls:UltimateControl x:Name="UltimateControl2" Placeholder="Enter your password" Style="{StaticResource UltimatePassword}" />
                     <Label Text="Same entry but with material design" FontSize="Small" />
                     <Label Text="There was an error" TextColor="Red" BindingContext="{x:Reference Name=UltimateControl3}" IsVisible="{Binding ShowError}"  />
-                    <controls:UltimateControl x:Name="UltimateControl3" Placeholder="Enter Stuff" Style="{StaticResource UltimateClearContents}" IsRoundedEntry="false" NextView="{x:Reference UltimateControl4}" />
+                    <controls:UltimateControl x:Name="UltimateControl3" Placeholder="Enter Stuff" UnFocusedBorderColor="Red" FocusedBorderColor="Blue" Style="{StaticResource UltimateClearContents}" IsRoundedEntry="false" NextView="{x:Reference UltimateControl4}" />
                     <Label Margin="0,10,0,0" Text="Password entry with button show show/hide" FontSize="Small" />
                     <controls:UltimateControl x:Name="UltimateControl4" Placeholder="Enter your password" Style="{StaticResource UltimatePassword}" IsRoundedEntry="false" Text="{Binding PasswordText}" ShowError="{Binding ShowErrorPassword}"/>
                     <Button Command="{Binding LoginCommand}" Text="Login" />

@@ -24,7 +24,12 @@ namespace PhantomLib.Droid.Renderers
         EditText _editText;
         Color _entryBackgroundColor;
 
-        public UltimateEntryRenderer(Context context) : base(context) { }
+        private Drawable _underlineDrawable;
+
+        public UltimateEntryRenderer(Context context) : base(context)
+        {
+            _underlineDrawable = Resources.GetDrawable(Resource.Drawable.ExtEntryShape, null); 
+        }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
@@ -118,9 +123,6 @@ namespace PhantomLib.Droid.Renderers
 
         public void UpdateControlUI()
         {
-            //use this if IsUnderlined == true
-            Drawable drawable = _editText.Background;
-
             // else remove the underline in the android entry field
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.SetCornerRadius(5);
@@ -129,17 +131,17 @@ namespace PhantomLib.Droid.Renderers
             if (_ultimateControl.ShowError)
             {
                 gradientDrawable.SetStroke(4, _ultimateControl.ErrorColor.ToAndroid());
-                drawable.SetColorFilter(_ultimateControl.ErrorColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                _underlineDrawable.SetColorFilter(_ultimateControl.ErrorColor.ToAndroid(), PorterDuff.Mode.SrcIn);
             }
             else if (!_ultimateControl.ShowError && _editText.IsFocused)
             {
                 gradientDrawable.SetStroke(4, _ultimateControl.FocusedBorderColor.ToAndroid());
-                drawable.SetColorFilter(_ultimateControl.FocusedBorderColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                _underlineDrawable.SetColorFilter(_ultimateControl.FocusedBorderColor.ToAndroid(), PorterDuff.Mode.SrcIn);
             }
             else
             {
-                gradientDrawable.SetStroke(4, Color.Transparent.ToAndroid());
-                drawable.ClearColorFilter();
+                gradientDrawable.SetStroke(4, _ultimateControl.UnFocusedBorderColor.ToAndroid());
+                _underlineDrawable.SetColorFilter(_ultimateControl.UnFocusedBorderColor.ToAndroid(), PorterDuff.Mode.SrcIn);
             }
 
             //get background color
@@ -155,7 +157,7 @@ namespace PhantomLib.Droid.Renderers
             }
             else
             {
-                _editText.SetBackgroundResource(Resource.Drawable.ExtEntryShape);
+                _editText.SetBackground(_underlineDrawable);
                 _ultimateEntry.BackgroundColor = bgColor;
             }
 
