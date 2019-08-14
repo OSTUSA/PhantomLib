@@ -35,11 +35,7 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Same Image Tinted Red" Style="{StaticResource TintLableStyle}" />
-                    <Image Source="ic_collapse_arrow" HorizontalOptions="EndAndExpand">
-                        <Image.Effects>
-                            <effects:TintImageEffect TintColor="Red" />
-                        </Image.Effects>
-                    </Image>
+                    <Image Source="ic_collapse_arrow" HorizontalOptions="EndAndExpand" extensions:Images.ImageColor="Red" />
                 </StackLayout>
                  <StackLayout Orientation="Horizontal">
                     <Label Text="Same Image Tinted Blue" Style="{StaticResource TintLableStyle}" />
