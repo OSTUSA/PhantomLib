@@ -105,7 +105,7 @@ namespace PhantomLib.iOS.Renderers
             }
             else
             {
-                _textField.Layer.BorderColor = Color.Transparent.ToCGColor();
+                _textField.Layer.BorderColor = _ultimateControl.UnFocusedBorderColor.ToCGColor();
             }
 
             //set background color

@@ -62,6 +62,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\drawable\ExtEntryShape.xml" />
+    <AndroidResource Include="Resources\drawable\WhiteLine.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

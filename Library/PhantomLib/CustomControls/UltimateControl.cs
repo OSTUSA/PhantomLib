@@ -336,6 +336,7 @@ namespace PhantomLib.CustomControls
         //colors
         public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(UltimateControl), Color.Red);
         public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create(nameof(FocusedBorderColor), typeof(Color), typeof(UltimateControl), Color.DimGray);
+        public static readonly BindableProperty UnFocusedBorderColorProperty = BindableProperty.Create(nameof(UnFocusedBorderColor), typeof(Color), typeof(UltimateControl), Color.Transparent);
         public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(UltimateControl), new Color(255, 255, 255, 0.2));
         //image
         public static readonly BindableProperty ImageSourceProperty = BindableProperty.Create(nameof(ImageSource), typeof(string), typeof(UltimateControl), string.Empty);
@@ -397,6 +398,12 @@ namespace PhantomLib.CustomControls
         {
             get => (Color)GetValue(FocusedBorderColorProperty);
             set => SetValue(FocusedBorderColorProperty, value);
+        }
+
+        public Color UnFocusedBorderColor
+        {
+            get => (Color)GetValue(UnFocusedBorderColorProperty);
+            set => SetValue(UnFocusedBorderColorProperty, value);
         }
 
         public Color FocusedBackgroundColor
