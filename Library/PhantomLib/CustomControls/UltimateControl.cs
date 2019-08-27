@@ -14,7 +14,7 @@ namespace PhantomLib.CustomControls
         private int _floatingTransitionLength;
 
         public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(UltimateControl), string.Empty, BindingMode.TwoWay, null, HandleBindingPropertyChangedDelegate);
-        
+
         public static readonly BindableProperty PlaceholderProperty = BindableProperty.Create(nameof(Placeholder), typeof(string), typeof(string), string.Empty);
         public static readonly BindableProperty PlaceholderColorProperty = BindableProperty.Create(nameof(PlaceholderColor), typeof(Color), typeof(UltimateControl), Color.DarkGray);
         public static readonly BindableProperty TextColorProperty = BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(UltimateControl), Color.Black);
@@ -28,6 +28,8 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty FloatingPlaceholderLeftMarginProperty = BindableProperty.Create(nameof(FloatingPlaceholderLeftMargin), typeof(int), typeof(UltimateControl), 15);
         public static readonly BindableProperty TitleFontSizeProperty = BindableProperty.Create(nameof(TitleFontSize), typeof(int), typeof(UltimateControl), 14);
         public static readonly BindableProperty TitleLeftMarginProperty = BindableProperty.Create(nameof(TitleLeftMargin), typeof(int), typeof(UltimateControl), 15);
+
+        public static readonly BindableProperty FontFamilyProperty = BindableProperty.Create(nameof(FontFamily), typeof(string), typeof(UltimateControl));
 
         static async void HandleBindingPropertyChangedDelegate(BindableObject bindable, object oldValue, object newValue)
         {
@@ -119,6 +121,13 @@ namespace PhantomLib.CustomControls
         {
             get => _ultimateEntry;
             set => _ultimateEntry = value;
+        }
+
+        private string _fontFamily;
+        public string FontFamily
+        {
+            get => (string)GetValue(FontFamilyProperty);
+            set => SetValue(FontFamilyProperty, value);
         }
 
         public UltimateControl()
@@ -306,11 +315,13 @@ namespace PhantomLib.CustomControls
                 case nameof(IsRoundedEntry):
                     Render();
                     break;
+                case nameof(FontFamily):
+                    UltimateEntryInstance.FontFamily = FontFamily;
+                    break;
             }
         }
 
         // Ultimate Entry members defined in outer scope so parent can see them too.
-        //
         public enum UltimateEntryReturn
         {
             Next,
@@ -323,6 +334,8 @@ namespace PhantomLib.CustomControls
             ClearContents,
             Password,
         }
+
+
 
         public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButton), typeof(UltimateEntryImageButton), typeof(UltimateControl), UltimateEntryImageButton.None);
         public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(UltimateControl), false);

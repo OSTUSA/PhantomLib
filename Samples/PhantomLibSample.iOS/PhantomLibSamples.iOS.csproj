@@ -178,5 +178,8 @@
     <Folder Include="Assets.xcassets\icon_error.imageset\" />
     <Folder Include="Assets.xcassets\ic_collapse_arrow.imageset\" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Roboto-Regular.ttf" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

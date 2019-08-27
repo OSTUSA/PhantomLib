@@ -12,7 +12,11 @@
              Title="Ultimate Entry"
              ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
-        <ResourceDictionary> 
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="RobotoFont">
+                <OnPlatform.iOS>Roboto-Regular</OnPlatform.iOS>
+                <OnPlatform.Android>roboto-regular.ttf#roboto-regular</OnPlatform.Android>
+            </OnPlatform>
             <Style x:Key="UltimateControl" TargetType="controls:UltimateControl">
                 <Setter Property="HeightRequest" Value="45" />
                 <Setter Property="FocusedBackgroundColor" Value="LightGray" />
@@ -33,6 +37,7 @@
                 <Setter Property="ImageButton" Value="ClearContents" />
                 <Setter Property="PlaceholderColor" Value="Blue" />
                 <Setter Property="TextColor" Value="Blue" />
+                <Setter Property="FontFamily" Value="{StaticResource RobotoFont}" />
             </Style>
             <Style x:Key="BoxView_Hr" TargetType="BoxView">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
