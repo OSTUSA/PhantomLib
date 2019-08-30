@@ -12,7 +12,7 @@
              Title="Ultimate Entry"
              ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
-        <ResourceDictionary> 
+        <ResourceDictionary>
             <Style x:Key="UltimateControl" TargetType="controls:UltimateControl">
                 <Setter Property="HeightRequest" Value="45" />
                 <Setter Property="FocusedBackgroundColor" Value="LightGray" />
