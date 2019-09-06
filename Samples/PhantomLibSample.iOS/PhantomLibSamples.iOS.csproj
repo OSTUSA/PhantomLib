@@ -136,6 +136,22 @@
     <ImageAsset Include="Assets.xcassets\ic_collapse_arrow.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ic_collapse_arrow.imageset\expand_more-1.png" />
     <ImageAsset Include="Assets.xcassets\ic_collapse_arrow.imageset\expand_more-2 copy.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\40.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\60.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\58.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\87.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\80.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\120.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\180.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\20.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\29.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\76.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\152.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\167.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\1024.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\100.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
