@@ -31,6 +31,7 @@
                 of our views in the app.
                 -->
                 <phantom-extensions:Labels />
+                <phantom-extensions:Values />
                 <phantom-extensions:Views />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

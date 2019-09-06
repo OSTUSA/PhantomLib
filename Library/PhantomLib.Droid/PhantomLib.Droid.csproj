@@ -52,6 +52,7 @@
     <Compile Include="Renderers\RoundedFrame.cs" />
     <Compile Include="Renderers\UltimateEntryRenderer.cs" />
     <Compile Include="Effects\TintImageEffect.cs" />
+    <Compile Include="Utilities\DeviceHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -68,6 +69,7 @@
     <Folder Include="Resources\drawable\" />
     <Folder Include="Effects\" />
     <Folder Include="Renderers\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhantomLib\PhantomLib.csproj">
