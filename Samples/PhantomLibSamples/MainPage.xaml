@@ -4,7 +4,7 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              NavigationPage.HasNavigationBar="false"
              x:Class="PhantomLibSamples.MainPage" 
-             Padding="{DynamicResource Thickness_SafeArea}">
+             Padding="{DynamicResource Thickness_SafeAreaInsets}">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">

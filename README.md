@@ -30,6 +30,7 @@ Collection of Xamarin additions that are ready to consume.
 
 # Other helpers included in this library
 * BaseAttachable - Acts as a base class for view-models, with helpers to easily raise `IPropertyChanged` events for properties.
+* Safe Area Insets - Allows adjustment based on the safe area insets of the screen (affected by screen cutouts and software buttons). This is available through the `Values` extension, providing dynamic resources for each dimension (Left, Top, Right, Bottom) and thicknesses with combinations of these dimensions. For example, `Double_SafeAreaInset_T` represents the top inset, `Thickness_SafeAreaInsets` represents the thickness with each inset dimension, and `Thickness_SafeAreaInsets_LRB` incorporates the Left, Right, and Bottom insets but ignores the Top inset.
 
 # Installation
 You must make a call to initialize after `Forms.Init` and before `LoadApplication` in order to use the effects from this library in `AppDelegate.cs` (iOS) and/or `MainActivity.cs` (Android).

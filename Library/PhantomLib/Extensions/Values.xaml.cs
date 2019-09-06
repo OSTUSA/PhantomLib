@@ -12,7 +12,7 @@ namespace PhantomLib.Extensions
         public const string Double_SafeAreaInset_R = "Double_SafeAreaInset_R";
         public const string Double_SafeAreaInset_B = "Double_SafeAreaInset_B";
 
-        public const string Thickness_SafeArea = "Thickness_SafeArea";
+        public const string Thickness_SafeAreaInsets = "Thickness_SafeAreaInsets";
 
         public const string Thickness_SafeAreaInsets_V = "Thickness_SafeAreaInsets_V";
         public const string Thickness_SafeAreaInsets_H = "Thickness_SafeAreaInsets_H";
@@ -50,7 +50,7 @@ namespace PhantomLib.Extensions
             this[Double_SafeAreaInset_R] = insets.Right;
             this[Double_SafeAreaInset_B] = insets.Bottom;
 
-            this[Thickness_SafeArea] = insets;
+            this[Thickness_SafeAreaInsets] = insets;
 
             this[Thickness_SafeAreaInsets_V] = new Thickness(0, insets.Top, 0, insets.Bottom);
             this[Thickness_SafeAreaInsets_H] = new Thickness(insets.Left, 0, insets.Right, 0);
