@@ -27,6 +27,7 @@ Collection of Xamarin additions that are ready to consume.
 # Attached Properties in this library
 * Labels.Kerning - Helper to easily add Kerning Effect
 * Views.TapBackgroundColor - Set the temporary background color of a view when it is tapped
+* Pages.FloatingActionButton - Add a Button to the page as a floating action button.
 
 # Other helpers included in this library
 * BaseAttachable - Acts as a base class for view-models, with helpers to easily raise `IPropertyChanged` events for properties.

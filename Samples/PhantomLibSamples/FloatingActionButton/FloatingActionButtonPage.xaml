@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+    x:Class="PhantomLibSamples.FloatingActionButton.FloatingActionButtonPage"
+    Title="FAB Example"
+    ios:Page.UseSafeArea="true">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Button_FloatingAction" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="Margin" Value="0, 0, 20, 20" />
+                <Setter Property="WidthRequest" Value="56" />
+                <Setter Property="HeightRequest" Value="56" />
+                <Setter Property="CornerRadius" Value="28" />
+                <Setter Property="ios:VisualElement.IsShadowEnabled" Value="true" />
+                <Setter Property="ios:VisualElement.ShadowColor" Value="Black" />
+                <Setter Property="ios:VisualElement.ShadowOpacity" Value="0.5" />
+                <Setter Property="ios:VisualElement.ShadowRadius" Value="4" />
+                <Setter Property="ios:VisualElement.ShadowOffset" Value="0, 2" />
+                <Setter Property="android:Button.UseDefaultShadow" Value="true" />
+                <Setter Property="android:Button.UseDefaultPadding" Value="true" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <extensions:Pages.FloatingActionButton>
+        <Button ImageSource="icon_lock_open.png" Style="{StaticResource Button_FloatingAction}" BackgroundColor="#FF4081" Clicked="OnClicked" />
+    </extensions:Pages.FloatingActionButton>
+    <ContentPage.Content>
+        <ScrollView>
+            <Label x:Name="_lblText" Text="Click the Floating Action Button to append a randomly-generated string to this label." />
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
