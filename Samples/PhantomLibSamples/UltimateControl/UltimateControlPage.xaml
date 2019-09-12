@@ -9,8 +9,7 @@
              xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
              xmlns:local-vms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
              x:Class="PhantomLibSamples.UltimateControl.UltimateControlPage"
-             Title="Ultimate Entry"
-             ios:Page.UseSafeArea="true">
+             Title="Ultimate Entry">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="UltimateControl" TargetType="controls:UltimateControl">
@@ -43,7 +42,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView Padding="{DynamicResource Thickness_SafeAreaInsets_LRB}">
             <StackLayout>
                 <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
                     <Label Text="Ultimate Entry" FontSize="Large" />
