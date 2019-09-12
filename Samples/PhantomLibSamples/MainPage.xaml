@@ -11,6 +11,7 @@
                 <Button Text="UltimateControl Examples" Clicked="Handle_Clicked" />
                 <Button Text="Effects Examples" Clicked="Handle_Clicked_1" />
                 <Button Text="Converters Examples" Clicked="Handle_Clicked_2" />
+                <Button Text="Floating Action Button" Clicked="Handle_Clicked_FloatingActionButton" />
                 <Button Text="Misc" Clicked="Handle_Clicked_3" />
                 
             </StackLayout>

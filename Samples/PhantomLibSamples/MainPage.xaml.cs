@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using PhantomLib.CustomControls;
 using PhantomLibSamples.Converters;
 using PhantomLibSamples.Effects;
+using PhantomLibSamples.FloatingActionButton;
 using PhantomLibSamples.Misc;
 using PhantomLibSamples.UltimateControl;
 using PhantomLibSamples.Utilities;
@@ -49,6 +50,11 @@ namespace PhantomLibSamples
             page.BindingContext = new ConvertersViewModel();
 
             await Navigation.PushAsync(page);
+        }
+
+        async void Handle_Clicked_FloatingActionButton(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new FloatingActionButtonPage());
         }
 
         async void Handle_Clicked_3(object sender, System.EventArgs e)
