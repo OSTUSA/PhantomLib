@@ -4,7 +4,7 @@ in order for them to work.
 Android:
 
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-PhantomLib.Android.Effects.Effects.Init();
+PhantomLib.Droid.Effects.Effects.Init();
 LoadApplication(new App());
 
 iOS:
