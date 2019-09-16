@@ -39,7 +39,7 @@ You must make a call to initialize after `Forms.Init` and before `LoadApplicatio
 **Android:**
   ```
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-PhantomLib.Android.Effects.Effects.Init();
+PhantomLib.Droid.Effects.Effects.Init();
 LoadApplication(new App());
 ```
 **iOS:**
