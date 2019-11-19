@@ -34,6 +34,7 @@ namespace PhantomLib.iOS.Renderers
 
                 _textField.Layer.CornerRadius = 5;
                 _textField.Layer.BorderWidth = 2;
+
                 // Add padding to the entry field
                 _textField.LeftView = new UIView(new CGRect(0, 0, 10, 0));
                 _textField.LeftViewMode = UITextFieldViewMode.Always;

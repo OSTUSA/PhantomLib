@@ -20,7 +20,6 @@ namespace PhantomLib.Droid.Renderers
     public class UltimateEntryRenderer : EntryRenderer
     {
         UltimateEntry _ultimateEntry;
-        UltimateControl _ultimateControl;
 
         EditText _editText;
         Color _entryBackgroundColor;
@@ -39,7 +38,6 @@ namespace PhantomLib.Droid.Renderers
             if (this.Control != null && this.Element != null && e.NewElement != null)
             {
                 _ultimateEntry = (UltimateEntry)this.Element;
-                _ultimateControl = _ultimateEntry.ParentUltimateControl;
 
                 _editText = (EditText)this.Control;
                 _entryBackgroundColor = _ultimateEntry.BackgroundColor;
@@ -58,7 +56,6 @@ namespace PhantomLib.Droid.Renderers
 
                 // Update UI when text is changed
                 _editText.TextChanged += EditText_TextChanged;
-                _ultimateControl.PropertyChanged += OnElementPropertyChanged;
 
                 UpdateControlUI();
             }
@@ -68,8 +65,8 @@ namespace PhantomLib.Droid.Renderers
                 // Unsubscribe
                 _editText.FocusChange -= EditText_FocusChange;
                 _editText.TextChanged -= EditText_TextChanged;
-                _ultimateControl.PropertyChanged -= OnElementPropertyChanged;
                 _editText.EditorAction -= _editText_OnNext;
+
                 if (_editText.HasOnClickListeners)
                 {
                     _editText.SetOnTouchListener(null);
@@ -86,12 +83,12 @@ namespace PhantomLib.Droid.Renderers
         private void SetPadding()
         {
             _editText.SetPadding
-                (
-                    ConvertToDip((int)_ultimateEntry.ThicknessPadding.Left),
-                    ConvertToDip((int)_ultimateEntry.ThicknessPadding.Top),
-                    ConvertToDip((int)_ultimateEntry.ThicknessPadding.Right),
-                    ConvertToDip((int)_ultimateEntry.ThicknessPadding.Bottom)
-                );
+            (
+                ConvertToDip((int)_ultimateEntry.ThicknessPadding.Left),
+                ConvertToDip((int)_ultimateEntry.ThicknessPadding.Top),
+                ConvertToDip((int)_ultimateEntry.ThicknessPadding.Right),
+                ConvertToDip((int)_ultimateEntry.ThicknessPadding.Bottom)
+            );
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -114,12 +111,12 @@ namespace PhantomLib.Droid.Renderers
 
         void EditText_FocusChange(object sender, FocusChangeEventArgs e)
         {
-            _ultimateControl.EntryIsFocused = e.HasFocus;
-
             UpdateControlUI();
-            AddKeyboardPlaceholder(_ultimateEntry.UseKeyboardPlaceholder && e.HasFocus);
 
+            _ultimateEntry.EntryIsFocused = e.HasFocus;
             _ultimateEntry.EntryFocusChangedDelegate(sender, new FocusEventArgs(_ultimateEntry, e.HasFocus));
+
+            AddKeyboardPlaceholder(_ultimateEntry.UseKeyboardPlaceholder && e.HasFocus);
         }
 
         public void UpdateControlUI()

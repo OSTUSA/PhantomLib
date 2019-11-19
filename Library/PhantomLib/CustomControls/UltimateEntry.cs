@@ -31,13 +31,6 @@ namespace PhantomLib.CustomControls
         public event EventHandler<FocusEventArgs> EntryFocusChanged;
         public event EventHandler<EventArgs> RightImageTouched;
 
-        private UltimateControl _parentUltimateControl;
-        public UltimateControl ParentUltimateControl
-        {
-            get => _parentUltimateControl;
-            set => _parentUltimateControl = value;
-        }
-
         public string ImageSource
         {
             get => (string)GetValue(ImageSourceProperty);
@@ -141,14 +134,13 @@ namespace PhantomLib.CustomControls
         {
             if (NextView != null)
             {
-                NextView.ParentUltimateControl.Focus();
+                NextView.Focus();
             }
         }
 
         public void EntryFocusChangedDelegate(object sender, FocusEventArgs focusEventArgs)
         {
             EntryFocusChanged?.Invoke(sender, focusEventArgs);
-            //Handle_Focus_Delegate(sender, focusEventArgs);
         }
     }
 }
