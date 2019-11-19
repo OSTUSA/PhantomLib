@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="PhantomLib.CustomControls.UltimateControl"
+                x:Name="this"
+                BindingContext="{x:Reference Name=this}">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+    <BoxView x:Name="FloatingLabelPlaceholder" Grid.Row="0" HeightRequest="{Binding FloatingSpace}" IsVisible="{Binding IsFloating} "/>
+    <Label x:Name="FloatingLabel" TextColor="{Binding PlaceholderColor}" InputTransparent="True" Text="{Binding PlaceholderText}" IsVisible="{Binding IsPlaceholderVisible}" VerticalOptions="Center" FontSize="{Binding FloatingPlaceholderFontSize}" Grid.Row="1"/>
+</Grid>

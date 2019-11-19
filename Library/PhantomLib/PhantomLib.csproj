@@ -26,5 +26,6 @@
     <Folder Include="Models\" />
     <Folder Include="Converters\" />
     <Folder Include="Templates\" />
+    <Folder Include="CustomControls\Enums\" />
   </ItemGroup>
 </Project>

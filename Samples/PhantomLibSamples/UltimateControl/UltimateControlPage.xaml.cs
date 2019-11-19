@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace PhantomLibSamples.UltimateControl
 {
@@ -14,7 +11,7 @@ namespace PhantomLibSamples.UltimateControl
 
         void UltimateEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (sender is PhantomLib.CustomControls.UltimateControl entry)
+            if (sender is PhantomLib.CustomControls.UltimateEntry entry)
             {
                 entry.ShowError = e.NewTextValue.Length > 10;
             }

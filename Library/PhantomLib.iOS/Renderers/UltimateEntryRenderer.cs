@@ -3,10 +3,10 @@ using System.ComponentModel;
 using System.Drawing;
 using CoreGraphics;
 using PhantomLib.CustomControls;
+using PhantomLib.CustomControls.Enums;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using static PhantomLib.CustomControls.UltimateControl;
 
 [assembly: ExportRenderer(typeof(UltimateEntry), typeof(PhantomLib.iOS.Renderers.UltimateEntryRenderer))]
 namespace PhantomLib.iOS.Renderers
@@ -14,7 +14,6 @@ namespace PhantomLib.iOS.Renderers
     public class UltimateEntryRenderer : EntryRenderer
     {
         UltimateEntry _ultimateEntry;
-        UltimateControl _ultimateControl;
 
         UITextField _textField;
         UIButton _imageButton;
@@ -27,9 +26,8 @@ namespace PhantomLib.iOS.Renderers
             {
                 _ultimateEntry = (UltimateEntry)this.Element;
                 _textField = (UITextField)this.Control;
-                _ultimateControl = _ultimateEntry.ParentUltimateControl;
 
-                if(_ultimateControl.ImageButton == UltimateEntryImageButton.Password)
+                if (_ultimateEntry.ImageButton == UltimateEntryImageButton.Password)
                 {
                     _ultimateEntry.IsPassword = true;
                 }
@@ -47,7 +45,7 @@ namespace PhantomLib.iOS.Renderers
                 _textField.EditingDidEnd += TextField_FocusChanged;
                 _textField.EditingChanged += TextField_FocusChanged;
                 _textField.ShouldReturn += TextField_ShouldReturn;
-                _ultimateControl.PropertyChanged += OnElementPropertyChanged;
+                _ultimateEntry.PropertyChanged += OnElementPropertyChanged;
 
                 UpdateControlUI();
             }
@@ -59,7 +57,7 @@ namespace PhantomLib.iOS.Renderers
                 _textField.EditingDidEnd -= TextField_FocusChanged;
                 _textField.EditingChanged -= TextField_FocusChanged;
                 _textField.ShouldReturn -= TextField_ShouldReturn;
-                _ultimateControl.PropertyChanged -= OnElementPropertyChanged;
+                _ultimateEntry.PropertyChanged -= OnElementPropertyChanged;
 
                 if (_imageButton != null)
                     _imageButton.TouchUpInside -= ImageButton_TouchUpInside;
@@ -72,13 +70,13 @@ namespace PhantomLib.iOS.Renderers
 
             switch (e.PropertyName)
             {
-                case nameof(UltimateControl.AlwaysShowImage):
-                case nameof(UltimateControl.ErrorColor):
-                case nameof(UltimateControl.ShowError):
-                case nameof(UltimateControl.FocusedBackgroundColor):
-                case nameof(UltimateControl.ImageSource):
-                case nameof(UltimateControl.HidePasswordImageSource):
-                case nameof(UltimateControl.ErrorImageSource):
+                case nameof(UltimateEntry.AlwaysShowImage):
+                case nameof(UltimateEntry.ErrorColor):
+                case nameof(UltimateEntry.ShowError):
+                case nameof(UltimateEntry.FocusedBackgroundColor):
+                case nameof(UltimateEntry.ImageSource):
+                case nameof(UltimateEntry.HidePasswordImageSource):
+                case nameof(UltimateEntry.ErrorImageSource):
                     UpdateControlUI();
                     break;
             }
@@ -88,29 +86,29 @@ namespace PhantomLib.iOS.Renderers
         {
             UpdateControlUI();
 
-            _ultimateControl.EntryIsFocused = _ultimateEntry.IsFocused;
+            _ultimateEntry.EntryIsFocused = _ultimateEntry.IsFocused;
             _ultimateEntry.EntryFocusChangedDelegate(sender, new FocusEventArgs(_ultimateEntry, _ultimateEntry.IsFocused));
         }
 
         private void UpdateControlUI()
         {
             //set stroke/border
-            if (_ultimateControl.ShowError)
+            if (_ultimateEntry.ShowError)
             {
-                _textField.Layer.BorderColor = _ultimateControl.ErrorColor.ToCGColor();
+                _textField.Layer.BorderColor = _ultimateEntry.ErrorColor.ToCGColor();
             }
-            else if (!_ultimateControl.ShowError && _ultimateEntry.IsFocused)
+            else if (!_ultimateEntry.ShowError && _ultimateEntry.IsFocused)
             {
-                _textField.Layer.BorderColor = _ultimateControl.FocusedBorderColor.ToCGColor();
+                _textField.Layer.BorderColor = _ultimateEntry.FocusedBorderColor.ToCGColor();
             }
             else
             {
-                _textField.Layer.BorderColor = _ultimateControl.UnFocusedBorderColor.ToCGColor();
+                _textField.Layer.BorderColor = _ultimateEntry.UnFocusedBorderColor.ToCGColor();
             }
 
             //set background color
             _textField.BackgroundColor = _ultimateEntry.IsFocused
-                    ? _ultimateControl.FocusedBackgroundColor.ToUIColor()
+                    ? _ultimateEntry.FocusedBackgroundColor.ToUIColor()
                     : _ultimateEntry.BackgroundColor.ToUIColor();
 
             SetImage();
@@ -118,7 +116,7 @@ namespace PhantomLib.iOS.Renderers
 
         private void SetReturnType()
         {
-            switch (_ultimateControl.ReturnButton)
+            switch (_ultimateEntry.ReturnButton)
             {
                 case UltimateEntryReturn.Next:
                     _textField.ReturnKeyType = UIReturnKeyType.Next;
@@ -140,21 +138,21 @@ namespace PhantomLib.iOS.Renderers
             string imageSource = "";
 
             //if error and error image is provided
-            if (_ultimateControl.ShowError && !string.IsNullOrEmpty(_ultimateControl.ErrorImageSource))
+            if (_ultimateEntry.ShowError && !string.IsNullOrEmpty(_ultimateEntry.ErrorImageSource))
             {
-                imageSource = _ultimateControl.ErrorImageSource;
+                imageSource = _ultimateEntry.ErrorImageSource;
             }
             //handle Password image if its a password
-            else if (_ultimateControl.ImageButton == UltimateEntryImageButton.Password)
+            else if (_ultimateEntry.ImageButton == UltimateEntryImageButton.Password)
             {
                 imageSource = _ultimateEntry.IsPassword
-                    ? _ultimateControl.HidePasswordImageSource
-                    : _ultimateControl.ImageSource;
+                    ? _ultimateEntry.HidePasswordImageSource
+                    : _ultimateEntry.ImageSource;
             }
             //lastly use RightImageSource if it exists
-            else if (!string.IsNullOrEmpty(_ultimateControl.ImageSource))
+            else if (!string.IsNullOrEmpty(_ultimateEntry.ImageSource))
             {
-                imageSource = _ultimateControl.ImageSource;
+                imageSource = _ultimateEntry.ImageSource;
             }
 
             //set padding in place of image if developer didnt set imageSource
@@ -166,7 +164,7 @@ namespace PhantomLib.iOS.Renderers
             else
             {
                 _textField.RightView = GetImageView(imageSource);
-                _textField.RightViewMode = _ultimateControl.AlwaysShowImage
+                _textField.RightViewMode = _ultimateEntry.AlwaysShowImage
                         ? UITextFieldViewMode.Always
                         : UITextFieldViewMode.WhileEditing;
             }
@@ -192,7 +190,7 @@ namespace PhantomLib.iOS.Renderers
 
         void ImageButton_TouchUpInside(object sender, EventArgs e)
         {
-            switch (_ultimateControl.ImageButton)
+            switch (_ultimateEntry.ImageButton)
             {
                 case UltimateEntryImageButton.ClearContents:
                     _ultimateEntry.Text = string.Empty;
@@ -203,12 +201,12 @@ namespace PhantomLib.iOS.Renderers
             }
 
             UpdateControlUI();
-            _ultimateEntry.RightImageTouchedDelegate(_ultimateEntry, e);
+            //_ultimateEntry.RightImageTouchedDelegate(_ultimateEntry, e);
         }
 
         bool TextField_ShouldReturn(UITextField textField)
         {
-            _ultimateEntry.OnNextDelegate();
+            _ultimateEntry.OnNext();
             return false;
         }
     }
