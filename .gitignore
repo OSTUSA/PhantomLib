@@ -18,3 +18,4 @@ bld/
 .vs/
 
 **/packages/*
+Resource.designer.cs
