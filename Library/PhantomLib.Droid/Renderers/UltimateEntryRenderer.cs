@@ -13,6 +13,7 @@ using Color = Xamarin.Forms.Color;
 using PhantomLib.CustomControls;
 using static PhantomLib.CustomControls.UltimateControl;
 using PhantomLib.CustomControls.Enums;
+using Android.Support.V4.Content.Res;
 
 [assembly: ExportRenderer(typeof(UltimateEntry), typeof(PhantomLib.Droid.Renderers.UltimateEntryRenderer))]
 namespace PhantomLib.Droid.Renderers
@@ -28,7 +29,7 @@ namespace PhantomLib.Droid.Renderers
 
         public UltimateEntryRenderer(Context context) : base(context)
         {
-            _underlineDrawable = Resources.GetDrawable(Resource.Drawable.ExtEntryShape, null); 
+            _underlineDrawable = Resources.GetDrawable(Resource.Drawable.ExtEntryShape, null);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
@@ -113,15 +114,12 @@ namespace PhantomLib.Droid.Renderers
         {
             UpdateControlUI();
 
-            _ultimateEntry.EntryIsFocused = e.HasFocus;
-            _ultimateEntry.EntryFocusChangedDelegate(sender, new FocusEventArgs(_ultimateEntry, e.HasFocus));
-
+            _ultimateEntry.EntryFocusChangedDelegate(_ultimateEntry, new FocusEventArgs(_ultimateEntry, e.HasFocus));
             AddKeyboardPlaceholder(_ultimateEntry.UseKeyboardPlaceholder && e.HasFocus);
         }
 
         public void UpdateControlUI()
         {
-            // else remove the underline in the android entry field
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.SetCornerRadius(5);
 
@@ -129,17 +127,23 @@ namespace PhantomLib.Droid.Renderers
             if (_ultimateEntry.ShowError)
             {
                 gradientDrawable.SetStroke(4, _ultimateEntry.ErrorColor.ToAndroid());
-                _underlineDrawable.SetColorFilter(_ultimateEntry.ErrorColor.ToAndroid(), PorterDuff.Mode.SrcIn);
-            }
-            else if (!_ultimateEntry.ShowError && _editText.IsFocused)
-            {
-                gradientDrawable.SetStroke(4, _ultimateEntry.FocusedBorderColor.ToAndroid());
-                _underlineDrawable.SetColorFilter(_ultimateEntry.FocusedBorderColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                _editText.SetBackground(gradientDrawable);
             }
             else
             {
-                gradientDrawable.SetStroke(4, _ultimateEntry.UnFocusedBorderColor.ToAndroid());
-                _underlineDrawable.SetColorFilter(_ultimateEntry.UnFocusedBorderColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                // Remove the underline
+                _underlineDrawable.SetColorFilter(Xamarin.Forms.Color.Transparent.ToAndroid(), PorterDuff.Mode.SrcIn);
+                _editText.SetBackground(_underlineDrawable);
+
+                if (_ultimateEntry.UnderlineColor != default(Color))
+                {
+                    _underlineDrawable.SetColorFilter(_ultimateEntry.UnderlineColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                    _editText.SetBackground(_underlineDrawable);
+                }
+                else
+                {
+                    SetBorderColor();
+                }
             }
 
             //get background color
@@ -147,20 +151,27 @@ namespace PhantomLib.Droid.Renderers
                     ? _ultimateEntry.FocusedBackgroundColor
                     : _entryBackgroundColor;
 
-            //set background
-            if (_ultimateEntry.IsRoundedEntry)
-            {
-                gradientDrawable.SetColor(bgColor.ToAndroid());
-                _editText.Background = gradientDrawable;
-            }
-            else
-            {
-                _editText.SetBackground(_underlineDrawable);
-                _ultimateEntry.BackgroundColor = bgColor;
-            }
+            _ultimateEntry.BackgroundColor = bgColor;
 
             //update image
             SetImage();
+        }
+
+        private void SetBorderColor()
+        {
+            Color borderColor = _ultimateEntry.BorderColor == default(Color) ? Color.Transparent : _ultimateEntry.BorderColor;
+            
+            Color backgroundColor = _ultimateEntry.IsFocused ? _ultimateEntry.FocusedBackgroundColor : _ultimateEntry.BackgroundColor;
+
+            var shape = new ShapeDrawable(new Android.Graphics.Drawables.Shapes.RectShape());
+            shape.Paint.Color = Color.Black.ToAndroid();
+            shape.Paint.SetStyle(Paint.Style.Stroke);
+            _editText.Background = shape;
+            GradientDrawable gd = new GradientDrawable();
+            gd.SetColor(backgroundColor.ToAndroid());
+            gd.SetCornerRadius(10);
+            gd.SetStroke(2, borderColor.ToAndroid());
+            _editText.SetBackground(gd);
         }
 
         private void SetReturnType(UltimateEntryReturn type)
@@ -191,7 +202,7 @@ namespace PhantomLib.Droid.Renderers
 
         public void SetImage()
         {
-            string imageSource = "";
+            string imageSource = string.Empty;
 
             //if error and error image is provided
             if (_ultimateEntry.ShowError && !string.IsNullOrEmpty(_ultimateEntry.ErrorImageSource))
@@ -206,7 +217,7 @@ namespace PhantomLib.Droid.Renderers
                     : _ultimateEntry.ImageSource;
             }
             //lastly use RightImageSource if it exists
-            else if(!string.IsNullOrEmpty(_ultimateEntry.ImageSource))
+            else if (!string.IsNullOrEmpty(_ultimateEntry.ImageSource))
             {
                 imageSource = _ultimateEntry.ImageSource;
             }
@@ -219,13 +230,26 @@ namespace PhantomLib.Droid.Renderers
             }
 
             var imageResourceId = Resources.GetIdentifier(imageSource, "drawable", Context.PackageName);
+            var image = ResourcesCompat.GetDrawable(Resources, imageResourceId, null);
+
+            // Tint the image, if needed.
+            if (_ultimateEntry.ImageTintColor == default(Color))
+            {
+                image.ClearColorFilter();
+            }
+            else
+            {
+                image.SetColorFilter(_ultimateEntry.ImageTintColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+            }
+
             if (imageResourceId != 0)
             {
                 if (!_editText.HasOnClickListeners)
                 {
                     _editText.SetOnTouchListener(new OnDrawableTouchListener());
                 }
-                _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, imageResourceId, 0);
+
+                _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(null, null, image, null);
             }
             else
             {
@@ -287,7 +311,7 @@ namespace PhantomLib.Droid.Renderers
                     if (ultimateEntryRenderer != null)
                     {
                         var ultimateEntry = (UltimateEntry)ultimateEntryRenderer.Element;
-                        if (ultimateEntry !=null)
+                        if (ultimateEntry != null)
                         {
                             switch (ultimateEntry.ImageButton)
                             {
@@ -299,13 +323,16 @@ namespace PhantomLib.Droid.Renderers
                                     ultimateEntry.IsPassword = !ultimateEntry.IsPassword;
                                     break;
                             }
+
                             ultimateEntryRenderer.UpdateControlUI();
-                            //ultimateEntry.RightImageTouchedDelegate(ultimateEntry, new EventArgs());
+                            ultimateEntry.EntryFocusChangedDelegate(ultimateEntry, new FocusEventArgs(ultimateEntry, ultimateEntry.IsFocused));
                         }
                     }
+
                     return true;
                 }
             }
+
             return false;
         }
     }

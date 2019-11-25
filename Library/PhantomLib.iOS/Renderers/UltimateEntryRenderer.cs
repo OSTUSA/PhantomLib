@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using CoreAnimation;
 using CoreGraphics;
 using PhantomLib.CustomControls;
 using PhantomLib.CustomControls.Enums;
@@ -35,8 +36,8 @@ namespace PhantomLib.iOS.Renderers
                 _textField.Layer.CornerRadius = 5;
                 _textField.Layer.BorderWidth = 2;
 
-                // Add padding to the entry field
-                _textField.LeftView = new UIView(new CGRect(0, 0, 10, 0));
+                // Add left padding to the entry field
+                _textField.LeftView = new UIView(new CGRect(0, 0, _ultimateEntry.ThicknessPadding.Left, 0));
                 _textField.LeftViewMode = UITextFieldViewMode.Always;
 
                 SetReturnType();
@@ -68,9 +69,10 @@ namespace PhantomLib.iOS.Renderers
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
-
+            Console.WriteLine($"Property changed: {e.PropertyName}");
             switch (e.PropertyName)
             {
+                case nameof(UltimateEntry.Height):
                 case nameof(UltimateEntry.AlwaysShowImage):
                 case nameof(UltimateEntry.ErrorColor):
                 case nameof(UltimateEntry.ShowError):
@@ -87,32 +89,74 @@ namespace PhantomLib.iOS.Renderers
         {
             UpdateControlUI();
 
-            _ultimateEntry.EntryIsFocused = _ultimateEntry.IsFocused;
-            _ultimateEntry.EntryFocusChangedDelegate(sender, new FocusEventArgs(_ultimateEntry, _ultimateEntry.IsFocused));
+            _ultimateEntry.EntryFocusChangedDelegate(_ultimateEntry, new FocusEventArgs(_ultimateEntry, _ultimateEntry.IsFocused));
         }
 
         private void UpdateControlUI()
         {
-            //set stroke/border
-            if (_ultimateEntry.ShowError)
+            if (!Element.Height.Equals(-1.0f))
             {
-                _textField.Layer.BorderColor = _ultimateEntry.ErrorColor.ToCGColor();
+                // set stroke/border
+                if (_ultimateEntry.ShowError)
+                {
+                    _textField.Layer.BorderColor = _ultimateEntry.ErrorColor.ToCGColor();
+                }
+                else
+                {
+                    if (_ultimateEntry.UnderlineColor != default(Xamarin.Forms.Color))
+                    {
+                        SetUnderline(_ultimateEntry.UnderlineColor);
+                    }
+                    else
+                    {
+                        SetBorderColor();
+                    }
+                }
+
+                // When used with an ultimate floating label, HideBackgroundColor
+                // will be set so that it doesn't conflict with the background color
+                // of the parent.
+                if (!_ultimateEntry.ShowError && _ultimateEntry.HideBackgroundColor)
+                {
+                    _textField.BorderStyle = UITextBorderStyle.None;
+                    _textField.BackgroundColor = UIColor.Clear;
+                }
+                else
+                {
+                    //set background color
+                    _textField.BackgroundColor = _ultimateEntry.IsFocused
+                            ? _ultimateEntry.FocusedBackgroundColor.ToUIColor()
+                            : _ultimateEntry.BackgroundColor.ToUIColor();
+                }
+
+                SetImage();
             }
-            else if (!_ultimateEntry.ShowError && _ultimateEntry.IsFocused)
+        }
+
+        private void SetBorderColor()
+        {
+            if (_ultimateEntry.BorderColor == default(Xamarin.Forms.Color))
             {
-                _textField.Layer.BorderColor = _ultimateEntry.FocusedBorderColor.ToCGColor();
-            }
-            else
-            {
-                _textField.Layer.BorderColor = _ultimateEntry.UnFocusedBorderColor.ToCGColor();
+                // Color was not set.
+                _textField.BorderStyle = UITextBorderStyle.None;
+                _textField.Layer.BorderColor = Xamarin.Forms.Color.Transparent.ToCGColor();
+                return;
             }
 
-            //set background color
-            _textField.BackgroundColor = _ultimateEntry.IsFocused
-                    ? _ultimateEntry.FocusedBackgroundColor.ToUIColor()
-                    : _ultimateEntry.BackgroundColor.ToUIColor();
+            _textField.Layer.BorderColor = _ultimateEntry.BorderColor.ToCGColor();
+        }
 
-            SetImage();
+        private void SetUnderline(Xamarin.Forms.Color color)
+        {
+            var bottomLine = new CALayer();
+            bottomLine.Frame = new CGRect(0.0, Element.Height - 1, Element.Width, 1.0);
+            bottomLine.BackgroundColor = color.ToCGColor();
+            _textField.BorderStyle = UITextBorderStyle.None;
+            _textField.Layer.AddSublayer(bottomLine);
+            _textField.Layer.MasksToBounds = true;
+
+            // If you have an underline, don't show the border
+            _textField.Layer.BorderColor = Xamarin.Forms.Color.Transparent.ToCGColor();
         }
 
         private void SetReturnType()
@@ -136,7 +180,7 @@ namespace PhantomLib.iOS.Renderers
 
         private void SetImage()
         {
-            string imageSource = "";
+            string imageSource = string.Empty;
 
             //if error and error image is provided
             if (_ultimateEntry.ShowError && !string.IsNullOrEmpty(_ultimateEntry.ErrorImageSource))
@@ -173,12 +217,28 @@ namespace PhantomLib.iOS.Renderers
 
         private UIView GetImageView(string imageSource)
         {
-            var image = UIImage.FromBundle(imageSource).ImageWithRenderingMode(UIKit.UIImageRenderingMode.Automatic);
-            // Make the view 10 wider than the image so that it has some padding.
+            UIImageRenderingMode renderingMode;
 
+            if (_ultimateEntry.ImageTintColor == default(Xamarin.Forms.Color))
+            {
+                //Turn off tinting
+                renderingMode = UIImageRenderingMode.Automatic;
+            }
+            else
+            {
+                //Apply tint color
+                renderingMode = UIImageRenderingMode.AlwaysTemplate;
+            }
+
+            UIImage image = UIImage.FromBundle(imageSource).ImageWithRenderingMode(renderingMode);
+
+            // Make the view 10 wider than the image so that it has some padding.
             _imageButton = UIButton.FromType(UIButtonType.Custom);
-            _imageButton.Frame = new RectangleF(0, 0, (int)(image.Size.Width), (int)image.Size.Height);
+            _imageButton.Frame = new RectangleF(0 + 0 - (float)_ultimateEntry.ThicknessPadding.Right, 0, (int)(image.Size.Width + _ultimateEntry.ThicknessPadding.Right), (int)image.Size.Height);
+            
             _imageButton.SetImage(image, UIControlState.Normal);
+            _imageButton.TintColor = renderingMode == UIImageRenderingMode.AlwaysTemplate ?
+                _ultimateEntry.ImageTintColor.ToUIColor() : null;
 
             //Set up event handler for "Click" event ("TouchUpInside in iOS terminology)
             _imageButton.TouchUpInside += ImageButton_TouchUpInside;
@@ -195,6 +255,7 @@ namespace PhantomLib.iOS.Renderers
             {
                 case UltimateEntryImageButton.ClearContents:
                     _ultimateEntry.Text = string.Empty;
+                    _ultimateEntry.EntryFocusChangedDelegate(_ultimateEntry, new FocusEventArgs(_ultimateEntry, _ultimateEntry.IsFocused));
                     break;
                 case UltimateEntryImageButton.Password:
                     _ultimateEntry.IsPassword = !_ultimateEntry.IsPassword;
@@ -202,7 +263,6 @@ namespace PhantomLib.iOS.Renderers
             }
 
             UpdateControlUI();
-            //_ultimateEntry.RightImageTouchedDelegate(_ultimateEntry, e);
         }
 
         bool TextField_ShouldReturn(UITextField textField)

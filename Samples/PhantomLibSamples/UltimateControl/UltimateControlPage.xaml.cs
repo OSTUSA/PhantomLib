@@ -13,7 +13,7 @@ namespace PhantomLibSamples.UltimateControl
         {
             if (sender is PhantomLib.CustomControls.UltimateEntry entry)
             {
-                entry.ShowError = e.NewTextValue.Length > 10;
+                entry.ShowError = e.NewTextValue.Length > 4;
             }
         }
     }

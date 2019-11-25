@@ -7,20 +7,22 @@ namespace PhantomLib.CustomControls
     public class UltimateEntry : Entry
     {
         public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButton), typeof(UltimateEntryImageButton), typeof(UltimateControl), UltimateEntryImageButton.None);
+        public static readonly BindableProperty ImageTintColorProperty = BindableProperty.Create(nameof(ImageTintColor), typeof(Color), typeof(UltimateControl), Color.Transparent);
+        public static readonly BindableProperty UnderlineColorProperty = BindableProperty.Create(nameof(UnderlineColor), typeof(Color), typeof(UltimateControl), default(Color));
+
         public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(UltimateControl), false);
         public static readonly BindableProperty IsRoundedEntryProperty = BindableProperty.Create(nameof(IsRoundedEntry), typeof(bool), typeof(UltimateControl), false);
         public static readonly BindableProperty ThicknessPaddingProperty = BindableProperty.Create(nameof(ThicknessPadding), typeof(Thickness), typeof(UltimateControl), new Thickness(20, 10));
         public static readonly BindableProperty ReturnButtonProperty = BindableProperty.Create(nameof(ReturnButton), typeof(UltimateEntryReturn), typeof(UltimateControl), UltimateEntryReturn.Done);
         public static readonly BindableProperty NextViewProperty = BindableProperty.Create(nameof(NextView), typeof(UltimateEntry), typeof(UltimateEntry));
 
-        public static readonly BindableProperty EntryIsFocusedProperty = BindableProperty.Create(nameof(EntryIsFocused), typeof(bool), typeof(UltimateControl), false);
+        public static readonly BindableProperty HideBackgroundColorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(UltimateControl), false);
         public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(UltimateControl), false);
 
         //colors
         public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(UltimateControl), Color.Red);
-        public static readonly BindableProperty FocusedBorderColorProperty = BindableProperty.Create(nameof(FocusedBorderColor), typeof(Color), typeof(UltimateControl), Color.DimGray);
-        public static readonly BindableProperty UnFocusedBorderColorProperty = BindableProperty.Create(nameof(UnFocusedBorderColor), typeof(Color), typeof(UltimateControl), Color.Transparent);
-        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(UltimateControl), new Color(255, 255, 255, 0.2));
+        public static readonly BindableProperty BorderColorProperty = BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(UltimateControl), default(Color));
+        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(UltimateControl), default(Color));
 
         //image
         public static readonly BindableProperty ImageSourceProperty = BindableProperty.Create(nameof(ImageSource), typeof(string), typeof(UltimateControl), string.Empty);
@@ -29,7 +31,6 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty AlwaysShowImageProperty = BindableProperty.Create(nameof(AlwaysShowImage), typeof(bool), typeof(UltimateControl), true);
 
         public event EventHandler<FocusEventArgs> EntryFocusChanged;
-        public event EventHandler<EventArgs> RightImageTouched;
 
         public string ImageSource
         {
@@ -52,6 +53,12 @@ namespace PhantomLib.CustomControls
         {
             get => (Thickness)GetValue(ThicknessPaddingProperty);
             set => SetValue(ThicknessPaddingProperty, value);
+        }
+
+        public bool HideBackgroundColor
+        {
+            get => (bool)GetValue(HideBackgroundColorProperty);
+            set => SetValue(HideBackgroundColorProperty, value);
         }
 
         public bool ShowError
@@ -78,28 +85,16 @@ namespace PhantomLib.CustomControls
             set => SetValue(ErrorColorProperty, value);
         }
 
-        public Color FocusedBorderColor
+        public Color BorderColor
         {
-            get => (Color)GetValue(FocusedBorderColorProperty);
-            set => SetValue(FocusedBorderColorProperty, value);
-        }
-
-        public Color UnFocusedBorderColor
-        {
-            get => (Color)GetValue(UnFocusedBorderColorProperty);
-            set => SetValue(UnFocusedBorderColorProperty, value);
+            get => (Color)GetValue(BorderColorProperty);
+            set => SetValue(BorderColorProperty, value);
         }
 
         public Color FocusedBackgroundColor
         {
             get => (Color)GetValue(FocusedBackgroundColorProperty);
             set => SetValue(FocusedBackgroundColorProperty, value);
-        }
-
-        public bool EntryIsFocused
-        {
-            get => (bool)GetValue(EntryIsFocusedProperty);
-            set => SetValue(EntryIsFocusedProperty, value);
         }
 
         public UltimateEntryReturn ReturnButton
@@ -112,6 +107,18 @@ namespace PhantomLib.CustomControls
         {
             get => (UltimateEntryImageButton)GetValue(ImageButtonProperty);
             set => SetValue(ImageButtonProperty, value);
+        }
+
+        public Color ImageTintColor
+        {
+            get => (Color)GetValue(ImageTintColorProperty);
+            set => SetValue(ImageTintColorProperty, value);
+        }
+
+        public Color UnderlineColor
+        {
+            get => (Color)GetValue(UnderlineColorProperty);
+            set => SetValue(UnderlineColorProperty, value);
         }
 
         public UltimateEntry NextView

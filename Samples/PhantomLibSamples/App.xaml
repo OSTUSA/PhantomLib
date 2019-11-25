@@ -34,6 +34,18 @@
                 <phantom-extensions:Values />
                 <phantom-extensions:Views />
             </ResourceDictionary.MergedDictionaries>
+            
+            <Color x:Key="ErrorColor">#CD2B1D</Color>
+            <Color x:Key="AccentColor">#D236DD</Color>
+            <Color x:Key="PrimaryColor">#1E2222</Color>
+            <Color x:Key="PrimaryFontColor">#E0E4E4</Color>
+            <Color x:Key="SecondaryFontColor">#7E8184</Color>
+            <Color x:Key="SecondaryColor">#2B2B2E</Color>
         </ResourceDictionary>
+        
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryColor}" />
+            <Setter Property="BarTextColor" Value="{DynamicResource PrimaryFontColor}" />
+        </Style>
     </Application.Resources>
 </Application>
