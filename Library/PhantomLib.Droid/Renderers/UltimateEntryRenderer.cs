@@ -11,7 +11,7 @@ using Xamarin.Forms.Platform.Android;
 using Android.Graphics;
 using Color = Xamarin.Forms.Color;
 using PhantomLib.CustomControls;
-using static PhantomLib.CustomControls.UltimateControl;
+using static PhantomLib.CustomControls.FloatingLabel;
 using PhantomLib.CustomControls.Enums;
 using Android.Support.V4.Content.Res;
 

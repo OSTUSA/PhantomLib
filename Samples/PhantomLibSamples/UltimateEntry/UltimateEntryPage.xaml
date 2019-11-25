@@ -8,7 +8,7 @@
              xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
              xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
              xmlns:localvms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
-             x:Class="PhantomLibSamples.UltimateControl.UltimateControlPage"
+             x:Class="PhantomLibSamples.UltimateEntry.UltimateEntryPage"
              BackgroundColor="{DynamicResource PrimaryColor}"
              Title="Ultimate Entry">
     <ContentPage.Resources>
@@ -23,7 +23,7 @@
                 <Setter Property="TextColor" Value="{DynamicResource PrimaryFontColor}" />
             </Style>
             
-            <Style x:Key="FloatingLabel" TargetType="controls:UltimateControl">
+            <Style x:Key="FloatingLabel" TargetType="controls:FloatingLabel">
                 <Setter Property="FocusedBackgroundColor" Value="{DynamicResource SecondaryColor}" />
                 <Setter Property="FloatingLeftMargin" Value="6" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}" />
@@ -59,25 +59,25 @@
                         <Label Margin="0,10,0,0" Text="Enter 5 characters to see an error" Style="{StaticResource Item}" />
                         
                         <Label Text="Please enter less than 5 characters" TextColor="{DynamicResource ErrorColor}" BindingContext="{x:Reference Name=FloatingUsername}" IsVisible="{Binding ShowError}" />
-                        <controls:UltimateControl x:Name="UsernameFloatingLabel" PlaceholderText="Username" Style="{StaticResource FloatingLabel}">
+                        <controls:FloatingLabel x:Name="UsernameFloatingLabel" PlaceholderText="Username" Style="{StaticResource FloatingLabel}">
                                 <controls:UltimateEntry x:Name="FloatingUsername" 
                                                     Style="{StaticResource MaterialEntry}"
-                                                    controls:UltimateControl.AttachedEntry="{x:Reference UsernameFloatingLabel}"
+                                                    controls:FloatingLabel.AttachedEntry="{x:Reference UsernameFloatingLabel}"
                                                     ImageButton="ClearContents"
                                                     ImageSource="icon_close_black"
                                                     NextView="{x:Reference FloatingPasswordEntry}"
                                                     TextChanged="UltimateEntry_TextChanged" />
-                        </controls:UltimateControl>
+                        </controls:FloatingLabel>
                         
                         <Label Text="Show/hide password with the lock icon" Style="{StaticResource Item}" Margin="0,20,0,0" />
-                        <controls:UltimateControl x:Name="PasswordFloatingLabel" PlaceholderText="Password" Style="{StaticResource FloatingLabel}">
+                        <controls:FloatingLabel x:Name="PasswordFloatingLabel" PlaceholderText="Password" Style="{StaticResource FloatingLabel}">
                             <controls:UltimateEntry x:Name="FloatingPasswordEntry" Style="{StaticResource MaterialEntry}"
                                             ImageSource="icon_lock_open" 
                                             HidePasswordImageSource="icon_lock_close" 
                                             ImageButton="Password"
                                             ReturnButton="Done"
-                                            controls:UltimateControl.AttachedEntry="{x:Reference PasswordFloatingLabel}" />
-                        </controls:UltimateControl>
+                                            controls:FloatingLabel.AttachedEntry="{x:Reference PasswordFloatingLabel}" />
+                        </controls:FloatingLabel>
                     </StackLayout>
                 </Frame>
                 

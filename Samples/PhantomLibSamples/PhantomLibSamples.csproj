@@ -21,7 +21,7 @@
     <Folder Include="Utilities\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Extensions\" />
-    <Folder Include="UltimateControl\" />
+    <Folder Include="UltimateEntry\" />
     <Folder Include="Effects\" />
     <Folder Include="Converters\" />
     <Folder Include="Misc\" />

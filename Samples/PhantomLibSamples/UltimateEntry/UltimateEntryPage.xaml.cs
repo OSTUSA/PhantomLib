@@ -1,10 +1,10 @@
 ﻿using Xamarin.Forms;
 
-namespace PhantomLibSamples.UltimateControl
+namespace PhantomLibSamples.UltimateEntry
 {
-    public partial class UltimateControlPage : ContentPage
+    public partial class UltimateEntryPage : ContentPage
     {
-        public UltimateControlPage()
+        public UltimateEntryPage()
         {
             InitializeComponent();
         }

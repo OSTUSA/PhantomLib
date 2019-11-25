@@ -6,29 +6,28 @@ namespace PhantomLib.CustomControls
 {
     public class UltimateEntry : Entry
     {
-        public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButton), typeof(UltimateEntryImageButton), typeof(UltimateControl), UltimateEntryImageButton.None);
-        public static readonly BindableProperty ImageTintColorProperty = BindableProperty.Create(nameof(ImageTintColor), typeof(Color), typeof(UltimateControl), Color.Transparent);
-        public static readonly BindableProperty UnderlineColorProperty = BindableProperty.Create(nameof(UnderlineColor), typeof(Color), typeof(UltimateControl), default(Color));
+        public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButton), typeof(UltimateEntryImageButton), typeof(FloatingLabel), UltimateEntryImageButton.None);
+        public static readonly BindableProperty ImageTintColorProperty = BindableProperty.Create(nameof(ImageTintColor), typeof(Color), typeof(FloatingLabel), Color.Transparent);
+        public static readonly BindableProperty UnderlineColorProperty = BindableProperty.Create(nameof(UnderlineColor), typeof(Color), typeof(FloatingLabel), default(Color));
 
-        public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(UltimateControl), false);
-        public static readonly BindableProperty IsRoundedEntryProperty = BindableProperty.Create(nameof(IsRoundedEntry), typeof(bool), typeof(UltimateControl), false);
-        public static readonly BindableProperty ThicknessPaddingProperty = BindableProperty.Create(nameof(ThicknessPadding), typeof(Thickness), typeof(UltimateControl), new Thickness(20, 10));
-        public static readonly BindableProperty ReturnButtonProperty = BindableProperty.Create(nameof(ReturnButton), typeof(UltimateEntryReturn), typeof(UltimateControl), UltimateEntryReturn.Done);
+        public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(FloatingLabel), false);
+        public static readonly BindableProperty ThicknessPaddingProperty = BindableProperty.Create(nameof(ThicknessPadding), typeof(Thickness), typeof(FloatingLabel), new Thickness(20, 10));
+        public static readonly BindableProperty ReturnButtonProperty = BindableProperty.Create(nameof(ReturnButton), typeof(UltimateEntryReturn), typeof(FloatingLabel), UltimateEntryReturn.Done);
         public static readonly BindableProperty NextViewProperty = BindableProperty.Create(nameof(NextView), typeof(UltimateEntry), typeof(UltimateEntry));
 
-        public static readonly BindableProperty HideBackgroundColorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(UltimateControl), false);
-        public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(UltimateControl), false);
+        public static readonly BindableProperty HideBackgroundColorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(FloatingLabel), false);
+        public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(FloatingLabel), false);
 
         //colors
-        public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(UltimateControl), Color.Red);
-        public static readonly BindableProperty BorderColorProperty = BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(UltimateControl), default(Color));
-        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(UltimateControl), default(Color));
+        public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(FloatingLabel), Color.Red);
+        public static readonly BindableProperty BorderColorProperty = BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(FloatingLabel), default(Color));
+        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(FloatingLabel), default(Color));
 
         //image
-        public static readonly BindableProperty ImageSourceProperty = BindableProperty.Create(nameof(ImageSource), typeof(string), typeof(UltimateControl), string.Empty);
-        public static readonly BindableProperty ErrorImageSourceProperty = BindableProperty.Create(nameof(ErrorImageSource), typeof(string), typeof(UltimateControl), string.Empty);
-        public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(UltimateControl), string.Empty);
-        public static readonly BindableProperty AlwaysShowImageProperty = BindableProperty.Create(nameof(AlwaysShowImage), typeof(bool), typeof(UltimateControl), true);
+        public static readonly BindableProperty ImageSourceProperty = BindableProperty.Create(nameof(ImageSource), typeof(string), typeof(FloatingLabel), string.Empty);
+        public static readonly BindableProperty ErrorImageSourceProperty = BindableProperty.Create(nameof(ErrorImageSource), typeof(string), typeof(FloatingLabel), string.Empty);
+        public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(FloatingLabel), string.Empty);
+        public static readonly BindableProperty AlwaysShowImageProperty = BindableProperty.Create(nameof(AlwaysShowImage), typeof(bool), typeof(FloatingLabel), true);
 
         public event EventHandler<FocusEventArgs> EntryFocusChanged;
 
@@ -66,13 +65,7 @@ namespace PhantomLib.CustomControls
             get => (bool)GetValue(ShowErrorProperty);
             set => SetValue(ShowErrorProperty, value);
         }
-
-        public bool IsRoundedEntry
-        {
-            get => (bool)GetValue(IsRoundedEntryProperty);
-            set => SetValue(IsRoundedEntryProperty, value);
-        }
-
+        
         public bool AlwaysShowImage
         {
             get => (bool)GetValue(AlwaysShowImageProperty);
