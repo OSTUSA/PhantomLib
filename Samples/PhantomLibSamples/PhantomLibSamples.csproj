@@ -11,8 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
-    <PackageReference Include="LiveXAML" Version="2.1.72" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
+    <PackageReference Include="LiveXAML" Version="2.1.73" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Library\PhantomLib\PhantomLib.csproj" />
