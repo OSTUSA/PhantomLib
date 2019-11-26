@@ -15,7 +15,7 @@ Note: Version 2.x of this package is not backward compatible with 1.x.
 
 * UltimateEntry - The UltimateEntry control jam packed with functionality. Features include being able to set an icon on the right that will clear the contents when tapped. You can also use it as a password entry and set an icon to show and hide the password by tapping it. You can have it validate input and show an error when validation fails. You can also style it like material design by having an underline on the bottom.
 ![UltimateEntry Image](Images/ultimateentrymaterial.png)
-* FloatingLabel - This control is used in with the UltimateControl to "float" the placeholder entering text.
+* FloatingLabel - This control is used with the UltimateControl to "float" the placeholder entering text.
 ![Floating label Image](Images/floatinglabel.gif)
 
 # Behaviors included in this library
