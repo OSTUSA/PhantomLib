@@ -1,16 +1,26 @@
 # PhantomLib
-Collection of Xamarin additions that are ready to consume.
+Collection of Xamarin controls, converters, behaviors, effects that will speed your developement time.
+Note: Version 2.x of this package is not backward compatible with 1.x.
 
 # Effects included in this library
 * Kerning Effect - Allows you to specify the letter spacing of your labels.
-* Spinner Effect - Allows you to have a custom activity indicator. Just supply an image and duration (how long it takes for one rotation) and the effect will rotate it.
+![Kerning Image](Images/kerning.png)
+
+* TintImage Effect - Allows you to change the color of an image.
+![TintImage Image](Images/tintimage.png)
 
 # Custom controls in this library
-* RoundedFrame - Allows you to specify which corners of a frame are rounded.
-* UltimateEntry - Entry control jam packed with functionality. You can set an icon on the right that will clear the contents when tapped. You can use it as a password entry and set an icon to show and hide the password by tapping it. You can have it validate input and show an error when validation fails. And you can even round the corners!
+* RoundedFrame - No longer is rounding corners on a frame an all or nothing affair. With RoundedFrame, you're in control of which corners are rounded and which aren't. Only need the left corners rounded? No problem. Only the top left corner? We can do that too. Any combination of corners can be rounded.
+![Sample rounded frame](Images/roundedframe.png)
+
+* UltimateEntry - The UltimateEntry control jam packed with functionality. Features include being able to set an icon on the right that will clear the contents when tapped. You can also use it as a password entry and set an icon to show and hide the password by tapping it. You can have it validate input and show an error when validation fails. You can also style it like material design by having an underline on the bottom.
+![UltimateEntry Image](Images/ultimateentrymaterial.png)
+* FloatingLabel - This control is used in conjunction with the UltimateControl to "float" the placeholder when a user is entering text.
+![Floating label Image](Images/floatinglabel.gif)
 
 # Behaviors included in this library
 * Tap Command Behavior - Allows you to bind an `ICommand` to be executed when a control is tapped.
+![Sample rounded frame](Images/tapbehavior.gif)
 
 # Converters included in this library
 * CharacterCountConverter - Counts the characters in a string
@@ -23,11 +33,15 @@ Collection of Xamarin additions that are ready to consume.
 * IsNotNullOrWhitespace - Determines if a string value is not null or whitespace (inverse of IsNullOrWhitespaceConverter)
 * StringFormatConverter - Safely formats strings (handles case where format string is not a valid .NET format string)
 * ToUpperConverter - Uppercases each character in a string (culture-specific)
+![Sample converters](Images/converters.png)
 
 # Attached Properties in this library
 * Labels.Kerning - Helper to easily add Kerning Effect
 * Views.TapBackgroundColor - Set the temporary background color of a view when it is tapped
+![Sample rounded frame](Images/tapbackgroundcolor.gif)
+
 * Pages.FloatingActionButton - Add a Button to the page as a floating action button.
+![Sample fab](Images/fab.png)
 
 # Other helpers included in this library
 * BaseAttachable - Acts as a base class for view-models, with helpers to easily raise `IPropertyChanged` events for properties.
@@ -50,5 +64,6 @@ return base.FinishedLaunching(app,  options);
 ```
 
 # Sample
-![Sample Image](Images/sample4.gif)
+## Included is a sample app that demonstrates each component.
+![Sample Image](Images/ultimateentrypage.png)
 
