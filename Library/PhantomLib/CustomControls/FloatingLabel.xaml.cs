@@ -52,7 +52,7 @@ namespace PhantomLib.CustomControls
 
                 // Set the left on ThicknessPadding so that the text in the entry is always
                 // left aligned to the floating label.
-                _ultimateEntry.ThicknessPadding = new Thickness(this.FloatingLeftMargin, 0, 0, 0);
+                _ultimateEntry.ThicknessPadding = new Thickness(this.FloatingLeftMargin, _ultimateEntry.ThicknessPadding.Top, _ultimateEntry.ThicknessPadding.Right, _ultimateEntry.ThicknessPadding.Bottom);
             }
         }
 
@@ -78,14 +78,7 @@ namespace PhantomLib.CustomControls
         /// How much vertical space should be allocated for the floating label.
         /// </summary>
         public static readonly BindableProperty FloatingSpaceProperty = BindableProperty.Create(nameof(FloatingSpace), typeof(int), typeof(FloatingLabel), 20);
-
-        /// <summary>
-        /// Used to set a margin between the placeholder text and the left side of the entry.
-        /// </summary>
-
-        // TODO remove this
-        public static readonly BindableProperty PlaceholderLeftMarginProperty = BindableProperty.Create(nameof(PlaceholderLeftMargin), typeof(int), typeof(FloatingLabel), 5);
-
+        
         // These properties modify the floating label
         // TODO Change over to ThicknessPadding property
         public static readonly BindableProperty FloatingTopMarginProperty = BindableProperty.Create(nameof(FloatingTopMargin), typeof(int), typeof(FloatingLabel), 4);
@@ -96,7 +89,7 @@ namespace PhantomLib.CustomControls
         {
             InitializeComponent();
 
-            Label.TranslationX = PlaceholderLeftMargin;
+            Label.TranslationX = FloatingLeftMargin;
         }
 
         public Color FocusedBackgroundColor
@@ -145,12 +138,6 @@ namespace PhantomLib.CustomControls
         {
             get => (int)GetValue(FloatingSpaceProperty);
             set => SetValue(FloatingSpaceProperty, value);
-        }
-
-        public int PlaceholderLeftMargin
-        {
-            get => (int)GetValue(PlaceholderLeftMarginProperty);
-            set => SetValue(PlaceholderLeftMarginProperty, value);
         }
 
         public int FloatingFontSize
@@ -212,7 +199,7 @@ namespace PhantomLib.CustomControls
 
         private async Task TransitionToPlaceholder(bool animated = true)
         {
-            var transition1 = Label.TranslateTo(PlaceholderLeftMargin, 0);
+            var transition1 = Label.TranslateTo(FloatingLeftMargin, 0);
             var transition2 = SizeTo(FloatingPlaceholderFontSize);
             await Task.WhenAll(transition1, transition2);
         }
