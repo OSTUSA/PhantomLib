@@ -9,7 +9,7 @@ namespace PhantomLib.CustomControls
     {
         // Attached property to map an ultimate entry to this control.
         public static BindableProperty AttachedEntryProperty =
-            BindableProperty.CreateAttached("AttachedEntry", typeof(FloatingLabel), typeof(Nullable), null, propertyChanged: HandleEntryChanged);
+            BindableProperty.CreateAttached("AttachedEntry", typeof(FloatingLabel), typeof(UltimateEntry), null, propertyChanged: HandleEntryChanged);
 
         public static FloatingLabel GetAttachedEntry(BindableObject view)
         {
@@ -23,12 +23,12 @@ namespace PhantomLib.CustomControls
 
         static void HandleEntryChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            if (newValue is FloatingLabel uc)
+            if (newValue is FloatingLabel floatingLabel)
             {
-                uc.UltimateEntry = (UltimateEntry)bindable;
-                uc.UltimateEntry.FocusedBackgroundColor = uc.FocusedBackgroundColor;
-                uc.UltimateEntry.BackgroundColor = uc.BackgroundColor;
-                uc.UltimateEntry.HideBackgroundColor = true;
+                floatingLabel.UltimateEntry = (UltimateEntry)bindable;
+                floatingLabel.UltimateEntry.FocusedBackgroundColor = floatingLabel.FocusedBackgroundColor;
+                floatingLabel.UltimateEntry.BackgroundColor = floatingLabel.BackgroundColor;
+                floatingLabel.UltimateEntry.HideBackgroundColor = true;
             }
         }
 
