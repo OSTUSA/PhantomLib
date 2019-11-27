@@ -3,9 +3,9 @@ using System.Windows.Input;
 using PhantomLib.Models;
 using Xamarin.Forms;
 
-namespace PhantomLibSamples.UltimateControl
+namespace PhantomLibSamples.UltimateEntry
 {
-    public class UltimateControlViewModel : BaseAttachable
+    public class UltimateEntryViewModel : BaseAttachable
     {
         private bool _isValidating;
 
@@ -16,17 +16,6 @@ namespace PhantomLibSamples.UltimateControl
         {
             get => _showErrorPassword;
             set => SetProperty(ref _showErrorPassword, value);
-        }
-
-        private string _ultimateControlText;
-        public string UltimateControlText
-        {
-            get { return _ultimateControlText; }
-            set
-            {
-                SetProperty(ref _ultimateControlText, value);
-                ValidateText(value);
-            }
         }
 
         private string _passwordText;
@@ -52,7 +41,7 @@ namespace PhantomLibSamples.UltimateControl
             IsUltimateError = text?.Length > 10 ? true : false;
         }
 
-        public UltimateControlViewModel()
+        public UltimateEntryViewModel()
         {
             LoginCommand = new Command(LoginCommandExecute);
         }

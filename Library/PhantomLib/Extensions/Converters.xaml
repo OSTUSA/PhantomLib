@@ -26,4 +26,5 @@
     </converters:ValueConverterGroup>
     <converters:StringFormatConverter x:Key="StringFormatConverter" />
     <converters:ToUpperConverter x:Key="ToUpperConverter" />
+    <converters:BoolToInConverter x:Key="BoolToIntConverter" />
 </ResourceDictionary>

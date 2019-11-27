@@ -11,7 +11,9 @@ using Xamarin.Forms.Platform.Android;
 using Android.Graphics;
 using Color = Xamarin.Forms.Color;
 using PhantomLib.CustomControls;
-using static PhantomLib.CustomControls.UltimateControl;
+using static PhantomLib.CustomControls.FloatingLabel;
+using PhantomLib.CustomControls.Enums;
+using Android.Support.V4.Content.Res;
 
 [assembly: ExportRenderer(typeof(UltimateEntry), typeof(PhantomLib.Droid.Renderers.UltimateEntryRenderer))]
 namespace PhantomLib.Droid.Renderers
@@ -19,7 +21,6 @@ namespace PhantomLib.Droid.Renderers
     public class UltimateEntryRenderer : EntryRenderer
     {
         UltimateEntry _ultimateEntry;
-        UltimateControl _ultimateControl;
 
         EditText _editText;
         Color _entryBackgroundColor;
@@ -28,7 +29,7 @@ namespace PhantomLib.Droid.Renderers
 
         public UltimateEntryRenderer(Context context) : base(context)
         {
-            _underlineDrawable = Resources.GetDrawable(Resource.Drawable.ExtEntryShape, null); 
+            _underlineDrawable = Resources.GetDrawable(Resource.Drawable.ExtEntryShape, null);
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
@@ -38,26 +39,24 @@ namespace PhantomLib.Droid.Renderers
             if (this.Control != null && this.Element != null && e.NewElement != null)
             {
                 _ultimateEntry = (UltimateEntry)this.Element;
-                _ultimateControl = _ultimateEntry.ParentUltimateControl;
 
                 _editText = (EditText)this.Control;
                 _entryBackgroundColor = _ultimateEntry.BackgroundColor;
 
-                if(_ultimateControl.ImageButton == UltimateEntryImageButton.Password)
+                if (_ultimateEntry.ImageButton == UltimateEntryImageButton.Password)
                 {
                     _ultimateEntry.IsPassword = true;
                 }
 
                 SetPadding();
 
-                SetReturnType(_ultimateControl.ReturnButton);
+                SetReturnType(_ultimateEntry.ReturnButton);
 
                 // Switch the stroke color to blue if the field is in focus and it doesn't have a validation error
                 _editText.FocusChange += EditText_FocusChange;
 
                 // Update UI when text is changed
                 _editText.TextChanged += EditText_TextChanged;
-                _ultimateControl.PropertyChanged += OnElementPropertyChanged;
 
                 UpdateControlUI();
             }
@@ -67,8 +66,8 @@ namespace PhantomLib.Droid.Renderers
                 // Unsubscribe
                 _editText.FocusChange -= EditText_FocusChange;
                 _editText.TextChanged -= EditText_TextChanged;
-                _ultimateControl.PropertyChanged -= OnElementPropertyChanged;
                 _editText.EditorAction -= _editText_OnNext;
+
                 if (_editText.HasOnClickListeners)
                 {
                     _editText.SetOnTouchListener(null);
@@ -85,12 +84,12 @@ namespace PhantomLib.Droid.Renderers
         private void SetPadding()
         {
             _editText.SetPadding
-                (
-                    ConvertToDip((int)_ultimateControl.ThicknessPadding.Left),
-                    ConvertToDip((int)_ultimateControl.ThicknessPadding.Top),
-                    ConvertToDip((int)_ultimateControl.ThicknessPadding.Right),
-                    ConvertToDip((int)_ultimateControl.ThicknessPadding.Bottom)
-                );
+            (
+                ConvertToDip((int)_ultimateEntry.ThicknessPadding.Left),
+                ConvertToDip((int)_ultimateEntry.ThicknessPadding.Top),
+                ConvertToDip((int)_ultimateEntry.ThicknessPadding.Right),
+                ConvertToDip((int)_ultimateEntry.ThicknessPadding.Bottom)
+            );
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -99,13 +98,13 @@ namespace PhantomLib.Droid.Renderers
 
             switch (e.PropertyName)
             {
-                case nameof(UltimateControl.AlwaysShowImage):
-                case nameof(UltimateControl.ErrorColor):
-                case nameof(UltimateControl.ShowError):
-                case nameof(UltimateControl.FocusedBackgroundColor):
-                case nameof(UltimateControl.ImageSource):
-                case nameof(UltimateControl.HidePasswordImageSource):
-                case nameof(UltimateControl.ErrorImageSource):
+                case nameof(UltimateEntry.AlwaysShowImage):
+                case nameof(UltimateEntry.ErrorColor):
+                case nameof(UltimateEntry.ShowError):
+                case nameof(UltimateEntry.FocusedBackgroundColor):
+                case nameof(UltimateEntry.ImageSource):
+                case nameof(UltimateEntry.HidePasswordImageSource):
+                case nameof(UltimateEntry.ErrorImageSource):
                     UpdateControlUI();
                     break;
             }
@@ -113,56 +112,66 @@ namespace PhantomLib.Droid.Renderers
 
         void EditText_FocusChange(object sender, FocusChangeEventArgs e)
         {
-            _ultimateControl.EntryIsFocused = e.HasFocus;
-
             UpdateControlUI();
-            AddKeyboardPlaceholder(_ultimateControl.UseKeyboardPlaceholder && e.HasFocus);
 
-            _ultimateEntry.EntryFocusChangedDelegate(sender, new FocusEventArgs(_ultimateEntry, e.HasFocus));
+            _ultimateEntry.EntryFocusChangedDelegate(_ultimateEntry, new FocusEventArgs(_ultimateEntry, e.HasFocus));
+            AddKeyboardPlaceholder(_ultimateEntry.UseKeyboardPlaceholder && e.HasFocus);
         }
 
         public void UpdateControlUI()
         {
-            // else remove the underline in the android entry field
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.SetCornerRadius(5);
 
             //set stroke
-            if (_ultimateControl.ShowError)
+            if (_ultimateEntry.ShowError)
             {
-                gradientDrawable.SetStroke(4, _ultimateControl.ErrorColor.ToAndroid());
-                _underlineDrawable.SetColorFilter(_ultimateControl.ErrorColor.ToAndroid(), PorterDuff.Mode.SrcIn);
-            }
-            else if (!_ultimateControl.ShowError && _editText.IsFocused)
-            {
-                gradientDrawable.SetStroke(4, _ultimateControl.FocusedBorderColor.ToAndroid());
-                _underlineDrawable.SetColorFilter(_ultimateControl.FocusedBorderColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                gradientDrawable.SetStroke(4, _ultimateEntry.ErrorColor.ToAndroid());
+                _editText.SetBackground(gradientDrawable);
             }
             else
             {
-                gradientDrawable.SetStroke(4, _ultimateControl.UnFocusedBorderColor.ToAndroid());
-                _underlineDrawable.SetColorFilter(_ultimateControl.UnFocusedBorderColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                // Remove the underline
+                _underlineDrawable.SetColorFilter(Xamarin.Forms.Color.Transparent.ToAndroid(), PorterDuff.Mode.SrcIn);
+                _editText.SetBackground(_underlineDrawable);
+
+                if (_ultimateEntry.UnderlineColor != default(Color))
+                {
+                    _underlineDrawable.SetColorFilter(_ultimateEntry.UnderlineColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                    _editText.SetBackground(_underlineDrawable);
+                }
+                else
+                {
+                    SetBorderColor();
+                }
             }
 
             //get background color
             var bgColor = _editText.IsFocused
-                    ? _ultimateControl.FocusedBackgroundColor
+                    ? _ultimateEntry.FocusedBackgroundColor
                     : _entryBackgroundColor;
 
-            //set background
-            if (_ultimateControl.IsRoundedEntry)
-            {
-                gradientDrawable.SetColor(bgColor.ToAndroid());
-                _editText.Background = gradientDrawable;
-            }
-            else
-            {
-                _editText.SetBackground(_underlineDrawable);
-                _ultimateEntry.BackgroundColor = bgColor;
-            }
+            _ultimateEntry.BackgroundColor = bgColor;
 
             //update image
             SetImage();
+        }
+
+        private void SetBorderColor()
+        {
+            Color borderColor = _ultimateEntry.BorderColor == default(Color) ? Color.Transparent : _ultimateEntry.BorderColor;
+            
+            Color backgroundColor = _ultimateEntry.IsFocused ? _ultimateEntry.FocusedBackgroundColor : _ultimateEntry.BackgroundColor;
+
+            var shape = new ShapeDrawable(new Android.Graphics.Drawables.Shapes.RectShape());
+            shape.Paint.Color = Color.Black.ToAndroid();
+            shape.Paint.SetStyle(Paint.Style.Stroke);
+            _editText.Background = shape;
+            GradientDrawable gd = new GradientDrawable();
+            gd.SetColor(backgroundColor.ToAndroid());
+            gd.SetCornerRadius(10);
+            gd.SetStroke(2, borderColor.ToAndroid());
+            _editText.SetBackground(gd);
         }
 
         private void SetReturnType(UltimateEntryReturn type)
@@ -188,46 +197,59 @@ namespace PhantomLib.Droid.Renderers
 
         private void _editText_OnNext(object sender, TextView.EditorActionEventArgs e)
         {
-            _ultimateEntry.OnNextDelegate();
+            _ultimateEntry.OnNext();
         }
 
         public void SetImage()
         {
-            string imageSource = "";
+            string imageSource = string.Empty;
 
             //if error and error image is provided
-            if (_ultimateControl.ShowError && !string.IsNullOrEmpty(_ultimateControl.ErrorImageSource))
+            if (_ultimateEntry.ShowError && !string.IsNullOrEmpty(_ultimateEntry.ErrorImageSource))
             {
-                imageSource = _ultimateControl.ErrorImageSource;
+                imageSource = _ultimateEntry.ErrorImageSource;
             }
             //handle Password image if its a password
-            else if (_ultimateControl.ImageButton == UltimateEntryImageButton.Password)
+            else if (_ultimateEntry.ImageButton == UltimateEntryImageButton.Password)
             {
                 imageSource = _ultimateEntry.IsPassword
-                    ? _ultimateControl.HidePasswordImageSource
-                    : _ultimateControl.ImageSource;
+                    ? _ultimateEntry.HidePasswordImageSource
+                    : _ultimateEntry.ImageSource;
             }
             //lastly use RightImageSource if it exists
-            else if(!string.IsNullOrEmpty(_ultimateControl.ImageSource))
+            else if (!string.IsNullOrEmpty(_ultimateEntry.ImageSource))
             {
-                imageSource = _ultimateControl.ImageSource;
+                imageSource = _ultimateEntry.ImageSource;
             }
 
             //clear image and return if developer didnt set imageSource  OR the entry is not focused and developer wants to hide image
-            if (string.IsNullOrEmpty(imageSource) || !_ultimateControl.AlwaysShowImage && !_editText.IsFocused)
+            if (string.IsNullOrEmpty(imageSource) || !_ultimateEntry.AlwaysShowImage && !_editText.IsFocused)
             {
                 _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0);
                 return;
             }
 
             var imageResourceId = Resources.GetIdentifier(imageSource, "drawable", Context.PackageName);
+            var image = ResourcesCompat.GetDrawable(Resources, imageResourceId, null);
+
+            // Tint the image, if needed.
+            if (_ultimateEntry.ImageTintColor == default(Color))
+            {
+                image.ClearColorFilter();
+            }
+            else
+            {
+                image.SetColorFilter(_ultimateEntry.ImageTintColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+            }
+
             if (imageResourceId != 0)
             {
                 if (!_editText.HasOnClickListeners)
                 {
                     _editText.SetOnTouchListener(new OnDrawableTouchListener());
                 }
-                _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, imageResourceId, 0);
+
+                _editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(null, null, image, null);
             }
             else
             {
@@ -289,9 +311,9 @@ namespace PhantomLib.Droid.Renderers
                     if (ultimateEntryRenderer != null)
                     {
                         var ultimateEntry = (UltimateEntry)ultimateEntryRenderer.Element;
-                        if (ultimateEntry !=null)
+                        if (ultimateEntry != null)
                         {
-                            switch (ultimateEntry.ParentUltimateControl.ImageButton)
+                            switch (ultimateEntry.ImageButton)
                             {
                                 case UltimateEntryImageButton.ClearContents:
                                     ultimateEntry.Text = string.Empty;
@@ -301,13 +323,16 @@ namespace PhantomLib.Droid.Renderers
                                     ultimateEntry.IsPassword = !ultimateEntry.IsPassword;
                                     break;
                             }
+
                             ultimateEntryRenderer.UpdateControlUI();
-                            ultimateEntry.RightImageTouchedDelegate(ultimateEntry, new EventArgs());
+                            ultimateEntry.EntryFocusChangedDelegate(ultimateEntry, new FocusEventArgs(ultimateEntry, ultimateEntry.IsFocused));
                         }
                     }
+
                     return true;
                 }
             }
+
             return false;
         }
     }

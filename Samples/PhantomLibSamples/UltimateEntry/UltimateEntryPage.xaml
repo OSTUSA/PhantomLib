@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:local="clr-namespace:PhantomLib" 
+             xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+             xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib"
+             xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
+             xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
+             xmlns:localvms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
+             x:Class="PhantomLibSamples.UltimateEntry.UltimateEntryPage"
+             BackgroundColor="{DynamicResource PrimaryColor}"
+             Title="Ultimate Entry">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Headline" TargetType="Label">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryFontColor}" />
+            </Style>
+            
+            <Style x:Key="SubHeadline" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryFontColor}" />
+            </Style>
+            
+            <Style x:Key="FloatingLabel" TargetType="controls:FloatingLabel">
+                <Setter Property="FocusedBackgroundColor" Value="{DynamicResource SecondaryColor}" />
+                <Setter Property="FloatingLeftMargin" Value="6" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}" />
+            </Style>
+            
+            <Style x:Key="MaterialEntry" TargetType="controls:UltimateEntry">
+                <Setter Property="ThicknessPadding" Value="10,0,2,0" />
+                <Setter Property="Grid.Row" Value="1" />
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryFontColor}" />
+                <Setter Property="ImageTintColor" Value="{DynamicResource AccentColor}" />
+                <Setter Property="UnderlineColor" Value="{DynamicResource AccentColor}" />
+                <Setter Property="FocusedBackgroundColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="ReturnButton" Value="Next" />
+                <Setter Property="PlaceholderColor" Value="{DynamicResource SecondaryFontColor}" />
+            </Style>
+            
+            <Style x:Key="NonMaterialEntry" TargetType="controls:UltimateEntry" BasedOn="{StaticResource MaterialEntry}">
+                <Setter Property="UnderlineColor" Value="Transparent" />
+            </Style>
+            
+            <Style x:Key="Item" TargetType="Label" BasedOn="{StaticResource SubHeadline}">
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView Padding="{DynamicResource Thickness_SafeAreaInsets_LRB}">
+            <StackLayout Padding="20">
+                <Frame Padding="0" BackgroundColor="Black" CornerRadius="5">
+                    <StackLayout Padding="20,20,20,15">
+                        <Label Text="UltimateEntry with floating placeholders" Style="{StaticResource Headline}" />
+                        <Label Margin="0,10,0,0" Text="Enter 5 characters to see an error" Style="{StaticResource Item}" />
+                        
+                        <Label Text="Please enter less than 5 characters" TextColor="{DynamicResource ErrorColor}" BindingContext="{x:Reference Name=FloatingUsername}" IsVisible="{Binding ShowError}" />
+                        <controls:FloatingLabel x:Name="UsernameFloatingLabel" PlaceholderText="Username" Style="{StaticResource FloatingLabel}"
+                                                controls:FloatingLabel.AttachedEntry="{x:Reference FloatingUsername}">
+                                <controls:UltimateEntry x:Name="FloatingUsername" 
+                                                    Style="{StaticResource MaterialEntry}"
+                                                    ImageButton="ClearContents"
+                                                    ImageSource="icon_close_black"
+                                                    NextView="{x:Reference FloatingPasswordEntry}"
+                                                    TextChanged="UltimateEntry_TextChanged" />
+                        </controls:FloatingLabel>
+                        
+                        <Label Text="Show/hide password with the lock icon" Style="{StaticResource Item}" Margin="0,20,0,0" />
+                        <controls:FloatingLabel x:Name="PasswordFloatingLabel" PlaceholderText="Password" Style="{StaticResource FloatingLabel}"
+                                                controls:FloatingLabel.AttachedEntry="{x:Reference FloatingPasswordEntry}">
+                            <controls:UltimateEntry x:Name="FloatingPasswordEntry" Style="{StaticResource MaterialEntry}"
+                                            ImageSource="icon_lock_open" 
+                                            HidePasswordImageSource="icon_lock_close" 
+                                            ImageButton="Password"
+                                            ReturnButton="Done" />
+                        </controls:FloatingLabel>
+                    </StackLayout>
+                </Frame>
+                
+                <Frame Padding="0" BackgroundColor="Black" CornerRadius="5">
+                    <StackLayout Padding="20">
+                        <Label Text="UltimateEntry with material design" Style="{StaticResource Headline}" />
+                        <Label Text="Notice the next and done buttons on the keyboard" Style="{StaticResource Item}" />
+                        <controls:UltimateEntry x:Name="AddressEntry" 
+                                            Placeholder="Address"
+                                            ImageButton="ClearContents"
+                                            ImageSource="icon_close_black"
+                                            NextView="{x:Reference CityEntry}"
+                                            Style="{StaticResource MaterialEntry}" />
+                        
+                        <controls:UltimateEntry x:Name="CityEntry"
+                                            Style="{StaticResource MaterialEntry}"
+                                            Placeholder="City"
+                                            ImageButton="ClearContents"
+                                            ImageSource="icon_close_black"
+                                            ReturnButton="Done" />
+                    </StackLayout>
+                </Frame>
+                <Frame Padding="0" BackgroundColor="Black" CornerRadius="5">
+                    <StackLayout Padding="20">
+                        <Label Text="Non-material UltimateEntry" Style="{StaticResource Headline}" />
+                        <controls:UltimateEntry x:Name="StateEntry" 
+                                        Placeholder="State"
+                                        ImageButton="ClearContents"
+                                        ImageSource="icon_close_black"
+                                        NextView="{x:Reference ZipEntry}"
+                                        Style="{StaticResource NonMaterialEntry}" />
+                        <controls:UltimateEntry x:Name="ZipEntry" 
+                                        Placeholder="Zip Code"
+                                        ImageButton="ClearContents"
+                                        ImageSource="icon_close_black"
+                                        ReturnButton="Done"
+                                        Style="{StaticResource NonMaterialEntry}" />
+                    </StackLayout>
+                </Frame>
+                <Frame Padding="0" BackgroundColor="Black" CornerRadius="5">
+                    <StackLayout Padding="20">
+                        <Label Text="UltimateEntry with material design, no background or icon" Style="{StaticResource Headline}" />
+                        <controls:UltimateEntry 
+                                        Placeholder="Phone number"
+                                        ImageButton="ClearContents"
+                                        NextView="{x:Reference CountryEntry}"
+                                        BackgroundColor="Transparent"
+                                        FocusedBackgroundColor="Transparent"
+                                        UnderlineColor="{DynamicResource AccentColor}"
+                                        Style="{StaticResource NonMaterialEntry}" />
+                        <controls:UltimateEntry x:Name="CountryEntry"
+                                        Placeholder="Country"
+                                        BackgroundColor="Transparent"
+                                        FocusedBackgroundColor="Transparent"
+                                        UnderlineColor="{DynamicResource AccentColor}"
+                                        ReturnButton="Done"
+                                        Style="{StaticResource NonMaterialEntry}" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

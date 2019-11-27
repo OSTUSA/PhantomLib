@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PhantomLib.CustomControls;
+﻿using System.ComponentModel;
 using PhantomLibSamples.Converters;
 using PhantomLibSamples.Effects;
 using PhantomLibSamples.FloatingActionButton;
 using PhantomLibSamples.Misc;
-using PhantomLibSamples.UltimateControl;
+using PhantomLibSamples.UltimateEntry;
 using PhantomLibSamples.Utilities;
 using Xamarin.Forms;
 
@@ -30,8 +24,8 @@ namespace PhantomLibSamples
 
         async void Handle_Clicked(object sender, System.EventArgs e)
         {
-            var page = new UltimateControlPage();
-            page.BindingContext = new UltimateControlViewModel();
+            var page = new UltimateEntryPage();
+            page.BindingContext = new UltimateEntryViewModel();
             
             await Navigation.PushAsync(page);
         }

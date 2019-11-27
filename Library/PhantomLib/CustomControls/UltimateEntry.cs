@@ -1,0 +1,146 @@
+﻿using System;
+using PhantomLib.CustomControls.Enums;
+using Xamarin.Forms;
+
+namespace PhantomLib.CustomControls
+{
+    public class UltimateEntry : Entry
+    {
+        public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButton), typeof(UltimateEntryImageButton), typeof(FloatingLabel), UltimateEntryImageButton.None);
+        public static readonly BindableProperty ImageTintColorProperty = BindableProperty.Create(nameof(ImageTintColor), typeof(Color), typeof(FloatingLabel), Color.Transparent);
+        public static readonly BindableProperty UnderlineColorProperty = BindableProperty.Create(nameof(UnderlineColor), typeof(Color), typeof(FloatingLabel), default(Color));
+
+        public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(FloatingLabel), false);
+        public static readonly BindableProperty ThicknessPaddingProperty = BindableProperty.Create(nameof(ThicknessPadding), typeof(Thickness), typeof(FloatingLabel), new Thickness(20, 10));
+        public static readonly BindableProperty ReturnButtonProperty = BindableProperty.Create(nameof(ReturnButton), typeof(UltimateEntryReturn), typeof(FloatingLabel), UltimateEntryReturn.Done);
+        public static readonly BindableProperty NextViewProperty = BindableProperty.Create(nameof(NextView), typeof(UltimateEntry), typeof(UltimateEntry));
+
+        public static readonly BindableProperty HideBackgroundColorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(FloatingLabel), false);
+        public static readonly BindableProperty UseKeyboardPlaceholderProperty = BindableProperty.Create(nameof(UseKeyboardPlaceholder), typeof(bool), typeof(FloatingLabel), false);
+
+        //colors
+        public static readonly BindableProperty ErrorColorProperty = BindableProperty.Create(nameof(ErrorColor), typeof(Color), typeof(FloatingLabel), Color.Red);
+        public static readonly BindableProperty BorderColorProperty = BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(FloatingLabel), default(Color));
+        public static readonly BindableProperty FocusedBackgroundColorProperty = BindableProperty.Create(nameof(FocusedBackgroundColor), typeof(Color), typeof(FloatingLabel), default(Color));
+
+        //image
+        public static readonly BindableProperty ImageSourceProperty = BindableProperty.Create(nameof(ImageSource), typeof(string), typeof(FloatingLabel), string.Empty);
+        public static readonly BindableProperty ErrorImageSourceProperty = BindableProperty.Create(nameof(ErrorImageSource), typeof(string), typeof(FloatingLabel), string.Empty);
+        public static readonly BindableProperty HidePasswordImageSourceProperty = BindableProperty.Create(nameof(HidePasswordImageSource), typeof(string), typeof(FloatingLabel), string.Empty);
+        public static readonly BindableProperty AlwaysShowImageProperty = BindableProperty.Create(nameof(AlwaysShowImage), typeof(bool), typeof(FloatingLabel), true);
+
+        public event EventHandler<FocusEventArgs> EntryFocusChanged;
+
+        public string ImageSource
+        {
+            get => (string)GetValue(ImageSourceProperty);
+            set => SetValue(ImageSourceProperty, value);
+        }
+        public string ErrorImageSource
+        {
+            get => (string)GetValue(ErrorImageSourceProperty);
+            set => SetValue(ErrorImageSourceProperty, value);
+        }
+
+        public string HidePasswordImageSource
+        {
+            get => (string)GetValue(HidePasswordImageSourceProperty);
+            set => SetValue(HidePasswordImageSourceProperty, value);
+        }
+
+        public Thickness ThicknessPadding
+        {
+            get => (Thickness)GetValue(ThicknessPaddingProperty);
+            set => SetValue(ThicknessPaddingProperty, value);
+        }
+
+        public bool HideBackgroundColor
+        {
+            get => (bool)GetValue(HideBackgroundColorProperty);
+            set => SetValue(HideBackgroundColorProperty, value);
+        }
+
+        public bool ShowError
+        {
+            get => (bool)GetValue(ShowErrorProperty);
+            set => SetValue(ShowErrorProperty, value);
+        }
+        
+        public bool AlwaysShowImage
+        {
+            get => (bool)GetValue(AlwaysShowImageProperty);
+            set => SetValue(AlwaysShowImageProperty, value);
+        }
+
+        public Color ErrorColor
+        {
+            get => (Color)GetValue(ErrorColorProperty);
+            set => SetValue(ErrorColorProperty, value);
+        }
+
+        public Color BorderColor
+        {
+            get => (Color)GetValue(BorderColorProperty);
+            set => SetValue(BorderColorProperty, value);
+        }
+
+        public Color FocusedBackgroundColor
+        {
+            get => (Color)GetValue(FocusedBackgroundColorProperty);
+            set => SetValue(FocusedBackgroundColorProperty, value);
+        }
+
+        public UltimateEntryReturn ReturnButton
+        {
+            get => (UltimateEntryReturn)GetValue(ReturnButtonProperty);
+            set => SetValue(ReturnButtonProperty, value);
+        }
+
+        public UltimateEntryImageButton ImageButton
+        {
+            get => (UltimateEntryImageButton)GetValue(ImageButtonProperty);
+            set => SetValue(ImageButtonProperty, value);
+        }
+
+        public Color ImageTintColor
+        {
+            get => (Color)GetValue(ImageTintColorProperty);
+            set => SetValue(ImageTintColorProperty, value);
+        }
+
+        public Color UnderlineColor
+        {
+            get => (Color)GetValue(UnderlineColorProperty);
+            set => SetValue(UnderlineColorProperty, value);
+        }
+
+        public UltimateEntry NextView
+        {
+            get => (UltimateEntry)GetValue(NextViewProperty);
+            set
+            {
+                ReturnButton = UltimateEntryReturn.Next;
+                SetValue(NextViewProperty, value);
+            }
+        }
+
+        public bool UseKeyboardPlaceholder
+        {
+            get => (bool)GetValue(UseKeyboardPlaceholderProperty);
+            set => SetValue(UseKeyboardPlaceholderProperty, value);
+        }
+
+        public void OnNext()
+        {
+            if (NextView != null)
+            {
+                NextView.Focus();
+            }
+        }
+
+        public void EntryFocusChangedDelegate(object sender, FocusEventArgs focusEventArgs)
+        {
+            EntryFocusChanged?.Invoke(sender, focusEventArgs);
+        }
+    }
+}
