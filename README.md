@@ -63,6 +63,9 @@ PhantomLib.iOS.Effects.Effects.Init();
 return base.FinishedLaunching(app,  options);
 ```
 
+# Documentation
+Documentation can be found in the WIKI
+
 # Sample
 ## Included is a sample app that demonstrates each component.
 ![Sample Image](Images/ultimateentrypage.png)
