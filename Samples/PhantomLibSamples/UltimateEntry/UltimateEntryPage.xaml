@@ -59,10 +59,10 @@
                         <Label Margin="0,10,0,0" Text="Enter 5 characters to see an error" Style="{StaticResource Item}" />
                         
                         <Label Text="Please enter less than 5 characters" TextColor="{DynamicResource ErrorColor}" BindingContext="{x:Reference Name=FloatingUsername}" IsVisible="{Binding ShowError}" />
-                        <controls:FloatingLabel x:Name="UsernameFloatingLabel" PlaceholderText="Username" Style="{StaticResource FloatingLabel}">
+                        <controls:FloatingLabel x:Name="UsernameFloatingLabel" PlaceholderText="Username" Style="{StaticResource FloatingLabel}"
+                                                controls:FloatingLabel.AttachedEntry="{x:Reference FloatingUsername}">
                                 <controls:UltimateEntry x:Name="FloatingUsername" 
                                                     Style="{StaticResource MaterialEntry}"
-                                                    controls:FloatingLabel.AttachedEntry="{x:Reference UsernameFloatingLabel}"
                                                     ImageButton="ClearContents"
                                                     ImageSource="icon_close_black"
                                                     NextView="{x:Reference FloatingPasswordEntry}"
@@ -70,13 +70,13 @@
                         </controls:FloatingLabel>
                         
                         <Label Text="Show/hide password with the lock icon" Style="{StaticResource Item}" Margin="0,20,0,0" />
-                        <controls:FloatingLabel x:Name="PasswordFloatingLabel" PlaceholderText="Password" Style="{StaticResource FloatingLabel}">
+                        <controls:FloatingLabel x:Name="PasswordFloatingLabel" PlaceholderText="Password" Style="{StaticResource FloatingLabel}"
+                                                controls:FloatingLabel.AttachedEntry="{x:Reference FloatingPasswordEntry}">
                             <controls:UltimateEntry x:Name="FloatingPasswordEntry" Style="{StaticResource MaterialEntry}"
                                             ImageSource="icon_lock_open" 
                                             HidePasswordImageSource="icon_lock_close" 
                                             ImageButton="Password"
-                                            ReturnButton="Done"
-                                            controls:FloatingLabel.AttachedEntry="{x:Reference PasswordFloatingLabel}" />
+                                            ReturnButton="Done" />
                         </controls:FloatingLabel>
                     </StackLayout>
                 </Frame>

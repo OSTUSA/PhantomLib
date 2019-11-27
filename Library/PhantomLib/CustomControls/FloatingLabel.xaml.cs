@@ -9,11 +9,11 @@ namespace PhantomLib.CustomControls
     {
         // Attached property to map an ultimate entry to this control.
         public static BindableProperty AttachedEntryProperty =
-            BindableProperty.CreateAttached("AttachedEntry", typeof(FloatingLabel), typeof(UltimateEntry), null, propertyChanged: HandleEntryChanged);
+            BindableProperty.CreateAttached("AttachedEntry", typeof(UltimateEntry), typeof(FloatingLabel), null, propertyChanged: HandleEntryChanged);
 
-        public static FloatingLabel GetAttachedEntry(BindableObject view)
+        public static UltimateEntry GetAttachedEntry(BindableObject view)
         {
-            return (FloatingLabel)view.GetValue(AttachedEntryProperty);
+            return (UltimateEntry)view.GetValue(AttachedEntryProperty);
         }
 
         public static void SetAttachedEntry(BindableObject view, UltimateEntry entry)
@@ -23,36 +23,24 @@ namespace PhantomLib.CustomControls
 
         static void HandleEntryChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            if (newValue is FloatingLabel floatingLabel)
+            if (newValue is UltimateEntry ue && bindable is FloatingLabel floatingLabel)
             {
-                floatingLabel.UltimateEntry = (UltimateEntry)bindable;
-                floatingLabel.UltimateEntry.FocusedBackgroundColor = floatingLabel.FocusedBackgroundColor;
-                floatingLabel.UltimateEntry.BackgroundColor = floatingLabel.BackgroundColor;
-                floatingLabel.UltimateEntry.HideBackgroundColor = true;
-            }
-        }
-
-        private UltimateEntry _ultimateEntry;
-        public UltimateEntry UltimateEntry
-        {
-            get => _ultimateEntry;
-            set
-            {
-                _ultimateEntry = value;
-
-                // Check to see if the entry already has text set. If so,
-                // we need to float the placeholder.
-                if (!string.IsNullOrEmpty(value.Text))
+                // If the entry already has text, float the label.
+                if (!string.IsNullOrEmpty(ue.Text))
                 {
-                    EntryIsFocused = false;
-                    AnimatePlaceholder(_ultimateEntry);
+                    floatingLabel.EntryIsFocused = false;
+                    floatingLabel.AnimatePlaceholder(ue);
                 }
 
-                _ultimateEntry.EntryFocusChanged += _ultimateEntry_EntryFocusChanged;
+                ue.FocusedBackgroundColor = floatingLabel.FocusedBackgroundColor;
+                ue.BackgroundColor = floatingLabel.BackgroundColor;
+                ue.HideBackgroundColor = true;
+
+                ue.EntryFocusChanged += floatingLabel._ultimateEntry_EntryFocusChanged; // _ultimateEntry_EntryFocusChanged;
 
                 // Set the left on ThicknessPadding so that the text in the entry is always
                 // left aligned to the floating label.
-                _ultimateEntry.ThicknessPadding = new Thickness(this.FloatingLeftMargin, _ultimateEntry.ThicknessPadding.Top, _ultimateEntry.ThicknessPadding.Right, _ultimateEntry.ThicknessPadding.Bottom);
+                ue.ThicknessPadding = new Thickness(floatingLabel.FloatingLeftMargin, ue.ThicknessPadding.Top, ue.ThicknessPadding.Right, ue.ThicknessPadding.Bottom);
             }
         }
 
@@ -80,7 +68,6 @@ namespace PhantomLib.CustomControls
         public static readonly BindableProperty FloatingSpaceProperty = BindableProperty.Create(nameof(FloatingSpace), typeof(int), typeof(FloatingLabel), 20);
         
         // These properties modify the floating label
-        // TODO Change over to ThicknessPadding property
         public static readonly BindableProperty FloatingTopMarginProperty = BindableProperty.Create(nameof(FloatingTopMargin), typeof(int), typeof(FloatingLabel), 4);
         public static readonly BindableProperty FloatingLeftMarginProperty = BindableProperty.Create(nameof(FloatingLeftMargin), typeof(int), typeof(FloatingLabel), 0);
         public static readonly BindableProperty FloatingFontSizeProperty = BindableProperty.Create(nameof(FloatingFontSize), typeof(int), typeof(FloatingLabel), 14);
@@ -169,13 +156,13 @@ namespace PhantomLib.CustomControls
 
                 // Set the background color to transparent so that it doesn't
                 // interfere with the FloatingLabel BackgroundColor.
-                UltimateEntry.BackgroundColor = Color.Transparent;
+                GetAttachedEntry(this).BackgroundColor = BackgroundColor;
             }
         }
 
         private void AnimatePlaceholder(UltimateEntry entry)
         {
-            if (EntryIsFocused || !string.IsNullOrEmpty(UltimateEntry?.Text))
+            if (EntryIsFocused || !string.IsNullOrEmpty(GetAttachedEntry(this)?.Text))
             {
                 TransitionToFloating();
                 IsFloating = true;
