@@ -7,6 +7,9 @@ namespace PhantomLib.CustomControls
 {
     public partial class FloatingLabel : Grid
     {
+
+        private readonly double EPSILON = 0.0001;
+
         // Attached property to map an ultimate entry to this control.
         public static BindableProperty AttachedEntryProperty =
             BindableProperty.CreateAttached("AttachedEntry", typeof(UltimateEntry), typeof(FloatingLabel), null, propertyChanged: HandleEntryChanged);
@@ -178,17 +181,37 @@ namespace PhantomLib.CustomControls
         {
             int floatingTransitionHeight = FloatingPlaceholderFontSize - FloatingTopMargin;
 
-            var textTranslationAnimation = Label.TranslateTo(FloatingLeftMargin, 0 - floatingTransitionHeight); 
+            var textTranslationAnimation = Label.TranslateTo(FloatingLeftMargin, 0 - floatingTransitionHeight);
             var textResizeAnimation = SizeTo(FloatingFontSize);
-            await Task.WhenAll(textTranslationAnimation, textResizeAnimation);
             
+
+            await Task.WhenAll(textTranslationAnimation, textResizeAnimation);
+
+            //Handle the scenario of animations being disabled or failing
+            if (Label.TranslationY >= 0)
+            {
+                Label.TranslationY = 0 - floatingTransitionHeight;
+                Label.TranslationX = FloatingLeftMargin;
+                Label.FontSize = FloatingFontSize;
+
+            }
         }
 
         private async Task TransitionToPlaceholder(bool animated = true)
         {
             var transition1 = Label.TranslateTo(FloatingLeftMargin, 0);
             var transition2 = SizeTo(FloatingPlaceholderFontSize);
+
+
             await Task.WhenAll(transition1, transition2);
+
+            //Handle the scenario of animations being disabled or failing
+            if (Math.Abs(Label.TranslationY) > EPSILON)
+            {
+                Label.TranslationY = 0;
+                Label.TranslationX = FloatingLeftMargin;
+                Label.FontSize = FloatingPlaceholderFontSize;
+            }
         }
 
         private Task SizeTo(int fontSize)
