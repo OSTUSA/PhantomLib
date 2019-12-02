@@ -8,9 +8,6 @@ namespace PhantomLib.CustomControls
 {
     public partial class FloatingLabel : Grid
     {
-
-        private readonly double EPSILON = 0.0001;
-
         // Attached property to map an ultimate entry to this control.
         public static BindableProperty AttachedEntryProperty =
             BindableProperty.CreateAttached("AttachedEntry", typeof(UltimateEntry), typeof(FloatingLabel), null, propertyChanged: HandleEntryChanged);
@@ -41,6 +38,9 @@ namespace PhantomLib.CustomControls
                 ue.HideBackgroundColor = true;
 
                 ue.EntryFocusChanged += floatingLabel._ultimateEntry_EntryFocusChanged; // _ultimateEntry_EntryFocusChanged;
+
+                // This is needed to initially put the placeholder label in the correct spot.
+                floatingLabel.Label.TranslationX = floatingLabel.FloatingLeftMargin;
 
                 // Set the left on ThicknessPadding so that the text in the entry is always
                 // left aligned to the floating label.
