@@ -36,7 +36,10 @@ namespace PhantomLib.CustomControls
                 ue.BackgroundColor = floatingLabel.BackgroundColor;
                 ue.HideBackgroundColor = true;
 
-                ue.EntryFocusChanged += floatingLabel._ultimateEntry_EntryFocusChanged; // _ultimateEntry_EntryFocusChanged;
+                ue.EntryFocusChanged += floatingLabel._ultimateEntry_EntryFocusChanged;
+
+                // This is needed to initially put the placeholder label in the correct spot.
+                floatingLabel.Label.TranslationX = floatingLabel.FloatingLeftMargin;
 
                 // Set the left on ThicknessPadding so that the text in the entry is always
                 // left aligned to the floating label.
@@ -177,7 +180,6 @@ namespace PhantomLib.CustomControls
         private async Task TransitionToFloating()
         {
             int floatingTransitionHeight = FloatingPlaceholderFontSize - FloatingTopMargin;
-
             var textTranslationAnimation = Label.TranslateTo(FloatingLeftMargin, 0 - floatingTransitionHeight); 
             var textResizeAnimation = SizeTo(FloatingFontSize);
             await Task.WhenAll(textTranslationAnimation, textResizeAnimation);
