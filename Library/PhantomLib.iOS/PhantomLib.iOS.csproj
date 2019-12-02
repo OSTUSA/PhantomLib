@@ -57,6 +57,7 @@
     <Folder Include="Effects\" />
     <Folder Include="Renderers\" />
     <Folder Include="Utilities\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Renderers\UltimateEntryRenderer.cs" />
     <Compile Include="Effects\TintImageEffect.cs" />
     <Compile Include="Utilities\DeviceHelper.cs" />
+    <Compile Include="Services\AnimationsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhantomLib\PhantomLib.csproj">

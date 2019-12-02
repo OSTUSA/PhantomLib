@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using PhantomLib.Services;
 using Xamarin.Forms;
 
 namespace PhantomLib.CustomControls
@@ -163,55 +164,64 @@ namespace PhantomLib.CustomControls
             }
         }
 
+        private IAnimationsService _animationsService;
+
         private void AnimatePlaceholder(UltimateEntry entry)
         {
+            if(_animationsService == null)
+            {
+                _animationsService = DependencyService.Get<IAnimationsService>();
+            }
+
             if (EntryIsFocused || !string.IsNullOrEmpty(GetAttachedEntry(this)?.Text))
             {
-                TransitionToFloating();
+                TransitionToFloating(_animationsService);
                 IsFloating = true;
             }
             else if (string.IsNullOrEmpty(entry?.Text))
             {
-                TransitionToPlaceholder();
+                TransitionToPlaceholder(_animationsService);
                 IsFloating = false;
             }
         }
 
-        private async Task TransitionToFloating()
+        private async Task TransitionToFloating(IAnimationsService animationsService)
         {
             int floatingTransitionHeight = FloatingPlaceholderFontSize - FloatingTopMargin;
 
-            var textTranslationAnimation = Label.TranslateTo(FloatingLeftMargin, 0 - floatingTransitionHeight);
-            var textResizeAnimation = SizeTo(FloatingFontSize);
-            
+            if(animationsService.AnimationsEnabled())
+            {
+                var textTranslationAnimation = Label.TranslateTo(FloatingLeftMargin, 0 - floatingTransitionHeight);
+                var textResizeAnimation = SizeTo(FloatingFontSize);
 
-            await Task.WhenAll(textTranslationAnimation, textResizeAnimation);
 
-            //Handle the scenario of animations being disabled or failing
-            if (Label.TranslationY >= 0)
+                await Task.WhenAll(textTranslationAnimation, textResizeAnimation);
+            }
+            else
             {
                 Label.TranslationY = 0 - floatingTransitionHeight;
                 Label.TranslationX = FloatingLeftMargin;
                 Label.FontSize = FloatingFontSize;
-
             }
         }
 
-        private async Task TransitionToPlaceholder(bool animated = true)
+        private async Task TransitionToPlaceholder(IAnimationsService animationsService)
         {
-            var transition1 = Label.TranslateTo(FloatingLeftMargin, 0);
-            var transition2 = SizeTo(FloatingPlaceholderFontSize);
+            if (animationsService.AnimationsEnabled())
+            {
+                var transition1 = Label.TranslateTo(FloatingLeftMargin, 0);
+                var transition2 = SizeTo(FloatingPlaceholderFontSize);
 
 
-            await Task.WhenAll(transition1, transition2);
-
-            //Handle the scenario of animations being disabled or failing
-            if (Math.Abs(Label.TranslationY) > EPSILON)
+                await Task.WhenAll(transition1, transition2);
+            }
+            else
             {
                 Label.TranslationY = 0;
                 Label.TranslationX = FloatingLeftMargin;
                 Label.FontSize = FloatingPlaceholderFontSize;
-            }
+            } 
+
         }
 
         private Task SizeTo(int fontSize)
