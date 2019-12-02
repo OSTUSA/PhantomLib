@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using PhantomLib.Services;
 using Xamarin.Forms;
 
 namespace PhantomLib.Extensions
@@ -16,8 +17,20 @@ namespace PhantomLib.Extensions
         /// <param name="easing">The easing for the animation.</param>
         public static Task<bool> BackgroundColorTo(this VisualElement visualElement, Color toColor, uint length = 250, Easing easing = null)
         {
-            var fromColor = visualElement.BackgroundColor;
-            Color transform(double t) =>
+            return ColorAnimation(visualElement, nameof(BackgroundColorTo), toColor, c => visualElement.BackgroundColor = c, length, easing);
+        }
+
+        private static async Task<bool> ColorAnimation(this VisualElement element, string name, Color toColor, Action<Color> callback, uint length, Easing easing)
+        {
+            bool result = false;
+
+            easing = easing ?? Easing.Linear;
+            var taskCompletionSource = new TaskCompletionSource<bool>();
+
+            if (DependencyService.Get<IAnimationsService>().AnimationsEnabled())
+            {
+                var fromColor = element.BackgroundColor;
+                Color transform(double t) =>
                 Color.FromRgba(
                     fromColor.R + t * (toColor.R - fromColor.R),
                     fromColor.G + t * (toColor.G - fromColor.G),
@@ -25,17 +38,22 @@ namespace PhantomLib.Extensions
                     fromColor.A + t * (toColor.A - fromColor.A)
                 );
 
-            return ColorAnimation(visualElement, nameof(BackgroundColorTo), transform, c => visualElement.BackgroundColor = c, length, easing);
-        }
+                element.Animate<Color>(name, transform, callback, 16, length, easing, (v, c) => taskCompletionSource.SetResult(c));
 
-        private static Task<bool> ColorAnimation(this VisualElement element, string name, Func<double, Color> transform, Action<Color> callback, uint length, Easing easing)
-        {
-            easing = easing ?? Easing.Linear;
-            var taskCompletionSource = new TaskCompletionSource<bool>();
+                result = await taskCompletionSource.Task;
+            }
+            else
+            {
+                element.BackgroundColor = toColor;
+                if (length > 0)
+                {
+                    await Task.Delay((int)length);
+                }
 
-            element.Animate<Color>(name, transform, callback, 16, length, easing, (v, c) => taskCompletionSource.SetResult(c));
+                result = true;
+            }
 
-            return taskCompletionSource.Task;
+            return  result;
         }
     }
 }
