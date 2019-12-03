@@ -9,20 +9,53 @@ namespace PhantomLib.CustomControls
     public partial class FloatingLabel : Grid
     {
         // Attached property to map an ultimate entry to this control.
-        public static BindableProperty AttachedEntryProperty =
-            BindableProperty.CreateAttached("AttachedEntry", typeof(UltimateEntry), typeof(FloatingLabel), null, propertyChanged: HandleEntryChanged);
+        //public static BindableProperty AttachedEntryProperty =
+        //    BindableProperty.CreateAttached("AttachedEntry", typeof(UltimateEntry), typeof(FloatingLabel), null, propertyChanged: HandleEntryChanged);
 
-        public static UltimateEntry GetAttachedEntry(BindableObject view)
+        //public static UltimateEntry GetAttachedEntry(BindableObject view)
+        //{
+        //    return (UltimateEntry)view.GetValue(AttachedEntryProperty);
+        //}
+
+        //public static void SetAttachedEntry(BindableObject view, UltimateEntry entry)
+        //{
+        //    view.SetValue(AttachedEntryProperty, entry);
+        //}
+
+        //static void HandleEntryChanged(BindableObject bindable, object oldValue, object newValue)
+        //{
+        //    if (newValue is UltimateEntry ue && bindable is FloatingLabel floatingLabel)
+        //    {
+        //        // If the entry already has text, float the label.
+        //        if (!string.IsNullOrEmpty(ue.Text))
+        //        {
+        //            floatingLabel.EntryIsFocused = false;
+        //            floatingLabel.AnimatePlaceholder(ue);
+        //        }
+
+        //        ue.FocusedBackgroundColor = floatingLabel.FocusedBackgroundColor;
+        //        ue.BackgroundColor = floatingLabel.BackgroundColor;
+        //        ue.HideBackgroundColor = true;
+
+        //        ue.EntryFocusChanged += floatingLabel._ultimateEntry_EntryFocusChanged; // _ultimateEntry_EntryFocusChanged;
+
+        //        // This is needed to initially put the placeholder label in the correct spot.
+        //        floatingLabel.Label.TranslationX = floatingLabel.FloatingLeftMargin;
+
+        //        // Set the left on ThicknessPadding so that the text in the entry is always
+        //        // left aligned to the floating label.
+        //        ue.ThicknessPadding = new Thickness(floatingLabel.FloatingLeftMargin, ue.ThicknessPadding.Top, ue.ThicknessPadding.Right, ue.ThicknessPadding.Bottom);
+        //    }
+        //}
+
+        public static readonly BindableProperty UltimateEntryProperty = BindableProperty.Create(nameof(UltimateEntry), typeof(UltimateEntry), typeof(FloatingLabel), null, propertyChanged: UltimateEntry_Changed);
+        public UltimateEntry UltimateEntry
         {
-            return (UltimateEntry)view.GetValue(AttachedEntryProperty);
+            get => (UltimateEntry)GetValue(UltimateEntryProperty);
+            set => SetValue(UltimateEntryProperty, value);
         }
 
-        public static void SetAttachedEntry(BindableObject view, UltimateEntry entry)
-        {
-            view.SetValue(AttachedEntryProperty, entry);
-        }
-
-        static void HandleEntryChanged(BindableObject bindable, object oldValue, object newValue)
+        static void UltimateEntry_Changed(BindableObject bindable, object oldValue, object newValue)
         {
             if (newValue is UltimateEntry ue && bindable is FloatingLabel floatingLabel)
             {
@@ -160,7 +193,7 @@ namespace PhantomLib.CustomControls
 
                 // Set the background color to transparent so that it doesn't
                 // interfere with the FloatingLabel BackgroundColor.
-                GetAttachedEntry(this).BackgroundColor = BackgroundColor;
+                UltimateEntry.BackgroundColor = BackgroundColor;
             }
         }
 
@@ -173,7 +206,7 @@ namespace PhantomLib.CustomControls
                 _animationsService = DependencyService.Get<IAnimationsService>();
             }
 
-            if (EntryIsFocused || !string.IsNullOrEmpty(GetAttachedEntry(this)?.Text))
+            if (EntryIsFocused || !string.IsNullOrEmpty(UltimateEntry?.Text))
             {
                 TransitionToFloating(_animationsService);
                 IsFloating = true;
