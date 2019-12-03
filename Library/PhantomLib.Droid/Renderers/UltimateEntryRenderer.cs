@@ -321,7 +321,7 @@ namespace PhantomLib.Droid.Renderers
                             }
 
                             ultimateEntryRenderer.UpdateControlUI();
-                            ultimateEntry.EntryFocusChangedDelegate(ultimateEntry, new FocusEventArgs(ultimateEntry, ultimateEntry.IsFocused));
+                            ultimateEntry.EntryFocusChangedDelegate(ultimateEntry, new FocusEventArgs(ultimateEntry, v.HasFocus));
                         }
                     }
 
