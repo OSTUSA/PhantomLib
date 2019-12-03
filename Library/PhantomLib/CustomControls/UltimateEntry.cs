@@ -7,7 +7,7 @@ namespace PhantomLib.CustomControls
     public class UltimateEntry : Entry
     {
         public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButton), typeof(UltimateEntryImageButton), typeof(FloatingLabel), UltimateEntryImageButton.None);
-        public static readonly BindableProperty ImageTintColorProperty = BindableProperty.Create(nameof(ImageTintColor), typeof(Color), typeof(FloatingLabel), Color.Transparent);
+        public static readonly BindableProperty ImageTintColorProperty = BindableProperty.Create(nameof(ImageTintColor), typeof(Color), typeof(FloatingLabel), default(Color));
         public static readonly BindableProperty UnderlineColorProperty = BindableProperty.Create(nameof(UnderlineColor), typeof(Color), typeof(FloatingLabel), default(Color));
 
         public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(FloatingLabel), false);

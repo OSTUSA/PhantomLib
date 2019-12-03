@@ -126,8 +126,8 @@ namespace PhantomLib.Droid.Renderers
             //set stroke
             if (_ultimateEntry.ShowError)
             {
-                gradientDrawable.SetStroke(4, _ultimateEntry.ErrorColor.ToAndroid());
-                _editText.SetBackground(gradientDrawable);
+                _underlineDrawable.SetColorFilter(_ultimateEntry.ErrorColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                _editText.SetBackground(_underlineDrawable);
             }
             else
             {
@@ -232,12 +232,8 @@ namespace PhantomLib.Droid.Renderers
             var imageResourceId = Resources.GetIdentifier(imageSource, "drawable", Context.PackageName);
             var image = ResourcesCompat.GetDrawable(Resources, imageResourceId, null);
 
-            // Tint the image, if needed.
-            if (_ultimateEntry.ImageTintColor == default(Color))
-            {
-                image.ClearColorFilter();
-            }
-            else
+            // Tint the image, if needed as long as it's not the error image.
+            if (!_ultimateEntry.ShowError && _ultimateEntry.ImageTintColor != default(Color))
             {
                 image.SetColorFilter(_ultimateEntry.ImageTintColor.ToAndroid(), PorterDuff.Mode.SrcIn);
             }
