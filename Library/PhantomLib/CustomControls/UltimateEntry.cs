@@ -8,6 +8,7 @@ namespace PhantomLib.CustomControls
     {
         public static readonly BindableProperty ImageButtonProperty = BindableProperty.Create(nameof(ImageButton), typeof(UltimateEntryImageButton), typeof(UltimateEntry), UltimateEntryImageButton.None);
         public static readonly BindableProperty ImageTintColorProperty = BindableProperty.Create(nameof(ImageTintColor), typeof(Color), typeof(UltimateEntry), default(Color));
+        public static readonly BindableProperty ErrorImageTintColorProperty = BindableProperty.Create(nameof(ErrorImageTintColor), typeof(Color), typeof(UltimateEntry), default(Color));
         public static readonly BindableProperty UnderlineColorProperty = BindableProperty.Create(nameof(UnderlineColor), typeof(Color), typeof(UltimateEntry), default(Color));
 
         public static readonly BindableProperty ShowErrorProperty = BindableProperty.Create(nameof(ShowError), typeof(bool), typeof(UltimateEntry), false);
@@ -106,6 +107,12 @@ namespace PhantomLib.CustomControls
         {
             get => (Color)GetValue(ImageTintColorProperty);
             set => SetValue(ImageTintColorProperty, value);
+        }
+
+        public Color ErrorImageTintColor
+        {
+            get => (Color)GetValue(ErrorImageTintColorProperty);
+            set => SetValue(ErrorImageTintColorProperty, value);
         }
 
         public Color UnderlineColor

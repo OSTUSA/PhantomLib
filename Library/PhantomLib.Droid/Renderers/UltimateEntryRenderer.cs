@@ -118,6 +118,20 @@ namespace PhantomLib.Droid.Renderers
             AddKeyboardPlaceholder(_ultimateEntry.UseKeyboardPlaceholder && e.HasFocus);
         }
 
+        private void SetColorFilter(Drawable drawable, Xamarin.Forms.Color color)
+        {
+            if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Q)
+            {
+                drawable.SetColorFilter(new BlendModeColorFilter(color.ToAndroid(), BlendMode.SrcAtop));
+            }
+            else
+            {
+#pragma warning disable CS0618 // Type or member is obsolete
+                drawable.SetColorFilter(color.ToAndroid(), PorterDuff.Mode.SrcIn);
+#pragma warning restore CS0618 // Type or member is obsolete
+            }
+        }
+
         public void UpdateControlUI()
         {
             GradientDrawable gradientDrawable = new GradientDrawable();
@@ -126,18 +140,18 @@ namespace PhantomLib.Droid.Renderers
             //set stroke
             if (_ultimateEntry.ShowError)
             {
-                _underlineDrawable.SetColorFilter(_ultimateEntry.ErrorColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                SetColorFilter(_underlineDrawable, _ultimateEntry.ErrorColor);
                 _editText.SetBackground(_underlineDrawable);
             }
             else
             {
                 // Remove the underline
-                _underlineDrawable.SetColorFilter(Xamarin.Forms.Color.Transparent.ToAndroid(), PorterDuff.Mode.SrcIn);
+                SetColorFilter(_underlineDrawable, Xamarin.Forms.Color.Transparent);
                 _editText.SetBackground(_underlineDrawable);
 
                 if (_ultimateEntry.UnderlineColor != default(Color))
                 {
-                    _underlineDrawable.SetColorFilter(_ultimateEntry.UnderlineColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                    SetColorFilter(_underlineDrawable, _ultimateEntry.UnderlineColor); 
                     _editText.SetBackground(_underlineDrawable);
                 }
                 else
@@ -160,7 +174,7 @@ namespace PhantomLib.Droid.Renderers
         private void SetBorderColor()
         {
             Color borderColor = _ultimateEntry.BorderColor == default(Color) ? Color.Transparent : _ultimateEntry.BorderColor;
-            
+
             Color backgroundColor = _ultimateEntry.IsFocused ? _ultimateEntry.FocusedBackgroundColor : _ultimateEntry.BackgroundColor;
 
             var shape = new ShapeDrawable(new Android.Graphics.Drawables.Shapes.RectShape());
@@ -232,10 +246,14 @@ namespace PhantomLib.Droid.Renderers
             var imageResourceId = Resources.GetIdentifier(imageSource, "drawable", Context.PackageName);
             var image = ResourcesCompat.GetDrawable(Resources, imageResourceId, null);
 
-            // Tint the image, if needed as long as it's not the error image.
+            // Tint the image, if needed.
             if (!_ultimateEntry.ShowError && _ultimateEntry.ImageTintColor != default(Color))
             {
-                image.SetColorFilter(_ultimateEntry.ImageTintColor.ToAndroid(), PorterDuff.Mode.SrcIn);
+                SetColorFilter(image, _ultimateEntry.ImageTintColor);
+            }
+            else if (_ultimateEntry.ShowError && _ultimateEntry.ErrorImageTintColor != default(Color))
+            {
+                SetColorFilter(image, _ultimateEntry.ErrorImageTintColor);
             }
 
             if (imageResourceId != 0)
@@ -285,7 +303,6 @@ namespace PhantomLib.Droid.Renderers
         {
             UpdateControlUI();
         }
-
     }
 
     public class OnDrawableTouchListener : Java.Lang.Object, Android.Views.View.IOnTouchListener

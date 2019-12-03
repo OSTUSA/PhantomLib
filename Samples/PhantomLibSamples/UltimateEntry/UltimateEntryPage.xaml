@@ -39,6 +39,8 @@
                 <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
                 <Setter Property="ReturnButton" Value="Next" />
                 <Setter Property="PlaceholderColor" Value="{DynamicResource SecondaryFontColor}" />
+                <Setter Property="ErrorImageSource" Value="icon_error" />
+                <Setter Property="ErrorImageTintColor" Value="{DynamicResource ErrorColor}" />
             </Style>
             
             <Style x:Key="NonMaterialEntry" TargetType="controls:UltimateEntry" BasedOn="{StaticResource MaterialEntry}">

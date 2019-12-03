@@ -99,7 +99,7 @@ namespace PhantomLib.iOS.Renderers
                 // set stroke/border
                 if (_ultimateEntry.ShowError)
                 {
-                    _textField.Layer.BorderColor = _ultimateEntry.ErrorColor.ToCGColor();
+                    SetUnderline(_ultimateEntry.ErrorColor);
                 }
                 else
                 {
@@ -237,8 +237,24 @@ namespace PhantomLib.iOS.Renderers
             _imageButton.Frame = new RectangleF(0 + 0 - (float)_ultimateEntry.ThicknessPadding.Right, 0, (int)(image.Size.Width + _ultimateEntry.ThicknessPadding.Right), (int)image.Size.Height);
             
             _imageButton.SetImage(image, UIControlState.Normal);
-            _imageButton.TintColor = renderingMode == UIImageRenderingMode.AlwaysTemplate ?
-                _ultimateEntry.ImageTintColor.ToUIColor() : null;
+
+            // If not in an error state and the image tint color is set.
+            if (!_ultimateEntry.ShowError && _ultimateEntry.ImageTintColor != default(Xamarin.Forms.Color))
+            {
+                renderingMode = UIImageRenderingMode.AlwaysTemplate;
+                _imageButton.TintColor = _ultimateEntry.ImageTintColor.ToUIColor();
+            }
+            else if (_ultimateEntry.ShowError && _ultimateEntry.ErrorImageTintColor != default(Xamarin.Forms.Color))
+            {
+                // In an error state and the error tint color is set.
+                renderingMode = UIImageRenderingMode.AlwaysTemplate;
+                _imageButton.TintColor = _ultimateEntry.ErrorImageTintColor.ToUIColor();
+            }
+            else
+            {
+                renderingMode = UIImageRenderingMode.Automatic;
+                _imageButton.TintColor = null;
+            }
 
             //Set up event handler for "Click" event ("TouchUpInside in iOS terminology)
             _imageButton.TouchUpInside += ImageButton_TouchUpInside;
