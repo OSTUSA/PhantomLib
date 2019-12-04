@@ -39,6 +39,8 @@
                 <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
                 <Setter Property="ReturnButton" Value="Next" />
                 <Setter Property="PlaceholderColor" Value="{DynamicResource SecondaryFontColor}" />
+                <Setter Property="ErrorImageSource" Value="icon_error" />
+                <Setter Property="ErrorImageTintColor" Value="{DynamicResource ErrorColor}" />
             </Style>
             
             <Style x:Key="NonMaterialEntry" TargetType="controls:UltimateEntry" BasedOn="{StaticResource MaterialEntry}">
@@ -60,7 +62,7 @@
                         
                         <Label Text="Please enter less than 5 characters" TextColor="{DynamicResource ErrorColor}" BindingContext="{x:Reference Name=FloatingUsername}" IsVisible="{Binding ShowError}" />
                         <controls:FloatingLabel x:Name="UsernameFloatingLabel" PlaceholderText="Username" Style="{StaticResource FloatingLabel}"
-                                                controls:FloatingLabel.AttachedEntry="{x:Reference FloatingUsername}">
+                                                UltimateEntry="{x:Reference FloatingUsername}">
                                 <controls:UltimateEntry x:Name="FloatingUsername" 
                                                     Style="{StaticResource MaterialEntry}"
                                                     ImageButton="ClearContents"
@@ -71,7 +73,7 @@
                         
                         <Label Text="Show/hide password with the lock icon" Style="{StaticResource Item}" Margin="0,20,0,0" />
                         <controls:FloatingLabel x:Name="PasswordFloatingLabel" PlaceholderText="Password" Style="{StaticResource FloatingLabel}"
-                                                controls:FloatingLabel.AttachedEntry="{x:Reference FloatingPasswordEntry}">
+                                                UltimateEntry="{x:Reference FloatingPasswordEntry}">
                             <controls:UltimateEntry x:Name="FloatingPasswordEntry" Style="{StaticResource MaterialEntry}"
                                             ImageSource="icon_lock_open" 
                                             HidePasswordImageSource="icon_lock_close" 

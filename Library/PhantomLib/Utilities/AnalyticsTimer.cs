@@ -39,7 +39,7 @@ namespace PhantomLib.Utilities
         public static OnMethodTimedEvent DEFAULT_TIMER_HANDLER = (timeEllapsed, methodName) =>
         {
             string name = string.IsNullOrEmpty(methodName) ? "<unspecified>" : methodName;
-            Console.WriteLine($"Method {name} took {timeEllapsed} milliseconds.");
+            Debug.WriteLine($"Method {name} took {timeEllapsed} milliseconds.");
         };
 
         public static TimerBuilderWithReturn<T> WithMethod<T>(Func<T> method)
