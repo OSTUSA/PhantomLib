@@ -134,9 +134,6 @@ namespace PhantomLib.Droid.Renderers
 
         public void UpdateControlUI()
         {
-            GradientDrawable gradientDrawable = new GradientDrawable();
-            gradientDrawable.SetCornerRadius(5);
-
             //set stroke
             if (_ultimateEntry.ShowError)
             {
