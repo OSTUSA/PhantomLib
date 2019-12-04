@@ -158,7 +158,7 @@ namespace PhantomLib.CustomControls
 
                 // Set the background color to transparent so that it doesn't
                 // interfere with the FloatingLabel BackgroundColor.
-                UltimateEntry.BackgroundColor = BackgroundColor;
+                UltimateEntry.BackgroundColor = Color.Transparent;
             }
         }
 

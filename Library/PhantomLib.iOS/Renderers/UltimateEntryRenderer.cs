@@ -69,7 +69,6 @@ namespace PhantomLib.iOS.Renderers
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
-            Console.WriteLine($"Property changed: {e.PropertyName}");
             switch (e.PropertyName)
             {
                 case nameof(UltimateEntry.Height):
