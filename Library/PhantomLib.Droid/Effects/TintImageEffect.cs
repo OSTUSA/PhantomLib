@@ -6,7 +6,7 @@ using Java.Lang;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportEffect(typeof(PhantomLib.Droid.Effects.TintImageEffect), nameof(PhantomLib.Effects.TintImageEffect))]
+[assembly: ExportEffect(typeof(PhantomLib.Droid.Effects.TintImageEffect), nameof(PhantomLib.Droid.Effects.TintImageEffect))]
 namespace PhantomLib.Droid.Effects
 {
     public class TintImageEffect : PlatformEffect
