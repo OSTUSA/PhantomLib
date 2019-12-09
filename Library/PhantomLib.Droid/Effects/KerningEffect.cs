@@ -1,11 +1,11 @@
-﻿using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
-using System.Linq;
+﻿using System.Linq;
 using Android.OS;
 using Android.Widget;
 using PhantomLib.Effects;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportEffect(typeof(PhantomLib.Droid.Effects.KerningEffect), nameof(Kerning))]
+[assembly: ExportEffect(typeof(PhantomLib.Droid.Effects.KerningEffect), nameof(PhantomLib.Droid.Effects.KerningEffect))]
 namespace PhantomLib.Droid.Effects
 {
     public class KerningEffect : PlatformEffect
