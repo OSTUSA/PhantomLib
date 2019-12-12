@@ -36,7 +36,7 @@ namespace PhantomLib.CustomControls
                 ue.BackgroundColor = floatingLabel.BackgroundColor;
                 ue.HideBackgroundColor = true;
 
-                ue.EntryFocusChanged += floatingLabel._ultimateEntry_EntryFocusChanged; // _ultimateEntry_EntryFocusChanged;
+                ue.EntryFocusChanged += floatingLabel._ultimateEntry_EntryFocusChanged; 
 
                 ue.TextChanged += floatingLabel._ultimateEntry_TextChanged;
 
