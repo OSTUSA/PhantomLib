@@ -22,6 +22,7 @@ namespace PhantomLib.CustomControls
                 if (oldValue != null && oldValue is UltimateEntry oldEntry)
                 {
                     oldEntry.EntryFocusChanged -= floatingLabel._ultimateEntry_EntryFocusChanged;
+                    oldEntry.TextChanged -= floatingLabel._ultimateEntry_TextChanged;
                 }
 
                 // If the entry already has text, float the label.
@@ -37,12 +38,22 @@ namespace PhantomLib.CustomControls
 
                 ue.EntryFocusChanged += floatingLabel._ultimateEntry_EntryFocusChanged; // _ultimateEntry_EntryFocusChanged;
 
+                ue.TextChanged += floatingLabel._ultimateEntry_TextChanged;
+
                 // This is needed to initially put the placeholder label in the correct location.
                 floatingLabel.Label.TranslationX = floatingLabel.FloatingLeftMargin;
 
                 // Set the left on ThicknessPadding so that the text in the entry is always
                 // left aligned to the floating label.
                 ue.ThicknessPadding = new Thickness(floatingLabel.FloatingLeftMargin, ue.ThicknessPadding.Top, ue.ThicknessPadding.Right, ue.ThicknessPadding.Bottom);
+            }
+        }
+
+        private void _ultimateEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(!string.IsNullOrEmpty(e.NewTextValue))
+            {
+                AnimatePlaceholder((UltimateEntry)sender);
             }
         }
 
