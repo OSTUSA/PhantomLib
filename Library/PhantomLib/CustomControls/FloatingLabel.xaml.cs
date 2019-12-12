@@ -51,10 +51,18 @@ namespace PhantomLib.CustomControls
 
         private void _ultimateEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //if the label is not floating and the entry has text, float it
-            if(!string.IsNullOrEmpty(e.NewTextValue) && !IsFloating)
+            if (sender is UltimateEntry ue)
             {
-                AnimatePlaceholder((UltimateEntry)sender);
+                //if the label is not floating and the entry has text, float it
+                if (!string.IsNullOrEmpty(e.NewTextValue) && !IsFloating)
+                {
+                    AnimatePlaceholder(ue);
+                }
+                else if (string.IsNullOrEmpty(e.NewTextValue) && IsFloating)
+                {
+                    // if the entry was floating but now has no text, unfloat it.
+                    AnimatePlaceholder((ue));
+                }
             }
         }
 
