@@ -182,6 +182,7 @@
     <Compile Include="Effects\TintImageEffect.cs" />
     <Compile Include="Utilities\DeviceHelper.cs" />
     <Compile Include="Services\AnimationsService.cs" />
+    <Compile Include="Services\WiFiAccessService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
