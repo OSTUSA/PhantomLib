@@ -163,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Prism.Forms">
+      <Version>7.2.0.1422</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<controls:RoundedFrame xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       x:Class="Fulfillment.UI.CustomViews.UpperToastView"
+                       xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib"
+                       HeightRequest="57" HorizontalOptions="FillAndExpand"
+                       CornerRadius="13" 
+                       RoundBottomRight="true" RoundBottomLeft="true" RoundTopLeft="false"
+                       RoundTopRight="false" VerticalOptions="Start" Padding="0"
+                       Margin="0,-58,0,0">
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+        <Image x:Name="MessageIcon" Source="{Binding icon}" Margin="0,0,10,0" VerticalOptions="Center" />
+        <Label x:Name="MessageText" Text="{Binding Message}" Style="{StaticResource H3LeftWhite}" VerticalOptions="Center" />
+    </StackLayout>
+</controls:RoundedFrame>
