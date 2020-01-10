@@ -12,7 +12,7 @@ namespace Fulfillment.UI.CustomViews
     public partial class UpperToastView : RoundedFrame
     {
         public static readonly BindableProperty MessageProperty = BindableProperty.Create(nameof(Message), typeof(string), typeof(UpperToastView), string.Empty);
-        public static readonly BindableProperty IconProperty = BindableProperty.Create(nameof(Icon), typeof(string), typeof(UpperToastView), "ic_check");
+        public static readonly BindableProperty IconProperty = BindableProperty.Create(nameof(Icon), typeof(string), typeof(UpperToastView), string.Empty);
         public static readonly BindableProperty ShowToastProperty = BindableProperty.Create(nameof(ShowToast), typeof(bool), typeof(UpperToastView), false, BindingMode.TwoWay);
 
 
