@@ -1,20 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-             NavigationPage.HasNavigationBar="false"
-             x:Class="PhantomLibSamples.MainPage" 
-             Padding="{DynamicResource Thickness_SafeAreaInsets}">
-    <ContentPage.Content>
-        <ScrollView>
-            <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0">
-                <Button Text="UltimateEntry Examples" Clicked="Handle_Clicked" />
-                <Button Text="Effects Examples" Clicked="Handle_Clicked_1" />
-                <Button Text="Converters Examples" Clicked="Handle_Clicked_2" />
-                <Button Text="Floating Action Button" Clicked="Handle_Clicked_FloatingActionButton" />
-                <Button Text="Misc" Clicked="Handle_Clicked_3" />
-                
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:phantomEffects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
+    x:Class="PhantomLibSamples.MainPage"
+    Title="Home"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        Spacing="0">
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            BackgroundColor="{StaticResource BluePrimary}"
+            Padding="30"
+            Spacing="10">
+            <StackLayout.Effects>
+                <phantomEffects:SafeAreaPaddingEffect Flags="Top" />
+            </StackLayout.Effects>
+
+            <Label
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Center"
+                TextColor="White"
+                FontSize="40"
+                FontAttributes="Bold"
+                Text="PhantomLib" />
+
+            <Label
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Label_Regular_16}"
+                TextColor="White"
+                Text="A collection of Xamarin controls, converters, behaviors, and effects by your friends at OST." />
+        </StackLayout>
+
+        <ScrollView
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Padding="30"
+                Spacing="10">
+
+                <Label
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Margin="0,0,0,20"
+                    Style="{StaticResource Label_Bold_16}"
+                    Text="Tap one of the buttons below to view examples:" />
+
+                <Button
+                    Style="{StaticResource Button_Primary}"
+                    Text="Ultimate Entry"
+                    Clicked="Handle_Tapped_UltimateEntry" />
+
+                <Button
+                    Style="{StaticResource Button_Primary}"
+                    Text="Effects"
+                    Clicked="Handle_Tapped_Effects" />
+
+                <Button
+                    Style="{StaticResource Button_Primary}"
+                    Text="Converters"
+                    Clicked="Handle_Tapped_Converters" />
+
+                <Button
+                    Style="{StaticResource Button_Primary}"
+                    Text="Floating Action Button"
+                    Clicked="Handle_Tapped_FloatingActionButton" />
+
+                <Button
+                    Style="{StaticResource Button_Primary}"
+                    Text="Miscellaneous"
+                    Clicked="Handle_Tapped_Misc" />
+
+                <Button
+                    Style="{StaticResource Button_Primary}"
+                    Text="Repeater View"
+                    Clicked="Handle_Tapped_Repeater" />
+
+                <Button
+                    Style="{StaticResource Button_Primary}"
+                    Text="Show Alert Page"
+                    Clicked="Handle_Tapped_Alert" />
             </StackLayout>
         </ScrollView>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>

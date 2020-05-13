@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using PhantomLib.Utilities;
+﻿using PhantomLib.Utilities;
 using UIKit;
 using Xamarin.Forms;
 

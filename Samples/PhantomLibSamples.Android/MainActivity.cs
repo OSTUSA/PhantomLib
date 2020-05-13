@@ -1,17 +1,8 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using PhantomLib.Droid.Effects;
-using Xamarin.Forms;
-using PhantomLib.Utilities;
-using System.Threading.Tasks;
+using Android.Runtime;
 
-[assembly: ResolutionGroupName("OST.PhantomLib")]
 namespace PhantomLibSamples.Droid
 {
     [Activity(Label = "PhantomLibSamples", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

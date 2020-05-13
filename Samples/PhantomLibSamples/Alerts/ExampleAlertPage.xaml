@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<phantomPages:AlertPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:phantomPages="clr-namespace:PhantomLib.Pages;assembly=PhantomLib"
+    x:Class="PhantomLibSamples.ExampleAlertPage"
+    x:Name="_root">
+    <Frame
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="Center"
+        Margin="20"
+        Padding="30,60,30,30">
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            Spacing="10">
+            <Label
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Label_Bold_18}"
+                Text="Hello World!" />
+
+            <Label
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource Label_Regular_13}"
+                Text="Alerts can be shown as 'modal' pages over top of any page and can be closed by tapping the page background or executing a command of your choice." />
+
+            <Button
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                HeightRequest="40"
+                Style="{StaticResource Button_Primary}"
+                Text="OK"
+                Command="{Binding TappedCommand, Source={Reference _root}}" />
+        </StackLayout>
+    </Frame>
+</phantomPages:AlertPage>

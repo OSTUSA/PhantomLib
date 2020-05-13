@@ -58,6 +58,7 @@
     <Folder Include="Renderers\" />
     <Folder Include="Utilities\" />
     <Folder Include="Services\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +69,11 @@
     <Compile Include="Effects\TintImageEffect.cs" />
     <Compile Include="Utilities\DeviceHelper.cs" />
     <Compile Include="Services\AnimationsService.cs" />
+    <Compile Include="Effects\SafeAreaPaddingEffect.cs" />
+    <Compile Include="Effects\ActivityIndicatorSizeEffect.cs" />
+    <Compile Include="Effects\RightImageEffect.cs" />
+    <Compile Include="Extensions\UITextFieldViewModeExtensions.cs" />
+    <Compile Include="Renderers\AlertPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhantomLib\PhantomLib.csproj">

@@ -24,7 +24,7 @@ namespace PhantomLib.iOS.Effects
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"An error occurred when setting the {typeof(TintImageEffect)} effect: {ex.Message}\n{ex.StackTrace}");
+                System.Diagnostics.Debug.WriteLine($"[PhantomLib.TintImageEffect] Exception thrown: {ex.Message}\n{ex.StackTrace}");
             }
         }
 

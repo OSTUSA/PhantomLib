@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using PhantomLibSamples.Converters;
 using PhantomLibSamples.Effects;
 using PhantomLibSamples.FloatingActionButton;
@@ -22,7 +23,7 @@ namespace PhantomLibSamples
             new AnalyticsTimerSample();
         }
 
-        async void Handle_Clicked(object sender, System.EventArgs e)
+        private async void Handle_Tapped_UltimateEntry(object sender, EventArgs e)
         {
             var page = new UltimateEntryPage();
             page.BindingContext = new UltimateEntryViewModel();
@@ -30,7 +31,7 @@ namespace PhantomLibSamples
             await Navigation.PushAsync(page);
         }
 
-        async void Handle_Clicked_1(object sender, System.EventArgs e)
+        private async void Handle_Tapped_Effects(object sender, EventArgs e)
         {
             var page = new EffectsPage();
             page.BindingContext = new EffectsViewModel();
@@ -38,7 +39,7 @@ namespace PhantomLibSamples
             await Navigation.PushAsync(page);
         }
 
-        async void Handle_Clicked_2(object sender, System.EventArgs e)
+        private async void Handle_Tapped_Converters(object sender, EventArgs e)
         {
             var page = new ConvertersPage();
             page.BindingContext = new ConvertersViewModel();
@@ -46,17 +47,33 @@ namespace PhantomLibSamples
             await Navigation.PushAsync(page);
         }
 
-        async void Handle_Clicked_FloatingActionButton(object sender, System.EventArgs e)
+        private async void Handle_Tapped_FloatingActionButton(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new FloatingActionButtonPage());
         }
 
-        async void Handle_Clicked_3(object sender, System.EventArgs e)
+        private async void Handle_Tapped_Misc(object sender, EventArgs e)
         {
             var page = new MiscPage();
             page.BindingContext = new MiscViewModel();
 
             await Navigation.PushAsync(page);
+        }
+
+        private async void Handle_Tapped_Repeater(object sender, EventArgs e)
+        {
+            var page = new RepeaterPage();
+            page.BindingContext = new RepeaterPageModel();
+
+            await Navigation.PushAsync(page);
+        }
+
+            private async void Handle_Tapped_Alert(object sender, EventArgs e)
+        {
+            var page = new ExampleAlertPage();
+
+            // Do not show an animation for alert pages
+            await Navigation.PushModalAsync(page, false);
         }
     }
 }

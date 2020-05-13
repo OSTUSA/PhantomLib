@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:phantomViews="clr-namespace:PhantomLib.Views;assembly=PhantomLib"
+    x:Class="PhantomLibSamples.RepeaterPage"
+    Title="Repeater">
+    <ScrollView
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <phantomViews:RepeaterView
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            ItemsSource="{Binding Items}">
+            <phantomViews:RepeaterView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        Margin="20,10">
+                        <Label
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            Text="{Binding .}" />
+                    </Frame>
+                </DataTemplate>
+            </phantomViews:RepeaterView.ItemTemplate>
+        </phantomViews:RepeaterView>
+    </ScrollView>
+</ContentPage>

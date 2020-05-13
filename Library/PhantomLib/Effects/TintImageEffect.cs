@@ -6,8 +6,6 @@ namespace PhantomLib.Effects
     {
         public Color TintColor { get; set; }
 
-        public TintImageEffect() : base($"OST.PhantomLib.{nameof(TintImageEffect)}")
-        {
-        }
+        public TintImageEffect() : base($"{ResolutionGroupName.PhantomLib}.{nameof(TintImageEffect)}") { }
     }
 }

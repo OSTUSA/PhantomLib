@@ -1,16 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             xmlns:local="clr-namespace:PhantomLib" 
-             xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
-             xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib"
-             xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
-             xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
-             xmlns:localvms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
-             x:Class="PhantomLibSamples.UltimateEntry.UltimateEntryPage"
-             BackgroundColor="{DynamicResource PrimaryColor}"
-             Title="Ultimate Entry">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib"
+    x:Class="PhantomLibSamples.UltimateEntry.UltimateEntryPage"
+    BackgroundColor="{DynamicResource PrimaryColor}"
+    Title="Ultimate Entry">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="Headline" TargetType="Label">

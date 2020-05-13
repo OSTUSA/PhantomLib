@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Android.App;
+using PhantomLib.Effects;
 using Xamarin.Forms;
 
 // General Information about an assembly is controlled through the following 
@@ -17,7 +16,7 @@ using Xamarin.Forms;
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 
-[assembly: ResolutionGroupName("OST.PhantomLib")]
+[assembly: ResolutionGroupName(ResolutionGroupName.PhantomLib)]
 
 // Version information for an assembly consists of the following four values:
 //

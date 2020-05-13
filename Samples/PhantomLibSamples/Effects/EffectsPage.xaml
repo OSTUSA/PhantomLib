@@ -1,51 +1,233 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib" 
-             xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
-             x:Class="PhantomLibSamples.Effects.EffectsPage">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="LabelStyle" TargetType="Label">
-                <Setter Property="extensions:Labels.Kerning" Value="10" />
-            </Style>
-            <Style x:Key="TintLableStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="Margin" Value="10,0" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    
-    <ContentPage.Content>
-        <StackLayout Padding="20">
-            <Label Text="Kerning Effect" FontSize="Large" />
-             <Label Text="This is an example of Kerning with a letter spacing of 10." HorizontalOptions="Center" Style="{StaticResource LabelStyle}">
-                <!--You can set the letters spacing via an extension (as shown in the style) or using the traditional Xamarin effect syntax
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:phantomEffects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
+    xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+    x:Class="PhantomLibSamples.Effects.EffectsPage"
+    Title="Effects">
+    <ScrollView
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="20"
+            Spacing="30">
+
+            <!-- KerningEffect Example -->
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                Spacing="10">
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Bold_18}"
+                    Text="Kerning Effect" />
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_16}"
+                    phantomExtensions:Labels.Kerning="10"
+                    Text="This is an example of Kerning with a letter spacing of 10.">
+                    <!--
+                    You can set the letters spacing via an extension (as shown above) or using the traditional Xamarin effect syntax below:
                     <Label.Effects>
-                        <effects:Kerning LetterSpacing="10" />
-                    </Label.Effects>-->
-            </Label>
-            
-            <Label Text="TintImage Effect" Margin="0,20,0,0" FontSize="Large" />
-            <StackLayout BackgroundColor="LightGray">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Original image" Style="{StaticResource TintLableStyle}" />
-                    <Image Source="ic_collapse_arrow" HorizontalOptions="EndAndExpand" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Same Image Tinted Red" Style="{StaticResource TintLableStyle}" />
-                    <Image Source="ic_collapse_arrow" HorizontalOptions="EndAndExpand" extensions:Images.ImageColor="Red" />
-                </StackLayout>
-                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Same Image Tinted Blue" Style="{StaticResource TintLableStyle}" />
-                    <Image Source="ic_collapse_arrow" HorizontalOptions="EndAndExpand">
+                        <phantomEffects:Kerning LetterSpacing="10" />
+                    </Label.Effects>
+                    -->
+                </Label>
+            </StackLayout>
+
+            <!-- TintImageEffect Example -->
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                Spacing="10">
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Bold_18}"
+                    Text="TintImageEffect" />
+
+                <Grid
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    BackgroundColor="WhiteSmoke">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        Style="{StaticResource Label_Regular_16}"
+                        Text="Original Image" />
+
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Source="ic_collapse_arrow" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        Style="{StaticResource Label_Regular_16}"
+                        Text="Same Image Tinted Red" />
+
+                    <Image
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Source="ic_collapse_arrow"
+                        phantomExtensions:Images.ImageColor="Red"  />
+
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        Style="{StaticResource Label_Regular_16}"
+                        Text="Same Image Tinted Blue" />
+
+                    <Image
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Source="ic_collapse_arrow">
                         <Image.Effects>
-                            <effects:TintImageEffect TintColor="Blue" />
+                            <phantomEffects:TintImageEffect TintColor="Blue" />
                         </Image.Effects>
                     </Image>
-                </StackLayout>
+                </Grid>
+            </StackLayout>
+
+            <!-- ActivityIndicatorSizeEffect Example -->
+            <Grid
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Bold_18}"
+                    Text="ActivityIndicatorSizeEffect" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}"
+                    Text="ActivityIndicatorSize.Medium" />
+
+                <ActivityIndicator
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    BackgroundColor="WhiteSmoke"
+                    IsRunning="True"
+                    Color="{StaticResource BluePrimary}">
+                    <ActivityIndicator.Effects>
+                        <phantomEffects:ActivityIndicatorSizeEffect Size="Medium" />
+                    </ActivityIndicator.Effects>
+                </ActivityIndicator>
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}"
+                    Text="ActivityIndicatorSize.Large" />
+
+                <ActivityIndicator
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    BackgroundColor="WhiteSmoke"
+                    IsRunning="True"
+                    Color="{StaticResource BluePrimary}">
+                    <ActivityIndicator.Effects>
+                        <phantomEffects:ActivityIndicatorSizeEffect Size="Large" />
+                    </ActivityIndicator.Effects>
+                </ActivityIndicator>
+            </Grid>
+
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                Spacing="10">
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Bold_18}"
+                    Text="RightImageEffect" />
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}"
+                    Text="Can be applied to any UITextField enabled control on iOS and EditText enabled control on Android." />
+
+                <Entry
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Placeholder="Search..."
+                    PlaceholderColor="LightGray"
+                    HeightRequest="40">
+                    <Entry.Effects>
+                        <phantomEffects:RightImageEffect Source="icon_search" />
+                    </Entry.Effects>
+                </Entry>
+
+                <Picker
+                    x:Name="_picker"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    HeightRequest="40">
+                    <Picker.Effects>
+                        <phantomEffects:RightImageEffect Source="ic_collapse_arrow" />
+                    </Picker.Effects>
+                </Picker>
             </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

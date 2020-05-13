@@ -26,6 +26,8 @@
     <Folder Include="Converters\" />
     <Folder Include="Misc\" />
     <Folder Include="FloatingActionButton\" />
+    <Folder Include="Alerts\" />
+    <Folder Include="Repeater\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Effects\EffectsPage.xaml.cs">
