@@ -1,4 +1,5 @@
 ﻿using Android.Content;
+using Android.Support.V7.Widget;
 using Android.Views;
 using PhantomLib.Droid.Renderers;
 using PhantomLib.Pages;
@@ -28,11 +29,11 @@ namespace PhantomLib.Droid.Renderers
 
             ViewGroup.SetOnTouchListener(this);
 
-            FrameRenderer frame = FindFrame(ViewGroup);
+            CardView cardView = FindCardView(ViewGroup);
 
-            if (frame != null)
+            if (cardView != null)
             {
-                frame.SetOnTouchListener(this);
+                cardView.SetOnTouchListener(this);
             }
         }
 
@@ -58,17 +59,17 @@ namespace PhantomLib.Droid.Renderers
             return false;
         }
 
-        private FrameRenderer FindFrame(ViewGroup viewGroup)
+        private CardView FindCardView(ViewGroup viewGroup)
         {
             if (viewGroup == null)
             {
                 return null;
             }
 
-            if (viewGroup is FrameRenderer frameViewRenderer)
+            if (viewGroup is CardView cardView)
             {
-                // Found the frame view
-                return frameViewRenderer;
+                // Found the card view
+                return cardView;
             }
 
             if (viewGroup.ChildCount > 0)
@@ -78,11 +79,11 @@ namespace PhantomLib.Droid.Renderers
                 {
                     var childView = viewGroup.GetChildAt(i);
 
-                    frameViewRenderer = FindFrame(childView as ViewGroup);
+                    cardView = FindCardView(childView as ViewGroup);
 
-                    if (frameViewRenderer != null)
+                    if (cardView != null)
                     {
-                        return frameViewRenderer;
+                        return cardView;
                     }
                 }
             }

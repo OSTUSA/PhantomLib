@@ -31,6 +31,7 @@
             <Button
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Start"
+                Margin="0,20,0,0"
                 HeightRequest="40"
                 Style="{StaticResource Button_Primary}"
                 Text="OK"

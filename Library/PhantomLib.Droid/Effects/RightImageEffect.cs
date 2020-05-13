@@ -5,7 +5,7 @@ using Android.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportEffect(typeof(PhantomLib.Droid.Effects.RightImageEffect), PhantomLib.Effects.RightImageEffect.EFFECT_NAME)]
+[assembly: ExportEffect(typeof(PhantomLib.Droid.Effects.RightImageEffect), nameof(PhantomLib.Effects.RightImageEffect))]
 namespace PhantomLib.Droid.Effects
 {
     public class RightImageEffect : PlatformEffect

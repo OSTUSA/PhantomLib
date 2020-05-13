@@ -5,6 +5,7 @@
     xmlns:phantomEffects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
     xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
     x:Class="PhantomLibSamples.Effects.EffectsPage"
+    BackgroundColor="White"
     Title="Effects">
     <ScrollView
         HorizontalOptions="FillAndExpand"
@@ -191,6 +192,7 @@
                 </ActivityIndicator>
             </Grid>
 
+            <!-- RightImageEffect Example -->
             <StackLayout
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Start"
@@ -214,7 +216,7 @@
                     PlaceholderColor="LightGray"
                     HeightRequest="40">
                     <Entry.Effects>
-                        <phantomEffects:RightImageEffect Source="icon_search" />
+                        <phantomEffects:RightImageEffect Source="icon_search" TintColor="Black" />
                     </Entry.Effects>
                 </Entry>
 
@@ -224,7 +226,7 @@
                     VerticalOptions="Start"
                     HeightRequest="40">
                     <Picker.Effects>
-                        <phantomEffects:RightImageEffect Source="ic_collapse_arrow" />
+                        <phantomEffects:RightImageEffect Source="ic_collapse_arrow" TintColor="Black" />
                     </Picker.Effects>
                 </Picker>
             </StackLayout>
