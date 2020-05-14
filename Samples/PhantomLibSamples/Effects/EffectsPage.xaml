@@ -211,13 +211,13 @@
                     HorizontalOptions="Start"
                     VerticalOptions="Start"
                     Style="{StaticResource Label_Bold_18}"
-                    Text="RightImageEffect" />
+                    Text="RightImageEffect and EntryCursorColorEffect" />
 
                 <Label
                     HorizontalOptions="Start"
                     VerticalOptions="Start"
                     Style="{StaticResource Label_Regular_13}"
-                    Text="Can be applied to any UITextField enabled control on iOS and EditText enabled control on Android." />
+                    Text="RightImageEffect can be applied to any UITextField enabled controls on iOS and EditText enabled controls on Android. EntryCursorColorEffect is only necessary on iOS and can be applied to any UITextField enabled controls. To change the cursor color on Android, change your 'colorAccent' in styles.xml." />
 
                 <Entry
                     HorizontalOptions="FillAndExpand"
@@ -227,6 +227,7 @@
                     HeightRequest="40">
                     <Entry.Effects>
                         <phantomEffects:RightImageEffect Source="icon_search" TintColor="Black" />
+                        <phantomEffects:EntryCursorColorEffect CursorColor="{StaticResource RedPrimary}" />
                     </Entry.Effects>
                 </Entry>
 

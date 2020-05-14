@@ -75,6 +75,7 @@
     <Compile Include="Extensions\UITextFieldViewModeExtensions.cs" />
     <Compile Include="Renderers\AlertPageRenderer.cs" />
     <Compile Include="Renderers\GradientContentViewRenderer.cs" />
+    <Compile Include="Effects\EntryCursorColorEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhantomLib\PhantomLib.csproj">
