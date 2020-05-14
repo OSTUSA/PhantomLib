@@ -26,7 +26,7 @@
                 VerticalOptions="Start"
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource Label_Regular_13}"
-                Text="Alerts can be shown as 'modal' pages over top of any page and can be closed by tapping the page background or executing a command of your choice." />
+                Text="Alert pages can be shown as 'modal' pages over top of any page and can be closed by tapping the page background or executing a command of your choice." />
 
             <Button
                 HorizontalOptions="FillAndExpand"

@@ -6,6 +6,7 @@
     xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
     xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
     x:Class="PhantomLibSamples.FloatingActionButton.FloatingActionButtonPage"
+    BackgroundColor="White"
     Title="FAB Example"
     ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
@@ -32,7 +33,13 @@
     </extensions:Pages.FloatingActionButton>
     <ContentPage.Content>
         <ScrollView>
-            <Label x:Name="_lblText" Text="Click the Floating Action Button to append a randomly-generated string to this label." />
+            <Label
+                x:Name="_lblText"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Style="{StaticResource Label_Regular_16}"
+                Margin="20"
+                Text="Click the Floating Action Button to append a randomly-generated string to this label." />
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

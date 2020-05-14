@@ -68,7 +68,7 @@ namespace PhantomLibSamples
             await Navigation.PushAsync(page);
         }
 
-            private async void Handle_Tapped_Alert(object sender, EventArgs e)
+        private async void Handle_Tapped_Alert(object sender, EventArgs e)
         {
             var page = new ExampleAlertPage();
 

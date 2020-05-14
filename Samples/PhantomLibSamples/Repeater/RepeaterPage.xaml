@@ -3,28 +3,82 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:phantomViews="clr-namespace:PhantomLib.Views;assembly=PhantomLib"
+    xmlns:phantomEffects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
     x:Class="PhantomLibSamples.RepeaterPage"
-    Title="Repeater">
-    <ScrollView
+    Title="Repeater View">
+    <StackLayout
         HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand">
-        <phantomViews:RepeaterView
+        VerticalOptions="FillAndExpand"
+        Spacing="0">
+        <ScrollView
             HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand"
-            ItemsSource="{Binding Items}">
-            <phantomViews:RepeaterView.ItemTemplate>
-                <DataTemplate>
-                    <Frame
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Start"
-                        Margin="20,10">
-                        <Label
-                            HorizontalOptions="Start"
-                            VerticalOptions="Center"
-                            Text="{Binding .}" />
-                    </Frame>
-                </DataTemplate>
-            </phantomViews:RepeaterView.ItemTemplate>
-        </phantomViews:RepeaterView>
-    </ScrollView>
+            VerticalOptions="FillAndExpand">
+            <phantomViews:RepeaterView
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                ItemsSource="{Binding Items}">
+                <phantomViews:RepeaterView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Start"
+                            Margin="20,10">
+                            <Label
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Text="{Binding .}" />
+                        </Frame>
+                    </DataTemplate>
+                </phantomViews:RepeaterView.ItemTemplate>
+            </phantomViews:RepeaterView>
+        </ScrollView>
+
+        <!-- Separator -->
+        <BoxView
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            HeightRequest="1"
+            Color="LightGray" />
+
+        <Grid
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            BackgroundColor="White"
+            Padding="20"
+            RowSpacing="0"
+            ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.Effects>
+                <phantomEffects:SafeAreaPaddingEffect Flags="Bottom" />
+            </Grid.Effects>
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                HeightRequest="40"
+                Style="{StaticResource Button_Destructive}"
+                Text="Remove Item"
+                Command="{Binding RemoveItemCommand}" />
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                HeightRequest="40"
+                Style="{StaticResource Button_Primary}"
+                Text="Add Item"
+                Command="{Binding AddItemCommand}" />
+        </Grid>
+    </StackLayout>
 </ContentPage>

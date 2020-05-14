@@ -74,6 +74,7 @@
     <Compile Include="Effects\RightImageEffect.cs" />
     <Compile Include="Extensions\UITextFieldViewModeExtensions.cs" />
     <Compile Include="Renderers\AlertPageRenderer.cs" />
+    <Compile Include="Renderers\GradientContentViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhantomLib\PhantomLib.csproj">

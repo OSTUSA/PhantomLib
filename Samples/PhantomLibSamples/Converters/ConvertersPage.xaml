@@ -1,83 +1,133 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="PhantomLibSamples.Converters.ConvertersPage">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PhantomLibSamples.Converters.ConvertersPage"
+    Title="Converters">
     <ContentPage.Content>
-        <StackLayout Padding="10">
-            <Label Text="Converters" FontSize="Large" />
-            <Entry x:Name="_entryConverters" Placeholder="Enter text to see converter values" />
-            <Label FontSize="Small">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>IsNullConverter: </Span>
-                        <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNullConverter}}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="Small">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>IsNotNullConverter: </Span>
-                        <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNotNullConverter}}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="Small">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>IsNotNotNullConverter: </Span>
-                        <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNotNotNullConverter}}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="Small">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>IsNullOrWhitespaceConverter: </Span>
-                        <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNullOrWhitespaceConverter}}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="Small">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>IsNotNullOrWhitespaceConverter: </Span>
-                        <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNotNullOrWhitespaceConverter}}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="Small">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>CharacterCountConverter: </Span>
-                        <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource CharacterCountConverter}}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="Small">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>IsMinimumCharacterCountConverter (10): </Span>
-                        <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsMinimumCharacterCountConverter}, ConverterParameter=10}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="Small">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>ToUpperConverter: </Span>
-                        <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource ToUpperConverter}}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="Small">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span>StringFormatConverter (Test {0}): </Span>
-                        <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource StringFormatConverter}, ConverterParameter='Test {0}'}}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="20,30"
+            Spacing="20">
+            <Entry
+                x:Name="_entryConverters"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                HeightRequest="40"
+                Placeholder="Enter text to see converter values" />
+
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold">IsNullConverter:</Span>
+                            <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNullConverter}}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold">IsNotNullConverter:</Span>
+                            <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNotNullConverter}}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold">IsNotNotNullConverter:</Span>
+                            <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNotNotNullConverter}}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold">IsNullOrWhitespaceConverter:</Span>
+                            <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNullOrWhitespaceConverter}}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold">IsNotNullOrWhitespaceConverter:</Span>
+                            <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsNotNullOrWhitespaceConverter}}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold">CharacterCountConverter:</Span>
+                            <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource CharacterCountConverter}}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold">IsMinimumCharacterCountConverter (10):</Span>
+                            <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource IsMinimumCharacterCountConverter}, ConverterParameter=10}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold">ToUpperConverter:</Span>
+                            <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource ToUpperConverter}}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Regular_13}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontAttributes="Bold">StringFormatConverter (Test {0}):</Span>
+                            <Span Text="{Binding Text, Source={x:Reference _entryConverters}, Converter={StaticResource StringFormatConverter}, ConverterParameter='Test {0}'}}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

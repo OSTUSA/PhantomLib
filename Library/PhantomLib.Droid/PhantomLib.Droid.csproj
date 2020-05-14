@@ -184,6 +184,7 @@
     <Compile Include="Services\AnimationsService.cs" />
     <Compile Include="Effects\RightImageEffect.cs" />
     <Compile Include="Renderers\AlertPageRenderer.cs" />
+    <Compile Include="Renderers\GradientContentViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -129,6 +129,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
@@ -148,15 +149,24 @@
                 <Label
                     Grid.Row="1"
                     Grid.Column="0"
+                    Grid.ColumnSpan="2"
                     HorizontalOptions="Start"
                     VerticalOptions="Start"
                     Style="{StaticResource Label_Regular_13}"
-                    Text="ActivityIndicatorSize.Medium" />
+                    Text="On Android, changing the WidthRequest and HeightRequest values will change the size of the ActivityIndicator. However, on iOS, the ActivityIndicatorSizeEffect is required to change the size of the activity indicator. There are two options:" />
 
-                <ActivityIndicator
+                <Label
                     Grid.Row="2"
                     Grid.Column="0"
-                    HorizontalOptions="Start"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Bold_13}"
+                    Text="Medium" />
+
+                <ActivityIndicator
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
                     VerticalOptions="Start"
                     WidthRequest="50"
                     HeightRequest="50"
@@ -169,17 +179,17 @@
                 </ActivityIndicator>
 
                 <Label
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    HorizontalOptions="Start"
-                    VerticalOptions="Start"
-                    Style="{StaticResource Label_Regular_13}"
-                    Text="ActivityIndicatorSize.Large" />
-
-                <ActivityIndicator
                     Grid.Row="2"
                     Grid.Column="1"
-                    HorizontalOptions="Start"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    Style="{StaticResource Label_Bold_13}"
+                    Text="Large" />
+
+                <ActivityIndicator
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
                     VerticalOptions="Start"
                     WidthRequest="50"
                     HeightRequest="50"

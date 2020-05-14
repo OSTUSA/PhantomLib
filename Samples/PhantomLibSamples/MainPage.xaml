@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:phantomEffects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
+    xmlns:phantomViews="clr-namespace:PhantomLib.Views;assembly=PhantomLib"
     x:Class="PhantomLibSamples.MainPage"
     Title="Home"
     BackgroundColor="White"
@@ -11,33 +12,37 @@
         HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand"
         Spacing="0">
-        <StackLayout
+        <phantomViews:GradientContentView
             HorizontalOptions="FillAndExpand"
             VerticalOptions="Start"
-            BackgroundColor="{StaticResource BluePrimary}"
             Padding="30"
-            Spacing="10">
-            <StackLayout.Effects>
-                <phantomEffects:SafeAreaPaddingEffect Flags="Top" />
-            </StackLayout.Effects>
-
-            <Label
-                HorizontalOptions="Center"
+            Style="{StaticResource Gradient_Primary}">
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
                 VerticalOptions="Start"
-                HorizontalTextAlignment="Center"
-                TextColor="White"
-                FontSize="40"
-                FontAttributes="Bold"
-                Text="PhantomLib" />
+                Spacing="10">
+                <StackLayout.Effects>
+                    <phantomEffects:SafeAreaPaddingEffect Flags="Top" />
+                </StackLayout.Effects>
 
-            <Label
-                HorizontalOptions="Center"
-                VerticalOptions="Start"
-                HorizontalTextAlignment="Center"
-                Style="{StaticResource Label_Regular_16}"
-                TextColor="White"
-                Text="A collection of Xamarin controls, converters, behaviors, and effects by your friends at OST." />
-        </StackLayout>
+                <Label
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    FontSize="40"
+                    FontAttributes="Bold"
+                    Text="PhantomLib" />
+
+                <Label
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource Label_Regular_16}"
+                    TextColor="White"
+                    Text="A collection of Xamarin controls, converters, behaviors, and effects by your friends at OST." />
+            </StackLayout>
+        </phantomViews:GradientContentView>
 
         <ScrollView
             HorizontalOptions="FillAndExpand"

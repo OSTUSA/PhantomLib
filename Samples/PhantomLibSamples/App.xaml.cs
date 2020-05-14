@@ -10,7 +10,7 @@ namespace PhantomLibSamples
 
             MainPage = new NavigationPage(new MainPage())
             {
-                BarBackgroundColor = (Color)App.Current.Resources["BluePrimary"],
+                BarBackgroundColor = (Color)Current.Resources["BluePrimary"],
                 BarTextColor = Color.White
             };
         }
