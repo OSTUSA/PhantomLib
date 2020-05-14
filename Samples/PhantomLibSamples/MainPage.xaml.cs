@@ -54,10 +54,13 @@ namespace PhantomLibSamples
 
         private async void Handle_Tapped_Misc(object sender, EventArgs e)
         {
-            var page = new MiscPage();
-            page.BindingContext = new MiscViewModel();
+            var navPage = new NavigationPage(new MiscPage())
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["BluePrimary"],
+                BarTextColor = Color.White
+            };
 
-            await Navigation.PushAsync(page);
+            await Navigation.PushModalAsync(navPage);
         }
 
         private async void Handle_Tapped_Repeater(object sender, EventArgs e)

@@ -37,5 +37,15 @@ namespace PhantomLib.iOS.Utilities
 
             return new Thickness(_safeInsets.Left, _safeInsets.Top, _safeInsets.Right, _safeInsets.Bottom);
         }
+
+        public float GetDisplayWidth()
+        {
+            return (float)UIScreen.MainScreen.Bounds.Width;
+        }
+
+        public float GetDisplayHeight()
+        {
+            return (float)UIScreen.MainScreen.Bounds.Height;
+        }
     }
 }

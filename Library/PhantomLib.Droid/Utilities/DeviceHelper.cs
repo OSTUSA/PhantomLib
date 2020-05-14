@@ -15,5 +15,19 @@ namespace PhantomLib.Droid.Utilities
             // done by the OS.
             return new Thickness(0);
         }
+
+        public float GetDisplayWidth()
+        {
+            var displayMetrics = Android.App.Application.Context.Resources.DisplayMetrics;
+
+            return displayMetrics.WidthPixels / displayMetrics.Density;
+        }
+
+        public float GetDisplayHeight()
+        {
+            var displayMetrics = Android.App.Application.Context.Resources.DisplayMetrics;
+
+            return displayMetrics.HeightPixels / displayMetrics.Density;
+        }
     }
 }

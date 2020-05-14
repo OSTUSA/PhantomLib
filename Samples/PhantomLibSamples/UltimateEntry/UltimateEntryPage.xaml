@@ -61,7 +61,7 @@
                                 <controls:UltimateEntry x:Name="FloatingUsername" 
                                                     Style="{StaticResource MaterialEntry}"
                                                     ImageButton="ClearContents"
-                                                    ImageSource="icon_close_black"
+                                                    ImageSource="icon_close_small"
                                                     NextView="{x:Reference FloatingPasswordEntry}"
                                                     TextChanged="UltimateEntry_TextChanged" />
                         </controls:FloatingLabel>
@@ -85,7 +85,7 @@
                         <controls:UltimateEntry x:Name="AddressEntry" 
                                             Placeholder="Address"
                                             ImageButton="ClearContents"
-                                            ImageSource="icon_close_black"
+                                            ImageSource="icon_close_small"
                                             NextView="{x:Reference CityEntry}"
                                             Style="{StaticResource MaterialEntry}" />
                         
@@ -93,7 +93,7 @@
                                             Style="{StaticResource MaterialEntry}"
                                             Placeholder="City"
                                             ImageButton="ClearContents"
-                                            ImageSource="icon_close_black"
+                                            ImageSource="icon_close_small"
                                             ReturnButton="Done" />
                     </StackLayout>
                 </Frame>
@@ -103,13 +103,13 @@
                         <controls:UltimateEntry x:Name="StateEntry" 
                                         Placeholder="State"
                                         ImageButton="ClearContents"
-                                        ImageSource="icon_close_black"
+                                        ImageSource="icon_close_small"
                                         NextView="{x:Reference ZipEntry}"
                                         Style="{StaticResource NonMaterialEntry}" />
                         <controls:UltimateEntry x:Name="ZipEntry" 
                                         Placeholder="Zip Code"
                                         ImageButton="ClearContents"
-                                        ImageSource="icon_close_black"
+                                        ImageSource="icon_close_small"
                                         ReturnButton="Done"
                                         Style="{StaticResource NonMaterialEntry}" />
                     </StackLayout>

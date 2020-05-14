@@ -3,92 +3,145 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:localViewModels="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
+    xmlns:phantomViews="clr-namespace:PhantomLib.Views;assembly=PhantomLib"
+    xmlns:phantomEffects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
     xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
     xmlns:phantomControls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib" 
     xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib" 
     x:Class="PhantomLibSamples.Misc.MiscPage"
-    BackgroundColor="White"
-    Title="Miscellaneous">
-    <ContentPage.Content>
-        <StackLayout
+    BackgroundColor="White">
+    <NavigationPage.TitleView>
+        <phantomViews:TitleView
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand"
-            Padding="20,30"
-            Spacing="30">
+            TitleIcon="logo_example">
+            <phantomViews:TitleView.RightToolbarItems>
+                <Image
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="Center"
+                    Source="icon_close_large">
+                    <Image.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS" Value="0,0,8,0" />
+                            <On Platform="Android" Value="0,0,16,0" />
+                        </OnPlatform>
+                    </Image.Margin>
+
+                    <Image.Effects>
+                        <phantomEffects:TintImageEffect TintColor="White" />
+                    </Image.Effects>
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Handle_Tapped_Close" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </phantomViews:TitleView.RightToolbarItems>
+        </phantomViews:TitleView>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
             <StackLayout
                 HorizontalOptions="FillAndExpand"
-                VerticalOptions="Start"
-                BackgroundColor="LightGray">
-                <StackLayout.BindingContext>
-                    <localViewModels:TapCommandBehaviorViewModel />
-                </StackLayout.BindingContext>
-
-                <StackLayout.Behaviors>
-                    <!--
-                        The TapCommandBehavior has bindable properties for Command and Command Parameter.
-                        This instance has a binding to ShowAlert for its command (from the binding context)
-                        and a binding to the Entry's text value for its command parameter.
-                        Tapping anywhere in the StackLayout will trigger an alert with the body that you write in the Entry.
-                        -->
-                    <behaviors:TapCommandBehavior Command="{Binding DisplayAlert}" CommandParameter="{Binding Text, Source={x:Reference _entryTapCommandValue}}" />
-                </StackLayout.Behaviors>
-
-                <Label
-                    HorizontalOptions="Start"
-                    VerticalOptions="Start"
-                    Style="{StaticResource Label_Bold_18}"
-                    Text="Tap Command Behavior" />
-
-                <Label
-                    HorizontalOptions="Start"
-                    VerticalOptions="Start"
-                    Style="{StaticResource Label_Regular_13}"
-                    Text="Tap anywhere in the gray area to show an alert with the body you enter below." />
-
-                <Entry
-                    x:Name="_entryTapCommandValue"
+                VerticalOptions="FillAndExpand"
+                Spacing="30">
+                <StackLayout
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Start"
-                    HeightRequest="40"
-                    Text="Hello, world!" />
-            </StackLayout>
+                    Padding="20,30,20,0">
+                    <Label
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Style="{StaticResource Label_Bold_18}"
+                        Text="TitleView" />
+
+                    <Label
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Style="{StaticResource Label_Regular_13}"
+                        Text="As seen above, TitleView allows you to show a centered image in the navigation bar on both iOS and Android. It also allows you to define a set of custom views within LeftToolbarItems and RightToolbarItems. All using the power of the NavigationPage.TitleView property." />
+                </StackLayout>
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    BackgroundColor="LightGray"
+                    Padding="20">
+                    <StackLayout.BindingContext>
+                        <localViewModels:TapCommandBehaviorViewModel />
+                    </StackLayout.BindingContext>
+
+                    <StackLayout.Behaviors>
+                        <!--
+                            The TapCommandBehavior has bindable properties for Command and Command Parameter.
+                            This instance has a binding to ShowAlert for its command (from the binding context)
+                            and a binding to the Entry's text value for its command parameter.
+                            Tapping anywhere in the StackLayout will trigger an alert with the body that you write in the Entry.
+                            -->
+                        <behaviors:TapCommandBehavior Command="{Binding DisplayAlert}" CommandParameter="{Binding Text, Source={x:Reference _entryTapCommandValue}}" />
+                    </StackLayout.Behaviors>
+
+                    <Label
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Style="{StaticResource Label_Bold_18}"
+                        Text="Tap Command Behavior" />
+
+                    <Label
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Style="{StaticResource Label_Regular_13}"
+                        Text="Tap anywhere in the gray area to show an alert with the body you enter below." />
+
+                    <Entry
+                        x:Name="_entryTapCommandValue"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        HeightRequest="40"
+                        Text="Hello, world!" />
+                </StackLayout>
             
-            <StackLayout
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Start"
-                phantomExtensions:Views.TapBackgroundColor="#CCCCCC">
-                <!--
-                The Views.TapBackgroundColor property will update the background color of the view when it is tapped.
-                This will last for 
-                Note: the view must have a default value for BackgroundColor. With a BackgroundColor of Transparent,
-                the transition from TapBackgroundColor to BackgroundColor will blink.
-                -->
-                <Label
-                    HorizontalOptions="Start"
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
                     VerticalOptions="Start"
-                    Style="{StaticResource Label_Bold_18}"
-                    Text="Tap Background Color" />
+                    Padding="20,0"
+                    phantomExtensions:Views.TapBackgroundColor="#CCCCCC">
+                    <!--
+                    The Views.TapBackgroundColor property will update the background color of the view when it is tapped.
+                    This will last for 
+                    Note: the view must have a default value for BackgroundColor. With a BackgroundColor of Transparent,
+                    the transition from TapBackgroundColor to BackgroundColor will blink.
+                    -->
+                    <Label
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Style="{StaticResource Label_Bold_18}"
+                        Text="Tap Background Color" />
 
-                <Label
-                    HorizontalOptions="Start"
+                    <Label
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Style="{StaticResource Label_Regular_13}"
+                        Text="Tap anywhere in this area to temporarily its background color to #CCCCCC." />
+                </StackLayout>
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
                     VerticalOptions="Start"
-                    Style="{StaticResource Label_Regular_13}"
-                    Text="Tap anywhere in this area to temporarily its background color to #CCCCCC." />
+                    Padding="20,0">
+                    <Label
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Style="{StaticResource Label_Bold_18}"
+                        Text="Rounded Frame" />
+
+                    <phantomControls:RoundedFrame CornerRadius="10" BackgroundColor="{StaticResource BluePrimary}" RoundTopLeft="true" RoundTopRight="true">
+                        <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
+                    </phantomControls:RoundedFrame>
+                </StackLayout>
             </StackLayout>
-
-            <StackLayout
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Start">
-                <Label
-                    HorizontalOptions="Start"
-                    VerticalOptions="Start"
-                    Style="{StaticResource Label_Bold_18}"
-                    Text="Rounded Frame" />
-
-                <phantomControls:RoundedFrame CornerRadius="10" BackgroundColor="Blue" RoundTopLeft="true" RoundTopRight="true">
-                    <Label Text="This is a rounded frame with just the top corners rounded" TextColor="White" />
-                </phantomControls:RoundedFrame>
-            </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
