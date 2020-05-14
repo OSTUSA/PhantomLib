@@ -106,6 +106,7 @@
                 <StackLayout
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Start"
+                    BackgroundColor="White"
                     Padding="20,0"
                     phantomExtensions:Views.TapBackgroundColor="#CCCCCC">
                     <!--
