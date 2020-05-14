@@ -45,9 +45,10 @@
             VerticalOptions="Start"
             BackgroundColor="White"
             Padding="20"
-            RowSpacing="0"
+            RowSpacing="10"
             ColumnSpacing="10">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
@@ -60,8 +61,17 @@
                 <phantomEffects:SafeAreaPaddingEffect Flags="Bottom" />
             </Grid.Effects>
 
-            <Button
+            <Label
                 Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Style="{StaticResource Label_Regular_13}"
+                Text="RepeaterView is a lightweight, bindable view based on StackLayout. It allows you to bind a list of items via ItemsSource and display a predefined ItemTemplate for each item in the list. It also supports dynamic adding and removal of items:" />
+
+            <Button
+                Grid.Row="1"
                 Grid.Column="0"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Start"
@@ -71,7 +81,7 @@
                 Command="{Binding RemoveItemCommand}" />
 
             <Button
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="1"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Start"

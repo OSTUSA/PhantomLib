@@ -28,9 +28,15 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+
     <extensions:Pages.FloatingActionButton>
-        <Button ImageSource="icon_lock_open.png" Style="{StaticResource Button_FloatingAction}" BackgroundColor="#FF4081" Clicked="OnClicked" />
+        <Button
+            ImageSource="icon_lock_open.png"
+            Style="{StaticResource Button_FloatingAction}"
+            BackgroundColor="{StaticResource RedPrimary}"
+            Clicked="OnClicked" />
     </extensions:Pages.FloatingActionButton>
+
     <ContentPage.Content>
         <ScrollView>
             <Label
