@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace PhantomLibSamples.Misc
@@ -10,6 +8,11 @@ namespace PhantomLibSamples.Misc
         public MiscPage()
         {
             InitializeComponent();
+        }
+
+        private async void Handle_Tapped_Close(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
     }
 }

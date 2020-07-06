@@ -28,5 +28,8 @@
     <Folder Include="Templates\" />
     <Folder Include="CustomControls\Enums\" />
     <Folder Include="Services\" />
+    <Folder Include="Effects\Enums\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AbsoluteLayout
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PhantomLib.Views.TitleView"
+    x:Name="_root"
+    HeightRequest="50">
+    <!-- Left Toolbar -->
+    <StackLayout
+        x:Name="_leftToolbar"
+        AbsoluteLayout.LayoutFlags="PositionProportional,HeightProportional"
+        AbsoluteLayout.LayoutBounds="0,0,-1,1"
+        Orientation="Horizontal"
+        Spacing="0" />
+
+    <!-- Right Toolbar -->
+    <StackLayout
+        x:Name="_rightToolbar"
+        AbsoluteLayout.LayoutFlags="PositionProportional,HeightProportional"
+        AbsoluteLayout.LayoutBounds="1,1,-1,1"
+        Orientation="Horizontal"
+        Spacing="0" />
+
+    <!-- Logo -->
+    <Image
+        x:Name="_logoImage"
+        AbsoluteLayout.LayoutFlags="YProportional"
+        AbsoluteLayout.LayoutBounds="0,0.5,-1,-1"
+        Aspect="AspectFit"
+        Source="{Binding TitleIcon, Source={Reference _root}}" />
+</AbsoluteLayout>
+

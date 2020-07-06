@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using PhantomLib.Extensions;
+﻿using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace PhantomLib.Templates
 {
     public class FloatingActionButtonControlTemplate : ControlTemplate
     {
-        public FloatingActionButtonControlTemplate()
-            : base(typeof(Container))
-        {
-            
-        }
+        public FloatingActionButtonControlTemplate() : base(typeof(Container)) { }
 
         public class Container : Grid
         {
@@ -43,13 +36,13 @@ namespace PhantomLib.Templates
 
             private void Parent_PropertyChanged(object sender, PropertyChangedEventArgs e)
             {
-                if (e.PropertyName == Pages.FloatingActionButtonProperty.PropertyName)
+                if (e.PropertyName == Extensions.Pages.FloatingActionButtonProperty.PropertyName)
                     SetButton();
             }
 
             private void SetButton()
             {
-                Button = Pages.GetFloatingActionButton(Parent);
+                Button = Extensions.Pages.GetFloatingActionButton(Parent);
             }
 
             private Button _button;

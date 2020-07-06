@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace PhantomLibSamples.Effects
@@ -10,6 +8,15 @@ namespace PhantomLibSamples.Effects
         public EffectsPage()
         {
             InitializeComponent();
+
+            _picker.ItemsSource = new List<string>
+            {
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            };
+
+            _picker.SelectedIndex = 0;
         }
     }
 }

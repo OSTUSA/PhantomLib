@@ -1,16 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             xmlns:local="clr-namespace:PhantomLib" 
-             xmlns:extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
-             xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib"
-             xmlns:effects="clr-namespace:PhantomLib.Effects;assembly=PhantomLib"
-             xmlns:behaviors="clr-namespace:PhantomLib.Behaviors;assembly=PhantomLib"
-             xmlns:localvms="clr-namespace:PhantomLibSamples.ViewModels;assembly=PhantomLibSamples"
-             x:Class="PhantomLibSamples.UltimateEntry.UltimateEntryPage"
-             BackgroundColor="{DynamicResource PrimaryColor}"
-             Title="Ultimate Entry">
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:PhantomLib.CustomControls;assembly=PhantomLib"
+    x:Class="PhantomLibSamples.UltimateEntry.UltimateEntryPage"
+    BackgroundColor="{DynamicResource PrimaryColor}"
+    Title="Ultimate Entry">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="Headline" TargetType="Label">
@@ -66,7 +61,7 @@
                                 <controls:UltimateEntry x:Name="FloatingUsername" 
                                                     Style="{StaticResource MaterialEntry}"
                                                     ImageButton="ClearContents"
-                                                    ImageSource="icon_close_black"
+                                                    ImageSource="icon_close_small"
                                                     NextView="{x:Reference FloatingPasswordEntry}"
                                                     TextChanged="UltimateEntry_TextChanged" />
                         </controls:FloatingLabel>
@@ -90,7 +85,7 @@
                         <controls:UltimateEntry x:Name="AddressEntry" 
                                             Placeholder="Address"
                                             ImageButton="ClearContents"
-                                            ImageSource="icon_close_black"
+                                            ImageSource="icon_close_small"
                                             NextView="{x:Reference CityEntry}"
                                             Style="{StaticResource MaterialEntry}" />
                         
@@ -98,7 +93,7 @@
                                             Style="{StaticResource MaterialEntry}"
                                             Placeholder="City"
                                             ImageButton="ClearContents"
-                                            ImageSource="icon_close_black"
+                                            ImageSource="icon_close_small"
                                             ReturnButton="Done" />
                     </StackLayout>
                 </Frame>
@@ -108,13 +103,13 @@
                         <controls:UltimateEntry x:Name="StateEntry" 
                                         Placeholder="State"
                                         ImageButton="ClearContents"
-                                        ImageSource="icon_close_black"
+                                        ImageSource="icon_close_small"
                                         NextView="{x:Reference ZipEntry}"
                                         Style="{StaticResource NonMaterialEntry}" />
                         <controls:UltimateEntry x:Name="ZipEntry" 
                                         Placeholder="Zip Code"
                                         ImageButton="ClearContents"
-                                        ImageSource="icon_close_black"
+                                        ImageSource="icon_close_small"
                                         ReturnButton="Done"
                                         Style="{StaticResource NonMaterialEntry}" />
                     </StackLayout>

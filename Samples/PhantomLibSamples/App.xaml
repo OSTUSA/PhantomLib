@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local-extensions="clr-namespace:PhantomLibSamples.Extensions"
-             xmlns:phantom-extensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
-             x:Class="PhantomLibSamples.App">
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:localExtensions="clr-namespace:PhantomLibSamples.Extensions"
+    xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+    xmlns:phantomViews="clr-namespace:PhantomLib.Views;assembly=PhantomLib"
+    x:Class="PhantomLibSamples.App">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -24,15 +26,15 @@
                 is handy for styles that can be extended or here for the set of
                 Converters that can be generic or app-specific.
                 -->
-                <local-extensions:Converters />
+                <localExtensions:Converters />
                 <!--
                 Here we are including direct references to the PhantomLib
                 resources. This allows us to reference the resources from any
                 of our views in the app.
                 -->
-                <phantom-extensions:Labels />
-                <phantom-extensions:Values />
-                <phantom-extensions:Views />
+                <phantomExtensions:Labels />
+                <phantomExtensions:Values />
+                <phantomExtensions:Views />
             </ResourceDictionary.MergedDictionaries>
             
             <Color x:Key="ErrorColor">#CD2B1D</Color>
@@ -41,11 +43,89 @@
             <Color x:Key="PrimaryFontColor">#E0E4E4</Color>
             <Color x:Key="SecondaryFontColor">#7E8184</Color>
             <Color x:Key="SecondaryColor">#2B2B2E</Color>
+
+            <Color x:Key="BluePrimary">#0078B3</Color>
+            <Color x:Key="BlueLight">#57BCE0</Color>
+            <Color x:Key="RedPrimary">#EC5B4E</Color>
+
+            <!-- Button Styles -->
+            <Style TargetType="Button" x:Key="Button_Primary">
+                <Setter Property="BackgroundColor" Value="{StaticResource BluePrimary}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="Button_Destructive">
+                <Setter Property="BackgroundColor" Value="{StaticResource RedPrimary}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="13" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <!-- Bold Label Styles -->
+            <Style TargetType="Label" x:Key="Label_Bold">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style TargetType="Label" BasedOn="{StaticResource Label_Bold}" x:Key="Label_Bold_18">
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style TargetType="Label" BasedOn="{StaticResource Label_Bold}" x:Key="Label_Bold_16">
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+
+            <Style TargetType="Label" BasedOn="{StaticResource Label_Bold}" x:Key="Label_Bold_13">
+                <Setter Property="FontSize" Value="13" />
+            </Style>
+
+            <!-- Regular Label Styles -->
+            <Style TargetType="Label" x:Key="Label_Regular">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
+            <Style TargetType="Label" BasedOn="{StaticResource Label_Regular}" x:Key="Label_Regular_16">
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+
+            <Style TargetType="Label" BasedOn="{StaticResource Label_Regular}" x:Key="Label_Regular_13">
+                <Setter Property="FontSize" Value="13" />
+            </Style>
+
+            <!-- Italic Label Styles -->
+            <Style TargetType="Label" x:Key="Label_Italic">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontAttributes" Value="Italic" />
+            </Style>
+
+            <!-- GradientContentView Styles -->
+            <Style TargetType="phantomViews:GradientContentView" x:Key="Gradient_Primary">
+                <!-- StartPoint and EndPoint determine the direction of the gradient -->
+                <Setter Property="StartPoint" Value="0.5,0" />
+                <Setter Property="EndPoint" Value="0.5,1" />
+
+                <!-- Colors is an array of colors that exist at various points in the gradient -->
+                <Setter Property="Colors">
+                    <Setter.Value>
+                        <x:Array Type="{x:Type Color}">
+                            <Color>#57BCE0</Color> <!-- Blue Light -->
+                            <Color>#0078B3</Color> <!-- Blue Primary -->
+                        </x:Array>
+                    </Setter.Value>
+                </Setter>
+
+                <!-- Locations is an array of float values where each color is located in the gradient. The gradient will blend between these locations. -->
+                <Setter Property="Locations">
+                    <Setter.Value>
+                        <x:Array Type="{x:Type x:Single}">
+                            <x:Single>0</x:Single>
+                            <x:Single>1</x:Single>
+                        </x:Array>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
-        
-        <Style TargetType="NavigationPage">
-            <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryColor}" />
-            <Setter Property="BarTextColor" Value="{DynamicResource PrimaryFontColor}" />
-        </Style>
     </Application.Resources>
 </Application>

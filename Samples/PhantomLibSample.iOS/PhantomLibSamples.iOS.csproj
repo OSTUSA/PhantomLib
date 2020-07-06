@@ -71,7 +71,6 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Effects\KerningEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -121,9 +120,6 @@
     <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green.png" />
     <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green-1.png" />
     <ImageAsset Include="Assets.xcassets\loading_spinner_green.imageset\loading_spinner_green-2.png" />
-    <ImageAsset Include="Assets.xcassets\icon_close_black.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icon_close_black.imageset\baseline_close_black_18dp.png" />
-    <ImageAsset Include="Assets.xcassets\icon_close_black.imageset\baseline_close_black_18dp-1.png" />
     <ImageAsset Include="Assets.xcassets\icon_lock_open.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\icon_lock_open.imageset\baseline_lock_open_black_18dp.png" />
     <ImageAsset Include="Assets.xcassets\icon_lock_open.imageset\baseline_lock_open_black_18dp-1.png" />
@@ -152,6 +148,14 @@
     <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\167.png" />
     <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\1024.png" />
     <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\100.png" />
+    <ImageAsset Include="Assets.xcassets\icon_search.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_search.imageset\icon_search.pdf" />
+    <ImageAsset Include="Assets.xcassets\logo_example.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logo_example.imageset\logo_example.pdf" />
+    <ImageAsset Include="Assets.xcassets\icon_close_small.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_close_large.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_close_small.imageset\icon_close_small.pdf" />
+    <ImageAsset Include="Assets.xcassets\icon_close_large.imageset\icon_close_large.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -190,6 +194,12 @@
     <Folder Include="Assets.xcassets\icon_lock_close.imageset\" />
     <Folder Include="Assets.xcassets\icon_error.imageset\" />
     <Folder Include="Assets.xcassets\ic_collapse_arrow.imageset\" />
+    <Folder Include="Assets.xcassets\icon_search.imageset\" />
+    <Folder Include="Assets.xcassets\icon_search.imageset\" />
+    <Folder Include="Assets.xcassets\icon_search.imageset\" />
+    <Folder Include="Assets.xcassets\logo_example.imageset\" />
+    <Folder Include="Assets.xcassets\icon_close_small.imageset\" />
+    <Folder Include="Assets.xcassets\icon_close_large.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
