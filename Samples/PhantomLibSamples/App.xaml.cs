@@ -1,6 +1,12 @@
 ﻿using System;
+using System.Reflection;
 using Autofac;
 using PhantomLib.DendencyInjection;
+using PhantomLibSamples.Converters;
+using PhantomLibSamples.Effects;
+using PhantomLibSamples.FloatingActionButton;
+using PhantomLibSamples.Misc;
+using PhantomLibSamples.UltimateControl;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,10 +20,19 @@ namespace PhantomLibSamples
 
             PhantomResolutionHelper.Register(builder => {
 
-                //builder.RegisterType<ChurchService>()
-                //    .As<IChurchService>()
-                //    .SingleInstance();
+                builder.RegisterNamespace(typeof(ConvertersPage).Namespace);
 
+                builder.RegisterNamespace(typeof(EffectsPage).Namespace);
+
+                builder.RegisterView<FloatingActionButtonPage>();
+
+                builder.RegisterView<MiscPage>();
+                builder.RegisterViewModel<MiscViewModel>();
+
+                builder.RegisterView<UltimateControlPage>();
+                builder.RegisterViewModel<UltimateControlViewModel>();
+
+                builder.RegisterView<MainPage>();
             });
 
             MainPage = new NavigationPage(new MainPage());

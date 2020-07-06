@@ -6,23 +6,67 @@ using Autofac;
 
 namespace PhantomLib.DendencyInjection
 {
-    public class PhantomContainerBuilder : ContainerBuilder
+    public class PhantomContainerBuilder
     { 
-        public PhantomContainerBuilder RegisterAssembly(string assembly)
+        private ContainerBuilder _container;
+
+        public PhantomContainerBuilder()
         {
+            _container = new ContainerBuilder();
+        }
+
+        public PhantomContainerBuilder RegisterNamespace(string ns)
+        {
+
+            var types = Assembly
+                .GetCallingAssembly()
+                .GetTypes();
+
             List<Type> pageTypes = Assembly
-                .GetExecutingAssembly()
+                .GetCallingAssembly()
                 .GetTypes()
                 .Where(t => t.IsClass)
-                .Where(t => t.Namespace == assembly)
+                .Where(t => t.Namespace == ns)
                 .ToList();
 
             foreach (Type t in pageTypes)
             {
-                this.RegisterType(t);
+                _container.RegisterType(t);
             }
 
             return this;
+        }
+
+        public PhantomContainerBuilder RegisterView<T>()
+        {
+            _container.RegisterType<T>();
+            return this;
+        }
+
+        public PhantomContainerBuilder RegisterViewModel<T>()
+        {
+            _container.RegisterType<T>();
+            return this;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T">Template</typeparam>
+        /// <typeparam name="S">Service</typeparam>
+        /// <returns></returns>
+        public PhantomContainerBuilder RegisterSingletonService<T, S>()
+        {
+            _container.RegisterType<T>()
+                .As<T>()
+                .SingleInstance();
+
+            return this;
+        }
+
+        internal IContainer Build()
+        {
+            return _container.Build();
         }
     }
 }

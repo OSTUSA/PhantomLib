@@ -11,6 +11,7 @@ using PhantomLibSamples.FloatingActionButton;
 using PhantomLibSamples.Misc;
 using PhantomLibSamples.UltimateControl;
 using PhantomLibSamples.Utilities;
+using PhantomLib.DendencyInjection;
 using Xamarin.Forms;
 
 namespace PhantomLibSamples
@@ -29,27 +30,18 @@ namespace PhantomLibSamples
         }
 
         async void Handle_Clicked(object sender, System.EventArgs e)
-        {
-            var page = new UltimateControlPage();
-            page.BindingContext = new UltimateControlViewModel();
-            
-            await Navigation.PushAsync(page);
+        {           
+            await Navigation.PushAsync<UltimateControlPage, UltimateControlViewModel>();
         }
 
         async void Handle_Clicked_1(object sender, System.EventArgs e)
         {
-            var page = new EffectsPage();
-            page.BindingContext = new EffectsViewModel();
-
-            await Navigation.PushAsync(page);
+            await Navigation.PushAsync<EffectsPage, EffectsViewModel>();
         }
 
         async void Handle_Clicked_2(object sender, System.EventArgs e)
         {
-            var page = new ConvertersPage();
-            page.BindingContext = new ConvertersViewModel();
-
-            await Navigation.PushAsync(page);
+            await Navigation.PushAsync<ConvertersPage, ConvertersViewModel>();
         }
 
         async void Handle_Clicked_FloatingActionButton(object sender, System.EventArgs e)
@@ -59,10 +51,7 @@ namespace PhantomLibSamples
 
         async void Handle_Clicked_3(object sender, System.EventArgs e)
         {
-            var page = new MiscPage();
-            page.BindingContext = new MiscViewModel();
-
-            await Navigation.PushAsync(page);
+            await Navigation.PushAsync<MiscPage, MiscViewModel>();
         }
 
         void Handle_Clicked_DI(System.Object sender, System.EventArgs e)

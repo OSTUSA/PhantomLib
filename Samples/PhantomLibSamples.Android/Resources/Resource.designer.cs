@@ -25,2287 +25,6 @@ namespace PhantomLibSamples.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::PhantomLib.Droid.Resource.Animation.abc_fade_in = global::PhantomLibSamples.Droid.Resource.Animation.abc_fade_in;
-			global::PhantomLib.Droid.Resource.Animation.abc_fade_out = global::PhantomLibSamples.Droid.Resource.Animation.abc_fade_out;
-			global::PhantomLib.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::PhantomLibSamples.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::PhantomLib.Droid.Resource.Animation.abc_popup_enter = global::PhantomLibSamples.Droid.Resource.Animation.abc_popup_enter;
-			global::PhantomLib.Droid.Resource.Animation.abc_popup_exit = global::PhantomLibSamples.Droid.Resource.Animation.abc_popup_exit;
-			global::PhantomLib.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::PhantomLibSamples.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::PhantomLib.Droid.Resource.Animation.abc_slide_in_bottom = global::PhantomLibSamples.Droid.Resource.Animation.abc_slide_in_bottom;
-			global::PhantomLib.Droid.Resource.Animation.abc_slide_in_top = global::PhantomLibSamples.Droid.Resource.Animation.abc_slide_in_top;
-			global::PhantomLib.Droid.Resource.Animation.abc_slide_out_bottom = global::PhantomLibSamples.Droid.Resource.Animation.abc_slide_out_bottom;
-			global::PhantomLib.Droid.Resource.Animation.abc_slide_out_top = global::PhantomLibSamples.Droid.Resource.Animation.abc_slide_out_top;
-			global::PhantomLib.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::PhantomLibSamples.Droid.Resource.Animation.design_bottom_sheet_slide_in;
-			global::PhantomLib.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::PhantomLibSamples.Droid.Resource.Animation.design_bottom_sheet_slide_out;
-			global::PhantomLib.Droid.Resource.Animation.design_snackbar_in = global::PhantomLibSamples.Droid.Resource.Animation.design_snackbar_in;
-			global::PhantomLib.Droid.Resource.Animation.design_snackbar_out = global::PhantomLibSamples.Droid.Resource.Animation.design_snackbar_out;
-			global::PhantomLib.Droid.Resource.Animation.EnterFromLeft = global::PhantomLibSamples.Droid.Resource.Animation.EnterFromLeft;
-			global::PhantomLib.Droid.Resource.Animation.EnterFromRight = global::PhantomLibSamples.Droid.Resource.Animation.EnterFromRight;
-			global::PhantomLib.Droid.Resource.Animation.ExitToLeft = global::PhantomLibSamples.Droid.Resource.Animation.ExitToLeft;
-			global::PhantomLib.Droid.Resource.Animation.ExitToRight = global::PhantomLibSamples.Droid.Resource.Animation.ExitToRight;
-			global::PhantomLib.Droid.Resource.Animation.tooltip_enter = global::PhantomLibSamples.Droid.Resource.Animation.tooltip_enter;
-			global::PhantomLib.Droid.Resource.Animation.tooltip_exit = global::PhantomLibSamples.Droid.Resource.Animation.tooltip_exit;
-			global::PhantomLib.Droid.Resource.Animator.design_appbar_state_list_animator = global::PhantomLibSamples.Droid.Resource.Animator.design_appbar_state_list_animator;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarDivider = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarDivider;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarItemBackground = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarItemBackground;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarPopupTheme = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarPopupTheme;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarSize = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarSize;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarSplitStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarSplitStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarTabBarStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarTabBarStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarTabStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarTabStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarTabTextStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarTabTextStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarTheme = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarTheme;
-			global::PhantomLib.Droid.Resource.Attribute.actionBarWidgetTheme = global::PhantomLibSamples.Droid.Resource.Attribute.actionBarWidgetTheme;
-			global::PhantomLib.Droid.Resource.Attribute.actionButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionDropDownStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionDropDownStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionLayout = global::PhantomLibSamples.Droid.Resource.Attribute.actionLayout;
-			global::PhantomLib.Droid.Resource.Attribute.actionMenuTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.actionMenuTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.actionMenuTextColor = global::PhantomLibSamples.Droid.Resource.Attribute.actionMenuTextColor;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeBackground = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeBackground;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeCloseButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeCloseDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeCloseDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeCopyDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeCopyDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeCutDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeCutDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeFindDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeFindDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.actionModePasteDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.actionModePasteDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.actionModePopupWindowStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionModePopupWindowStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeSelectAllDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeShareDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeShareDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeSplitBackground = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeSplitBackground;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.actionModeWebSearchDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.actionOverflowButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionOverflowButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionOverflowMenuStyle = global::PhantomLibSamples.Droid.Resource.Attribute.actionOverflowMenuStyle;
-			global::PhantomLib.Droid.Resource.Attribute.actionProviderClass = global::PhantomLibSamples.Droid.Resource.Attribute.actionProviderClass;
-			global::PhantomLib.Droid.Resource.Attribute.actionViewClass = global::PhantomLibSamples.Droid.Resource.Attribute.actionViewClass;
-			global::PhantomLib.Droid.Resource.Attribute.activityChooserViewStyle = global::PhantomLibSamples.Droid.Resource.Attribute.activityChooserViewStyle;
-			global::PhantomLib.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::PhantomLibSamples.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::PhantomLib.Droid.Resource.Attribute.alertDialogCenterButtons = global::PhantomLibSamples.Droid.Resource.Attribute.alertDialogCenterButtons;
-			global::PhantomLib.Droid.Resource.Attribute.alertDialogStyle = global::PhantomLibSamples.Droid.Resource.Attribute.alertDialogStyle;
-			global::PhantomLib.Droid.Resource.Attribute.alertDialogTheme = global::PhantomLibSamples.Droid.Resource.Attribute.alertDialogTheme;
-			global::PhantomLib.Droid.Resource.Attribute.allowStacking = global::PhantomLibSamples.Droid.Resource.Attribute.allowStacking;
-			global::PhantomLib.Droid.Resource.Attribute.alpha = global::PhantomLibSamples.Droid.Resource.Attribute.alpha;
-			global::PhantomLib.Droid.Resource.Attribute.alphabeticModifiers = global::PhantomLibSamples.Droid.Resource.Attribute.alphabeticModifiers;
-			global::PhantomLib.Droid.Resource.Attribute.arrowHeadLength = global::PhantomLibSamples.Droid.Resource.Attribute.arrowHeadLength;
-			global::PhantomLib.Droid.Resource.Attribute.arrowShaftLength = global::PhantomLibSamples.Droid.Resource.Attribute.arrowShaftLength;
-			global::PhantomLib.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::PhantomLibSamples.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::PhantomLib.Droid.Resource.Attribute.autoSizeMaxTextSize = global::PhantomLibSamples.Droid.Resource.Attribute.autoSizeMaxTextSize;
-			global::PhantomLib.Droid.Resource.Attribute.autoSizeMinTextSize = global::PhantomLibSamples.Droid.Resource.Attribute.autoSizeMinTextSize;
-			global::PhantomLib.Droid.Resource.Attribute.autoSizePresetSizes = global::PhantomLibSamples.Droid.Resource.Attribute.autoSizePresetSizes;
-			global::PhantomLib.Droid.Resource.Attribute.autoSizeStepGranularity = global::PhantomLibSamples.Droid.Resource.Attribute.autoSizeStepGranularity;
-			global::PhantomLib.Droid.Resource.Attribute.autoSizeTextType = global::PhantomLibSamples.Droid.Resource.Attribute.autoSizeTextType;
-			global::PhantomLib.Droid.Resource.Attribute.background = global::PhantomLibSamples.Droid.Resource.Attribute.background;
-			global::PhantomLib.Droid.Resource.Attribute.backgroundSplit = global::PhantomLibSamples.Droid.Resource.Attribute.backgroundSplit;
-			global::PhantomLib.Droid.Resource.Attribute.backgroundStacked = global::PhantomLibSamples.Droid.Resource.Attribute.backgroundStacked;
-			global::PhantomLib.Droid.Resource.Attribute.backgroundTint = global::PhantomLibSamples.Droid.Resource.Attribute.backgroundTint;
-			global::PhantomLib.Droid.Resource.Attribute.backgroundTintMode = global::PhantomLibSamples.Droid.Resource.Attribute.backgroundTintMode;
-			global::PhantomLib.Droid.Resource.Attribute.barLength = global::PhantomLibSamples.Droid.Resource.Attribute.barLength;
-			global::PhantomLib.Droid.Resource.Attribute.behavior_autoHide = global::PhantomLibSamples.Droid.Resource.Attribute.behavior_autoHide;
-			global::PhantomLib.Droid.Resource.Attribute.behavior_hideable = global::PhantomLibSamples.Droid.Resource.Attribute.behavior_hideable;
-			global::PhantomLib.Droid.Resource.Attribute.behavior_overlapTop = global::PhantomLibSamples.Droid.Resource.Attribute.behavior_overlapTop;
-			global::PhantomLib.Droid.Resource.Attribute.behavior_peekHeight = global::PhantomLibSamples.Droid.Resource.Attribute.behavior_peekHeight;
-			global::PhantomLib.Droid.Resource.Attribute.behavior_skipCollapsed = global::PhantomLibSamples.Droid.Resource.Attribute.behavior_skipCollapsed;
-			global::PhantomLib.Droid.Resource.Attribute.borderlessButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.borderlessButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.borderWidth = global::PhantomLibSamples.Droid.Resource.Attribute.borderWidth;
-			global::PhantomLib.Droid.Resource.Attribute.bottomSheetDialogTheme = global::PhantomLibSamples.Droid.Resource.Attribute.bottomSheetDialogTheme;
-			global::PhantomLib.Droid.Resource.Attribute.bottomSheetStyle = global::PhantomLibSamples.Droid.Resource.Attribute.bottomSheetStyle;
-			global::PhantomLib.Droid.Resource.Attribute.buttonBarButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.buttonBarButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.buttonBarStyle = global::PhantomLibSamples.Droid.Resource.Attribute.buttonBarStyle;
-			global::PhantomLib.Droid.Resource.Attribute.buttonGravity = global::PhantomLibSamples.Droid.Resource.Attribute.buttonGravity;
-			global::PhantomLib.Droid.Resource.Attribute.buttonPanelSideLayout = global::PhantomLibSamples.Droid.Resource.Attribute.buttonPanelSideLayout;
-			global::PhantomLib.Droid.Resource.Attribute.buttonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.buttonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.buttonStyleSmall = global::PhantomLibSamples.Droid.Resource.Attribute.buttonStyleSmall;
-			global::PhantomLib.Droid.Resource.Attribute.buttonTint = global::PhantomLibSamples.Droid.Resource.Attribute.buttonTint;
-			global::PhantomLib.Droid.Resource.Attribute.buttonTintMode = global::PhantomLibSamples.Droid.Resource.Attribute.buttonTintMode;
-			global::PhantomLib.Droid.Resource.Attribute.cardBackgroundColor = global::PhantomLibSamples.Droid.Resource.Attribute.cardBackgroundColor;
-			global::PhantomLib.Droid.Resource.Attribute.cardCornerRadius = global::PhantomLibSamples.Droid.Resource.Attribute.cardCornerRadius;
-			global::PhantomLib.Droid.Resource.Attribute.cardElevation = global::PhantomLibSamples.Droid.Resource.Attribute.cardElevation;
-			global::PhantomLib.Droid.Resource.Attribute.cardMaxElevation = global::PhantomLibSamples.Droid.Resource.Attribute.cardMaxElevation;
-			global::PhantomLib.Droid.Resource.Attribute.cardPreventCornerOverlap = global::PhantomLibSamples.Droid.Resource.Attribute.cardPreventCornerOverlap;
-			global::PhantomLib.Droid.Resource.Attribute.cardUseCompatPadding = global::PhantomLibSamples.Droid.Resource.Attribute.cardUseCompatPadding;
-			global::PhantomLib.Droid.Resource.Attribute.checkboxStyle = global::PhantomLibSamples.Droid.Resource.Attribute.checkboxStyle;
-			global::PhantomLib.Droid.Resource.Attribute.checkedTextViewStyle = global::PhantomLibSamples.Droid.Resource.Attribute.checkedTextViewStyle;
-			global::PhantomLib.Droid.Resource.Attribute.closeIcon = global::PhantomLibSamples.Droid.Resource.Attribute.closeIcon;
-			global::PhantomLib.Droid.Resource.Attribute.closeItemLayout = global::PhantomLibSamples.Droid.Resource.Attribute.closeItemLayout;
-			global::PhantomLib.Droid.Resource.Attribute.collapseContentDescription = global::PhantomLibSamples.Droid.Resource.Attribute.collapseContentDescription;
-			global::PhantomLib.Droid.Resource.Attribute.collapsedTitleGravity = global::PhantomLibSamples.Droid.Resource.Attribute.collapsedTitleGravity;
-			global::PhantomLib.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.collapsedTitleTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.collapseIcon = global::PhantomLibSamples.Droid.Resource.Attribute.collapseIcon;
-			global::PhantomLib.Droid.Resource.Attribute.color = global::PhantomLibSamples.Droid.Resource.Attribute.color;
-			global::PhantomLib.Droid.Resource.Attribute.colorAccent = global::PhantomLibSamples.Droid.Resource.Attribute.colorAccent;
-			global::PhantomLib.Droid.Resource.Attribute.colorBackgroundFloating = global::PhantomLibSamples.Droid.Resource.Attribute.colorBackgroundFloating;
-			global::PhantomLib.Droid.Resource.Attribute.colorButtonNormal = global::PhantomLibSamples.Droid.Resource.Attribute.colorButtonNormal;
-			global::PhantomLib.Droid.Resource.Attribute.colorControlActivated = global::PhantomLibSamples.Droid.Resource.Attribute.colorControlActivated;
-			global::PhantomLib.Droid.Resource.Attribute.colorControlHighlight = global::PhantomLibSamples.Droid.Resource.Attribute.colorControlHighlight;
-			global::PhantomLib.Droid.Resource.Attribute.colorControlNormal = global::PhantomLibSamples.Droid.Resource.Attribute.colorControlNormal;
-			global::PhantomLib.Droid.Resource.Attribute.colorError = global::PhantomLibSamples.Droid.Resource.Attribute.colorError;
-			global::PhantomLib.Droid.Resource.Attribute.colorPrimary = global::PhantomLibSamples.Droid.Resource.Attribute.colorPrimary;
-			global::PhantomLib.Droid.Resource.Attribute.colorPrimaryDark = global::PhantomLibSamples.Droid.Resource.Attribute.colorPrimaryDark;
-			global::PhantomLib.Droid.Resource.Attribute.colorSwitchThumbNormal = global::PhantomLibSamples.Droid.Resource.Attribute.colorSwitchThumbNormal;
-			global::PhantomLib.Droid.Resource.Attribute.commitIcon = global::PhantomLibSamples.Droid.Resource.Attribute.commitIcon;
-			global::PhantomLib.Droid.Resource.Attribute.contentDescription = global::PhantomLibSamples.Droid.Resource.Attribute.contentDescription;
-			global::PhantomLib.Droid.Resource.Attribute.contentInsetEnd = global::PhantomLibSamples.Droid.Resource.Attribute.contentInsetEnd;
-			global::PhantomLib.Droid.Resource.Attribute.contentInsetEndWithActions = global::PhantomLibSamples.Droid.Resource.Attribute.contentInsetEndWithActions;
-			global::PhantomLib.Droid.Resource.Attribute.contentInsetLeft = global::PhantomLibSamples.Droid.Resource.Attribute.contentInsetLeft;
-			global::PhantomLib.Droid.Resource.Attribute.contentInsetRight = global::PhantomLibSamples.Droid.Resource.Attribute.contentInsetRight;
-			global::PhantomLib.Droid.Resource.Attribute.contentInsetStart = global::PhantomLibSamples.Droid.Resource.Attribute.contentInsetStart;
-			global::PhantomLib.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::PhantomLibSamples.Droid.Resource.Attribute.contentInsetStartWithNavigation;
-			global::PhantomLib.Droid.Resource.Attribute.contentPadding = global::PhantomLibSamples.Droid.Resource.Attribute.contentPadding;
-			global::PhantomLib.Droid.Resource.Attribute.contentPaddingBottom = global::PhantomLibSamples.Droid.Resource.Attribute.contentPaddingBottom;
-			global::PhantomLib.Droid.Resource.Attribute.contentPaddingLeft = global::PhantomLibSamples.Droid.Resource.Attribute.contentPaddingLeft;
-			global::PhantomLib.Droid.Resource.Attribute.contentPaddingRight = global::PhantomLibSamples.Droid.Resource.Attribute.contentPaddingRight;
-			global::PhantomLib.Droid.Resource.Attribute.contentPaddingTop = global::PhantomLibSamples.Droid.Resource.Attribute.contentPaddingTop;
-			global::PhantomLib.Droid.Resource.Attribute.contentScrim = global::PhantomLibSamples.Droid.Resource.Attribute.contentScrim;
-			global::PhantomLib.Droid.Resource.Attribute.controlBackground = global::PhantomLibSamples.Droid.Resource.Attribute.controlBackground;
-			global::PhantomLib.Droid.Resource.Attribute.counterEnabled = global::PhantomLibSamples.Droid.Resource.Attribute.counterEnabled;
-			global::PhantomLib.Droid.Resource.Attribute.counterMaxLength = global::PhantomLibSamples.Droid.Resource.Attribute.counterMaxLength;
-			global::PhantomLib.Droid.Resource.Attribute.counterOverflowTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.counterOverflowTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.counterTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.counterTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.customNavigationLayout = global::PhantomLibSamples.Droid.Resource.Attribute.customNavigationLayout;
-			global::PhantomLib.Droid.Resource.Attribute.defaultQueryHint = global::PhantomLibSamples.Droid.Resource.Attribute.defaultQueryHint;
-			global::PhantomLib.Droid.Resource.Attribute.dialogPreferredPadding = global::PhantomLibSamples.Droid.Resource.Attribute.dialogPreferredPadding;
-			global::PhantomLib.Droid.Resource.Attribute.dialogTheme = global::PhantomLibSamples.Droid.Resource.Attribute.dialogTheme;
-			global::PhantomLib.Droid.Resource.Attribute.displayOptions = global::PhantomLibSamples.Droid.Resource.Attribute.displayOptions;
-			global::PhantomLib.Droid.Resource.Attribute.divider = global::PhantomLibSamples.Droid.Resource.Attribute.divider;
-			global::PhantomLib.Droid.Resource.Attribute.dividerHorizontal = global::PhantomLibSamples.Droid.Resource.Attribute.dividerHorizontal;
-			global::PhantomLib.Droid.Resource.Attribute.dividerPadding = global::PhantomLibSamples.Droid.Resource.Attribute.dividerPadding;
-			global::PhantomLib.Droid.Resource.Attribute.dividerVertical = global::PhantomLibSamples.Droid.Resource.Attribute.dividerVertical;
-			global::PhantomLib.Droid.Resource.Attribute.drawableSize = global::PhantomLibSamples.Droid.Resource.Attribute.drawableSize;
-			global::PhantomLib.Droid.Resource.Attribute.drawerArrowStyle = global::PhantomLibSamples.Droid.Resource.Attribute.drawerArrowStyle;
-			global::PhantomLib.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::PhantomLibSamples.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::PhantomLib.Droid.Resource.Attribute.dropDownListViewStyle = global::PhantomLibSamples.Droid.Resource.Attribute.dropDownListViewStyle;
-			global::PhantomLib.Droid.Resource.Attribute.editTextBackground = global::PhantomLibSamples.Droid.Resource.Attribute.editTextBackground;
-			global::PhantomLib.Droid.Resource.Attribute.editTextColor = global::PhantomLibSamples.Droid.Resource.Attribute.editTextColor;
-			global::PhantomLib.Droid.Resource.Attribute.editTextStyle = global::PhantomLibSamples.Droid.Resource.Attribute.editTextStyle;
-			global::PhantomLib.Droid.Resource.Attribute.elevation = global::PhantomLibSamples.Droid.Resource.Attribute.elevation;
-			global::PhantomLib.Droid.Resource.Attribute.errorEnabled = global::PhantomLibSamples.Droid.Resource.Attribute.errorEnabled;
-			global::PhantomLib.Droid.Resource.Attribute.errorTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.errorTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.expanded = global::PhantomLibSamples.Droid.Resource.Attribute.expanded;
-			global::PhantomLib.Droid.Resource.Attribute.expandedTitleGravity = global::PhantomLibSamples.Droid.Resource.Attribute.expandedTitleGravity;
-			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMargin = global::PhantomLibSamples.Droid.Resource.Attribute.expandedTitleMargin;
-			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMarginBottom = global::PhantomLibSamples.Droid.Resource.Attribute.expandedTitleMarginBottom;
-			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMarginEnd = global::PhantomLibSamples.Droid.Resource.Attribute.expandedTitleMarginEnd;
-			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMarginStart = global::PhantomLibSamples.Droid.Resource.Attribute.expandedTitleMarginStart;
-			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMarginTop = global::PhantomLibSamples.Droid.Resource.Attribute.expandedTitleMarginTop;
-			global::PhantomLib.Droid.Resource.Attribute.expandedTitleTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.expandedTitleTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.externalRouteEnabledDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.fabSize = global::PhantomLibSamples.Droid.Resource.Attribute.fabSize;
-			global::PhantomLib.Droid.Resource.Attribute.fastScrollEnabled = global::PhantomLibSamples.Droid.Resource.Attribute.fastScrollEnabled;
-			global::PhantomLib.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.font = global::PhantomLibSamples.Droid.Resource.Attribute.font;
-			global::PhantomLib.Droid.Resource.Attribute.fontFamily = global::PhantomLibSamples.Droid.Resource.Attribute.fontFamily;
-			global::PhantomLib.Droid.Resource.Attribute.fontProviderAuthority = global::PhantomLibSamples.Droid.Resource.Attribute.fontProviderAuthority;
-			global::PhantomLib.Droid.Resource.Attribute.fontProviderCerts = global::PhantomLibSamples.Droid.Resource.Attribute.fontProviderCerts;
-			global::PhantomLib.Droid.Resource.Attribute.fontProviderFetchStrategy = global::PhantomLibSamples.Droid.Resource.Attribute.fontProviderFetchStrategy;
-			global::PhantomLib.Droid.Resource.Attribute.fontProviderFetchTimeout = global::PhantomLibSamples.Droid.Resource.Attribute.fontProviderFetchTimeout;
-			global::PhantomLib.Droid.Resource.Attribute.fontProviderPackage = global::PhantomLibSamples.Droid.Resource.Attribute.fontProviderPackage;
-			global::PhantomLib.Droid.Resource.Attribute.fontProviderQuery = global::PhantomLibSamples.Droid.Resource.Attribute.fontProviderQuery;
-			global::PhantomLib.Droid.Resource.Attribute.fontStyle = global::PhantomLibSamples.Droid.Resource.Attribute.fontStyle;
-			global::PhantomLib.Droid.Resource.Attribute.fontWeight = global::PhantomLibSamples.Droid.Resource.Attribute.fontWeight;
-			global::PhantomLib.Droid.Resource.Attribute.foregroundInsidePadding = global::PhantomLibSamples.Droid.Resource.Attribute.foregroundInsidePadding;
-			global::PhantomLib.Droid.Resource.Attribute.gapBetweenBars = global::PhantomLibSamples.Droid.Resource.Attribute.gapBetweenBars;
-			global::PhantomLib.Droid.Resource.Attribute.goIcon = global::PhantomLibSamples.Droid.Resource.Attribute.goIcon;
-			global::PhantomLib.Droid.Resource.Attribute.headerLayout = global::PhantomLibSamples.Droid.Resource.Attribute.headerLayout;
-			global::PhantomLib.Droid.Resource.Attribute.height = global::PhantomLibSamples.Droid.Resource.Attribute.height;
-			global::PhantomLib.Droid.Resource.Attribute.hideOnContentScroll = global::PhantomLibSamples.Droid.Resource.Attribute.hideOnContentScroll;
-			global::PhantomLib.Droid.Resource.Attribute.hintAnimationEnabled = global::PhantomLibSamples.Droid.Resource.Attribute.hintAnimationEnabled;
-			global::PhantomLib.Droid.Resource.Attribute.hintEnabled = global::PhantomLibSamples.Droid.Resource.Attribute.hintEnabled;
-			global::PhantomLib.Droid.Resource.Attribute.hintTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.hintTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.homeAsUpIndicator = global::PhantomLibSamples.Droid.Resource.Attribute.homeAsUpIndicator;
-			global::PhantomLib.Droid.Resource.Attribute.homeLayout = global::PhantomLibSamples.Droid.Resource.Attribute.homeLayout;
-			global::PhantomLib.Droid.Resource.Attribute.icon = global::PhantomLibSamples.Droid.Resource.Attribute.icon;
-			global::PhantomLib.Droid.Resource.Attribute.iconifiedByDefault = global::PhantomLibSamples.Droid.Resource.Attribute.iconifiedByDefault;
-			global::PhantomLib.Droid.Resource.Attribute.iconTint = global::PhantomLibSamples.Droid.Resource.Attribute.iconTint;
-			global::PhantomLib.Droid.Resource.Attribute.iconTintMode = global::PhantomLibSamples.Droid.Resource.Attribute.iconTintMode;
-			global::PhantomLib.Droid.Resource.Attribute.imageButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.imageButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.indeterminateProgressStyle = global::PhantomLibSamples.Droid.Resource.Attribute.indeterminateProgressStyle;
-			global::PhantomLib.Droid.Resource.Attribute.initialActivityCount = global::PhantomLibSamples.Droid.Resource.Attribute.initialActivityCount;
-			global::PhantomLib.Droid.Resource.Attribute.insetForeground = global::PhantomLibSamples.Droid.Resource.Attribute.insetForeground;
-			global::PhantomLib.Droid.Resource.Attribute.isLightTheme = global::PhantomLibSamples.Droid.Resource.Attribute.isLightTheme;
-			global::PhantomLib.Droid.Resource.Attribute.itemBackground = global::PhantomLibSamples.Droid.Resource.Attribute.itemBackground;
-			global::PhantomLib.Droid.Resource.Attribute.itemIconTint = global::PhantomLibSamples.Droid.Resource.Attribute.itemIconTint;
-			global::PhantomLib.Droid.Resource.Attribute.itemPadding = global::PhantomLibSamples.Droid.Resource.Attribute.itemPadding;
-			global::PhantomLib.Droid.Resource.Attribute.itemTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.itemTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.itemTextColor = global::PhantomLibSamples.Droid.Resource.Attribute.itemTextColor;
-			global::PhantomLib.Droid.Resource.Attribute.keylines = global::PhantomLibSamples.Droid.Resource.Attribute.keylines;
-			global::PhantomLib.Droid.Resource.Attribute.layout = global::PhantomLibSamples.Droid.Resource.Attribute.layout;
-			global::PhantomLib.Droid.Resource.Attribute.layoutManager = global::PhantomLibSamples.Droid.Resource.Attribute.layoutManager;
-			global::PhantomLib.Droid.Resource.Attribute.layout_anchor = global::PhantomLibSamples.Droid.Resource.Attribute.layout_anchor;
-			global::PhantomLib.Droid.Resource.Attribute.layout_anchorGravity = global::PhantomLibSamples.Droid.Resource.Attribute.layout_anchorGravity;
-			global::PhantomLib.Droid.Resource.Attribute.layout_behavior = global::PhantomLibSamples.Droid.Resource.Attribute.layout_behavior;
-			global::PhantomLib.Droid.Resource.Attribute.layout_collapseMode = global::PhantomLibSamples.Droid.Resource.Attribute.layout_collapseMode;
-			global::PhantomLib.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::PhantomLibSamples.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
-			global::PhantomLib.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::PhantomLibSamples.Droid.Resource.Attribute.layout_dodgeInsetEdges;
-			global::PhantomLib.Droid.Resource.Attribute.layout_insetEdge = global::PhantomLibSamples.Droid.Resource.Attribute.layout_insetEdge;
-			global::PhantomLib.Droid.Resource.Attribute.layout_keyline = global::PhantomLibSamples.Droid.Resource.Attribute.layout_keyline;
-			global::PhantomLib.Droid.Resource.Attribute.layout_scrollFlags = global::PhantomLibSamples.Droid.Resource.Attribute.layout_scrollFlags;
-			global::PhantomLib.Droid.Resource.Attribute.layout_scrollInterpolator = global::PhantomLibSamples.Droid.Resource.Attribute.layout_scrollInterpolator;
-			global::PhantomLib.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::PhantomLibSamples.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::PhantomLib.Droid.Resource.Attribute.listDividerAlertDialog = global::PhantomLibSamples.Droid.Resource.Attribute.listDividerAlertDialog;
-			global::PhantomLib.Droid.Resource.Attribute.listItemLayout = global::PhantomLibSamples.Droid.Resource.Attribute.listItemLayout;
-			global::PhantomLib.Droid.Resource.Attribute.listLayout = global::PhantomLibSamples.Droid.Resource.Attribute.listLayout;
-			global::PhantomLib.Droid.Resource.Attribute.listMenuViewStyle = global::PhantomLibSamples.Droid.Resource.Attribute.listMenuViewStyle;
-			global::PhantomLib.Droid.Resource.Attribute.listPopupWindowStyle = global::PhantomLibSamples.Droid.Resource.Attribute.listPopupWindowStyle;
-			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemHeight = global::PhantomLibSamples.Droid.Resource.Attribute.listPreferredItemHeight;
-			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::PhantomLibSamples.Droid.Resource.Attribute.listPreferredItemHeightLarge;
-			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::PhantomLibSamples.Droid.Resource.Attribute.listPreferredItemHeightSmall;
-			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::PhantomLibSamples.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::PhantomLibSamples.Droid.Resource.Attribute.listPreferredItemPaddingRight;
-			global::PhantomLib.Droid.Resource.Attribute.logo = global::PhantomLibSamples.Droid.Resource.Attribute.logo;
-			global::PhantomLib.Droid.Resource.Attribute.logoDescription = global::PhantomLibSamples.Droid.Resource.Attribute.logoDescription;
-			global::PhantomLib.Droid.Resource.Attribute.maxActionInlineWidth = global::PhantomLibSamples.Droid.Resource.Attribute.maxActionInlineWidth;
-			global::PhantomLib.Droid.Resource.Attribute.maxButtonHeight = global::PhantomLibSamples.Droid.Resource.Attribute.maxButtonHeight;
-			global::PhantomLib.Droid.Resource.Attribute.measureWithLargestChild = global::PhantomLibSamples.Droid.Resource.Attribute.measureWithLargestChild;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteButtonTint = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteButtonTint;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteCloseDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteCloseDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRoutePauseDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRoutePlayDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteStopDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteStopDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteTheme = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteTheme;
-			global::PhantomLib.Droid.Resource.Attribute.mediaRouteTvIconDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.menu = global::PhantomLibSamples.Droid.Resource.Attribute.menu;
-			global::PhantomLib.Droid.Resource.Attribute.multiChoiceItemLayout = global::PhantomLibSamples.Droid.Resource.Attribute.multiChoiceItemLayout;
-			global::PhantomLib.Droid.Resource.Attribute.navigationContentDescription = global::PhantomLibSamples.Droid.Resource.Attribute.navigationContentDescription;
-			global::PhantomLib.Droid.Resource.Attribute.navigationIcon = global::PhantomLibSamples.Droid.Resource.Attribute.navigationIcon;
-			global::PhantomLib.Droid.Resource.Attribute.navigationMode = global::PhantomLibSamples.Droid.Resource.Attribute.navigationMode;
-			global::PhantomLib.Droid.Resource.Attribute.numericModifiers = global::PhantomLibSamples.Droid.Resource.Attribute.numericModifiers;
-			global::PhantomLib.Droid.Resource.Attribute.overlapAnchor = global::PhantomLibSamples.Droid.Resource.Attribute.overlapAnchor;
-			global::PhantomLib.Droid.Resource.Attribute.paddingBottomNoButtons = global::PhantomLibSamples.Droid.Resource.Attribute.paddingBottomNoButtons;
-			global::PhantomLib.Droid.Resource.Attribute.paddingEnd = global::PhantomLibSamples.Droid.Resource.Attribute.paddingEnd;
-			global::PhantomLib.Droid.Resource.Attribute.paddingStart = global::PhantomLibSamples.Droid.Resource.Attribute.paddingStart;
-			global::PhantomLib.Droid.Resource.Attribute.paddingTopNoTitle = global::PhantomLibSamples.Droid.Resource.Attribute.paddingTopNoTitle;
-			global::PhantomLib.Droid.Resource.Attribute.panelBackground = global::PhantomLibSamples.Droid.Resource.Attribute.panelBackground;
-			global::PhantomLib.Droid.Resource.Attribute.panelMenuListTheme = global::PhantomLibSamples.Droid.Resource.Attribute.panelMenuListTheme;
-			global::PhantomLib.Droid.Resource.Attribute.panelMenuListWidth = global::PhantomLibSamples.Droid.Resource.Attribute.panelMenuListWidth;
-			global::PhantomLib.Droid.Resource.Attribute.passwordToggleContentDescription = global::PhantomLibSamples.Droid.Resource.Attribute.passwordToggleContentDescription;
-			global::PhantomLib.Droid.Resource.Attribute.passwordToggleDrawable = global::PhantomLibSamples.Droid.Resource.Attribute.passwordToggleDrawable;
-			global::PhantomLib.Droid.Resource.Attribute.passwordToggleEnabled = global::PhantomLibSamples.Droid.Resource.Attribute.passwordToggleEnabled;
-			global::PhantomLib.Droid.Resource.Attribute.passwordToggleTint = global::PhantomLibSamples.Droid.Resource.Attribute.passwordToggleTint;
-			global::PhantomLib.Droid.Resource.Attribute.passwordToggleTintMode = global::PhantomLibSamples.Droid.Resource.Attribute.passwordToggleTintMode;
-			global::PhantomLib.Droid.Resource.Attribute.popupMenuStyle = global::PhantomLibSamples.Droid.Resource.Attribute.popupMenuStyle;
-			global::PhantomLib.Droid.Resource.Attribute.popupTheme = global::PhantomLibSamples.Droid.Resource.Attribute.popupTheme;
-			global::PhantomLib.Droid.Resource.Attribute.popupWindowStyle = global::PhantomLibSamples.Droid.Resource.Attribute.popupWindowStyle;
-			global::PhantomLib.Droid.Resource.Attribute.preserveIconSpacing = global::PhantomLibSamples.Droid.Resource.Attribute.preserveIconSpacing;
-			global::PhantomLib.Droid.Resource.Attribute.pressedTranslationZ = global::PhantomLibSamples.Droid.Resource.Attribute.pressedTranslationZ;
-			global::PhantomLib.Droid.Resource.Attribute.progressBarPadding = global::PhantomLibSamples.Droid.Resource.Attribute.progressBarPadding;
-			global::PhantomLib.Droid.Resource.Attribute.progressBarStyle = global::PhantomLibSamples.Droid.Resource.Attribute.progressBarStyle;
-			global::PhantomLib.Droid.Resource.Attribute.queryBackground = global::PhantomLibSamples.Droid.Resource.Attribute.queryBackground;
-			global::PhantomLib.Droid.Resource.Attribute.queryHint = global::PhantomLibSamples.Droid.Resource.Attribute.queryHint;
-			global::PhantomLib.Droid.Resource.Attribute.radioButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.radioButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.ratingBarStyle = global::PhantomLibSamples.Droid.Resource.Attribute.ratingBarStyle;
-			global::PhantomLib.Droid.Resource.Attribute.ratingBarStyleIndicator = global::PhantomLibSamples.Droid.Resource.Attribute.ratingBarStyleIndicator;
-			global::PhantomLib.Droid.Resource.Attribute.ratingBarStyleSmall = global::PhantomLibSamples.Droid.Resource.Attribute.ratingBarStyleSmall;
-			global::PhantomLib.Droid.Resource.Attribute.reverseLayout = global::PhantomLibSamples.Droid.Resource.Attribute.reverseLayout;
-			global::PhantomLib.Droid.Resource.Attribute.rippleColor = global::PhantomLibSamples.Droid.Resource.Attribute.rippleColor;
-			global::PhantomLib.Droid.Resource.Attribute.scrimAnimationDuration = global::PhantomLibSamples.Droid.Resource.Attribute.scrimAnimationDuration;
-			global::PhantomLib.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::PhantomLibSamples.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
-			global::PhantomLib.Droid.Resource.Attribute.searchHintIcon = global::PhantomLibSamples.Droid.Resource.Attribute.searchHintIcon;
-			global::PhantomLib.Droid.Resource.Attribute.searchIcon = global::PhantomLibSamples.Droid.Resource.Attribute.searchIcon;
-			global::PhantomLib.Droid.Resource.Attribute.searchViewStyle = global::PhantomLibSamples.Droid.Resource.Attribute.searchViewStyle;
-			global::PhantomLib.Droid.Resource.Attribute.seekBarStyle = global::PhantomLibSamples.Droid.Resource.Attribute.seekBarStyle;
-			global::PhantomLib.Droid.Resource.Attribute.selectableItemBackground = global::PhantomLibSamples.Droid.Resource.Attribute.selectableItemBackground;
-			global::PhantomLib.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::PhantomLibSamples.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::PhantomLib.Droid.Resource.Attribute.showAsAction = global::PhantomLibSamples.Droid.Resource.Attribute.showAsAction;
-			global::PhantomLib.Droid.Resource.Attribute.showDividers = global::PhantomLibSamples.Droid.Resource.Attribute.showDividers;
-			global::PhantomLib.Droid.Resource.Attribute.showText = global::PhantomLibSamples.Droid.Resource.Attribute.showText;
-			global::PhantomLib.Droid.Resource.Attribute.showTitle = global::PhantomLibSamples.Droid.Resource.Attribute.showTitle;
-			global::PhantomLib.Droid.Resource.Attribute.singleChoiceItemLayout = global::PhantomLibSamples.Droid.Resource.Attribute.singleChoiceItemLayout;
-			global::PhantomLib.Droid.Resource.Attribute.spanCount = global::PhantomLibSamples.Droid.Resource.Attribute.spanCount;
-			global::PhantomLib.Droid.Resource.Attribute.spinBars = global::PhantomLibSamples.Droid.Resource.Attribute.spinBars;
-			global::PhantomLib.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::PhantomLibSamples.Droid.Resource.Attribute.spinnerDropDownItemStyle;
-			global::PhantomLib.Droid.Resource.Attribute.spinnerStyle = global::PhantomLibSamples.Droid.Resource.Attribute.spinnerStyle;
-			global::PhantomLib.Droid.Resource.Attribute.splitTrack = global::PhantomLibSamples.Droid.Resource.Attribute.splitTrack;
-			global::PhantomLib.Droid.Resource.Attribute.srcCompat = global::PhantomLibSamples.Droid.Resource.Attribute.srcCompat;
-			global::PhantomLib.Droid.Resource.Attribute.stackFromEnd = global::PhantomLibSamples.Droid.Resource.Attribute.stackFromEnd;
-			global::PhantomLib.Droid.Resource.Attribute.state_above_anchor = global::PhantomLibSamples.Droid.Resource.Attribute.state_above_anchor;
-			global::PhantomLib.Droid.Resource.Attribute.state_collapsed = global::PhantomLibSamples.Droid.Resource.Attribute.state_collapsed;
-			global::PhantomLib.Droid.Resource.Attribute.state_collapsible = global::PhantomLibSamples.Droid.Resource.Attribute.state_collapsible;
-			global::PhantomLib.Droid.Resource.Attribute.statusBarBackground = global::PhantomLibSamples.Droid.Resource.Attribute.statusBarBackground;
-			global::PhantomLib.Droid.Resource.Attribute.statusBarScrim = global::PhantomLibSamples.Droid.Resource.Attribute.statusBarScrim;
-			global::PhantomLib.Droid.Resource.Attribute.subMenuArrow = global::PhantomLibSamples.Droid.Resource.Attribute.subMenuArrow;
-			global::PhantomLib.Droid.Resource.Attribute.submitBackground = global::PhantomLibSamples.Droid.Resource.Attribute.submitBackground;
-			global::PhantomLib.Droid.Resource.Attribute.subtitle = global::PhantomLibSamples.Droid.Resource.Attribute.subtitle;
-			global::PhantomLib.Droid.Resource.Attribute.subtitleTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.subtitleTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.subtitleTextColor = global::PhantomLibSamples.Droid.Resource.Attribute.subtitleTextColor;
-			global::PhantomLib.Droid.Resource.Attribute.subtitleTextStyle = global::PhantomLibSamples.Droid.Resource.Attribute.subtitleTextStyle;
-			global::PhantomLib.Droid.Resource.Attribute.suggestionRowLayout = global::PhantomLibSamples.Droid.Resource.Attribute.suggestionRowLayout;
-			global::PhantomLib.Droid.Resource.Attribute.switchMinWidth = global::PhantomLibSamples.Droid.Resource.Attribute.switchMinWidth;
-			global::PhantomLib.Droid.Resource.Attribute.switchPadding = global::PhantomLibSamples.Droid.Resource.Attribute.switchPadding;
-			global::PhantomLib.Droid.Resource.Attribute.switchStyle = global::PhantomLibSamples.Droid.Resource.Attribute.switchStyle;
-			global::PhantomLib.Droid.Resource.Attribute.switchTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.switchTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.tabBackground = global::PhantomLibSamples.Droid.Resource.Attribute.tabBackground;
-			global::PhantomLib.Droid.Resource.Attribute.tabContentStart = global::PhantomLibSamples.Droid.Resource.Attribute.tabContentStart;
-			global::PhantomLib.Droid.Resource.Attribute.tabGravity = global::PhantomLibSamples.Droid.Resource.Attribute.tabGravity;
-			global::PhantomLib.Droid.Resource.Attribute.tabIndicatorColor = global::PhantomLibSamples.Droid.Resource.Attribute.tabIndicatorColor;
-			global::PhantomLib.Droid.Resource.Attribute.tabIndicatorHeight = global::PhantomLibSamples.Droid.Resource.Attribute.tabIndicatorHeight;
-			global::PhantomLib.Droid.Resource.Attribute.tabMaxWidth = global::PhantomLibSamples.Droid.Resource.Attribute.tabMaxWidth;
-			global::PhantomLib.Droid.Resource.Attribute.tabMinWidth = global::PhantomLibSamples.Droid.Resource.Attribute.tabMinWidth;
-			global::PhantomLib.Droid.Resource.Attribute.tabMode = global::PhantomLibSamples.Droid.Resource.Attribute.tabMode;
-			global::PhantomLib.Droid.Resource.Attribute.tabPadding = global::PhantomLibSamples.Droid.Resource.Attribute.tabPadding;
-			global::PhantomLib.Droid.Resource.Attribute.tabPaddingBottom = global::PhantomLibSamples.Droid.Resource.Attribute.tabPaddingBottom;
-			global::PhantomLib.Droid.Resource.Attribute.tabPaddingEnd = global::PhantomLibSamples.Droid.Resource.Attribute.tabPaddingEnd;
-			global::PhantomLib.Droid.Resource.Attribute.tabPaddingStart = global::PhantomLibSamples.Droid.Resource.Attribute.tabPaddingStart;
-			global::PhantomLib.Droid.Resource.Attribute.tabPaddingTop = global::PhantomLibSamples.Droid.Resource.Attribute.tabPaddingTop;
-			global::PhantomLib.Droid.Resource.Attribute.tabSelectedTextColor = global::PhantomLibSamples.Droid.Resource.Attribute.tabSelectedTextColor;
-			global::PhantomLib.Droid.Resource.Attribute.tabTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.tabTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.tabTextColor = global::PhantomLibSamples.Droid.Resource.Attribute.tabTextColor;
-			global::PhantomLib.Droid.Resource.Attribute.textAllCaps = global::PhantomLibSamples.Droid.Resource.Attribute.textAllCaps;
-			global::PhantomLib.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::PhantomLibSamples.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::PhantomLib.Droid.Resource.Attribute.textAppearanceListItem = global::PhantomLibSamples.Droid.Resource.Attribute.textAppearanceListItem;
-			global::PhantomLib.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::PhantomLibSamples.Droid.Resource.Attribute.textAppearanceListItemSecondary;
-			global::PhantomLib.Droid.Resource.Attribute.textAppearanceListItemSmall = global::PhantomLibSamples.Droid.Resource.Attribute.textAppearanceListItemSmall;
-			global::PhantomLib.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::PhantomLibSamples.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
-			global::PhantomLib.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::PhantomLibSamples.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::PhantomLib.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::PhantomLibSamples.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::PhantomLib.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::PhantomLibSamples.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::PhantomLib.Droid.Resource.Attribute.textColorAlertDialogListItem = global::PhantomLibSamples.Droid.Resource.Attribute.textColorAlertDialogListItem;
-			global::PhantomLib.Droid.Resource.Attribute.textColorError = global::PhantomLibSamples.Droid.Resource.Attribute.textColorError;
-			global::PhantomLib.Droid.Resource.Attribute.textColorSearchUrl = global::PhantomLibSamples.Droid.Resource.Attribute.textColorSearchUrl;
-			global::PhantomLib.Droid.Resource.Attribute.theme = global::PhantomLibSamples.Droid.Resource.Attribute.theme;
-			global::PhantomLib.Droid.Resource.Attribute.thickness = global::PhantomLibSamples.Droid.Resource.Attribute.thickness;
-			global::PhantomLib.Droid.Resource.Attribute.thumbTextPadding = global::PhantomLibSamples.Droid.Resource.Attribute.thumbTextPadding;
-			global::PhantomLib.Droid.Resource.Attribute.thumbTint = global::PhantomLibSamples.Droid.Resource.Attribute.thumbTint;
-			global::PhantomLib.Droid.Resource.Attribute.thumbTintMode = global::PhantomLibSamples.Droid.Resource.Attribute.thumbTintMode;
-			global::PhantomLib.Droid.Resource.Attribute.tickMark = global::PhantomLibSamples.Droid.Resource.Attribute.tickMark;
-			global::PhantomLib.Droid.Resource.Attribute.tickMarkTint = global::PhantomLibSamples.Droid.Resource.Attribute.tickMarkTint;
-			global::PhantomLib.Droid.Resource.Attribute.tickMarkTintMode = global::PhantomLibSamples.Droid.Resource.Attribute.tickMarkTintMode;
-			global::PhantomLib.Droid.Resource.Attribute.tint = global::PhantomLibSamples.Droid.Resource.Attribute.tint;
-			global::PhantomLib.Droid.Resource.Attribute.tintMode = global::PhantomLibSamples.Droid.Resource.Attribute.tintMode;
-			global::PhantomLib.Droid.Resource.Attribute.title = global::PhantomLibSamples.Droid.Resource.Attribute.title;
-			global::PhantomLib.Droid.Resource.Attribute.titleEnabled = global::PhantomLibSamples.Droid.Resource.Attribute.titleEnabled;
-			global::PhantomLib.Droid.Resource.Attribute.titleMargin = global::PhantomLibSamples.Droid.Resource.Attribute.titleMargin;
-			global::PhantomLib.Droid.Resource.Attribute.titleMarginBottom = global::PhantomLibSamples.Droid.Resource.Attribute.titleMarginBottom;
-			global::PhantomLib.Droid.Resource.Attribute.titleMarginEnd = global::PhantomLibSamples.Droid.Resource.Attribute.titleMarginEnd;
-			global::PhantomLib.Droid.Resource.Attribute.titleMargins = global::PhantomLibSamples.Droid.Resource.Attribute.titleMargins;
-			global::PhantomLib.Droid.Resource.Attribute.titleMarginStart = global::PhantomLibSamples.Droid.Resource.Attribute.titleMarginStart;
-			global::PhantomLib.Droid.Resource.Attribute.titleMarginTop = global::PhantomLibSamples.Droid.Resource.Attribute.titleMarginTop;
-			global::PhantomLib.Droid.Resource.Attribute.titleTextAppearance = global::PhantomLibSamples.Droid.Resource.Attribute.titleTextAppearance;
-			global::PhantomLib.Droid.Resource.Attribute.titleTextColor = global::PhantomLibSamples.Droid.Resource.Attribute.titleTextColor;
-			global::PhantomLib.Droid.Resource.Attribute.titleTextStyle = global::PhantomLibSamples.Droid.Resource.Attribute.titleTextStyle;
-			global::PhantomLib.Droid.Resource.Attribute.toolbarId = global::PhantomLibSamples.Droid.Resource.Attribute.toolbarId;
-			global::PhantomLib.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::PhantomLibSamples.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::PhantomLib.Droid.Resource.Attribute.toolbarStyle = global::PhantomLibSamples.Droid.Resource.Attribute.toolbarStyle;
-			global::PhantomLib.Droid.Resource.Attribute.tooltipForegroundColor = global::PhantomLibSamples.Droid.Resource.Attribute.tooltipForegroundColor;
-			global::PhantomLib.Droid.Resource.Attribute.tooltipFrameBackground = global::PhantomLibSamples.Droid.Resource.Attribute.tooltipFrameBackground;
-			global::PhantomLib.Droid.Resource.Attribute.tooltipText = global::PhantomLibSamples.Droid.Resource.Attribute.tooltipText;
-			global::PhantomLib.Droid.Resource.Attribute.track = global::PhantomLibSamples.Droid.Resource.Attribute.track;
-			global::PhantomLib.Droid.Resource.Attribute.trackTint = global::PhantomLibSamples.Droid.Resource.Attribute.trackTint;
-			global::PhantomLib.Droid.Resource.Attribute.trackTintMode = global::PhantomLibSamples.Droid.Resource.Attribute.trackTintMode;
-			global::PhantomLib.Droid.Resource.Attribute.useCompatPadding = global::PhantomLibSamples.Droid.Resource.Attribute.useCompatPadding;
-			global::PhantomLib.Droid.Resource.Attribute.voiceIcon = global::PhantomLibSamples.Droid.Resource.Attribute.voiceIcon;
-			global::PhantomLib.Droid.Resource.Attribute.windowActionBar = global::PhantomLibSamples.Droid.Resource.Attribute.windowActionBar;
-			global::PhantomLib.Droid.Resource.Attribute.windowActionBarOverlay = global::PhantomLibSamples.Droid.Resource.Attribute.windowActionBarOverlay;
-			global::PhantomLib.Droid.Resource.Attribute.windowActionModeOverlay = global::PhantomLibSamples.Droid.Resource.Attribute.windowActionModeOverlay;
-			global::PhantomLib.Droid.Resource.Attribute.windowFixedHeightMajor = global::PhantomLibSamples.Droid.Resource.Attribute.windowFixedHeightMajor;
-			global::PhantomLib.Droid.Resource.Attribute.windowFixedHeightMinor = global::PhantomLibSamples.Droid.Resource.Attribute.windowFixedHeightMinor;
-			global::PhantomLib.Droid.Resource.Attribute.windowFixedWidthMajor = global::PhantomLibSamples.Droid.Resource.Attribute.windowFixedWidthMajor;
-			global::PhantomLib.Droid.Resource.Attribute.windowFixedWidthMinor = global::PhantomLibSamples.Droid.Resource.Attribute.windowFixedWidthMinor;
-			global::PhantomLib.Droid.Resource.Attribute.windowMinWidthMajor = global::PhantomLibSamples.Droid.Resource.Attribute.windowMinWidthMajor;
-			global::PhantomLib.Droid.Resource.Attribute.windowMinWidthMinor = global::PhantomLibSamples.Droid.Resource.Attribute.windowMinWidthMinor;
-			global::PhantomLib.Droid.Resource.Attribute.windowNoTitle = global::PhantomLibSamples.Droid.Resource.Attribute.windowNoTitle;
-			global::PhantomLib.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::PhantomLibSamples.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::PhantomLib.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::PhantomLibSamples.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
-			global::PhantomLib.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::PhantomLibSamples.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::PhantomLib.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::PhantomLibSamples.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
-			global::PhantomLib.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::PhantomLibSamples.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
-			global::PhantomLib.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::PhantomLibSamples.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::PhantomLib.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::PhantomLibSamples.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::PhantomLib.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::PhantomLibSamples.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
-			global::PhantomLib.Droid.Resource.Color.abc_btn_colored_text_material = global::PhantomLibSamples.Droid.Resource.Color.abc_btn_colored_text_material;
-			global::PhantomLib.Droid.Resource.Color.abc_color_highlight_material = global::PhantomLibSamples.Droid.Resource.Color.abc_color_highlight_material;
-			global::PhantomLib.Droid.Resource.Color.abc_hint_foreground_material_dark = global::PhantomLibSamples.Droid.Resource.Color.abc_hint_foreground_material_dark;
-			global::PhantomLib.Droid.Resource.Color.abc_hint_foreground_material_light = global::PhantomLibSamples.Droid.Resource.Color.abc_hint_foreground_material_light;
-			global::PhantomLib.Droid.Resource.Color.abc_input_method_navigation_guard = global::PhantomLibSamples.Droid.Resource.Color.abc_input_method_navigation_guard;
-			global::PhantomLib.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::PhantomLibSamples.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::PhantomLib.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::PhantomLibSamples.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::PhantomLib.Droid.Resource.Color.abc_primary_text_material_dark = global::PhantomLibSamples.Droid.Resource.Color.abc_primary_text_material_dark;
-			global::PhantomLib.Droid.Resource.Color.abc_primary_text_material_light = global::PhantomLibSamples.Droid.Resource.Color.abc_primary_text_material_light;
-			global::PhantomLib.Droid.Resource.Color.abc_search_url_text = global::PhantomLibSamples.Droid.Resource.Color.abc_search_url_text;
-			global::PhantomLib.Droid.Resource.Color.abc_search_url_text_normal = global::PhantomLibSamples.Droid.Resource.Color.abc_search_url_text_normal;
-			global::PhantomLib.Droid.Resource.Color.abc_search_url_text_pressed = global::PhantomLibSamples.Droid.Resource.Color.abc_search_url_text_pressed;
-			global::PhantomLib.Droid.Resource.Color.abc_search_url_text_selected = global::PhantomLibSamples.Droid.Resource.Color.abc_search_url_text_selected;
-			global::PhantomLib.Droid.Resource.Color.abc_secondary_text_material_dark = global::PhantomLibSamples.Droid.Resource.Color.abc_secondary_text_material_dark;
-			global::PhantomLib.Droid.Resource.Color.abc_secondary_text_material_light = global::PhantomLibSamples.Droid.Resource.Color.abc_secondary_text_material_light;
-			global::PhantomLib.Droid.Resource.Color.abc_tint_btn_checkable = global::PhantomLibSamples.Droid.Resource.Color.abc_tint_btn_checkable;
-			global::PhantomLib.Droid.Resource.Color.abc_tint_default = global::PhantomLibSamples.Droid.Resource.Color.abc_tint_default;
-			global::PhantomLib.Droid.Resource.Color.abc_tint_edittext = global::PhantomLibSamples.Droid.Resource.Color.abc_tint_edittext;
-			global::PhantomLib.Droid.Resource.Color.abc_tint_seek_thumb = global::PhantomLibSamples.Droid.Resource.Color.abc_tint_seek_thumb;
-			global::PhantomLib.Droid.Resource.Color.abc_tint_spinner = global::PhantomLibSamples.Droid.Resource.Color.abc_tint_spinner;
-			global::PhantomLib.Droid.Resource.Color.abc_tint_switch_track = global::PhantomLibSamples.Droid.Resource.Color.abc_tint_switch_track;
-			global::PhantomLib.Droid.Resource.Color.accent_material_dark = global::PhantomLibSamples.Droid.Resource.Color.accent_material_dark;
-			global::PhantomLib.Droid.Resource.Color.accent_material_light = global::PhantomLibSamples.Droid.Resource.Color.accent_material_light;
-			global::PhantomLib.Droid.Resource.Color.background_floating_material_dark = global::PhantomLibSamples.Droid.Resource.Color.background_floating_material_dark;
-			global::PhantomLib.Droid.Resource.Color.background_floating_material_light = global::PhantomLibSamples.Droid.Resource.Color.background_floating_material_light;
-			global::PhantomLib.Droid.Resource.Color.background_material_dark = global::PhantomLibSamples.Droid.Resource.Color.background_material_dark;
-			global::PhantomLib.Droid.Resource.Color.background_material_light = global::PhantomLibSamples.Droid.Resource.Color.background_material_light;
-			global::PhantomLib.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::PhantomLibSamples.Droid.Resource.Color.bright_foreground_disabled_material_dark;
-			global::PhantomLib.Droid.Resource.Color.bright_foreground_disabled_material_light = global::PhantomLibSamples.Droid.Resource.Color.bright_foreground_disabled_material_light;
-			global::PhantomLib.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::PhantomLibSamples.Droid.Resource.Color.bright_foreground_inverse_material_dark;
-			global::PhantomLib.Droid.Resource.Color.bright_foreground_inverse_material_light = global::PhantomLibSamples.Droid.Resource.Color.bright_foreground_inverse_material_light;
-			global::PhantomLib.Droid.Resource.Color.bright_foreground_material_dark = global::PhantomLibSamples.Droid.Resource.Color.bright_foreground_material_dark;
-			global::PhantomLib.Droid.Resource.Color.bright_foreground_material_light = global::PhantomLibSamples.Droid.Resource.Color.bright_foreground_material_light;
-			global::PhantomLib.Droid.Resource.Color.button_material_dark = global::PhantomLibSamples.Droid.Resource.Color.button_material_dark;
-			global::PhantomLib.Droid.Resource.Color.button_material_light = global::PhantomLibSamples.Droid.Resource.Color.button_material_light;
-			global::PhantomLib.Droid.Resource.Color.cardview_dark_background = global::PhantomLibSamples.Droid.Resource.Color.cardview_dark_background;
-			global::PhantomLib.Droid.Resource.Color.cardview_light_background = global::PhantomLibSamples.Droid.Resource.Color.cardview_light_background;
-			global::PhantomLib.Droid.Resource.Color.cardview_shadow_end_color = global::PhantomLibSamples.Droid.Resource.Color.cardview_shadow_end_color;
-			global::PhantomLib.Droid.Resource.Color.cardview_shadow_start_color = global::PhantomLibSamples.Droid.Resource.Color.cardview_shadow_start_color;
-			global::PhantomLib.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::PhantomLibSamples.Droid.Resource.Color.design_bottom_navigation_shadow_color;
-			global::PhantomLib.Droid.Resource.Color.design_error = global::PhantomLibSamples.Droid.Resource.Color.design_error;
-			global::PhantomLib.Droid.Resource.Color.design_fab_shadow_end_color = global::PhantomLibSamples.Droid.Resource.Color.design_fab_shadow_end_color;
-			global::PhantomLib.Droid.Resource.Color.design_fab_shadow_mid_color = global::PhantomLibSamples.Droid.Resource.Color.design_fab_shadow_mid_color;
-			global::PhantomLib.Droid.Resource.Color.design_fab_shadow_start_color = global::PhantomLibSamples.Droid.Resource.Color.design_fab_shadow_start_color;
-			global::PhantomLib.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::PhantomLibSamples.Droid.Resource.Color.design_fab_stroke_end_inner_color;
-			global::PhantomLib.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::PhantomLibSamples.Droid.Resource.Color.design_fab_stroke_end_outer_color;
-			global::PhantomLib.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::PhantomLibSamples.Droid.Resource.Color.design_fab_stroke_top_inner_color;
-			global::PhantomLib.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::PhantomLibSamples.Droid.Resource.Color.design_fab_stroke_top_outer_color;
-			global::PhantomLib.Droid.Resource.Color.design_snackbar_background_color = global::PhantomLibSamples.Droid.Resource.Color.design_snackbar_background_color;
-			global::PhantomLib.Droid.Resource.Color.design_tint_password_toggle = global::PhantomLibSamples.Droid.Resource.Color.design_tint_password_toggle;
-			global::PhantomLib.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::PhantomLibSamples.Droid.Resource.Color.dim_foreground_disabled_material_dark;
-			global::PhantomLib.Droid.Resource.Color.dim_foreground_disabled_material_light = global::PhantomLibSamples.Droid.Resource.Color.dim_foreground_disabled_material_light;
-			global::PhantomLib.Droid.Resource.Color.dim_foreground_material_dark = global::PhantomLibSamples.Droid.Resource.Color.dim_foreground_material_dark;
-			global::PhantomLib.Droid.Resource.Color.dim_foreground_material_light = global::PhantomLibSamples.Droid.Resource.Color.dim_foreground_material_light;
-			global::PhantomLib.Droid.Resource.Color.error_color_material = global::PhantomLibSamples.Droid.Resource.Color.error_color_material;
-			global::PhantomLib.Droid.Resource.Color.foreground_material_dark = global::PhantomLibSamples.Droid.Resource.Color.foreground_material_dark;
-			global::PhantomLib.Droid.Resource.Color.foreground_material_light = global::PhantomLibSamples.Droid.Resource.Color.foreground_material_light;
-			global::PhantomLib.Droid.Resource.Color.highlighted_text_material_dark = global::PhantomLibSamples.Droid.Resource.Color.highlighted_text_material_dark;
-			global::PhantomLib.Droid.Resource.Color.highlighted_text_material_light = global::PhantomLibSamples.Droid.Resource.Color.highlighted_text_material_light;
-			global::PhantomLib.Droid.Resource.Color.material_blue_grey_800 = global::PhantomLibSamples.Droid.Resource.Color.material_blue_grey_800;
-			global::PhantomLib.Droid.Resource.Color.material_blue_grey_900 = global::PhantomLibSamples.Droid.Resource.Color.material_blue_grey_900;
-			global::PhantomLib.Droid.Resource.Color.material_blue_grey_950 = global::PhantomLibSamples.Droid.Resource.Color.material_blue_grey_950;
-			global::PhantomLib.Droid.Resource.Color.material_deep_teal_200 = global::PhantomLibSamples.Droid.Resource.Color.material_deep_teal_200;
-			global::PhantomLib.Droid.Resource.Color.material_deep_teal_500 = global::PhantomLibSamples.Droid.Resource.Color.material_deep_teal_500;
-			global::PhantomLib.Droid.Resource.Color.material_grey_100 = global::PhantomLibSamples.Droid.Resource.Color.material_grey_100;
-			global::PhantomLib.Droid.Resource.Color.material_grey_300 = global::PhantomLibSamples.Droid.Resource.Color.material_grey_300;
-			global::PhantomLib.Droid.Resource.Color.material_grey_50 = global::PhantomLibSamples.Droid.Resource.Color.material_grey_50;
-			global::PhantomLib.Droid.Resource.Color.material_grey_600 = global::PhantomLibSamples.Droid.Resource.Color.material_grey_600;
-			global::PhantomLib.Droid.Resource.Color.material_grey_800 = global::PhantomLibSamples.Droid.Resource.Color.material_grey_800;
-			global::PhantomLib.Droid.Resource.Color.material_grey_850 = global::PhantomLibSamples.Droid.Resource.Color.material_grey_850;
-			global::PhantomLib.Droid.Resource.Color.material_grey_900 = global::PhantomLibSamples.Droid.Resource.Color.material_grey_900;
-			global::PhantomLib.Droid.Resource.Color.notification_action_color_filter = global::PhantomLibSamples.Droid.Resource.Color.notification_action_color_filter;
-			global::PhantomLib.Droid.Resource.Color.notification_icon_bg_color = global::PhantomLibSamples.Droid.Resource.Color.notification_icon_bg_color;
-			global::PhantomLib.Droid.Resource.Color.notification_material_background_media_default_color = global::PhantomLibSamples.Droid.Resource.Color.notification_material_background_media_default_color;
-			global::PhantomLib.Droid.Resource.Color.primary_dark_material_dark = global::PhantomLibSamples.Droid.Resource.Color.primary_dark_material_dark;
-			global::PhantomLib.Droid.Resource.Color.primary_dark_material_light = global::PhantomLibSamples.Droid.Resource.Color.primary_dark_material_light;
-			global::PhantomLib.Droid.Resource.Color.primary_material_dark = global::PhantomLibSamples.Droid.Resource.Color.primary_material_dark;
-			global::PhantomLib.Droid.Resource.Color.primary_material_light = global::PhantomLibSamples.Droid.Resource.Color.primary_material_light;
-			global::PhantomLib.Droid.Resource.Color.primary_text_default_material_dark = global::PhantomLibSamples.Droid.Resource.Color.primary_text_default_material_dark;
-			global::PhantomLib.Droid.Resource.Color.primary_text_default_material_light = global::PhantomLibSamples.Droid.Resource.Color.primary_text_default_material_light;
-			global::PhantomLib.Droid.Resource.Color.primary_text_disabled_material_dark = global::PhantomLibSamples.Droid.Resource.Color.primary_text_disabled_material_dark;
-			global::PhantomLib.Droid.Resource.Color.primary_text_disabled_material_light = global::PhantomLibSamples.Droid.Resource.Color.primary_text_disabled_material_light;
-			global::PhantomLib.Droid.Resource.Color.ripple_material_dark = global::PhantomLibSamples.Droid.Resource.Color.ripple_material_dark;
-			global::PhantomLib.Droid.Resource.Color.ripple_material_light = global::PhantomLibSamples.Droid.Resource.Color.ripple_material_light;
-			global::PhantomLib.Droid.Resource.Color.secondary_text_default_material_dark = global::PhantomLibSamples.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::PhantomLib.Droid.Resource.Color.secondary_text_default_material_light = global::PhantomLibSamples.Droid.Resource.Color.secondary_text_default_material_light;
-			global::PhantomLib.Droid.Resource.Color.secondary_text_disabled_material_dark = global::PhantomLibSamples.Droid.Resource.Color.secondary_text_disabled_material_dark;
-			global::PhantomLib.Droid.Resource.Color.secondary_text_disabled_material_light = global::PhantomLibSamples.Droid.Resource.Color.secondary_text_disabled_material_light;
-			global::PhantomLib.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::PhantomLibSamples.Droid.Resource.Color.switch_thumb_disabled_material_dark;
-			global::PhantomLib.Droid.Resource.Color.switch_thumb_disabled_material_light = global::PhantomLibSamples.Droid.Resource.Color.switch_thumb_disabled_material_light;
-			global::PhantomLib.Droid.Resource.Color.switch_thumb_material_dark = global::PhantomLibSamples.Droid.Resource.Color.switch_thumb_material_dark;
-			global::PhantomLib.Droid.Resource.Color.switch_thumb_material_light = global::PhantomLibSamples.Droid.Resource.Color.switch_thumb_material_light;
-			global::PhantomLib.Droid.Resource.Color.switch_thumb_normal_material_dark = global::PhantomLibSamples.Droid.Resource.Color.switch_thumb_normal_material_dark;
-			global::PhantomLib.Droid.Resource.Color.switch_thumb_normal_material_light = global::PhantomLibSamples.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::PhantomLib.Droid.Resource.Color.tooltip_background_dark = global::PhantomLibSamples.Droid.Resource.Color.tooltip_background_dark;
-			global::PhantomLib.Droid.Resource.Color.tooltip_background_light = global::PhantomLibSamples.Droid.Resource.Color.tooltip_background_light;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_default_height_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_elevation_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_progress_bar_size = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_button_min_height_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_button_min_height_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_button_min_width_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_button_min_width_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::PhantomLibSamples.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::PhantomLib.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_button_inset_vertical_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_button_padding_vertical_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::PhantomLibSamples.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
-			global::PhantomLib.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::PhantomLibSamples.Droid.Resource.Dimension.abc_config_prefDialogWidth;
-			global::PhantomLib.Droid.Resource.Dimension.abc_control_corner_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_control_corner_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_control_inset_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_control_inset_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_control_padding_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_control_padding_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_min_width_major = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_min_width_major;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_min_width_minor;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_padding_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_padding_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_padding_top_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dialog_title_divider_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::PhantomLibSamples.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::PhantomLib.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::PhantomLibSamples.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::PhantomLib.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::PhantomLibSamples.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::PhantomLib.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_floating_window_z = global::PhantomLibSamples.Droid.Resource.Dimension.abc_floating_window_z;
-			global::PhantomLib.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_panel_menu_list_width = global::PhantomLibSamples.Droid.Resource.Dimension.abc_panel_menu_list_width;
-			global::PhantomLib.Droid.Resource.Dimension.abc_progress_bar_height_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_progress_bar_height_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_search_view_preferred_height = global::PhantomLibSamples.Droid.Resource.Dimension.abc_search_view_preferred_height;
-			global::PhantomLib.Droid.Resource.Dimension.abc_search_view_preferred_width = global::PhantomLibSamples.Droid.Resource.Dimension.abc_search_view_preferred_width;
-			global::PhantomLib.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_switch_padding = global::PhantomLibSamples.Droid.Resource.Dimension.abc_switch_padding;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_body_1_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_body_1_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_body_2_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_body_2_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_button_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_button_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_caption_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_caption_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_display_1_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_display_1_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_display_2_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_display_2_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_display_3_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_display_3_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_display_4_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_display_4_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_headline_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_headline_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_large_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_large_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_medium_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_medium_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_menu_header_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_menu_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_menu_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_small_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_small_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_subhead_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_subhead_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_title_material = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_title_material;
-			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::PhantomLibSamples.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::PhantomLib.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::PhantomLibSamples.Droid.Resource.Dimension.cardview_compat_inset_shadow;
-			global::PhantomLib.Droid.Resource.Dimension.cardview_default_elevation = global::PhantomLibSamples.Droid.Resource.Dimension.cardview_default_elevation;
-			global::PhantomLib.Droid.Resource.Dimension.cardview_default_radius = global::PhantomLibSamples.Droid.Resource.Dimension.cardview_default_radius;
-			global::PhantomLib.Droid.Resource.Dimension.compat_button_inset_horizontal_material = global::PhantomLibSamples.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
-			global::PhantomLib.Droid.Resource.Dimension.compat_button_inset_vertical_material = global::PhantomLibSamples.Droid.Resource.Dimension.compat_button_inset_vertical_material;
-			global::PhantomLib.Droid.Resource.Dimension.compat_button_padding_horizontal_material = global::PhantomLibSamples.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
-			global::PhantomLib.Droid.Resource.Dimension.compat_button_padding_vertical_material = global::PhantomLibSamples.Droid.Resource.Dimension.compat_button_padding_vertical_material;
-			global::PhantomLib.Droid.Resource.Dimension.compat_control_corner_material = global::PhantomLibSamples.Droid.Resource.Dimension.compat_control_corner_material;
-			global::PhantomLib.Droid.Resource.Dimension.design_appbar_elevation = global::PhantomLibSamples.Droid.Resource.Dimension.design_appbar_elevation;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_navigation_elevation;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_height = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_navigation_height;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_margin = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_navigation_margin;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_navigation_text_size;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
-			global::PhantomLib.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::PhantomLibSamples.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
-			global::PhantomLib.Droid.Resource.Dimension.design_fab_border_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_fab_border_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_fab_elevation = global::PhantomLibSamples.Droid.Resource.Dimension.design_fab_elevation;
-			global::PhantomLib.Droid.Resource.Dimension.design_fab_image_size = global::PhantomLibSamples.Droid.Resource.Dimension.design_fab_image_size;
-			global::PhantomLib.Droid.Resource.Dimension.design_fab_size_mini = global::PhantomLibSamples.Droid.Resource.Dimension.design_fab_size_mini;
-			global::PhantomLib.Droid.Resource.Dimension.design_fab_size_normal = global::PhantomLibSamples.Droid.Resource.Dimension.design_fab_size_normal;
-			global::PhantomLib.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::PhantomLibSamples.Droid.Resource.Dimension.design_fab_translation_z_pressed;
-			global::PhantomLib.Droid.Resource.Dimension.design_navigation_elevation = global::PhantomLibSamples.Droid.Resource.Dimension.design_navigation_elevation;
-			global::PhantomLib.Droid.Resource.Dimension.design_navigation_icon_padding = global::PhantomLibSamples.Droid.Resource.Dimension.design_navigation_icon_padding;
-			global::PhantomLib.Droid.Resource.Dimension.design_navigation_icon_size = global::PhantomLibSamples.Droid.Resource.Dimension.design_navigation_icon_size;
-			global::PhantomLib.Droid.Resource.Dimension.design_navigation_max_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_navigation_max_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_navigation_padding_bottom = global::PhantomLibSamples.Droid.Resource.Dimension.design_navigation_padding_bottom;
-			global::PhantomLib.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::PhantomLibSamples.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_elevation = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_elevation;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_max_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_max_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_min_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_min_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_padding_vertical;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
-			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_text_size = global::PhantomLibSamples.Droid.Resource.Dimension.design_snackbar_text_size;
-			global::PhantomLib.Droid.Resource.Dimension.design_tab_max_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_tab_max_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::PhantomLibSamples.Droid.Resource.Dimension.design_tab_scrollable_min_width;
-			global::PhantomLib.Droid.Resource.Dimension.design_tab_text_size = global::PhantomLibSamples.Droid.Resource.Dimension.design_tab_text_size;
-			global::PhantomLib.Droid.Resource.Dimension.design_tab_text_size_2line = global::PhantomLibSamples.Droid.Resource.Dimension.design_tab_text_size_2line;
-			global::PhantomLib.Droid.Resource.Dimension.disabled_alpha_material_dark = global::PhantomLibSamples.Droid.Resource.Dimension.disabled_alpha_material_dark;
-			global::PhantomLib.Droid.Resource.Dimension.disabled_alpha_material_light = global::PhantomLibSamples.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::PhantomLib.Droid.Resource.Dimension.fastscroll_default_thickness = global::PhantomLibSamples.Droid.Resource.Dimension.fastscroll_default_thickness;
-			global::PhantomLib.Droid.Resource.Dimension.fastscroll_margin = global::PhantomLibSamples.Droid.Resource.Dimension.fastscroll_margin;
-			global::PhantomLib.Droid.Resource.Dimension.fastscroll_minimum_range = global::PhantomLibSamples.Droid.Resource.Dimension.fastscroll_minimum_range;
-			global::PhantomLib.Droid.Resource.Dimension.highlight_alpha_material_colored = global::PhantomLibSamples.Droid.Resource.Dimension.highlight_alpha_material_colored;
-			global::PhantomLib.Droid.Resource.Dimension.highlight_alpha_material_dark = global::PhantomLibSamples.Droid.Resource.Dimension.highlight_alpha_material_dark;
-			global::PhantomLib.Droid.Resource.Dimension.highlight_alpha_material_light = global::PhantomLibSamples.Droid.Resource.Dimension.highlight_alpha_material_light;
-			global::PhantomLib.Droid.Resource.Dimension.hint_alpha_material_dark = global::PhantomLibSamples.Droid.Resource.Dimension.hint_alpha_material_dark;
-			global::PhantomLib.Droid.Resource.Dimension.hint_alpha_material_light = global::PhantomLibSamples.Droid.Resource.Dimension.hint_alpha_material_light;
-			global::PhantomLib.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::PhantomLibSamples.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
-			global::PhantomLib.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::PhantomLibSamples.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
-			global::PhantomLib.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::PhantomLibSamples.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::PhantomLib.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::PhantomLibSamples.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::PhantomLib.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::PhantomLibSamples.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::PhantomLib.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height = global::PhantomLibSamples.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
-			global::PhantomLib.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::PhantomLibSamples.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
-			global::PhantomLib.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height = global::PhantomLibSamples.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
-			global::PhantomLib.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::PhantomLibSamples.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
-			global::PhantomLib.Droid.Resource.Dimension.mr_dialog_fixed_width_major = global::PhantomLibSamples.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
-			global::PhantomLib.Droid.Resource.Dimension.mr_dialog_fixed_width_minor = global::PhantomLibSamples.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
-			global::PhantomLib.Droid.Resource.Dimension.notification_action_icon_size = global::PhantomLibSamples.Droid.Resource.Dimension.notification_action_icon_size;
-			global::PhantomLib.Droid.Resource.Dimension.notification_action_text_size = global::PhantomLibSamples.Droid.Resource.Dimension.notification_action_text_size;
-			global::PhantomLib.Droid.Resource.Dimension.notification_big_circle_margin = global::PhantomLibSamples.Droid.Resource.Dimension.notification_big_circle_margin;
-			global::PhantomLib.Droid.Resource.Dimension.notification_content_margin_start = global::PhantomLibSamples.Droid.Resource.Dimension.notification_content_margin_start;
-			global::PhantomLib.Droid.Resource.Dimension.notification_large_icon_height = global::PhantomLibSamples.Droid.Resource.Dimension.notification_large_icon_height;
-			global::PhantomLib.Droid.Resource.Dimension.notification_large_icon_width = global::PhantomLibSamples.Droid.Resource.Dimension.notification_large_icon_width;
-			global::PhantomLib.Droid.Resource.Dimension.notification_main_column_padding_top = global::PhantomLibSamples.Droid.Resource.Dimension.notification_main_column_padding_top;
-			global::PhantomLib.Droid.Resource.Dimension.notification_media_narrow_margin = global::PhantomLibSamples.Droid.Resource.Dimension.notification_media_narrow_margin;
-			global::PhantomLib.Droid.Resource.Dimension.notification_right_icon_size = global::PhantomLibSamples.Droid.Resource.Dimension.notification_right_icon_size;
-			global::PhantomLib.Droid.Resource.Dimension.notification_right_side_padding_top = global::PhantomLibSamples.Droid.Resource.Dimension.notification_right_side_padding_top;
-			global::PhantomLib.Droid.Resource.Dimension.notification_small_icon_background_padding = global::PhantomLibSamples.Droid.Resource.Dimension.notification_small_icon_background_padding;
-			global::PhantomLib.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::PhantomLibSamples.Droid.Resource.Dimension.notification_small_icon_size_as_large;
-			global::PhantomLib.Droid.Resource.Dimension.notification_subtext_size = global::PhantomLibSamples.Droid.Resource.Dimension.notification_subtext_size;
-			global::PhantomLib.Droid.Resource.Dimension.notification_top_pad = global::PhantomLibSamples.Droid.Resource.Dimension.notification_top_pad;
-			global::PhantomLib.Droid.Resource.Dimension.notification_top_pad_large_text = global::PhantomLibSamples.Droid.Resource.Dimension.notification_top_pad_large_text;
-			global::PhantomLib.Droid.Resource.Dimension.tooltip_corner_radius = global::PhantomLibSamples.Droid.Resource.Dimension.tooltip_corner_radius;
-			global::PhantomLib.Droid.Resource.Dimension.tooltip_horizontal_padding = global::PhantomLibSamples.Droid.Resource.Dimension.tooltip_horizontal_padding;
-			global::PhantomLib.Droid.Resource.Dimension.tooltip_margin = global::PhantomLibSamples.Droid.Resource.Dimension.tooltip_margin;
-			global::PhantomLib.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::PhantomLibSamples.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
-			global::PhantomLib.Droid.Resource.Dimension.tooltip_precise_anchor_threshold = global::PhantomLibSamples.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
-			global::PhantomLib.Droid.Resource.Dimension.tooltip_vertical_padding = global::PhantomLibSamples.Droid.Resource.Dimension.tooltip_vertical_padding;
-			global::PhantomLib.Droid.Resource.Dimension.tooltip_y_offset_non_touch = global::PhantomLibSamples.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
-			global::PhantomLib.Droid.Resource.Dimension.tooltip_y_offset_touch = global::PhantomLibSamples.Droid.Resource.Dimension.tooltip_y_offset_touch;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_action_bar_item_background_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_borderless_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_borderless_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_check_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_check_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_colored_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_colored_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_radio_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_radio_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::PhantomLib.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::PhantomLibSamples.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::PhantomLib.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::PhantomLibSamples.Droid.Resource.Drawable.abc_cab_background_internal_bg;
-			global::PhantomLib.Droid.Resource.Drawable.abc_cab_background_top_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_cab_background_top_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_control_background_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_control_background_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_dialog_material_background = global::PhantomLibSamples.Droid.Resource.Drawable.abc_dialog_material_background;
-			global::PhantomLib.Droid.Resource.Drawable.abc_edit_text_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_edit_text_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_ab_back_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_ab_back_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_clear_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_clear_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_go_search_api_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_search_api_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_search_api_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_star_black_16dp;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_star_black_36dp;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_star_black_48dp;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_item_background_holo_dark = global::PhantomLibSamples.Droid.Resource.Drawable.abc_item_background_holo_dark;
-			global::PhantomLib.Droid.Resource.Drawable.abc_item_background_holo_light = global::PhantomLibSamples.Droid.Resource.Drawable.abc_item_background_holo_light;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_focused_holo = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_focused_holo;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_longpressed_holo = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_longpressed_holo;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_pressed_holo_light;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_selector_holo_dark;
-			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_holo_light = global::PhantomLibSamples.Droid.Resource.Drawable.abc_list_selector_holo_light;
-			global::PhantomLib.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::PhantomLibSamples.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::PhantomLib.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::PhantomLibSamples.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ratingbar_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ratingbar_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_ratingbar_small_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_ratingbar_small_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::PhantomLibSamples.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
-			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::PhantomLibSamples.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
-			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_seekbar_thumb_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_seekbar_track_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_seekbar_track_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_switch_thumb_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_switch_thumb_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_tab_indicator_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_tab_indicator_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::PhantomLibSamples.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_search_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_textfield_search_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_text_cursor_material = global::PhantomLibSamples.Droid.Resource.Drawable.abc_text_cursor_material;
-			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::PhantomLibSamples.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
-			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::PhantomLibSamples.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
-			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::PhantomLibSamples.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
-			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::PhantomLibSamples.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
-			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::PhantomLibSamples.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
-			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::PhantomLibSamples.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
-			global::PhantomLib.Droid.Resource.Drawable.abc_vector_test = global::PhantomLibSamples.Droid.Resource.Drawable.abc_vector_test;
-			global::PhantomLib.Droid.Resource.Drawable.avd_hide_password = global::PhantomLibSamples.Droid.Resource.Drawable.avd_hide_password;
-			global::PhantomLib.Droid.Resource.Drawable.avd_show_password = global::PhantomLibSamples.Droid.Resource.Drawable.avd_show_password;
-			global::PhantomLib.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::PhantomLibSamples.Droid.Resource.Drawable.design_bottom_navigation_item_background;
-			global::PhantomLib.Droid.Resource.Drawable.design_fab_background = global::PhantomLibSamples.Droid.Resource.Drawable.design_fab_background;
-			global::PhantomLib.Droid.Resource.Drawable.design_ic_visibility = global::PhantomLibSamples.Droid.Resource.Drawable.design_ic_visibility;
-			global::PhantomLib.Droid.Resource.Drawable.design_ic_visibility_off = global::PhantomLibSamples.Droid.Resource.Drawable.design_ic_visibility_off;
-			global::PhantomLib.Droid.Resource.Drawable.design_password_eye = global::PhantomLibSamples.Droid.Resource.Drawable.design_password_eye;
-			global::PhantomLib.Droid.Resource.Drawable.design_snackbar_background = global::PhantomLibSamples.Droid.Resource.Drawable.design_snackbar_background;
-			global::PhantomLib.Droid.Resource.Drawable.ExtEntryShape = global::PhantomLibSamples.Droid.Resource.Drawable.ExtEntryShape;
-			global::PhantomLib.Droid.Resource.Drawable.ic_audiotrack_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_audiotrack_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_audiotrack_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_audiotrack_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_dialog_close_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_dialog_close_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_dialog_close_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_dialog_close_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_00 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_00;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_01 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_01;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_02 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_02;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_03 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_03;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_04 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_04;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_05 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_05;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_06 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_06;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_07 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_07;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_08 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_08;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_09 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_09;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_10 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_10;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_11 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_11;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_12 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_12;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_13 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_13;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_14 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_14;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_collapse_15 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_collapse_15;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_00 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_00;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_01 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_01;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_02 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_02;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_03 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_03;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_04 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_04;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_05 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_05;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_06 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_06;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_07 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_07;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_08 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_08;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_09 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_09;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_10 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_10;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_11 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_11;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_12 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_12;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_13 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_13;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_14 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_14;
-			global::PhantomLib.Droid.Resource.Drawable.ic_group_expand_15 = global::PhantomLibSamples.Droid.Resource.Drawable.ic_group_expand_15;
-			global::PhantomLib.Droid.Resource.Drawable.ic_media_pause_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_media_pause_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_media_pause_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_media_pause_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_media_play_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_media_play_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_media_play_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_media_play_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_media_stop_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_media_stop_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_media_stop_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_media_stop_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_00_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_00_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_00_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_00_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_01_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_01_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_01_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_01_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_02_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_02_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_02_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_02_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_03_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_03_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_03_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_03_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_04_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_04_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_04_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_04_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_05_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_05_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_05_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_05_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_06_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_06_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_06_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_06_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_07_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_07_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_07_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_07_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_08_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_08_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_08_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_08_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_09_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_09_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_09_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_09_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_10_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_10_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_10_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_10_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_11_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_11_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_11_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_11_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_12_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_12_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_12_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_12_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_13_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_13_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_13_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_13_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_14_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_14_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_14_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_14_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_15_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_15_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_15_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_15_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_16_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_16_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_16_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_16_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_17_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_17_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_17_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_17_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_18_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_18_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_18_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_18_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_19_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_19_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_19_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_19_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_20_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_20_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_20_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_20_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_21_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_21_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_21_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_22_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_22_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_23_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_23_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_23_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_23_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_24_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_24_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_24_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_24_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_25_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_25_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_25_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_25_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_26_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_26_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_26_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_26_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_27_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_27_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_27_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_27_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_28_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_28_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_28_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_28_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_29_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_29_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_29_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_29_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_30_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_30_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connected_30_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connected_30_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_00_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_01_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_01_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_02_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_02_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_03_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_03_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_04_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_04_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_05_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_05_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_06_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_06_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_07_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_07_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_08_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_08_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_09_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_09_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_10_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_10_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_11_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_11_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_12_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_12_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_13_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_13_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_14_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_14_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_15_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_15_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_16_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_16_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_17_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_17_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_18_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_18_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_19_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_19_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_20_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_20_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_21_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_22_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_23_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_23_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_24_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_24_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_25_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_25_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_26_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_26_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_27_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_27_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_28_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_28_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_29_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_29_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_connecting_30_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_connecting_30_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_disabled_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_disabled_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_disabled_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_disconnected_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_disconnected_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_disconnected_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_mr_button_grey = global::PhantomLibSamples.Droid.Resource.Drawable.ic_mr_button_grey;
-			global::PhantomLib.Droid.Resource.Drawable.ic_vol_type_speaker_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_vol_type_speaker_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_vol_type_speaker_group_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_vol_type_speaker_group_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_vol_type_speaker_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_vol_type_speaker_light;
-			global::PhantomLib.Droid.Resource.Drawable.ic_vol_type_tv_dark = global::PhantomLibSamples.Droid.Resource.Drawable.ic_vol_type_tv_dark;
-			global::PhantomLib.Droid.Resource.Drawable.ic_vol_type_tv_light = global::PhantomLibSamples.Droid.Resource.Drawable.ic_vol_type_tv_light;
-			global::PhantomLib.Droid.Resource.Drawable.mr_button_connected_dark = global::PhantomLibSamples.Droid.Resource.Drawable.mr_button_connected_dark;
-			global::PhantomLib.Droid.Resource.Drawable.mr_button_connected_light = global::PhantomLibSamples.Droid.Resource.Drawable.mr_button_connected_light;
-			global::PhantomLib.Droid.Resource.Drawable.mr_button_connecting_dark = global::PhantomLibSamples.Droid.Resource.Drawable.mr_button_connecting_dark;
-			global::PhantomLib.Droid.Resource.Drawable.mr_button_connecting_light = global::PhantomLibSamples.Droid.Resource.Drawable.mr_button_connecting_light;
-			global::PhantomLib.Droid.Resource.Drawable.mr_button_dark = global::PhantomLibSamples.Droid.Resource.Drawable.mr_button_dark;
-			global::PhantomLib.Droid.Resource.Drawable.mr_button_light = global::PhantomLibSamples.Droid.Resource.Drawable.mr_button_light;
-			global::PhantomLib.Droid.Resource.Drawable.mr_dialog_close_dark = global::PhantomLibSamples.Droid.Resource.Drawable.mr_dialog_close_dark;
-			global::PhantomLib.Droid.Resource.Drawable.mr_dialog_close_light = global::PhantomLibSamples.Droid.Resource.Drawable.mr_dialog_close_light;
-			global::PhantomLib.Droid.Resource.Drawable.mr_dialog_material_background_dark = global::PhantomLibSamples.Droid.Resource.Drawable.mr_dialog_material_background_dark;
-			global::PhantomLib.Droid.Resource.Drawable.mr_dialog_material_background_light = global::PhantomLibSamples.Droid.Resource.Drawable.mr_dialog_material_background_light;
-			global::PhantomLib.Droid.Resource.Drawable.mr_group_collapse = global::PhantomLibSamples.Droid.Resource.Drawable.mr_group_collapse;
-			global::PhantomLib.Droid.Resource.Drawable.mr_group_expand = global::PhantomLibSamples.Droid.Resource.Drawable.mr_group_expand;
-			global::PhantomLib.Droid.Resource.Drawable.mr_media_pause_dark = global::PhantomLibSamples.Droid.Resource.Drawable.mr_media_pause_dark;
-			global::PhantomLib.Droid.Resource.Drawable.mr_media_pause_light = global::PhantomLibSamples.Droid.Resource.Drawable.mr_media_pause_light;
-			global::PhantomLib.Droid.Resource.Drawable.mr_media_play_dark = global::PhantomLibSamples.Droid.Resource.Drawable.mr_media_play_dark;
-			global::PhantomLib.Droid.Resource.Drawable.mr_media_play_light = global::PhantomLibSamples.Droid.Resource.Drawable.mr_media_play_light;
-			global::PhantomLib.Droid.Resource.Drawable.mr_media_stop_dark = global::PhantomLibSamples.Droid.Resource.Drawable.mr_media_stop_dark;
-			global::PhantomLib.Droid.Resource.Drawable.mr_media_stop_light = global::PhantomLibSamples.Droid.Resource.Drawable.mr_media_stop_light;
-			global::PhantomLib.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark = global::PhantomLibSamples.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark;
-			global::PhantomLib.Droid.Resource.Drawable.mr_vol_type_audiotrack_light = global::PhantomLibSamples.Droid.Resource.Drawable.mr_vol_type_audiotrack_light;
-			global::PhantomLib.Droid.Resource.Drawable.navigation_empty_icon = global::PhantomLibSamples.Droid.Resource.Drawable.navigation_empty_icon;
-			global::PhantomLib.Droid.Resource.Drawable.notification_action_background = global::PhantomLibSamples.Droid.Resource.Drawable.notification_action_background;
-			global::PhantomLib.Droid.Resource.Drawable.notification_bg = global::PhantomLibSamples.Droid.Resource.Drawable.notification_bg;
-			global::PhantomLib.Droid.Resource.Drawable.notification_bg_low = global::PhantomLibSamples.Droid.Resource.Drawable.notification_bg_low;
-			global::PhantomLib.Droid.Resource.Drawable.notification_bg_low_normal = global::PhantomLibSamples.Droid.Resource.Drawable.notification_bg_low_normal;
-			global::PhantomLib.Droid.Resource.Drawable.notification_bg_low_pressed = global::PhantomLibSamples.Droid.Resource.Drawable.notification_bg_low_pressed;
-			global::PhantomLib.Droid.Resource.Drawable.notification_bg_normal = global::PhantomLibSamples.Droid.Resource.Drawable.notification_bg_normal;
-			global::PhantomLib.Droid.Resource.Drawable.notification_bg_normal_pressed = global::PhantomLibSamples.Droid.Resource.Drawable.notification_bg_normal_pressed;
-			global::PhantomLib.Droid.Resource.Drawable.notification_icon_background = global::PhantomLibSamples.Droid.Resource.Drawable.notification_icon_background;
-			global::PhantomLib.Droid.Resource.Drawable.notification_template_icon_bg = global::PhantomLibSamples.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::PhantomLib.Droid.Resource.Drawable.notification_template_icon_low_bg = global::PhantomLibSamples.Droid.Resource.Drawable.notification_template_icon_low_bg;
-			global::PhantomLib.Droid.Resource.Drawable.notification_tile_bg = global::PhantomLibSamples.Droid.Resource.Drawable.notification_tile_bg;
-			global::PhantomLib.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::PhantomLibSamples.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
-			global::PhantomLib.Droid.Resource.Drawable.tooltip_frame_dark = global::PhantomLibSamples.Droid.Resource.Drawable.tooltip_frame_dark;
-			global::PhantomLib.Droid.Resource.Drawable.tooltip_frame_light = global::PhantomLibSamples.Droid.Resource.Drawable.tooltip_frame_light;
-			global::PhantomLib.Droid.Resource.Drawable.WhiteLine = global::PhantomLibSamples.Droid.Resource.Drawable.WhiteLine;
-			global::PhantomLib.Droid.Resource.Id.action0 = global::PhantomLibSamples.Droid.Resource.Id.action0;
-			global::PhantomLib.Droid.Resource.Id.actions = global::PhantomLibSamples.Droid.Resource.Id.actions;
-			global::PhantomLib.Droid.Resource.Id.action_bar = global::PhantomLibSamples.Droid.Resource.Id.action_bar;
-			global::PhantomLib.Droid.Resource.Id.action_bar_activity_content = global::PhantomLibSamples.Droid.Resource.Id.action_bar_activity_content;
-			global::PhantomLib.Droid.Resource.Id.action_bar_container = global::PhantomLibSamples.Droid.Resource.Id.action_bar_container;
-			global::PhantomLib.Droid.Resource.Id.action_bar_root = global::PhantomLibSamples.Droid.Resource.Id.action_bar_root;
-			global::PhantomLib.Droid.Resource.Id.action_bar_spinner = global::PhantomLibSamples.Droid.Resource.Id.action_bar_spinner;
-			global::PhantomLib.Droid.Resource.Id.action_bar_subtitle = global::PhantomLibSamples.Droid.Resource.Id.action_bar_subtitle;
-			global::PhantomLib.Droid.Resource.Id.action_bar_title = global::PhantomLibSamples.Droid.Resource.Id.action_bar_title;
-			global::PhantomLib.Droid.Resource.Id.action_container = global::PhantomLibSamples.Droid.Resource.Id.action_container;
-			global::PhantomLib.Droid.Resource.Id.action_context_bar = global::PhantomLibSamples.Droid.Resource.Id.action_context_bar;
-			global::PhantomLib.Droid.Resource.Id.action_divider = global::PhantomLibSamples.Droid.Resource.Id.action_divider;
-			global::PhantomLib.Droid.Resource.Id.action_image = global::PhantomLibSamples.Droid.Resource.Id.action_image;
-			global::PhantomLib.Droid.Resource.Id.action_menu_divider = global::PhantomLibSamples.Droid.Resource.Id.action_menu_divider;
-			global::PhantomLib.Droid.Resource.Id.action_menu_presenter = global::PhantomLibSamples.Droid.Resource.Id.action_menu_presenter;
-			global::PhantomLib.Droid.Resource.Id.action_mode_bar = global::PhantomLibSamples.Droid.Resource.Id.action_mode_bar;
-			global::PhantomLib.Droid.Resource.Id.action_mode_bar_stub = global::PhantomLibSamples.Droid.Resource.Id.action_mode_bar_stub;
-			global::PhantomLib.Droid.Resource.Id.action_mode_close_button = global::PhantomLibSamples.Droid.Resource.Id.action_mode_close_button;
-			global::PhantomLib.Droid.Resource.Id.action_text = global::PhantomLibSamples.Droid.Resource.Id.action_text;
-			global::PhantomLib.Droid.Resource.Id.activity_chooser_view_content = global::PhantomLibSamples.Droid.Resource.Id.activity_chooser_view_content;
-			global::PhantomLib.Droid.Resource.Id.add = global::PhantomLibSamples.Droid.Resource.Id.add;
-			global::PhantomLib.Droid.Resource.Id.alertTitle = global::PhantomLibSamples.Droid.Resource.Id.alertTitle;
-			global::PhantomLib.Droid.Resource.Id.all = global::PhantomLibSamples.Droid.Resource.Id.all;
-			global::PhantomLib.Droid.Resource.Id.ALT = global::PhantomLibSamples.Droid.Resource.Id.ALT;
-			global::PhantomLib.Droid.Resource.Id.always = global::PhantomLibSamples.Droid.Resource.Id.always;
-			global::PhantomLib.Droid.Resource.Id.async = global::PhantomLibSamples.Droid.Resource.Id.async;
-			global::PhantomLib.Droid.Resource.Id.auto = global::PhantomLibSamples.Droid.Resource.Id.auto;
-			global::PhantomLib.Droid.Resource.Id.beginning = global::PhantomLibSamples.Droid.Resource.Id.beginning;
-			global::PhantomLib.Droid.Resource.Id.blocking = global::PhantomLibSamples.Droid.Resource.Id.blocking;
-			global::PhantomLib.Droid.Resource.Id.bottom = global::PhantomLibSamples.Droid.Resource.Id.bottom;
-			global::PhantomLib.Droid.Resource.Id.bottomtab_navarea = global::PhantomLibSamples.Droid.Resource.Id.bottomtab_navarea;
-			global::PhantomLib.Droid.Resource.Id.bottomtab_tabbar = global::PhantomLibSamples.Droid.Resource.Id.bottomtab_tabbar;
-			global::PhantomLib.Droid.Resource.Id.buttonPanel = global::PhantomLibSamples.Droid.Resource.Id.buttonPanel;
-			global::PhantomLib.Droid.Resource.Id.cancel_action = global::PhantomLibSamples.Droid.Resource.Id.cancel_action;
-			global::PhantomLib.Droid.Resource.Id.center = global::PhantomLibSamples.Droid.Resource.Id.center;
-			global::PhantomLib.Droid.Resource.Id.center_horizontal = global::PhantomLibSamples.Droid.Resource.Id.center_horizontal;
-			global::PhantomLib.Droid.Resource.Id.center_vertical = global::PhantomLibSamples.Droid.Resource.Id.center_vertical;
-			global::PhantomLib.Droid.Resource.Id.checkbox = global::PhantomLibSamples.Droid.Resource.Id.checkbox;
-			global::PhantomLib.Droid.Resource.Id.chronometer = global::PhantomLibSamples.Droid.Resource.Id.chronometer;
-			global::PhantomLib.Droid.Resource.Id.clip_horizontal = global::PhantomLibSamples.Droid.Resource.Id.clip_horizontal;
-			global::PhantomLib.Droid.Resource.Id.clip_vertical = global::PhantomLibSamples.Droid.Resource.Id.clip_vertical;
-			global::PhantomLib.Droid.Resource.Id.collapseActionView = global::PhantomLibSamples.Droid.Resource.Id.collapseActionView;
-			global::PhantomLib.Droid.Resource.Id.container = global::PhantomLibSamples.Droid.Resource.Id.container;
-			global::PhantomLib.Droid.Resource.Id.contentPanel = global::PhantomLibSamples.Droid.Resource.Id.contentPanel;
-			global::PhantomLib.Droid.Resource.Id.coordinator = global::PhantomLibSamples.Droid.Resource.Id.coordinator;
-			global::PhantomLib.Droid.Resource.Id.CTRL = global::PhantomLibSamples.Droid.Resource.Id.CTRL;
-			global::PhantomLib.Droid.Resource.Id.custom = global::PhantomLibSamples.Droid.Resource.Id.custom;
-			global::PhantomLib.Droid.Resource.Id.customPanel = global::PhantomLibSamples.Droid.Resource.Id.customPanel;
-			global::PhantomLib.Droid.Resource.Id.decor_content_parent = global::PhantomLibSamples.Droid.Resource.Id.decor_content_parent;
-			global::PhantomLib.Droid.Resource.Id.default_activity_button = global::PhantomLibSamples.Droid.Resource.Id.default_activity_button;
-			global::PhantomLib.Droid.Resource.Id.design_bottom_sheet = global::PhantomLibSamples.Droid.Resource.Id.design_bottom_sheet;
-			global::PhantomLib.Droid.Resource.Id.design_menu_item_action_area = global::PhantomLibSamples.Droid.Resource.Id.design_menu_item_action_area;
-			global::PhantomLib.Droid.Resource.Id.design_menu_item_action_area_stub = global::PhantomLibSamples.Droid.Resource.Id.design_menu_item_action_area_stub;
-			global::PhantomLib.Droid.Resource.Id.design_menu_item_text = global::PhantomLibSamples.Droid.Resource.Id.design_menu_item_text;
-			global::PhantomLib.Droid.Resource.Id.design_navigation_view = global::PhantomLibSamples.Droid.Resource.Id.design_navigation_view;
-			global::PhantomLib.Droid.Resource.Id.disableHome = global::PhantomLibSamples.Droid.Resource.Id.disableHome;
-			global::PhantomLib.Droid.Resource.Id.edit_query = global::PhantomLibSamples.Droid.Resource.Id.edit_query;
-			global::PhantomLib.Droid.Resource.Id.end = global::PhantomLibSamples.Droid.Resource.Id.end;
-			global::PhantomLib.Droid.Resource.Id.end_padder = global::PhantomLibSamples.Droid.Resource.Id.end_padder;
-			global::PhantomLib.Droid.Resource.Id.enterAlways = global::PhantomLibSamples.Droid.Resource.Id.enterAlways;
-			global::PhantomLib.Droid.Resource.Id.enterAlwaysCollapsed = global::PhantomLibSamples.Droid.Resource.Id.enterAlwaysCollapsed;
-			global::PhantomLib.Droid.Resource.Id.exitUntilCollapsed = global::PhantomLibSamples.Droid.Resource.Id.exitUntilCollapsed;
-			global::PhantomLib.Droid.Resource.Id.expanded_menu = global::PhantomLibSamples.Droid.Resource.Id.expanded_menu;
-			global::PhantomLib.Droid.Resource.Id.expand_activities_button = global::PhantomLibSamples.Droid.Resource.Id.expand_activities_button;
-			global::PhantomLib.Droid.Resource.Id.fill = global::PhantomLibSamples.Droid.Resource.Id.fill;
-			global::PhantomLib.Droid.Resource.Id.fill_horizontal = global::PhantomLibSamples.Droid.Resource.Id.fill_horizontal;
-			global::PhantomLib.Droid.Resource.Id.fill_vertical = global::PhantomLibSamples.Droid.Resource.Id.fill_vertical;
-			global::PhantomLib.Droid.Resource.Id.@fixed = global::PhantomLibSamples.Droid.Resource.Id.@fixed;
-			global::PhantomLib.Droid.Resource.Id.flyoutcontent_appbar = global::PhantomLibSamples.Droid.Resource.Id.flyoutcontent_appbar;
-			global::PhantomLib.Droid.Resource.Id.flyoutcontent_recycler = global::PhantomLibSamples.Droid.Resource.Id.flyoutcontent_recycler;
-			global::PhantomLib.Droid.Resource.Id.forever = global::PhantomLibSamples.Droid.Resource.Id.forever;
-			global::PhantomLib.Droid.Resource.Id.FUNCTION = global::PhantomLibSamples.Droid.Resource.Id.FUNCTION;
-			global::PhantomLib.Droid.Resource.Id.ghost_view = global::PhantomLibSamples.Droid.Resource.Id.ghost_view;
-			global::PhantomLib.Droid.Resource.Id.home = global::PhantomLibSamples.Droid.Resource.Id.home;
-			global::PhantomLib.Droid.Resource.Id.homeAsUp = global::PhantomLibSamples.Droid.Resource.Id.homeAsUp;
-			global::PhantomLib.Droid.Resource.Id.icon = global::PhantomLibSamples.Droid.Resource.Id.icon;
-			global::PhantomLib.Droid.Resource.Id.icon_group = global::PhantomLibSamples.Droid.Resource.Id.icon_group;
-			global::PhantomLib.Droid.Resource.Id.ifRoom = global::PhantomLibSamples.Droid.Resource.Id.ifRoom;
-			global::PhantomLib.Droid.Resource.Id.image = global::PhantomLibSamples.Droid.Resource.Id.image;
-			global::PhantomLib.Droid.Resource.Id.info = global::PhantomLibSamples.Droid.Resource.Id.info;
-			global::PhantomLib.Droid.Resource.Id.italic = global::PhantomLibSamples.Droid.Resource.Id.italic;
-			global::PhantomLib.Droid.Resource.Id.item_touch_helper_previous_elevation = global::PhantomLibSamples.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::PhantomLib.Droid.Resource.Id.largeLabel = global::PhantomLibSamples.Droid.Resource.Id.largeLabel;
-			global::PhantomLib.Droid.Resource.Id.left = global::PhantomLibSamples.Droid.Resource.Id.left;
-			global::PhantomLib.Droid.Resource.Id.line1 = global::PhantomLibSamples.Droid.Resource.Id.line1;
-			global::PhantomLib.Droid.Resource.Id.line3 = global::PhantomLibSamples.Droid.Resource.Id.line3;
-			global::PhantomLib.Droid.Resource.Id.listMode = global::PhantomLibSamples.Droid.Resource.Id.listMode;
-			global::PhantomLib.Droid.Resource.Id.list_item = global::PhantomLibSamples.Droid.Resource.Id.list_item;
-			global::PhantomLib.Droid.Resource.Id.main_appbar = global::PhantomLibSamples.Droid.Resource.Id.main_appbar;
-			global::PhantomLib.Droid.Resource.Id.main_scrollview = global::PhantomLibSamples.Droid.Resource.Id.main_scrollview;
-			global::PhantomLib.Droid.Resource.Id.main_tablayout = global::PhantomLibSamples.Droid.Resource.Id.main_tablayout;
-			global::PhantomLib.Droid.Resource.Id.main_toolbar = global::PhantomLibSamples.Droid.Resource.Id.main_toolbar;
-			global::PhantomLib.Droid.Resource.Id.masked = global::PhantomLibSamples.Droid.Resource.Id.masked;
-			global::PhantomLib.Droid.Resource.Id.media_actions = global::PhantomLibSamples.Droid.Resource.Id.media_actions;
-			global::PhantomLib.Droid.Resource.Id.message = global::PhantomLibSamples.Droid.Resource.Id.message;
-			global::PhantomLib.Droid.Resource.Id.META = global::PhantomLibSamples.Droid.Resource.Id.META;
-			global::PhantomLib.Droid.Resource.Id.middle = global::PhantomLibSamples.Droid.Resource.Id.middle;
-			global::PhantomLib.Droid.Resource.Id.mini = global::PhantomLibSamples.Droid.Resource.Id.mini;
-			global::PhantomLib.Droid.Resource.Id.mr_art = global::PhantomLibSamples.Droid.Resource.Id.mr_art;
-			global::PhantomLib.Droid.Resource.Id.mr_chooser_list = global::PhantomLibSamples.Droid.Resource.Id.mr_chooser_list;
-			global::PhantomLib.Droid.Resource.Id.mr_chooser_route_desc = global::PhantomLibSamples.Droid.Resource.Id.mr_chooser_route_desc;
-			global::PhantomLib.Droid.Resource.Id.mr_chooser_route_icon = global::PhantomLibSamples.Droid.Resource.Id.mr_chooser_route_icon;
-			global::PhantomLib.Droid.Resource.Id.mr_chooser_route_name = global::PhantomLibSamples.Droid.Resource.Id.mr_chooser_route_name;
-			global::PhantomLib.Droid.Resource.Id.mr_chooser_title = global::PhantomLibSamples.Droid.Resource.Id.mr_chooser_title;
-			global::PhantomLib.Droid.Resource.Id.mr_close = global::PhantomLibSamples.Droid.Resource.Id.mr_close;
-			global::PhantomLib.Droid.Resource.Id.mr_control_divider = global::PhantomLibSamples.Droid.Resource.Id.mr_control_divider;
-			global::PhantomLib.Droid.Resource.Id.mr_control_playback_ctrl = global::PhantomLibSamples.Droid.Resource.Id.mr_control_playback_ctrl;
-			global::PhantomLib.Droid.Resource.Id.mr_control_subtitle = global::PhantomLibSamples.Droid.Resource.Id.mr_control_subtitle;
-			global::PhantomLib.Droid.Resource.Id.mr_control_title = global::PhantomLibSamples.Droid.Resource.Id.mr_control_title;
-			global::PhantomLib.Droid.Resource.Id.mr_control_title_container = global::PhantomLibSamples.Droid.Resource.Id.mr_control_title_container;
-			global::PhantomLib.Droid.Resource.Id.mr_custom_control = global::PhantomLibSamples.Droid.Resource.Id.mr_custom_control;
-			global::PhantomLib.Droid.Resource.Id.mr_default_control = global::PhantomLibSamples.Droid.Resource.Id.mr_default_control;
-			global::PhantomLib.Droid.Resource.Id.mr_dialog_area = global::PhantomLibSamples.Droid.Resource.Id.mr_dialog_area;
-			global::PhantomLib.Droid.Resource.Id.mr_expandable_area = global::PhantomLibSamples.Droid.Resource.Id.mr_expandable_area;
-			global::PhantomLib.Droid.Resource.Id.mr_group_expand_collapse = global::PhantomLibSamples.Droid.Resource.Id.mr_group_expand_collapse;
-			global::PhantomLib.Droid.Resource.Id.mr_media_main_control = global::PhantomLibSamples.Droid.Resource.Id.mr_media_main_control;
-			global::PhantomLib.Droid.Resource.Id.mr_name = global::PhantomLibSamples.Droid.Resource.Id.mr_name;
-			global::PhantomLib.Droid.Resource.Id.mr_playback_control = global::PhantomLibSamples.Droid.Resource.Id.mr_playback_control;
-			global::PhantomLib.Droid.Resource.Id.mr_title_bar = global::PhantomLibSamples.Droid.Resource.Id.mr_title_bar;
-			global::PhantomLib.Droid.Resource.Id.mr_volume_control = global::PhantomLibSamples.Droid.Resource.Id.mr_volume_control;
-			global::PhantomLib.Droid.Resource.Id.mr_volume_group_list = global::PhantomLibSamples.Droid.Resource.Id.mr_volume_group_list;
-			global::PhantomLib.Droid.Resource.Id.mr_volume_item_icon = global::PhantomLibSamples.Droid.Resource.Id.mr_volume_item_icon;
-			global::PhantomLib.Droid.Resource.Id.mr_volume_slider = global::PhantomLibSamples.Droid.Resource.Id.mr_volume_slider;
-			global::PhantomLib.Droid.Resource.Id.multiply = global::PhantomLibSamples.Droid.Resource.Id.multiply;
-			global::PhantomLib.Droid.Resource.Id.navigation_header_container = global::PhantomLibSamples.Droid.Resource.Id.navigation_header_container;
-			global::PhantomLib.Droid.Resource.Id.never = global::PhantomLibSamples.Droid.Resource.Id.never;
-			global::PhantomLib.Droid.Resource.Id.none = global::PhantomLibSamples.Droid.Resource.Id.none;
-			global::PhantomLib.Droid.Resource.Id.normal = global::PhantomLibSamples.Droid.Resource.Id.normal;
-			global::PhantomLib.Droid.Resource.Id.notification_background = global::PhantomLibSamples.Droid.Resource.Id.notification_background;
-			global::PhantomLib.Droid.Resource.Id.notification_main_column = global::PhantomLibSamples.Droid.Resource.Id.notification_main_column;
-			global::PhantomLib.Droid.Resource.Id.notification_main_column_container = global::PhantomLibSamples.Droid.Resource.Id.notification_main_column_container;
-			global::PhantomLib.Droid.Resource.Id.parallax = global::PhantomLibSamples.Droid.Resource.Id.parallax;
-			global::PhantomLib.Droid.Resource.Id.parentPanel = global::PhantomLibSamples.Droid.Resource.Id.parentPanel;
-			global::PhantomLib.Droid.Resource.Id.parent_matrix = global::PhantomLibSamples.Droid.Resource.Id.parent_matrix;
-			global::PhantomLib.Droid.Resource.Id.pin = global::PhantomLibSamples.Droid.Resource.Id.pin;
-			global::PhantomLib.Droid.Resource.Id.progress_circular = global::PhantomLibSamples.Droid.Resource.Id.progress_circular;
-			global::PhantomLib.Droid.Resource.Id.progress_horizontal = global::PhantomLibSamples.Droid.Resource.Id.progress_horizontal;
-			global::PhantomLib.Droid.Resource.Id.radio = global::PhantomLibSamples.Droid.Resource.Id.radio;
-			global::PhantomLib.Droid.Resource.Id.right = global::PhantomLibSamples.Droid.Resource.Id.right;
-			global::PhantomLib.Droid.Resource.Id.right_icon = global::PhantomLibSamples.Droid.Resource.Id.right_icon;
-			global::PhantomLib.Droid.Resource.Id.right_side = global::PhantomLibSamples.Droid.Resource.Id.right_side;
-			global::PhantomLib.Droid.Resource.Id.save_image_matrix = global::PhantomLibSamples.Droid.Resource.Id.save_image_matrix;
-			global::PhantomLib.Droid.Resource.Id.save_non_transition_alpha = global::PhantomLibSamples.Droid.Resource.Id.save_non_transition_alpha;
-			global::PhantomLib.Droid.Resource.Id.save_scale_type = global::PhantomLibSamples.Droid.Resource.Id.save_scale_type;
-			global::PhantomLib.Droid.Resource.Id.screen = global::PhantomLibSamples.Droid.Resource.Id.screen;
-			global::PhantomLib.Droid.Resource.Id.scroll = global::PhantomLibSamples.Droid.Resource.Id.scroll;
-			global::PhantomLib.Droid.Resource.Id.scrollable = global::PhantomLibSamples.Droid.Resource.Id.scrollable;
-			global::PhantomLib.Droid.Resource.Id.scrollIndicatorDown = global::PhantomLibSamples.Droid.Resource.Id.scrollIndicatorDown;
-			global::PhantomLib.Droid.Resource.Id.scrollIndicatorUp = global::PhantomLibSamples.Droid.Resource.Id.scrollIndicatorUp;
-			global::PhantomLib.Droid.Resource.Id.scrollView = global::PhantomLibSamples.Droid.Resource.Id.scrollView;
-			global::PhantomLib.Droid.Resource.Id.search_badge = global::PhantomLibSamples.Droid.Resource.Id.search_badge;
-			global::PhantomLib.Droid.Resource.Id.search_bar = global::PhantomLibSamples.Droid.Resource.Id.search_bar;
-			global::PhantomLib.Droid.Resource.Id.search_button = global::PhantomLibSamples.Droid.Resource.Id.search_button;
-			global::PhantomLib.Droid.Resource.Id.search_close_btn = global::PhantomLibSamples.Droid.Resource.Id.search_close_btn;
-			global::PhantomLib.Droid.Resource.Id.search_edit_frame = global::PhantomLibSamples.Droid.Resource.Id.search_edit_frame;
-			global::PhantomLib.Droid.Resource.Id.search_go_btn = global::PhantomLibSamples.Droid.Resource.Id.search_go_btn;
-			global::PhantomLib.Droid.Resource.Id.search_mag_icon = global::PhantomLibSamples.Droid.Resource.Id.search_mag_icon;
-			global::PhantomLib.Droid.Resource.Id.search_plate = global::PhantomLibSamples.Droid.Resource.Id.search_plate;
-			global::PhantomLib.Droid.Resource.Id.search_src_text = global::PhantomLibSamples.Droid.Resource.Id.search_src_text;
-			global::PhantomLib.Droid.Resource.Id.search_voice_btn = global::PhantomLibSamples.Droid.Resource.Id.search_voice_btn;
-			global::PhantomLib.Droid.Resource.Id.select_dialog_listview = global::PhantomLibSamples.Droid.Resource.Id.select_dialog_listview;
-			global::PhantomLib.Droid.Resource.Id.shellcontent_appbar = global::PhantomLibSamples.Droid.Resource.Id.shellcontent_appbar;
-			global::PhantomLib.Droid.Resource.Id.shellcontent_scrollview = global::PhantomLibSamples.Droid.Resource.Id.shellcontent_scrollview;
-			global::PhantomLib.Droid.Resource.Id.shellcontent_toolbar = global::PhantomLibSamples.Droid.Resource.Id.shellcontent_toolbar;
-			global::PhantomLib.Droid.Resource.Id.SHIFT = global::PhantomLibSamples.Droid.Resource.Id.SHIFT;
-			global::PhantomLib.Droid.Resource.Id.shortcut = global::PhantomLibSamples.Droid.Resource.Id.shortcut;
-			global::PhantomLib.Droid.Resource.Id.showCustom = global::PhantomLibSamples.Droid.Resource.Id.showCustom;
-			global::PhantomLib.Droid.Resource.Id.showHome = global::PhantomLibSamples.Droid.Resource.Id.showHome;
-			global::PhantomLib.Droid.Resource.Id.showTitle = global::PhantomLibSamples.Droid.Resource.Id.showTitle;
-			global::PhantomLib.Droid.Resource.Id.smallLabel = global::PhantomLibSamples.Droid.Resource.Id.smallLabel;
-			global::PhantomLib.Droid.Resource.Id.snackbar_action = global::PhantomLibSamples.Droid.Resource.Id.snackbar_action;
-			global::PhantomLib.Droid.Resource.Id.snackbar_text = global::PhantomLibSamples.Droid.Resource.Id.snackbar_text;
-			global::PhantomLib.Droid.Resource.Id.snap = global::PhantomLibSamples.Droid.Resource.Id.snap;
-			global::PhantomLib.Droid.Resource.Id.spacer = global::PhantomLibSamples.Droid.Resource.Id.spacer;
-			global::PhantomLib.Droid.Resource.Id.split_action_bar = global::PhantomLibSamples.Droid.Resource.Id.split_action_bar;
-			global::PhantomLib.Droid.Resource.Id.src_atop = global::PhantomLibSamples.Droid.Resource.Id.src_atop;
-			global::PhantomLib.Droid.Resource.Id.src_in = global::PhantomLibSamples.Droid.Resource.Id.src_in;
-			global::PhantomLib.Droid.Resource.Id.src_over = global::PhantomLibSamples.Droid.Resource.Id.src_over;
-			global::PhantomLib.Droid.Resource.Id.start = global::PhantomLibSamples.Droid.Resource.Id.start;
-			global::PhantomLib.Droid.Resource.Id.status_bar_latest_event_content = global::PhantomLibSamples.Droid.Resource.Id.status_bar_latest_event_content;
-			global::PhantomLib.Droid.Resource.Id.submenuarrow = global::PhantomLibSamples.Droid.Resource.Id.submenuarrow;
-			global::PhantomLib.Droid.Resource.Id.submit_area = global::PhantomLibSamples.Droid.Resource.Id.submit_area;
-			global::PhantomLib.Droid.Resource.Id.SYM = global::PhantomLibSamples.Droid.Resource.Id.SYM;
-			global::PhantomLib.Droid.Resource.Id.tabMode = global::PhantomLibSamples.Droid.Resource.Id.tabMode;
-			global::PhantomLib.Droid.Resource.Id.tag_transition_group = global::PhantomLibSamples.Droid.Resource.Id.tag_transition_group;
-			global::PhantomLib.Droid.Resource.Id.text = global::PhantomLibSamples.Droid.Resource.Id.text;
-			global::PhantomLib.Droid.Resource.Id.text2 = global::PhantomLibSamples.Droid.Resource.Id.text2;
-			global::PhantomLib.Droid.Resource.Id.textinput_counter = global::PhantomLibSamples.Droid.Resource.Id.textinput_counter;
-			global::PhantomLib.Droid.Resource.Id.textinput_error = global::PhantomLibSamples.Droid.Resource.Id.textinput_error;
-			global::PhantomLib.Droid.Resource.Id.textSpacerNoButtons = global::PhantomLibSamples.Droid.Resource.Id.textSpacerNoButtons;
-			global::PhantomLib.Droid.Resource.Id.textSpacerNoTitle = global::PhantomLibSamples.Droid.Resource.Id.textSpacerNoTitle;
-			global::PhantomLib.Droid.Resource.Id.text_input_password_toggle = global::PhantomLibSamples.Droid.Resource.Id.text_input_password_toggle;
-			global::PhantomLib.Droid.Resource.Id.time = global::PhantomLibSamples.Droid.Resource.Id.time;
-			global::PhantomLib.Droid.Resource.Id.title = global::PhantomLibSamples.Droid.Resource.Id.title;
-			global::PhantomLib.Droid.Resource.Id.titleDividerNoCustom = global::PhantomLibSamples.Droid.Resource.Id.titleDividerNoCustom;
-			global::PhantomLib.Droid.Resource.Id.title_template = global::PhantomLibSamples.Droid.Resource.Id.title_template;
-			global::PhantomLib.Droid.Resource.Id.top = global::PhantomLibSamples.Droid.Resource.Id.top;
-			global::PhantomLib.Droid.Resource.Id.topPanel = global::PhantomLibSamples.Droid.Resource.Id.topPanel;
-			global::PhantomLib.Droid.Resource.Id.touch_outside = global::PhantomLibSamples.Droid.Resource.Id.touch_outside;
-			global::PhantomLib.Droid.Resource.Id.transition_current_scene = global::PhantomLibSamples.Droid.Resource.Id.transition_current_scene;
-			global::PhantomLib.Droid.Resource.Id.transition_layout_save = global::PhantomLibSamples.Droid.Resource.Id.transition_layout_save;
-			global::PhantomLib.Droid.Resource.Id.transition_position = global::PhantomLibSamples.Droid.Resource.Id.transition_position;
-			global::PhantomLib.Droid.Resource.Id.transition_scene_layoutid_cache = global::PhantomLibSamples.Droid.Resource.Id.transition_scene_layoutid_cache;
-			global::PhantomLib.Droid.Resource.Id.transition_transform = global::PhantomLibSamples.Droid.Resource.Id.transition_transform;
-			global::PhantomLib.Droid.Resource.Id.uniform = global::PhantomLibSamples.Droid.Resource.Id.uniform;
-			global::PhantomLib.Droid.Resource.Id.up = global::PhantomLibSamples.Droid.Resource.Id.up;
-			global::PhantomLib.Droid.Resource.Id.useLogo = global::PhantomLibSamples.Droid.Resource.Id.useLogo;
-			global::PhantomLib.Droid.Resource.Id.view_offset_helper = global::PhantomLibSamples.Droid.Resource.Id.view_offset_helper;
-			global::PhantomLib.Droid.Resource.Id.visible = global::PhantomLibSamples.Droid.Resource.Id.visible;
-			global::PhantomLib.Droid.Resource.Id.volume_item_container = global::PhantomLibSamples.Droid.Resource.Id.volume_item_container;
-			global::PhantomLib.Droid.Resource.Id.withText = global::PhantomLibSamples.Droid.Resource.Id.withText;
-			global::PhantomLib.Droid.Resource.Id.wrap_content = global::PhantomLibSamples.Droid.Resource.Id.wrap_content;
-			global::PhantomLib.Droid.Resource.Integer.abc_config_activityDefaultDur = global::PhantomLibSamples.Droid.Resource.Integer.abc_config_activityDefaultDur;
-			global::PhantomLib.Droid.Resource.Integer.abc_config_activityShortDur = global::PhantomLibSamples.Droid.Resource.Integer.abc_config_activityShortDur;
-			global::PhantomLib.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::PhantomLibSamples.Droid.Resource.Integer.app_bar_elevation_anim_duration;
-			global::PhantomLib.Droid.Resource.Integer.bottom_sheet_slide_duration = global::PhantomLibSamples.Droid.Resource.Integer.bottom_sheet_slide_duration;
-			global::PhantomLib.Droid.Resource.Integer.cancel_button_image_alpha = global::PhantomLibSamples.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::PhantomLib.Droid.Resource.Integer.config_tooltipAnimTime = global::PhantomLibSamples.Droid.Resource.Integer.config_tooltipAnimTime;
-			global::PhantomLib.Droid.Resource.Integer.design_snackbar_text_max_lines = global::PhantomLibSamples.Droid.Resource.Integer.design_snackbar_text_max_lines;
-			global::PhantomLib.Droid.Resource.Integer.hide_password_duration = global::PhantomLibSamples.Droid.Resource.Integer.hide_password_duration;
-			global::PhantomLib.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::PhantomLibSamples.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
-			global::PhantomLib.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::PhantomLibSamples.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
-			global::PhantomLib.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::PhantomLibSamples.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
-			global::PhantomLib.Droid.Resource.Integer.show_password_duration = global::PhantomLibSamples.Droid.Resource.Integer.show_password_duration;
-			global::PhantomLib.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::PhantomLibSamples.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::PhantomLib.Droid.Resource.Interpolator.mr_fast_out_slow_in = global::PhantomLibSamples.Droid.Resource.Interpolator.mr_fast_out_slow_in;
-			global::PhantomLib.Droid.Resource.Interpolator.mr_linear_out_slow_in = global::PhantomLibSamples.Droid.Resource.Interpolator.mr_linear_out_slow_in;
-			global::PhantomLib.Droid.Resource.Layout.abc_action_bar_title_item = global::PhantomLibSamples.Droid.Resource.Layout.abc_action_bar_title_item;
-			global::PhantomLib.Droid.Resource.Layout.abc_action_bar_up_container = global::PhantomLibSamples.Droid.Resource.Layout.abc_action_bar_up_container;
-			global::PhantomLib.Droid.Resource.Layout.abc_action_menu_item_layout = global::PhantomLibSamples.Droid.Resource.Layout.abc_action_menu_item_layout;
-			global::PhantomLib.Droid.Resource.Layout.abc_action_menu_layout = global::PhantomLibSamples.Droid.Resource.Layout.abc_action_menu_layout;
-			global::PhantomLib.Droid.Resource.Layout.abc_action_mode_bar = global::PhantomLibSamples.Droid.Resource.Layout.abc_action_mode_bar;
-			global::PhantomLib.Droid.Resource.Layout.abc_action_mode_close_item_material = global::PhantomLibSamples.Droid.Resource.Layout.abc_action_mode_close_item_material;
-			global::PhantomLib.Droid.Resource.Layout.abc_activity_chooser_view = global::PhantomLibSamples.Droid.Resource.Layout.abc_activity_chooser_view;
-			global::PhantomLib.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::PhantomLibSamples.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::PhantomLib.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::PhantomLibSamples.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
-			global::PhantomLib.Droid.Resource.Layout.abc_alert_dialog_material = global::PhantomLibSamples.Droid.Resource.Layout.abc_alert_dialog_material;
-			global::PhantomLib.Droid.Resource.Layout.abc_alert_dialog_title_material = global::PhantomLibSamples.Droid.Resource.Layout.abc_alert_dialog_title_material;
-			global::PhantomLib.Droid.Resource.Layout.abc_dialog_title_material = global::PhantomLibSamples.Droid.Resource.Layout.abc_dialog_title_material;
-			global::PhantomLib.Droid.Resource.Layout.abc_expanded_menu_layout = global::PhantomLibSamples.Droid.Resource.Layout.abc_expanded_menu_layout;
-			global::PhantomLib.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::PhantomLibSamples.Droid.Resource.Layout.abc_list_menu_item_checkbox;
-			global::PhantomLib.Droid.Resource.Layout.abc_list_menu_item_icon = global::PhantomLibSamples.Droid.Resource.Layout.abc_list_menu_item_icon;
-			global::PhantomLib.Droid.Resource.Layout.abc_list_menu_item_layout = global::PhantomLibSamples.Droid.Resource.Layout.abc_list_menu_item_layout;
-			global::PhantomLib.Droid.Resource.Layout.abc_list_menu_item_radio = global::PhantomLibSamples.Droid.Resource.Layout.abc_list_menu_item_radio;
-			global::PhantomLib.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::PhantomLibSamples.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
-			global::PhantomLib.Droid.Resource.Layout.abc_popup_menu_item_layout = global::PhantomLibSamples.Droid.Resource.Layout.abc_popup_menu_item_layout;
-			global::PhantomLib.Droid.Resource.Layout.abc_screen_content_include = global::PhantomLibSamples.Droid.Resource.Layout.abc_screen_content_include;
-			global::PhantomLib.Droid.Resource.Layout.abc_screen_simple = global::PhantomLibSamples.Droid.Resource.Layout.abc_screen_simple;
-			global::PhantomLib.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::PhantomLibSamples.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::PhantomLib.Droid.Resource.Layout.abc_screen_toolbar = global::PhantomLibSamples.Droid.Resource.Layout.abc_screen_toolbar;
-			global::PhantomLib.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::PhantomLibSamples.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::PhantomLib.Droid.Resource.Layout.abc_search_view = global::PhantomLibSamples.Droid.Resource.Layout.abc_search_view;
-			global::PhantomLib.Droid.Resource.Layout.abc_select_dialog_material = global::PhantomLibSamples.Droid.Resource.Layout.abc_select_dialog_material;
-			global::PhantomLib.Droid.Resource.Layout.BottomTabLayout = global::PhantomLibSamples.Droid.Resource.Layout.BottomTabLayout;
-			global::PhantomLib.Droid.Resource.Layout.design_bottom_navigation_item = global::PhantomLibSamples.Droid.Resource.Layout.design_bottom_navigation_item;
-			global::PhantomLib.Droid.Resource.Layout.design_bottom_sheet_dialog = global::PhantomLibSamples.Droid.Resource.Layout.design_bottom_sheet_dialog;
-			global::PhantomLib.Droid.Resource.Layout.design_layout_snackbar = global::PhantomLibSamples.Droid.Resource.Layout.design_layout_snackbar;
-			global::PhantomLib.Droid.Resource.Layout.design_layout_snackbar_include = global::PhantomLibSamples.Droid.Resource.Layout.design_layout_snackbar_include;
-			global::PhantomLib.Droid.Resource.Layout.design_layout_tab_icon = global::PhantomLibSamples.Droid.Resource.Layout.design_layout_tab_icon;
-			global::PhantomLib.Droid.Resource.Layout.design_layout_tab_text = global::PhantomLibSamples.Droid.Resource.Layout.design_layout_tab_text;
-			global::PhantomLib.Droid.Resource.Layout.design_menu_item_action_area = global::PhantomLibSamples.Droid.Resource.Layout.design_menu_item_action_area;
-			global::PhantomLib.Droid.Resource.Layout.design_navigation_item = global::PhantomLibSamples.Droid.Resource.Layout.design_navigation_item;
-			global::PhantomLib.Droid.Resource.Layout.design_navigation_item_header = global::PhantomLibSamples.Droid.Resource.Layout.design_navigation_item_header;
-			global::PhantomLib.Droid.Resource.Layout.design_navigation_item_separator = global::PhantomLibSamples.Droid.Resource.Layout.design_navigation_item_separator;
-			global::PhantomLib.Droid.Resource.Layout.design_navigation_item_subheader = global::PhantomLibSamples.Droid.Resource.Layout.design_navigation_item_subheader;
-			global::PhantomLib.Droid.Resource.Layout.design_navigation_menu = global::PhantomLibSamples.Droid.Resource.Layout.design_navigation_menu;
-			global::PhantomLib.Droid.Resource.Layout.design_navigation_menu_item = global::PhantomLibSamples.Droid.Resource.Layout.design_navigation_menu_item;
-			global::PhantomLib.Droid.Resource.Layout.design_text_input_password_icon = global::PhantomLibSamples.Droid.Resource.Layout.design_text_input_password_icon;
-			global::PhantomLib.Droid.Resource.Layout.FlyoutContent = global::PhantomLibSamples.Droid.Resource.Layout.FlyoutContent;
-			global::PhantomLib.Droid.Resource.Layout.mr_chooser_dialog = global::PhantomLibSamples.Droid.Resource.Layout.mr_chooser_dialog;
-			global::PhantomLib.Droid.Resource.Layout.mr_chooser_list_item = global::PhantomLibSamples.Droid.Resource.Layout.mr_chooser_list_item;
-			global::PhantomLib.Droid.Resource.Layout.mr_controller_material_dialog_b = global::PhantomLibSamples.Droid.Resource.Layout.mr_controller_material_dialog_b;
-			global::PhantomLib.Droid.Resource.Layout.mr_controller_volume_item = global::PhantomLibSamples.Droid.Resource.Layout.mr_controller_volume_item;
-			global::PhantomLib.Droid.Resource.Layout.mr_playback_control = global::PhantomLibSamples.Droid.Resource.Layout.mr_playback_control;
-			global::PhantomLib.Droid.Resource.Layout.mr_volume_control = global::PhantomLibSamples.Droid.Resource.Layout.mr_volume_control;
-			global::PhantomLib.Droid.Resource.Layout.notification_action = global::PhantomLibSamples.Droid.Resource.Layout.notification_action;
-			global::PhantomLib.Droid.Resource.Layout.notification_action_tombstone = global::PhantomLibSamples.Droid.Resource.Layout.notification_action_tombstone;
-			global::PhantomLib.Droid.Resource.Layout.notification_media_action = global::PhantomLibSamples.Droid.Resource.Layout.notification_media_action;
-			global::PhantomLib.Droid.Resource.Layout.notification_media_cancel_action = global::PhantomLibSamples.Droid.Resource.Layout.notification_media_cancel_action;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_big_media = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_big_media;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_big_media_custom = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_big_media_custom;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_big_media_narrow = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_big_media_narrow;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_custom_big = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_custom_big;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_icon_group = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_icon_group;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_lines_media = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_lines_media;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_media = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_media;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_media_custom = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_media_custom;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_part_chronometer = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::PhantomLib.Droid.Resource.Layout.notification_template_part_time = global::PhantomLibSamples.Droid.Resource.Layout.notification_template_part_time;
-			global::PhantomLib.Droid.Resource.Layout.RootLayout = global::PhantomLibSamples.Droid.Resource.Layout.RootLayout;
-			global::PhantomLib.Droid.Resource.Layout.select_dialog_item_material = global::PhantomLibSamples.Droid.Resource.Layout.select_dialog_item_material;
-			global::PhantomLib.Droid.Resource.Layout.select_dialog_multichoice_material = global::PhantomLibSamples.Droid.Resource.Layout.select_dialog_multichoice_material;
-			global::PhantomLib.Droid.Resource.Layout.select_dialog_singlechoice_material = global::PhantomLibSamples.Droid.Resource.Layout.select_dialog_singlechoice_material;
-			global::PhantomLib.Droid.Resource.Layout.ShellContent = global::PhantomLibSamples.Droid.Resource.Layout.ShellContent;
-			global::PhantomLib.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::PhantomLibSamples.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::PhantomLib.Droid.Resource.Layout.tooltip = global::PhantomLibSamples.Droid.Resource.Layout.tooltip;
-			global::PhantomLib.Droid.Resource.String.abc_action_bar_home_description = global::PhantomLibSamples.Droid.Resource.String.abc_action_bar_home_description;
-			global::PhantomLib.Droid.Resource.String.abc_action_bar_up_description = global::PhantomLibSamples.Droid.Resource.String.abc_action_bar_up_description;
-			global::PhantomLib.Droid.Resource.String.abc_action_menu_overflow_description = global::PhantomLibSamples.Droid.Resource.String.abc_action_menu_overflow_description;
-			global::PhantomLib.Droid.Resource.String.abc_action_mode_done = global::PhantomLibSamples.Droid.Resource.String.abc_action_mode_done;
-			global::PhantomLib.Droid.Resource.String.abc_activitychooserview_choose_application = global::PhantomLibSamples.Droid.Resource.String.abc_activitychooserview_choose_application;
-			global::PhantomLib.Droid.Resource.String.abc_activity_chooser_view_see_all = global::PhantomLibSamples.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::PhantomLib.Droid.Resource.String.abc_capital_off = global::PhantomLibSamples.Droid.Resource.String.abc_capital_off;
-			global::PhantomLib.Droid.Resource.String.abc_capital_on = global::PhantomLibSamples.Droid.Resource.String.abc_capital_on;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_body_1_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_body_1_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_body_2_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_body_2_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_button_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_button_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_caption_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_caption_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_display_1_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_display_1_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_display_2_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_display_2_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_display_3_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_display_3_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_display_4_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_display_4_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_headline_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_headline_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_menu_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_menu_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_subhead_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_subhead_material;
-			global::PhantomLib.Droid.Resource.String.abc_font_family_title_material = global::PhantomLibSamples.Droid.Resource.String.abc_font_family_title_material;
-			global::PhantomLib.Droid.Resource.String.abc_searchview_description_clear = global::PhantomLibSamples.Droid.Resource.String.abc_searchview_description_clear;
-			global::PhantomLib.Droid.Resource.String.abc_searchview_description_query = global::PhantomLibSamples.Droid.Resource.String.abc_searchview_description_query;
-			global::PhantomLib.Droid.Resource.String.abc_searchview_description_search = global::PhantomLibSamples.Droid.Resource.String.abc_searchview_description_search;
-			global::PhantomLib.Droid.Resource.String.abc_searchview_description_submit = global::PhantomLibSamples.Droid.Resource.String.abc_searchview_description_submit;
-			global::PhantomLib.Droid.Resource.String.abc_searchview_description_voice = global::PhantomLibSamples.Droid.Resource.String.abc_searchview_description_voice;
-			global::PhantomLib.Droid.Resource.String.abc_search_hint = global::PhantomLibSamples.Droid.Resource.String.abc_search_hint;
-			global::PhantomLib.Droid.Resource.String.abc_shareactionprovider_share_with = global::PhantomLibSamples.Droid.Resource.String.abc_shareactionprovider_share_with;
-			global::PhantomLib.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::PhantomLibSamples.Droid.Resource.String.abc_shareactionprovider_share_with_application;
-			global::PhantomLib.Droid.Resource.String.abc_toolbar_collapse_description = global::PhantomLibSamples.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::PhantomLib.Droid.Resource.String.appbar_scrolling_view_behavior = global::PhantomLibSamples.Droid.Resource.String.appbar_scrolling_view_behavior;
-			global::PhantomLib.Droid.Resource.String.app_name = global::PhantomLibSamples.Droid.Resource.String.app_name;
-			global::PhantomLib.Droid.Resource.String.bottom_sheet_behavior = global::PhantomLibSamples.Droid.Resource.String.bottom_sheet_behavior;
-			global::PhantomLib.Droid.Resource.String.character_counter_pattern = global::PhantomLibSamples.Droid.Resource.String.character_counter_pattern;
-			global::PhantomLib.Droid.Resource.String.hello = global::PhantomLibSamples.Droid.Resource.String.hello;
-			global::PhantomLib.Droid.Resource.String.mr_button_content_description = global::PhantomLibSamples.Droid.Resource.String.mr_button_content_description;
-			global::PhantomLib.Droid.Resource.String.mr_cast_button_connected = global::PhantomLibSamples.Droid.Resource.String.mr_cast_button_connected;
-			global::PhantomLib.Droid.Resource.String.mr_cast_button_connecting = global::PhantomLibSamples.Droid.Resource.String.mr_cast_button_connecting;
-			global::PhantomLib.Droid.Resource.String.mr_cast_button_disconnected = global::PhantomLibSamples.Droid.Resource.String.mr_cast_button_disconnected;
-			global::PhantomLib.Droid.Resource.String.mr_chooser_searching = global::PhantomLibSamples.Droid.Resource.String.mr_chooser_searching;
-			global::PhantomLib.Droid.Resource.String.mr_chooser_title = global::PhantomLibSamples.Droid.Resource.String.mr_chooser_title;
-			global::PhantomLib.Droid.Resource.String.mr_controller_album_art = global::PhantomLibSamples.Droid.Resource.String.mr_controller_album_art;
-			global::PhantomLib.Droid.Resource.String.mr_controller_casting_screen = global::PhantomLibSamples.Droid.Resource.String.mr_controller_casting_screen;
-			global::PhantomLib.Droid.Resource.String.mr_controller_close_description = global::PhantomLibSamples.Droid.Resource.String.mr_controller_close_description;
-			global::PhantomLib.Droid.Resource.String.mr_controller_collapse_group = global::PhantomLibSamples.Droid.Resource.String.mr_controller_collapse_group;
-			global::PhantomLib.Droid.Resource.String.mr_controller_disconnect = global::PhantomLibSamples.Droid.Resource.String.mr_controller_disconnect;
-			global::PhantomLib.Droid.Resource.String.mr_controller_expand_group = global::PhantomLibSamples.Droid.Resource.String.mr_controller_expand_group;
-			global::PhantomLib.Droid.Resource.String.mr_controller_no_info_available = global::PhantomLibSamples.Droid.Resource.String.mr_controller_no_info_available;
-			global::PhantomLib.Droid.Resource.String.mr_controller_no_media_selected = global::PhantomLibSamples.Droid.Resource.String.mr_controller_no_media_selected;
-			global::PhantomLib.Droid.Resource.String.mr_controller_pause = global::PhantomLibSamples.Droid.Resource.String.mr_controller_pause;
-			global::PhantomLib.Droid.Resource.String.mr_controller_play = global::PhantomLibSamples.Droid.Resource.String.mr_controller_play;
-			global::PhantomLib.Droid.Resource.String.mr_controller_stop = global::PhantomLibSamples.Droid.Resource.String.mr_controller_stop;
-			global::PhantomLib.Droid.Resource.String.mr_controller_stop_casting = global::PhantomLibSamples.Droid.Resource.String.mr_controller_stop_casting;
-			global::PhantomLib.Droid.Resource.String.mr_controller_volume_slider = global::PhantomLibSamples.Droid.Resource.String.mr_controller_volume_slider;
-			global::PhantomLib.Droid.Resource.String.mr_system_route_name = global::PhantomLibSamples.Droid.Resource.String.mr_system_route_name;
-			global::PhantomLib.Droid.Resource.String.mr_user_route_category_name = global::PhantomLibSamples.Droid.Resource.String.mr_user_route_category_name;
-			global::PhantomLib.Droid.Resource.String.password_toggle_content_description = global::PhantomLibSamples.Droid.Resource.String.password_toggle_content_description;
-			global::PhantomLib.Droid.Resource.String.path_password_eye = global::PhantomLibSamples.Droid.Resource.String.path_password_eye;
-			global::PhantomLib.Droid.Resource.String.path_password_eye_mask_strike_through = global::PhantomLibSamples.Droid.Resource.String.path_password_eye_mask_strike_through;
-			global::PhantomLib.Droid.Resource.String.path_password_eye_mask_visible = global::PhantomLibSamples.Droid.Resource.String.path_password_eye_mask_visible;
-			global::PhantomLib.Droid.Resource.String.path_password_strike_through = global::PhantomLibSamples.Droid.Resource.String.path_password_strike_through;
-			global::PhantomLib.Droid.Resource.String.search_menu_title = global::PhantomLibSamples.Droid.Resource.String.search_menu_title;
-			global::PhantomLib.Droid.Resource.String.status_bar_notification_info_overflow = global::PhantomLibSamples.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::PhantomLib.Droid.Resource.Style.AlertDialog_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.AlertDialog_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.AlertDialog_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Animation_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Animation_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::PhantomLibSamples.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::PhantomLib.Droid.Resource.Style.Animation_AppCompat_Tooltip = global::PhantomLibSamples.Droid.Resource.Style.Animation_AppCompat_Tooltip;
-			global::PhantomLib.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::PhantomLibSamples.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
-			global::PhantomLib.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_AlertDialog_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::PhantomLibSamples.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::PhantomLib.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip = global::PhantomLibSamples.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
-			global::PhantomLib.Droid.Resource.Style.Base_CardView = global::PhantomLibSamples.Droid.Resource.Style.Base_CardView;
-			global::PhantomLib.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::PhantomLibSamples.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::PhantomLibSamples.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::PhantomLibSamples.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
-			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::PhantomLibSamples.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::PhantomLib.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::PhantomLibSamples.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
-			global::PhantomLib.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::PhantomLibSamples.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
-			global::PhantomLib.Droid.Resource.Style.Base_V14_Widget_Design_AppBarLayout = global::PhantomLibSamples.Droid.Resource.Style.Base_V14_Widget_Design_AppBarLayout;
-			global::PhantomLib.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_V21_Theme_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_V21_Widget_Design_AppBarLayout = global::PhantomLibSamples.Droid.Resource.Style.Base_V21_Widget_Design_AppBarLayout;
-			global::PhantomLib.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Base_V26_Theme_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_V26_Theme_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::PhantomLibSamples.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
-			global::PhantomLib.Droid.Resource.Style.Base_V26_Widget_Design_AppBarLayout = global::PhantomLibSamples.Droid.Resource.Style.Base_V26_Widget_Design_AppBarLayout;
-			global::PhantomLib.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Base_V7_Theme_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::PhantomLibSamples.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::PhantomLib.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::PhantomLibSamples.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::PhantomLib.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::PhantomLibSamples.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Button;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_Design_AppBarLayout = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_Design_AppBarLayout;
-			global::PhantomLib.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::PhantomLibSamples.Droid.Resource.Style.Base_Widget_Design_TabLayout;
-			global::PhantomLib.Droid.Resource.Style.CardView = global::PhantomLibSamples.Droid.Resource.Style.CardView;
-			global::PhantomLib.Droid.Resource.Style.CardView_Dark = global::PhantomLibSamples.Droid.Resource.Style.CardView_Dark;
-			global::PhantomLib.Droid.Resource.Style.CardView_Light = global::PhantomLibSamples.Droid.Resource.Style.CardView_Light;
-			global::PhantomLib.Droid.Resource.Style.Platform_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Platform_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Platform_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Platform_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::PhantomLibSamples.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::PhantomLib.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Platform_V11_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Platform_V11_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Platform_V11_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Platform_V11_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Platform_V14_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Platform_V14_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Platform_V14_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Platform_V14_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Platform_V21_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Platform_V21_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Platform_V21_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Platform_V25_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Platform_V25_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Platform_V25_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::PhantomLibSamples.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::PhantomLibSamples.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::PhantomLib.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::PhantomLibSamples.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
-			global::PhantomLib.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::PhantomLibSamples.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Button;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Large;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Small;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Title;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Info = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Media = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Time = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Title = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Counter = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Design_Counter;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Error = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Design_Error;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Hint = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Design_Hint;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Tab = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Design_Tab;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_MediaRouter_Title = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_MediaRouter_Title;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::PhantomLib.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::PhantomLibSamples.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::PhantomLibSamples.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::PhantomLibSamples.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
-			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::PhantomLibSamples.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
-			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light = global::PhantomLibSamples.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_DayNight;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Light;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::PhantomLibSamples.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::PhantomLib.Droid.Resource.Style.Theme_Design = global::PhantomLibSamples.Droid.Resource.Style.Theme_Design;
-			global::PhantomLib.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::PhantomLibSamples.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
-			global::PhantomLib.Droid.Resource.Style.Theme_Design_Light = global::PhantomLibSamples.Droid.Resource.Style.Theme_Design_Light;
-			global::PhantomLib.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::PhantomLibSamples.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
-			global::PhantomLib.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::PhantomLibSamples.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
-			global::PhantomLib.Droid.Resource.Style.Theme_Design_NoActionBar = global::PhantomLibSamples.Droid.Resource.Style.Theme_Design_NoActionBar;
-			global::PhantomLib.Droid.Resource.Style.Theme_MediaRouter = global::PhantomLibSamples.Droid.Resource.Style.Theme_MediaRouter;
-			global::PhantomLib.Droid.Resource.Style.Theme_MediaRouter_Light = global::PhantomLibSamples.Droid.Resource.Style.Theme_MediaRouter_Light;
-			global::PhantomLib.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel = global::PhantomLibSamples.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
-			global::PhantomLib.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::PhantomLibSamples.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActionButton;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActionMode;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Button;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_EditText = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_EditText;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ImageButton;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ListView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_RatingBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_SearchView = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_SearchView;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_SeekBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Spinner = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Spinner;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Toolbar;
-			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::PhantomLibSamples.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::PhantomLib.Droid.Resource.Style.Widget_Compat_NotificationActionContainer = global::PhantomLibSamples.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
-			global::PhantomLib.Droid.Resource.Style.Widget_Compat_NotificationActionText = global::PhantomLibSamples.Droid.Resource.Style.Widget_Compat_NotificationActionText;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_AppBarLayout = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_AppBarLayout;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_BottomNavigationView;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_CoordinatorLayout = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_FloatingActionButton;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_NavigationView = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_NavigationView;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_Snackbar = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_Snackbar;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_TabLayout = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_TabLayout;
-			global::PhantomLib.Droid.Resource.Style.Widget_Design_TextInputLayout = global::PhantomLibSamples.Droid.Resource.Style.Widget_Design_TextInputLayout;
-			global::PhantomLib.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::PhantomLibSamples.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
-			global::PhantomLib.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::PhantomLibSamples.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBarLayout = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBarLayout;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_background = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_background;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_backgroundSplit;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_backgroundStacked;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_contentInsetRight;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_contentInsetStart;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_displayOptions = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_displayOptions;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_divider = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_divider;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_elevation = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_elevation;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_height = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_height;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_homeLayout = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_homeLayout;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_icon = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_icon;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_itemPadding = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_itemPadding;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_logo = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_logo;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_navigationMode = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_navigationMode;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_popupTheme = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_popupTheme;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_progressBarPadding;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_progressBarStyle;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_subtitle = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_subtitle;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_title = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_title;
-			global::PhantomLib.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::PhantomLibSamples.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMenuItemView = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMenuItemView;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMenuView = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMenuView;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMode = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMode;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMode_background = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMode_background;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMode_backgroundSplit;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMode_closeItemLayout;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMode_height = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMode_height;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::PhantomLib.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::PhantomLibSamples.Droid.Resource.Styleable.ActionMode_titleTextStyle;
-			global::PhantomLib.Droid.Resource.Styleable.ActivityChooserView = global::PhantomLibSamples.Droid.Resource.Styleable.ActivityChooserView;
-			global::PhantomLib.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::PhantomLibSamples.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::PhantomLib.Droid.Resource.Styleable.AlertDialog = global::PhantomLibSamples.Droid.Resource.Styleable.AlertDialog;
-			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_android_layout = global::PhantomLibSamples.Droid.Resource.Styleable.AlertDialog_android_layout;
-			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::PhantomLibSamples.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::PhantomLibSamples.Droid.Resource.Styleable.AlertDialog_listItemLayout;
-			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_listLayout = global::PhantomLibSamples.Droid.Resource.Styleable.AlertDialog_listLayout;
-			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::PhantomLibSamples.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_showTitle = global::PhantomLibSamples.Droid.Resource.Styleable.AlertDialog_showTitle;
-			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::PhantomLibSamples.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayout;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayoutStates = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayoutStates;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_android_background = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayout_android_background;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_elevation = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayout_elevation;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_expanded = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayout_expanded;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_Layout = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayout_Layout;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
-			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::PhantomLibSamples.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatImageView;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView_android_src = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatImageView_android_src;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView_tint = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatImageView_tint;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatImageView_tintMode;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatSeekBar;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextHelper;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextView;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_fontFamily = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorError = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorError;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
-			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::PhantomLibSamples.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
-			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView = global::PhantomLibSamples.Droid.Resource.Styleable.BottomNavigationView;
-			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_elevation = global::PhantomLibSamples.Droid.Resource.Styleable.BottomNavigationView_elevation;
-			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::PhantomLibSamples.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
-			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::PhantomLibSamples.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
-			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::PhantomLibSamples.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
-			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_menu = global::PhantomLibSamples.Droid.Resource.Styleable.BottomNavigationView_menu;
-			global::PhantomLib.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::PhantomLibSamples.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
-			global::PhantomLib.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::PhantomLibSamples.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
-			global::PhantomLib.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::PhantomLibSamples.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
-			global::PhantomLib.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::PhantomLibSamples.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
-			global::PhantomLib.Droid.Resource.Styleable.ButtonBarLayout = global::PhantomLibSamples.Droid.Resource.Styleable.ButtonBarLayout;
-			global::PhantomLib.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::PhantomLibSamples.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
-			global::PhantomLib.Droid.Resource.Styleable.CardView = global::PhantomLibSamples.Droid.Resource.Styleable.CardView;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_android_minHeight = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_android_minHeight;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_android_minWidth = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_android_minWidth;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_cardBackgroundColor;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_cardCornerRadius = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_cardCornerRadius;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_cardElevation = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_cardElevation;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_cardMaxElevation = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_cardMaxElevation;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPadding = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_contentPadding;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_contentPaddingBottom;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_contentPaddingLeft;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPaddingRight = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_contentPaddingRight;
-			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPaddingTop = global::PhantomLibSamples.Droid.Resource.Styleable.CardView_contentPaddingTop;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
-			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::PhantomLibSamples.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
-			global::PhantomLib.Droid.Resource.Styleable.ColorStateListItem = global::PhantomLibSamples.Droid.Resource.Styleable.ColorStateListItem;
-			global::PhantomLib.Droid.Resource.Styleable.ColorStateListItem_alpha = global::PhantomLibSamples.Droid.Resource.Styleable.ColorStateListItem_alpha;
-			global::PhantomLib.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::PhantomLibSamples.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
-			global::PhantomLib.Droid.Resource.Styleable.ColorStateListItem_android_color = global::PhantomLibSamples.Droid.Resource.Styleable.ColorStateListItem_android_color;
-			global::PhantomLib.Droid.Resource.Styleable.CompoundButton = global::PhantomLibSamples.Droid.Resource.Styleable.CompoundButton;
-			global::PhantomLib.Droid.Resource.Styleable.CompoundButton_android_button = global::PhantomLibSamples.Droid.Resource.Styleable.CompoundButton_android_button;
-			global::PhantomLib.Droid.Resource.Styleable.CompoundButton_buttonTint = global::PhantomLibSamples.Droid.Resource.Styleable.CompoundButton_buttonTint;
-			global::PhantomLib.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::PhantomLibSamples.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_Layout;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
-			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::PhantomLibSamples.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
-			global::PhantomLib.Droid.Resource.Styleable.DesignTheme = global::PhantomLibSamples.Droid.Resource.Styleable.DesignTheme;
-			global::PhantomLib.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::PhantomLibSamples.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
-			global::PhantomLib.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::PhantomLibSamples.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
-			global::PhantomLib.Droid.Resource.Styleable.DesignTheme_textColorError = global::PhantomLibSamples.Droid.Resource.Styleable.DesignTheme_textColorError;
-			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle = global::PhantomLibSamples.Droid.Resource.Styleable.DrawerArrowToggle;
-			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::PhantomLibSamples.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
-			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::PhantomLibSamples.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
-			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::PhantomLibSamples.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
-			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_color = global::PhantomLibSamples.Droid.Resource.Styleable.DrawerArrowToggle_color;
-			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::PhantomLibSamples.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::PhantomLibSamples.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::PhantomLibSamples.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::PhantomLibSamples.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_elevation = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_elevation;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_fabSize;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
-			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::PhantomLibSamples.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamily = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamily;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamilyFont;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_android_font = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamilyFont_android_font;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_font = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamilyFont_font;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_fontStyle = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_fontWeight = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderAuthority = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderCerts = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderPackage = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderQuery = global::PhantomLibSamples.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
-			global::PhantomLib.Droid.Resource.Styleable.ForegroundLinearLayout = global::PhantomLibSamples.Droid.Resource.Styleable.ForegroundLinearLayout;
-			global::PhantomLib.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::PhantomLibSamples.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
-			global::PhantomLib.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::PhantomLibSamples.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
-			global::PhantomLib.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::PhantomLibSamples.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_divider;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::PhantomLibSamples.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::PhantomLib.Droid.Resource.Styleable.ListPopupWindow = global::PhantomLibSamples.Droid.Resource.Styleable.ListPopupWindow;
-			global::PhantomLib.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::PhantomLibSamples.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::PhantomLib.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::PhantomLibSamples.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::PhantomLib.Droid.Resource.Styleable.MediaRouteButton = global::PhantomLibSamples.Droid.Resource.Styleable.MediaRouteButton;
-			global::PhantomLib.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::PhantomLibSamples.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
-			global::PhantomLib.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::PhantomLibSamples.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
-			global::PhantomLib.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::PhantomLibSamples.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
-			global::PhantomLib.Droid.Resource.Styleable.MenuGroup = global::PhantomLibSamples.Droid.Resource.Styleable.MenuGroup;
-			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::PhantomLibSamples.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_enabled = global::PhantomLibSamples.Droid.Resource.Styleable.MenuGroup_android_enabled;
-			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_id = global::PhantomLibSamples.Droid.Resource.Styleable.MenuGroup_android_id;
-			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::PhantomLibSamples.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::PhantomLibSamples.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_visible = global::PhantomLibSamples.Droid.Resource.Styleable.MenuGroup_android_visible;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_actionLayout = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_actionLayout;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_actionProviderClass;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_actionViewClass = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_alphabeticModifiers = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_checkable = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_checkable;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_checked = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_checked;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_enabled = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_enabled;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_icon = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_icon;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_id = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_id;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_menuCategory;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_onClick = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_onClick;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_title = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_title;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_visible = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_contentDescription = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_contentDescription;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_iconTint = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_iconTint;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_iconTintMode = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_iconTintMode;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_numericModifiers = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_numericModifiers;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_showAsAction = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::PhantomLib.Droid.Resource.Styleable.MenuItem_tooltipText = global::PhantomLibSamples.Droid.Resource.Styleable.MenuItem_tooltipText;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_headerBackground = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView_android_headerBackground;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_itemBackground = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView_android_itemBackground;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView_android_verticalDivider;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::PhantomLib.Droid.Resource.Styleable.MenuView_subMenuArrow = global::PhantomLibSamples.Droid.Resource.Styleable.MenuView_subMenuArrow;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_android_background = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_android_background;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_android_maxWidth;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_elevation = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_elevation;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_headerLayout = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_headerLayout;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemBackground = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_itemBackground;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemIconTint = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_itemIconTint;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemTextColor = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_itemTextColor;
-			global::PhantomLib.Droid.Resource.Styleable.NavigationView_menu = global::PhantomLibSamples.Droid.Resource.Styleable.NavigationView_menu;
-			global::PhantomLib.Droid.Resource.Styleable.PopupWindow = global::PhantomLibSamples.Droid.Resource.Styleable.PopupWindow;
-			global::PhantomLib.Droid.Resource.Styleable.PopupWindowBackgroundState = global::PhantomLibSamples.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::PhantomLib.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::PhantomLibSamples.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::PhantomLib.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::PhantomLibSamples.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
-			global::PhantomLib.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::PhantomLibSamples.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::PhantomLib.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::PhantomLibSamples.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::PhantomLib.Droid.Resource.Styleable.RecycleListView = global::PhantomLibSamples.Droid.Resource.Styleable.RecycleListView;
-			global::PhantomLib.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::PhantomLibSamples.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
-			global::PhantomLib.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::PhantomLibSamples.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_android_orientation = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_layoutManager = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_spanCount = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::PhantomLibSamples.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::PhantomLib.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::PhantomLibSamples.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
-			global::PhantomLib.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::PhantomLibSamples.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
-			global::PhantomLib.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::PhantomLibSamples.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
-			global::PhantomLib.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::PhantomLibSamples.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_android_focusable = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_android_focusable;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_android_imeOptions = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_android_imeOptions;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_android_inputType = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_android_inputType;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_android_maxWidth = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_android_maxWidth;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_closeIcon = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_closeIcon;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_commitIcon = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_commitIcon;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_defaultQueryHint;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_goIcon = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_goIcon;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_layout = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_layout;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_queryBackground = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_queryBackground;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_queryHint = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_queryHint;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_searchHintIcon = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_searchHintIcon;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_searchIcon = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_searchIcon;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_submitBackground = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_submitBackground;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::PhantomLib.Droid.Resource.Styleable.SearchView_voiceIcon = global::PhantomLibSamples.Droid.Resource.Styleable.SearchView_voiceIcon;
-			global::PhantomLib.Droid.Resource.Styleable.SnackbarLayout = global::PhantomLibSamples.Droid.Resource.Styleable.SnackbarLayout;
-			global::PhantomLib.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::PhantomLibSamples.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
-			global::PhantomLib.Droid.Resource.Styleable.SnackbarLayout_elevation = global::PhantomLibSamples.Droid.Resource.Styleable.SnackbarLayout_elevation;
-			global::PhantomLib.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::PhantomLibSamples.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
-			global::PhantomLib.Droid.Resource.Styleable.Spinner = global::PhantomLibSamples.Droid.Resource.Styleable.Spinner;
-			global::PhantomLib.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::PhantomLibSamples.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::PhantomLib.Droid.Resource.Styleable.Spinner_android_entries = global::PhantomLibSamples.Droid.Resource.Styleable.Spinner_android_entries;
-			global::PhantomLib.Droid.Resource.Styleable.Spinner_android_popupBackground = global::PhantomLibSamples.Droid.Resource.Styleable.Spinner_android_popupBackground;
-			global::PhantomLib.Droid.Resource.Styleable.Spinner_android_prompt = global::PhantomLibSamples.Droid.Resource.Styleable.Spinner_android_prompt;
-			global::PhantomLib.Droid.Resource.Styleable.Spinner_popupTheme = global::PhantomLibSamples.Droid.Resource.Styleable.Spinner_popupTheme;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_android_textOff;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_android_textOn;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_android_thumb;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_showText = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_showText;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_splitTrack;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_switchPadding;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_thumbTint;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_track = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_track;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_trackTint = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_trackTint;
-			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::PhantomLibSamples.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
-			global::PhantomLib.Droid.Resource.Styleable.TabItem = global::PhantomLibSamples.Droid.Resource.Styleable.TabItem;
-			global::PhantomLib.Droid.Resource.Styleable.TabItem_android_icon = global::PhantomLibSamples.Droid.Resource.Styleable.TabItem_android_icon;
-			global::PhantomLib.Droid.Resource.Styleable.TabItem_android_layout = global::PhantomLibSamples.Droid.Resource.Styleable.TabItem_android_layout;
-			global::PhantomLib.Droid.Resource.Styleable.TabItem_android_text = global::PhantomLibSamples.Droid.Resource.Styleable.TabItem_android_text;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabBackground = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabBackground;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabContentStart = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabContentStart;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabGravity = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabGravity;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabMinWidth;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabMode = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabMode;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPadding = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabPadding;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabTextColor = global::PhantomLibSamples.Droid.Resource.Styleable.TabLayout_tabTextColor;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_fontFamily = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textColor = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_textColor;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textColorLink = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textSize = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_textSize;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_textStyle;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_typeface = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_fontFamily = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_fontFamily;
-			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::PhantomLibSamples.Droid.Resource.Styleable.TextAppearance_textAllCaps;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_android_hint = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_android_hint;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
-			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::PhantomLibSamples.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_android_gravity = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_android_gravity;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_android_minHeight = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_android_minHeight;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_buttonGravity = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_buttonGravity;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_collapseIcon = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_collapseIcon;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_contentInsetRight;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_contentInsetStart;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_logo = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_logo;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_logoDescription = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_logoDescription;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_navigationIcon = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_navigationIcon;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_popupTheme = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_popupTheme;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_subtitle = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_subtitle;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_title = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_title;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMargin = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_titleMargin;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMargins = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_titleMargins;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_titleMarginStart;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleTextColor = global::PhantomLibSamples.Droid.Resource.Styleable.Toolbar_titleTextColor;
-			global::PhantomLib.Droid.Resource.Styleable.View = global::PhantomLibSamples.Droid.Resource.Styleable.View;
-			global::PhantomLib.Droid.Resource.Styleable.ViewBackgroundHelper = global::PhantomLibSamples.Droid.Resource.Styleable.ViewBackgroundHelper;
-			global::PhantomLib.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::PhantomLibSamples.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
-			global::PhantomLib.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::PhantomLibSamples.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
-			global::PhantomLib.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::PhantomLibSamples.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
-			global::PhantomLib.Droid.Resource.Styleable.ViewStubCompat = global::PhantomLibSamples.Droid.Resource.Styleable.ViewStubCompat;
-			global::PhantomLib.Droid.Resource.Styleable.ViewStubCompat_android_id = global::PhantomLibSamples.Droid.Resource.Styleable.ViewStubCompat_android_id;
-			global::PhantomLib.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::PhantomLibSamples.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::PhantomLib.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::PhantomLibSamples.Droid.Resource.Styleable.ViewStubCompat_android_layout;
-			global::PhantomLib.Droid.Resource.Styleable.View_android_focusable = global::PhantomLibSamples.Droid.Resource.Styleable.View_android_focusable;
-			global::PhantomLib.Droid.Resource.Styleable.View_android_theme = global::PhantomLibSamples.Droid.Resource.Styleable.View_android_theme;
-			global::PhantomLib.Droid.Resource.Styleable.View_paddingEnd = global::PhantomLibSamples.Droid.Resource.Styleable.View_paddingEnd;
-			global::PhantomLib.Droid.Resource.Styleable.View_paddingStart = global::PhantomLibSamples.Droid.Resource.Styleable.View_paddingStart;
-			global::PhantomLib.Droid.Resource.Styleable.View_theme = global::PhantomLibSamples.Droid.Resource.Styleable.View_theme;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_in = global::PhantomLibSamples.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_out = global::PhantomLibSamples.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::PhantomLibSamples.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -6640,665 +4359,659 @@ namespace PhantomLibSamples.Droid
 			// aapt resource value: 0x7F070060
 			public const int design_snackbar_background = 2131165280;
 			
-			// aapt resource value: 0x7F070061
-			public const int ExtEntryShape = 2131165281;
+			// aapt resource value: 0x7F070113
+			public const int icon_close_black = 2131165459;
 			
 			// aapt resource value: 0x7F070114
-			public const int icon_close_black = 2131165460;
+			public const int icon_error = 2131165460;
 			
 			// aapt resource value: 0x7F070115
-			public const int icon_error = 2131165461;
+			public const int icon_lock_close = 2131165461;
 			
 			// aapt resource value: 0x7F070116
-			public const int icon_lock_close = 2131165462;
+			public const int icon_lock_open = 2131165462;
 			
-			// aapt resource value: 0x7F070117
-			public const int icon_lock_open = 2131165463;
+			// aapt resource value: 0x7F070061
+			public const int ic_audiotrack_dark = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int ic_audiotrack_dark = 2131165282;
+			public const int ic_audiotrack_light = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int ic_audiotrack_light = 2131165283;
+			public const int ic_collapse_arrow = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int ic_collapse_arrow = 2131165284;
+			public const int ic_dialog_close_dark = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int ic_dialog_close_dark = 2131165285;
+			public const int ic_dialog_close_light = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int ic_dialog_close_light = 2131165286;
+			public const int ic_group_collapse_00 = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int ic_group_collapse_00 = 2131165287;
+			public const int ic_group_collapse_01 = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int ic_group_collapse_01 = 2131165288;
+			public const int ic_group_collapse_02 = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int ic_group_collapse_02 = 2131165289;
+			public const int ic_group_collapse_03 = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int ic_group_collapse_03 = 2131165290;
+			public const int ic_group_collapse_04 = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int ic_group_collapse_04 = 2131165291;
+			public const int ic_group_collapse_05 = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int ic_group_collapse_05 = 2131165292;
+			public const int ic_group_collapse_06 = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int ic_group_collapse_06 = 2131165293;
+			public const int ic_group_collapse_07 = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int ic_group_collapse_07 = 2131165294;
+			public const int ic_group_collapse_08 = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int ic_group_collapse_08 = 2131165295;
+			public const int ic_group_collapse_09 = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int ic_group_collapse_09 = 2131165296;
+			public const int ic_group_collapse_10 = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int ic_group_collapse_10 = 2131165297;
+			public const int ic_group_collapse_11 = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int ic_group_collapse_11 = 2131165298;
+			public const int ic_group_collapse_12 = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int ic_group_collapse_12 = 2131165299;
+			public const int ic_group_collapse_13 = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int ic_group_collapse_13 = 2131165300;
+			public const int ic_group_collapse_14 = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int ic_group_collapse_14 = 2131165301;
+			public const int ic_group_collapse_15 = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int ic_group_collapse_15 = 2131165302;
+			public const int ic_group_expand_00 = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int ic_group_expand_00 = 2131165303;
+			public const int ic_group_expand_01 = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int ic_group_expand_01 = 2131165304;
+			public const int ic_group_expand_02 = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int ic_group_expand_02 = 2131165305;
+			public const int ic_group_expand_03 = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int ic_group_expand_03 = 2131165306;
+			public const int ic_group_expand_04 = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int ic_group_expand_04 = 2131165307;
+			public const int ic_group_expand_05 = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int ic_group_expand_05 = 2131165308;
+			public const int ic_group_expand_06 = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int ic_group_expand_06 = 2131165309;
+			public const int ic_group_expand_07 = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int ic_group_expand_07 = 2131165310;
+			public const int ic_group_expand_08 = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int ic_group_expand_08 = 2131165311;
+			public const int ic_group_expand_09 = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int ic_group_expand_09 = 2131165312;
+			public const int ic_group_expand_10 = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int ic_group_expand_10 = 2131165313;
+			public const int ic_group_expand_11 = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int ic_group_expand_11 = 2131165314;
+			public const int ic_group_expand_12 = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int ic_group_expand_12 = 2131165315;
+			public const int ic_group_expand_13 = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int ic_group_expand_13 = 2131165316;
+			public const int ic_group_expand_14 = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int ic_group_expand_14 = 2131165317;
+			public const int ic_group_expand_15 = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int ic_group_expand_15 = 2131165318;
+			public const int ic_media_pause_dark = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int ic_media_pause_dark = 2131165319;
+			public const int ic_media_pause_light = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int ic_media_pause_light = 2131165320;
+			public const int ic_media_play_dark = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int ic_media_play_dark = 2131165321;
+			public const int ic_media_play_light = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int ic_media_play_light = 2131165322;
+			public const int ic_media_stop_dark = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int ic_media_stop_dark = 2131165323;
+			public const int ic_media_stop_light = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int ic_media_stop_light = 2131165324;
+			public const int ic_mr_button_connected_00_dark = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int ic_mr_button_connected_00_dark = 2131165325;
+			public const int ic_mr_button_connected_00_light = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int ic_mr_button_connected_00_light = 2131165326;
+			public const int ic_mr_button_connected_01_dark = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int ic_mr_button_connected_01_dark = 2131165327;
+			public const int ic_mr_button_connected_01_light = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int ic_mr_button_connected_01_light = 2131165328;
+			public const int ic_mr_button_connected_02_dark = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int ic_mr_button_connected_02_dark = 2131165329;
+			public const int ic_mr_button_connected_02_light = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int ic_mr_button_connected_02_light = 2131165330;
+			public const int ic_mr_button_connected_03_dark = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int ic_mr_button_connected_03_dark = 2131165331;
+			public const int ic_mr_button_connected_03_light = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int ic_mr_button_connected_03_light = 2131165332;
+			public const int ic_mr_button_connected_04_dark = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int ic_mr_button_connected_04_dark = 2131165333;
+			public const int ic_mr_button_connected_04_light = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int ic_mr_button_connected_04_light = 2131165334;
+			public const int ic_mr_button_connected_05_dark = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int ic_mr_button_connected_05_dark = 2131165335;
+			public const int ic_mr_button_connected_05_light = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int ic_mr_button_connected_05_light = 2131165336;
+			public const int ic_mr_button_connected_06_dark = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int ic_mr_button_connected_06_dark = 2131165337;
+			public const int ic_mr_button_connected_06_light = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int ic_mr_button_connected_06_light = 2131165338;
+			public const int ic_mr_button_connected_07_dark = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int ic_mr_button_connected_07_dark = 2131165339;
+			public const int ic_mr_button_connected_07_light = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int ic_mr_button_connected_07_light = 2131165340;
+			public const int ic_mr_button_connected_08_dark = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int ic_mr_button_connected_08_dark = 2131165341;
+			public const int ic_mr_button_connected_08_light = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int ic_mr_button_connected_08_light = 2131165342;
+			public const int ic_mr_button_connected_09_dark = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int ic_mr_button_connected_09_dark = 2131165343;
+			public const int ic_mr_button_connected_09_light = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int ic_mr_button_connected_09_light = 2131165344;
+			public const int ic_mr_button_connected_10_dark = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int ic_mr_button_connected_10_dark = 2131165345;
+			public const int ic_mr_button_connected_10_light = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int ic_mr_button_connected_10_light = 2131165346;
+			public const int ic_mr_button_connected_11_dark = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int ic_mr_button_connected_11_dark = 2131165347;
+			public const int ic_mr_button_connected_11_light = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int ic_mr_button_connected_11_light = 2131165348;
+			public const int ic_mr_button_connected_12_dark = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int ic_mr_button_connected_12_dark = 2131165349;
+			public const int ic_mr_button_connected_12_light = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int ic_mr_button_connected_12_light = 2131165350;
+			public const int ic_mr_button_connected_13_dark = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int ic_mr_button_connected_13_dark = 2131165351;
+			public const int ic_mr_button_connected_13_light = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int ic_mr_button_connected_13_light = 2131165352;
+			public const int ic_mr_button_connected_14_dark = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int ic_mr_button_connected_14_dark = 2131165353;
+			public const int ic_mr_button_connected_14_light = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int ic_mr_button_connected_14_light = 2131165354;
+			public const int ic_mr_button_connected_15_dark = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int ic_mr_button_connected_15_dark = 2131165355;
+			public const int ic_mr_button_connected_15_light = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int ic_mr_button_connected_15_light = 2131165356;
+			public const int ic_mr_button_connected_16_dark = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int ic_mr_button_connected_16_dark = 2131165357;
+			public const int ic_mr_button_connected_16_light = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int ic_mr_button_connected_16_light = 2131165358;
+			public const int ic_mr_button_connected_17_dark = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int ic_mr_button_connected_17_dark = 2131165359;
+			public const int ic_mr_button_connected_17_light = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int ic_mr_button_connected_17_light = 2131165360;
+			public const int ic_mr_button_connected_18_dark = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int ic_mr_button_connected_18_dark = 2131165361;
+			public const int ic_mr_button_connected_18_light = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int ic_mr_button_connected_18_light = 2131165362;
+			public const int ic_mr_button_connected_19_dark = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int ic_mr_button_connected_19_dark = 2131165363;
+			public const int ic_mr_button_connected_19_light = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int ic_mr_button_connected_19_light = 2131165364;
+			public const int ic_mr_button_connected_20_dark = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int ic_mr_button_connected_20_dark = 2131165365;
+			public const int ic_mr_button_connected_20_light = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int ic_mr_button_connected_20_light = 2131165366;
+			public const int ic_mr_button_connected_21_dark = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int ic_mr_button_connected_21_dark = 2131165367;
+			public const int ic_mr_button_connected_21_light = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int ic_mr_button_connected_21_light = 2131165368;
+			public const int ic_mr_button_connected_22_dark = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int ic_mr_button_connected_22_dark = 2131165369;
+			public const int ic_mr_button_connected_22_light = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int ic_mr_button_connected_22_light = 2131165370;
+			public const int ic_mr_button_connected_23_dark = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int ic_mr_button_connected_23_dark = 2131165371;
+			public const int ic_mr_button_connected_23_light = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int ic_mr_button_connected_23_light = 2131165372;
+			public const int ic_mr_button_connected_24_dark = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int ic_mr_button_connected_24_dark = 2131165373;
+			public const int ic_mr_button_connected_24_light = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int ic_mr_button_connected_24_light = 2131165374;
+			public const int ic_mr_button_connected_25_dark = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int ic_mr_button_connected_25_dark = 2131165375;
+			public const int ic_mr_button_connected_25_light = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int ic_mr_button_connected_25_light = 2131165376;
+			public const int ic_mr_button_connected_26_dark = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int ic_mr_button_connected_26_dark = 2131165377;
+			public const int ic_mr_button_connected_26_light = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int ic_mr_button_connected_26_light = 2131165378;
+			public const int ic_mr_button_connected_27_dark = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int ic_mr_button_connected_27_dark = 2131165379;
+			public const int ic_mr_button_connected_27_light = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int ic_mr_button_connected_27_light = 2131165380;
+			public const int ic_mr_button_connected_28_dark = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int ic_mr_button_connected_28_dark = 2131165381;
+			public const int ic_mr_button_connected_28_light = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int ic_mr_button_connected_28_light = 2131165382;
+			public const int ic_mr_button_connected_29_dark = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int ic_mr_button_connected_29_dark = 2131165383;
+			public const int ic_mr_button_connected_29_light = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int ic_mr_button_connected_29_light = 2131165384;
+			public const int ic_mr_button_connected_30_dark = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int ic_mr_button_connected_30_dark = 2131165385;
+			public const int ic_mr_button_connected_30_light = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int ic_mr_button_connected_30_light = 2131165386;
+			public const int ic_mr_button_connecting_00_dark = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int ic_mr_button_connecting_00_dark = 2131165387;
+			public const int ic_mr_button_connecting_00_light = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int ic_mr_button_connecting_00_light = 2131165388;
+			public const int ic_mr_button_connecting_01_dark = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int ic_mr_button_connecting_01_dark = 2131165389;
+			public const int ic_mr_button_connecting_01_light = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int ic_mr_button_connecting_01_light = 2131165390;
+			public const int ic_mr_button_connecting_02_dark = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int ic_mr_button_connecting_02_dark = 2131165391;
+			public const int ic_mr_button_connecting_02_light = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int ic_mr_button_connecting_02_light = 2131165392;
+			public const int ic_mr_button_connecting_03_dark = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int ic_mr_button_connecting_03_dark = 2131165393;
+			public const int ic_mr_button_connecting_03_light = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int ic_mr_button_connecting_03_light = 2131165394;
+			public const int ic_mr_button_connecting_04_dark = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int ic_mr_button_connecting_04_dark = 2131165395;
+			public const int ic_mr_button_connecting_04_light = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int ic_mr_button_connecting_04_light = 2131165396;
+			public const int ic_mr_button_connecting_05_dark = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int ic_mr_button_connecting_05_dark = 2131165397;
+			public const int ic_mr_button_connecting_05_light = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int ic_mr_button_connecting_05_light = 2131165398;
+			public const int ic_mr_button_connecting_06_dark = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int ic_mr_button_connecting_06_dark = 2131165399;
+			public const int ic_mr_button_connecting_06_light = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int ic_mr_button_connecting_06_light = 2131165400;
+			public const int ic_mr_button_connecting_07_dark = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int ic_mr_button_connecting_07_dark = 2131165401;
+			public const int ic_mr_button_connecting_07_light = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int ic_mr_button_connecting_07_light = 2131165402;
+			public const int ic_mr_button_connecting_08_dark = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int ic_mr_button_connecting_08_dark = 2131165403;
+			public const int ic_mr_button_connecting_08_light = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int ic_mr_button_connecting_08_light = 2131165404;
+			public const int ic_mr_button_connecting_09_dark = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int ic_mr_button_connecting_09_dark = 2131165405;
+			public const int ic_mr_button_connecting_09_light = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int ic_mr_button_connecting_09_light = 2131165406;
+			public const int ic_mr_button_connecting_10_dark = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int ic_mr_button_connecting_10_dark = 2131165407;
+			public const int ic_mr_button_connecting_10_light = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int ic_mr_button_connecting_10_light = 2131165408;
+			public const int ic_mr_button_connecting_11_dark = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int ic_mr_button_connecting_11_dark = 2131165409;
+			public const int ic_mr_button_connecting_11_light = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int ic_mr_button_connecting_11_light = 2131165410;
+			public const int ic_mr_button_connecting_12_dark = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int ic_mr_button_connecting_12_dark = 2131165411;
+			public const int ic_mr_button_connecting_12_light = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int ic_mr_button_connecting_12_light = 2131165412;
+			public const int ic_mr_button_connecting_13_dark = 2131165412;
 			
 			// aapt resource value: 0x7F0700E5
-			public const int ic_mr_button_connecting_13_dark = 2131165413;
+			public const int ic_mr_button_connecting_13_light = 2131165413;
 			
 			// aapt resource value: 0x7F0700E6
-			public const int ic_mr_button_connecting_13_light = 2131165414;
+			public const int ic_mr_button_connecting_14_dark = 2131165414;
 			
 			// aapt resource value: 0x7F0700E7
-			public const int ic_mr_button_connecting_14_dark = 2131165415;
+			public const int ic_mr_button_connecting_14_light = 2131165415;
 			
 			// aapt resource value: 0x7F0700E8
-			public const int ic_mr_button_connecting_14_light = 2131165416;
+			public const int ic_mr_button_connecting_15_dark = 2131165416;
 			
 			// aapt resource value: 0x7F0700E9
-			public const int ic_mr_button_connecting_15_dark = 2131165417;
+			public const int ic_mr_button_connecting_15_light = 2131165417;
 			
 			// aapt resource value: 0x7F0700EA
-			public const int ic_mr_button_connecting_15_light = 2131165418;
+			public const int ic_mr_button_connecting_16_dark = 2131165418;
 			
 			// aapt resource value: 0x7F0700EB
-			public const int ic_mr_button_connecting_16_dark = 2131165419;
+			public const int ic_mr_button_connecting_16_light = 2131165419;
 			
 			// aapt resource value: 0x7F0700EC
-			public const int ic_mr_button_connecting_16_light = 2131165420;
+			public const int ic_mr_button_connecting_17_dark = 2131165420;
 			
 			// aapt resource value: 0x7F0700ED
-			public const int ic_mr_button_connecting_17_dark = 2131165421;
+			public const int ic_mr_button_connecting_17_light = 2131165421;
 			
 			// aapt resource value: 0x7F0700EE
-			public const int ic_mr_button_connecting_17_light = 2131165422;
+			public const int ic_mr_button_connecting_18_dark = 2131165422;
 			
 			// aapt resource value: 0x7F0700EF
-			public const int ic_mr_button_connecting_18_dark = 2131165423;
+			public const int ic_mr_button_connecting_18_light = 2131165423;
 			
 			// aapt resource value: 0x7F0700F0
-			public const int ic_mr_button_connecting_18_light = 2131165424;
+			public const int ic_mr_button_connecting_19_dark = 2131165424;
 			
 			// aapt resource value: 0x7F0700F1
-			public const int ic_mr_button_connecting_19_dark = 2131165425;
+			public const int ic_mr_button_connecting_19_light = 2131165425;
 			
 			// aapt resource value: 0x7F0700F2
-			public const int ic_mr_button_connecting_19_light = 2131165426;
+			public const int ic_mr_button_connecting_20_dark = 2131165426;
 			
 			// aapt resource value: 0x7F0700F3
-			public const int ic_mr_button_connecting_20_dark = 2131165427;
+			public const int ic_mr_button_connecting_20_light = 2131165427;
 			
 			// aapt resource value: 0x7F0700F4
-			public const int ic_mr_button_connecting_20_light = 2131165428;
+			public const int ic_mr_button_connecting_21_dark = 2131165428;
 			
 			// aapt resource value: 0x7F0700F5
-			public const int ic_mr_button_connecting_21_dark = 2131165429;
+			public const int ic_mr_button_connecting_21_light = 2131165429;
 			
 			// aapt resource value: 0x7F0700F6
-			public const int ic_mr_button_connecting_21_light = 2131165430;
+			public const int ic_mr_button_connecting_22_dark = 2131165430;
 			
 			// aapt resource value: 0x7F0700F7
-			public const int ic_mr_button_connecting_22_dark = 2131165431;
+			public const int ic_mr_button_connecting_22_light = 2131165431;
 			
 			// aapt resource value: 0x7F0700F8
-			public const int ic_mr_button_connecting_22_light = 2131165432;
+			public const int ic_mr_button_connecting_23_dark = 2131165432;
 			
 			// aapt resource value: 0x7F0700F9
-			public const int ic_mr_button_connecting_23_dark = 2131165433;
+			public const int ic_mr_button_connecting_23_light = 2131165433;
 			
 			// aapt resource value: 0x7F0700FA
-			public const int ic_mr_button_connecting_23_light = 2131165434;
+			public const int ic_mr_button_connecting_24_dark = 2131165434;
 			
 			// aapt resource value: 0x7F0700FB
-			public const int ic_mr_button_connecting_24_dark = 2131165435;
+			public const int ic_mr_button_connecting_24_light = 2131165435;
 			
 			// aapt resource value: 0x7F0700FC
-			public const int ic_mr_button_connecting_24_light = 2131165436;
+			public const int ic_mr_button_connecting_25_dark = 2131165436;
 			
 			// aapt resource value: 0x7F0700FD
-			public const int ic_mr_button_connecting_25_dark = 2131165437;
+			public const int ic_mr_button_connecting_25_light = 2131165437;
 			
 			// aapt resource value: 0x7F0700FE
-			public const int ic_mr_button_connecting_25_light = 2131165438;
+			public const int ic_mr_button_connecting_26_dark = 2131165438;
 			
 			// aapt resource value: 0x7F0700FF
-			public const int ic_mr_button_connecting_26_dark = 2131165439;
+			public const int ic_mr_button_connecting_26_light = 2131165439;
 			
 			// aapt resource value: 0x7F070100
-			public const int ic_mr_button_connecting_26_light = 2131165440;
+			public const int ic_mr_button_connecting_27_dark = 2131165440;
 			
 			// aapt resource value: 0x7F070101
-			public const int ic_mr_button_connecting_27_dark = 2131165441;
+			public const int ic_mr_button_connecting_27_light = 2131165441;
 			
 			// aapt resource value: 0x7F070102
-			public const int ic_mr_button_connecting_27_light = 2131165442;
+			public const int ic_mr_button_connecting_28_dark = 2131165442;
 			
 			// aapt resource value: 0x7F070103
-			public const int ic_mr_button_connecting_28_dark = 2131165443;
+			public const int ic_mr_button_connecting_28_light = 2131165443;
 			
 			// aapt resource value: 0x7F070104
-			public const int ic_mr_button_connecting_28_light = 2131165444;
+			public const int ic_mr_button_connecting_29_dark = 2131165444;
 			
 			// aapt resource value: 0x7F070105
-			public const int ic_mr_button_connecting_29_dark = 2131165445;
+			public const int ic_mr_button_connecting_29_light = 2131165445;
 			
 			// aapt resource value: 0x7F070106
-			public const int ic_mr_button_connecting_29_light = 2131165446;
+			public const int ic_mr_button_connecting_30_dark = 2131165446;
 			
 			// aapt resource value: 0x7F070107
-			public const int ic_mr_button_connecting_30_dark = 2131165447;
+			public const int ic_mr_button_connecting_30_light = 2131165447;
 			
 			// aapt resource value: 0x7F070108
-			public const int ic_mr_button_connecting_30_light = 2131165448;
+			public const int ic_mr_button_disabled_dark = 2131165448;
 			
 			// aapt resource value: 0x7F070109
-			public const int ic_mr_button_disabled_dark = 2131165449;
+			public const int ic_mr_button_disabled_light = 2131165449;
 			
 			// aapt resource value: 0x7F07010A
-			public const int ic_mr_button_disabled_light = 2131165450;
+			public const int ic_mr_button_disconnected_dark = 2131165450;
 			
 			// aapt resource value: 0x7F07010B
-			public const int ic_mr_button_disconnected_dark = 2131165451;
+			public const int ic_mr_button_disconnected_light = 2131165451;
 			
 			// aapt resource value: 0x7F07010C
-			public const int ic_mr_button_disconnected_light = 2131165452;
+			public const int ic_mr_button_grey = 2131165452;
 			
 			// aapt resource value: 0x7F07010D
-			public const int ic_mr_button_grey = 2131165453;
+			public const int ic_vol_type_speaker_dark = 2131165453;
 			
 			// aapt resource value: 0x7F07010E
-			public const int ic_vol_type_speaker_dark = 2131165454;
+			public const int ic_vol_type_speaker_group_dark = 2131165454;
 			
 			// aapt resource value: 0x7F07010F
-			public const int ic_vol_type_speaker_group_dark = 2131165455;
+			public const int ic_vol_type_speaker_group_light = 2131165455;
 			
 			// aapt resource value: 0x7F070110
-			public const int ic_vol_type_speaker_group_light = 2131165456;
+			public const int ic_vol_type_speaker_light = 2131165456;
 			
 			// aapt resource value: 0x7F070111
-			public const int ic_vol_type_speaker_light = 2131165457;
+			public const int ic_vol_type_tv_dark = 2131165457;
 			
 			// aapt resource value: 0x7F070112
-			public const int ic_vol_type_tv_dark = 2131165458;
+			public const int ic_vol_type_tv_light = 2131165458;
 			
-			// aapt resource value: 0x7F070113
-			public const int ic_vol_type_tv_light = 2131165459;
+			// aapt resource value: 0x7F070117
+			public const int loading_spinner_green = 2131165463;
 			
 			// aapt resource value: 0x7F070118
-			public const int loading_spinner_green = 2131165464;
+			public const int mr_button_connected_dark = 2131165464;
 			
 			// aapt resource value: 0x7F070119
-			public const int mr_button_connected_dark = 2131165465;
+			public const int mr_button_connected_light = 2131165465;
 			
 			// aapt resource value: 0x7F07011A
-			public const int mr_button_connected_light = 2131165466;
+			public const int mr_button_connecting_dark = 2131165466;
 			
 			// aapt resource value: 0x7F07011B
-			public const int mr_button_connecting_dark = 2131165467;
+			public const int mr_button_connecting_light = 2131165467;
 			
 			// aapt resource value: 0x7F07011C
-			public const int mr_button_connecting_light = 2131165468;
+			public const int mr_button_dark = 2131165468;
 			
 			// aapt resource value: 0x7F07011D
-			public const int mr_button_dark = 2131165469;
+			public const int mr_button_light = 2131165469;
 			
 			// aapt resource value: 0x7F07011E
-			public const int mr_button_light = 2131165470;
+			public const int mr_dialog_close_dark = 2131165470;
 			
 			// aapt resource value: 0x7F07011F
-			public const int mr_dialog_close_dark = 2131165471;
+			public const int mr_dialog_close_light = 2131165471;
 			
 			// aapt resource value: 0x7F070120
-			public const int mr_dialog_close_light = 2131165472;
+			public const int mr_dialog_material_background_dark = 2131165472;
 			
 			// aapt resource value: 0x7F070121
-			public const int mr_dialog_material_background_dark = 2131165473;
+			public const int mr_dialog_material_background_light = 2131165473;
 			
 			// aapt resource value: 0x7F070122
-			public const int mr_dialog_material_background_light = 2131165474;
+			public const int mr_group_collapse = 2131165474;
 			
 			// aapt resource value: 0x7F070123
-			public const int mr_group_collapse = 2131165475;
+			public const int mr_group_expand = 2131165475;
 			
 			// aapt resource value: 0x7F070124
-			public const int mr_group_expand = 2131165476;
+			public const int mr_media_pause_dark = 2131165476;
 			
 			// aapt resource value: 0x7F070125
-			public const int mr_media_pause_dark = 2131165477;
+			public const int mr_media_pause_light = 2131165477;
 			
 			// aapt resource value: 0x7F070126
-			public const int mr_media_pause_light = 2131165478;
+			public const int mr_media_play_dark = 2131165478;
 			
 			// aapt resource value: 0x7F070127
-			public const int mr_media_play_dark = 2131165479;
+			public const int mr_media_play_light = 2131165479;
 			
 			// aapt resource value: 0x7F070128
-			public const int mr_media_play_light = 2131165480;
+			public const int mr_media_stop_dark = 2131165480;
 			
 			// aapt resource value: 0x7F070129
-			public const int mr_media_stop_dark = 2131165481;
+			public const int mr_media_stop_light = 2131165481;
 			
 			// aapt resource value: 0x7F07012A
-			public const int mr_media_stop_light = 2131165482;
+			public const int mr_vol_type_audiotrack_dark = 2131165482;
 			
 			// aapt resource value: 0x7F07012B
-			public const int mr_vol_type_audiotrack_dark = 2131165483;
+			public const int mr_vol_type_audiotrack_light = 2131165483;
 			
 			// aapt resource value: 0x7F07012C
-			public const int mr_vol_type_audiotrack_light = 2131165484;
+			public const int navigation_empty_icon = 2131165484;
 			
 			// aapt resource value: 0x7F07012D
-			public const int navigation_empty_icon = 2131165485;
+			public const int notification_action_background = 2131165485;
 			
 			// aapt resource value: 0x7F07012E
-			public const int notification_action_background = 2131165486;
+			public const int notification_bg = 2131165486;
 			
 			// aapt resource value: 0x7F07012F
-			public const int notification_bg = 2131165487;
+			public const int notification_bg_low = 2131165487;
 			
 			// aapt resource value: 0x7F070130
-			public const int notification_bg_low = 2131165488;
+			public const int notification_bg_low_normal = 2131165488;
 			
 			// aapt resource value: 0x7F070131
-			public const int notification_bg_low_normal = 2131165489;
+			public const int notification_bg_low_pressed = 2131165489;
 			
 			// aapt resource value: 0x7F070132
-			public const int notification_bg_low_pressed = 2131165490;
+			public const int notification_bg_normal = 2131165490;
 			
 			// aapt resource value: 0x7F070133
-			public const int notification_bg_normal = 2131165491;
+			public const int notification_bg_normal_pressed = 2131165491;
 			
 			// aapt resource value: 0x7F070134
-			public const int notification_bg_normal_pressed = 2131165492;
+			public const int notification_icon_background = 2131165492;
 			
 			// aapt resource value: 0x7F070135
-			public const int notification_icon_background = 2131165493;
+			public const int notification_template_icon_bg = 2131165493;
 			
 			// aapt resource value: 0x7F070136
-			public const int notification_template_icon_bg = 2131165494;
+			public const int notification_template_icon_low_bg = 2131165494;
 			
 			// aapt resource value: 0x7F070137
-			public const int notification_template_icon_low_bg = 2131165495;
+			public const int notification_tile_bg = 2131165495;
 			
 			// aapt resource value: 0x7F070138
-			public const int notification_tile_bg = 2131165496;
+			public const int notify_panel_notification_icon_bg = 2131165496;
 			
 			// aapt resource value: 0x7F070139
-			public const int notify_panel_notification_icon_bg = 2131165497;
+			public const int tooltip_frame_dark = 2131165497;
 			
 			// aapt resource value: 0x7F07013A
-			public const int tooltip_frame_dark = 2131165498;
-			
-			// aapt resource value: 0x7F07013B
-			public const int tooltip_frame_light = 2131165499;
-			
-			// aapt resource value: 0x7F07013C
-			public const int WhiteLine = 2131165500;
+			public const int tooltip_frame_light = 2131165498;
 			
 			static Drawable()
 			{
@@ -8377,104 +6090,98 @@ namespace PhantomLibSamples.Droid
 			// aapt resource value: 0x7F0D001C
 			public const int abc_toolbar_collapse_description = 2131558428;
 			
-			// aapt resource value: 0x7F0D001E
-			public const int appbar_scrolling_view_behavior = 2131558430;
-			
 			// aapt resource value: 0x7F0D001D
-			public const int app_name = 2131558429;
+			public const int appbar_scrolling_view_behavior = 2131558429;
+			
+			// aapt resource value: 0x7F0D001E
+			public const int bottom_sheet_behavior = 2131558430;
 			
 			// aapt resource value: 0x7F0D001F
-			public const int bottom_sheet_behavior = 2131558431;
+			public const int character_counter_pattern = 2131558431;
 			
 			// aapt resource value: 0x7F0D0020
-			public const int character_counter_pattern = 2131558432;
+			public const int mr_button_content_description = 2131558432;
 			
 			// aapt resource value: 0x7F0D0021
-			public const int hello = 2131558433;
+			public const int mr_cast_button_connected = 2131558433;
 			
 			// aapt resource value: 0x7F0D0022
-			public const int mr_button_content_description = 2131558434;
+			public const int mr_cast_button_connecting = 2131558434;
 			
 			// aapt resource value: 0x7F0D0023
-			public const int mr_cast_button_connected = 2131558435;
+			public const int mr_cast_button_disconnected = 2131558435;
 			
 			// aapt resource value: 0x7F0D0024
-			public const int mr_cast_button_connecting = 2131558436;
+			public const int mr_chooser_searching = 2131558436;
 			
 			// aapt resource value: 0x7F0D0025
-			public const int mr_cast_button_disconnected = 2131558437;
+			public const int mr_chooser_title = 2131558437;
 			
 			// aapt resource value: 0x7F0D0026
-			public const int mr_chooser_searching = 2131558438;
+			public const int mr_controller_album_art = 2131558438;
 			
 			// aapt resource value: 0x7F0D0027
-			public const int mr_chooser_title = 2131558439;
+			public const int mr_controller_casting_screen = 2131558439;
 			
 			// aapt resource value: 0x7F0D0028
-			public const int mr_controller_album_art = 2131558440;
+			public const int mr_controller_close_description = 2131558440;
 			
 			// aapt resource value: 0x7F0D0029
-			public const int mr_controller_casting_screen = 2131558441;
+			public const int mr_controller_collapse_group = 2131558441;
 			
 			// aapt resource value: 0x7F0D002A
-			public const int mr_controller_close_description = 2131558442;
+			public const int mr_controller_disconnect = 2131558442;
 			
 			// aapt resource value: 0x7F0D002B
-			public const int mr_controller_collapse_group = 2131558443;
+			public const int mr_controller_expand_group = 2131558443;
 			
 			// aapt resource value: 0x7F0D002C
-			public const int mr_controller_disconnect = 2131558444;
+			public const int mr_controller_no_info_available = 2131558444;
 			
 			// aapt resource value: 0x7F0D002D
-			public const int mr_controller_expand_group = 2131558445;
+			public const int mr_controller_no_media_selected = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int mr_controller_no_info_available = 2131558446;
+			public const int mr_controller_pause = 2131558446;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int mr_controller_no_media_selected = 2131558447;
+			public const int mr_controller_play = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int mr_controller_pause = 2131558448;
+			public const int mr_controller_stop = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int mr_controller_play = 2131558449;
+			public const int mr_controller_stop_casting = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int mr_controller_stop = 2131558450;
+			public const int mr_controller_volume_slider = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int mr_controller_stop_casting = 2131558451;
+			public const int mr_system_route_name = 2131558451;
 			
 			// aapt resource value: 0x7F0D0034
-			public const int mr_controller_volume_slider = 2131558452;
+			public const int mr_user_route_category_name = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int mr_system_route_name = 2131558453;
+			public const int password_toggle_content_description = 2131558453;
 			
 			// aapt resource value: 0x7F0D0036
-			public const int mr_user_route_category_name = 2131558454;
+			public const int path_password_eye = 2131558454;
 			
 			// aapt resource value: 0x7F0D0037
-			public const int password_toggle_content_description = 2131558455;
+			public const int path_password_eye_mask_strike_through = 2131558455;
 			
 			// aapt resource value: 0x7F0D0038
-			public const int path_password_eye = 2131558456;
+			public const int path_password_eye_mask_visible = 2131558456;
 			
 			// aapt resource value: 0x7F0D0039
-			public const int path_password_eye_mask_strike_through = 2131558457;
+			public const int path_password_strike_through = 2131558457;
 			
 			// aapt resource value: 0x7F0D003A
-			public const int path_password_eye_mask_visible = 2131558458;
+			public const int search_menu_title = 2131558458;
 			
 			// aapt resource value: 0x7F0D003B
-			public const int path_password_strike_through = 2131558459;
-			
-			// aapt resource value: 0x7F0D003C
-			public const int search_menu_title = 2131558460;
-			
-			// aapt resource value: 0x7F0D003D
-			public const int status_bar_notification_info_overflow = 2131558461;
+			public const int status_bar_notification_info_overflow = 2131558459;
 			
 			static String()
 			{
