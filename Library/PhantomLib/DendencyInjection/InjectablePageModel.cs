@@ -6,7 +6,8 @@ namespace PhantomLib.DendencyInjection
 {
     public class InjectablePageModel
     {
-        public INavigation Navigation;
+        public INavigation Navigation { get; set; }
+
         public virtual Task OnAppearing()
         {
             return Task.FromResult(0);

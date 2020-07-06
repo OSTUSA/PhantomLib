@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using PhantomLib.DendencyInjection;
 
 namespace PhantomLib.Models
 {
@@ -10,7 +11,7 @@ namespace PhantomLib.Models
     /// <see cref="PropertyChanged"/> events to notify any listeners of property
     /// changes.
     /// </summary>
-    public abstract class BaseAttachable : IAttachable
+    public abstract class BaseAttachable : InjectablePageModel, IAttachable
     {
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         public event PropertyChangingEventHandler PropertyChanging = delegate { };

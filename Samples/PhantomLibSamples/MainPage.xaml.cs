@@ -64,5 +64,10 @@ namespace PhantomLibSamples
 
             await Navigation.PushAsync(page);
         }
+
+        void Handle_Clicked_DI(System.Object sender, System.EventArgs e)
+        {
+             
+        }
     }
 }

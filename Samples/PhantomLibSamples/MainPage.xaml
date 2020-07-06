@@ -13,7 +13,7 @@
                 <Button Text="Converters Examples" Clicked="Handle_Clicked_2" />
                 <Button Text="Floating Action Button" Clicked="Handle_Clicked_FloatingActionButton" />
                 <Button Text="Misc" Clicked="Handle_Clicked_3" />
-                
+                <Button Text="Dependency Injection" Clicked="Handle_Clicked_DI" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -1,4 +1,6 @@
 ﻿using System;
+using Autofac;
+using PhantomLib.DendencyInjection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +11,14 @@ namespace PhantomLibSamples
         public App()
         {
             InitializeComponent();
+
+            PhantomResolutionHelper.Register(builder => {
+
+                //builder.RegisterType<ChurchService>()
+                //    .As<IChurchService>()
+                //    .SingleInstance();
+
+            });
 
             MainPage = new NavigationPage(new MainPage());
         }
