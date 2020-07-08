@@ -3,7 +3,7 @@ using PhantomLib.DendencyInjection;
 
 namespace PhantomLibSamples.Converters
 {
-    public class ConvertersViewModel : InjectablePageModel
+    public class ConvertersViewModel : InjectableViewModel
     {
         public ConvertersViewModel()
         {

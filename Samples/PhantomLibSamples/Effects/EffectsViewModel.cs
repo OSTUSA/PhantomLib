@@ -3,7 +3,7 @@ using PhantomLib.DendencyInjection;
 
 namespace PhantomLibSamples.Effects
 {
-    public class EffectsViewModel : InjectablePageModel
+    public class EffectsViewModel : InjectableViewModel
     {
         public EffectsViewModel()
         {

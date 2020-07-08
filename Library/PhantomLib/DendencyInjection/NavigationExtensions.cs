@@ -10,7 +10,7 @@ namespace PhantomLib.DendencyInjection
     {
         public static Task PushAsync<P, M>(this INavigation navigation, Action<M> initialize = null, bool animated = true)
             where P : Page
-            where M : InjectablePageModel
+            where M : InjectableViewModel
         {
             var page = PhantomResolutionHelper.ResolvePage<P, M>(initialize);
             return navigation.PushAsync(page, animated);
@@ -18,7 +18,7 @@ namespace PhantomLib.DendencyInjection
 
         public static Task PushModalAsync<P, M>(this INavigation navigation, Action<M> initialize = null, bool animated = true)
             where P : Page
-            where M : InjectablePageModel
+            where M : InjectableViewModel
         {
             var page = PhantomResolutionHelper.ResolvePage<P, M>(initialize);
             return navigation.PushModalAsync(page, animated);
@@ -26,7 +26,7 @@ namespace PhantomLib.DendencyInjection
 
         public static Task PushNavigationModalAsync<P, M>(this INavigation navigation, Action<M> initialize = null, bool animated = true)
             where P : Page
-            where M : InjectablePageModel
+            where M : InjectableViewModel
         {
             var page = PhantomResolutionHelper.ResolvePage<P, M>(initialize);
             return navigation.PushModalAsync(new NavigationPage(page), animated);

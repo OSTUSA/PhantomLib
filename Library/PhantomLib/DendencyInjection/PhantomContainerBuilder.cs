@@ -50,14 +50,14 @@ namespace PhantomLib.DendencyInjection
         }
 
         /// <summary>
-        /// 
+        /// Register an instance type as a template, such as MyService as IMyService. IService can then be injected into any registered Views, ViewModels, or other registered Singletons.
         /// </summary>
+        /// <typeparam name="I">Instance</typeparam>
         /// <typeparam name="T">Template</typeparam>
-        /// <typeparam name="S">Service</typeparam>
         /// <returns></returns>
-        public PhantomContainerBuilder RegisterSingletonService<T, S>()
+        public PhantomContainerBuilder RegisterSingleton<I, T>()
         {
-            _container.RegisterType<T>()
+            _container.RegisterType<I>()
                 .As<T>()
                 .SingleInstance();
 

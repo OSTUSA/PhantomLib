@@ -13,6 +13,7 @@ using PhantomLibSamples.UltimateControl;
 using PhantomLibSamples.Utilities;
 using PhantomLib.DendencyInjection;
 using Xamarin.Forms;
+using PhantomLibSamples.DependencyInjection;
 
 namespace PhantomLibSamples
 {
@@ -54,9 +55,9 @@ namespace PhantomLibSamples
             await Navigation.PushAsync<MiscPage, MiscViewModel>();
         }
 
-        void Handle_Clicked_DI(System.Object sender, System.EventArgs e)
+        async void Handle_Clicked_DI(System.Object sender, System.EventArgs e)
         {
-             
+            await Navigation.PushAsync<DependencyInjectionPage, DependencyInjectionViewModel>();
         }
     }
 }

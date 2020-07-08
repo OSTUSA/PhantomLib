@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace PhantomLib.DendencyInjection
 {
-    public class InjectablePageModel
+    public class InjectableViewModel
     {
         public INavigation Navigation { get; set; }
 

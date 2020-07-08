@@ -11,7 +11,7 @@ namespace PhantomLib.Models
     /// <see cref="PropertyChanged"/> events to notify any listeners of property
     /// changes.
     /// </summary>
-    public abstract class BaseAttachable : InjectablePageModel, IAttachable
+    public abstract class BaseAttachable : InjectableViewModel, IAttachable
     {
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         public event PropertyChangingEventHandler PropertyChanging = delegate { };

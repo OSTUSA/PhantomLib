@@ -17,9 +17,9 @@ namespace PhantomLib.DendencyInjection
             _container = _builder.Build();
         }
 
-        public static Page ResolvePage<P, M>(Action<M> initialize = null, bool unwrapExceptions = true)
+        public static P ResolvePage<P, M>(Action<M> initialize = null, bool unwrapExceptions = true)
             where P : Page
-            where M : InjectablePageModel
+            where M : InjectableViewModel
         {
             if (_container is null)
                 throw new Exception("Unable to resolve pages, no container built. Please use Register to register services");

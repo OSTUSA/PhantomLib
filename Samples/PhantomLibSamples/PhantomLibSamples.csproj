@@ -10,6 +10,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
     <PackageReference Include="LiveXAML" Version="2.1.72" />
@@ -26,6 +29,8 @@
     <Folder Include="Converters\" />
     <Folder Include="Misc\" />
     <Folder Include="FloatingActionButton\" />
+    <Folder Include="Services\" />
+    <Folder Include="DependencyInjection\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Effects\EffectsPage.xaml.cs">
