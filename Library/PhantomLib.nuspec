@@ -26,13 +26,16 @@
     <file src="PhantomLib\bin\Release\netstandard2.0\PhantomLib.pdb"	target="lib\netstandard2.0\PhantomLib.pdb" />
 
     <!-- iOS -->
-    <file src="PhantomLib.iOS\bin\Release\*.dll"		    target="lib\Xamarin.iOS10" />
-    <file src="PhantomLib.iOS\bin\Release\*.pdb"		    target="lib\Xamarin.iOS10" />
-    
+    <file src="PhantomLib.iOS\bin\Release\PhantomLib.dll" target="lib\Xamarin.iOS10" />
+    <file src="PhantomLib.iOS\bin\Release\PhantomLib.pdb" target="lib\Xamarin.iOS10" />
+    <file src="PhantomLib.iOS\bin\Release\PhantomLib.iOS.dll" target="lib\Xamarin.iOS10" />
+    <file src="PhantomLib.iOS\bin\Release\PhantomLib.iOS.pdb"	target="lib\Xamarin.iOS10" />
+
     <!-- Android -->
-    <file src="PhantomLib.Droid\bin\Release\*.dll"	target="lib\MonoAndroid10" />
-    <file src="PhantomLib.Droid\bin\Release\*.pdb"	target="lib\MonoAndroid10" />
-    
+    <file src="PhantomLib.Droid\bin\Release\PhantomLib.dll"	target="lib\MonoAndroid10" />
+    <file src="PhantomLib.Droid\bin\Release\PhantomLib.pdb"	target="lib\MonoAndroid10" />
+    <file src="PhantomLib.Droid\bin\Release\PhantomLib.Droid.dll"	target="lib\MonoAndroid10" />
+    <file src="PhantomLib.Droid\bin\Release\PhantomLib.Droid.pdb"	target="lib\MonoAndroid10" />
 
     <!-- Readme -->
     <file src="readme.txt" target="" />
