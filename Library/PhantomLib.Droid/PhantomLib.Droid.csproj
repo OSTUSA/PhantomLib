@@ -171,6 +171,12 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\..\packages\Xamarin.Forms.4.2.0.709249\lib\MonoAndroid90\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Prism">
+      <HintPath>..\..\packages\Prism.Core.7.2.0.1422\lib\netstandard2.0\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Forms">
+      <HintPath>..\..\packages\Prism.Forms.7.2.0.1422\lib\monoandroid81\Prism.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
